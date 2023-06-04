@@ -1,0 +1,66 @@
+// Colors.
+$white: #fff;
+$grey:  #444;
+
+// Styles for dashboard widget.
+#d4ph_dashboard_widget {
+	// Fix spinner alignment.
+	.postbox-title-action {
+		.spinner {
+			margin: 0;
+		}
+	}
+
+	// Fix alignment of pager page input text.
+	.search-box,
+	.tablenav-pages {
+		input {
+			vertical-align: unset;
+		}
+	}
+
+	.tablenav-pages {
+		margin-left: 9px;
+	}
+
+	.tippy-content {
+		// White text for dark backgrounds.
+		.dark-mode {
+			h1,
+			th,
+			td {
+				color: $white;
+			}
+
+			.striped > tbody > :nth-child(odd) {
+				background-color: $grey;
+			}
+		}
+
+		// Left align table cells in tooltips.
+		table {
+			text-align: left;
+		}
+
+		// Hide list numbering for ordered lists in tooltips.
+		ol {
+			list-style-type: none;
+			margin-left: 0;
+		}
+	}
+
+	// Fix search box on top of user list at mobile screen sizes.
+	@media screen and (max-width: 782px) {
+		.tablenav {
+			height: 40px;
+		}
+
+		.users {
+			padding-bottom: 62px;
+		}
+
+		.search-box {
+			height: auto;
+		}
+	}
+}
