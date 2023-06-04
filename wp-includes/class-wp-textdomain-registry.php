@@ -97,7 +97,7 @@ class WP_Textdomain_Registry {
 	 */
 	public function has( $domain ) {
 		return (
-			isset( $this->current[ $domain ] ) ||
+			! empty( $this->current[ $domain ] ) ||
 			empty( $this->all[ $domain ] ) ||
 			in_array( $domain, $this->domains_with_translations, true )
 		);

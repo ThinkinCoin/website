@@ -1155,11 +1155,8 @@ border color while dragging a file over the uploader drop area */
 }
 
 span.imgedit-scale-warn {
-	display: flex;
-	align-items: center;
-	margin: 4px;
-	gap: 4px;
-	color: #b32d2e;
+	color: #d63638;
+	font-size: 20px;
 	font-style: normal;
 	visibility: hidden;
 	vertical-align: middle;

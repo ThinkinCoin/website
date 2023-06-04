@@ -1,0 +1,54 @@
+/* ---------Customizer--------- */
+li#accordion-section-educator_education_example_1 h3 {
+  background: #006799 !important;
+  color: #fff !important;
+  padding: 15px;
+}
+a.button.button-secondary.alignright {
+  background: #fff;
+  color: #2271b1;
+  border: solid 1px #0073aa;
+  font-size: 15px;
+  padding: 18px 10px;
+  margin-top: -9px;
+  line-height: 0;
+  min-height: 0;
+}
+
+/* ---------Excerpt & Logo --------- */
+input#_customize-input-logo_size,
+input#_customize-input-educator_education_excerpt_number,
+input#_customize-input-educator_education_wooproducts_border_radius,
+input#_customize-input-educator_education_wooproducts_box_shadow,
+input#_customize-input-educator_education_product_button_border_radius,
+input#_customize-input-educator_education_slider_speed_option{
+  width: 100%;
+}
+li#customize-control-logo_size {
+  background: #fff;
+  padding: 4px;
+}
+input#_customize-input-educator_education_button_padding_top_bottom,
+input#_customize-input-educator_education_button_padding_left_right,
+input#_customize-input-educator_education_button_border_radius,
+input#_customize-input-educator_education_copyright_padding,
+input#_customize-input-educator_education_scroll_font_size_icon,
+input#_customize-input-educator_education_footer_content_font_size,
+input#_customize-input-educator_education_excerpt_number,
+input#_customize-input-educator_education_slider_excerpt_length,
+input#_customize-input-educator_education_topbar_padding,
+input#_customize-input-educator_education_site_title_size_option,
+input#_customize-input-educator_education_site_tagline_size_option{
+	width: 30%;
+	float:right;
+}
+.customize-control-title{
+	display: inline-block;
+}
+ul#sub-accordion-section-educator_education_product_button_section{
+  border: none !important;
+}
+.customize-control-checkbox label {
+  font-weight: 600;
+  font-size: 14px;
+}

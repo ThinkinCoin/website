@@ -226,19 +226,14 @@ class Plugin_Upgrader extends WP_Upgrader {
 				'clear_destination' => true,
 				'clear_working'     => true,
 				'hook_extra'        => array(
-					'plugin'      => $plugin,
-					'type'        => 'plugin',
-					'action'      => 'update',
-					'temp_backup' => array(
-						'slug' => dirname( $plugin ),
-						'src'  => WP_PLUGIN_DIR,
-						'dir'  => 'plugins',
-					),
+					'plugin' => $plugin,
+					'type'   => 'plugin',
+					'action' => 'update',
 				),
 			)
 		);
 
-		// Cleanup our hooks, in case something else does an upgrade on this connection.
+		// Cleanup our hooks, in case something else does a upgrade on this connection.
 		remove_action( 'upgrader_process_complete', 'wp_clean_plugins_cache', 9 );
 		remove_filter( 'upgrader_pre_install', array( $this, 'deactivate_plugin_before_upgrade' ) );
 		remove_filter( 'upgrader_pre_install', array( $this, 'active_before' ) );
@@ -347,12 +342,7 @@ class Plugin_Upgrader extends WP_Upgrader {
 					'clear_working'     => true,
 					'is_multi'          => true,
 					'hook_extra'        => array(
-						'plugin'      => $plugin,
-						'temp_backup' => array(
-							'slug' => dirname( $plugin ),
-							'src'  => WP_PLUGIN_DIR,
-							'dir'  => 'plugins',
-						),
+						'plugin' => $plugin,
 					),
 				)
 			);
@@ -386,7 +376,7 @@ class Plugin_Upgrader extends WP_Upgrader {
 
 		$this->skin->footer();
 
-		// Cleanup our hooks, in case something else does an upgrade on this connection.
+		// Cleanup our hooks, in case something else does a upgrade on this connection.
 		remove_filter( 'upgrader_clear_destination', array( $this, 'delete_old_plugin' ) );
 
 		// Ensure any future auto-update failures trigger a failure email by removing

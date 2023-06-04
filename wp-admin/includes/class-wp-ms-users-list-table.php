@@ -185,7 +185,7 @@ class WP_MS_Users_List_Table extends WP_List_Table {
 	}
 
 	/**
-	 * @return string[] Array of column titles keyed by their column name.
+	 * @return array
 	 */
 	public function get_columns() {
 		$users_columns = array(

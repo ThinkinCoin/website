@@ -69,6 +69,8 @@ class WP_Widget_Custom_HTML extends WP_Widget {
 		}
 		$this->registered = true;
 
+		wp_add_inline_script( 'custom-html-widgets', sprintf( 'wp.customHtmlWidgets.idBases.push( %s );', wp_json_encode( $this->id_base ) ) );
+
 		// Note that the widgets component in the customizer will also do
 		// the 'admin_print_scripts-widgets.php' action in WP_Customize_Widgets::print_scripts().
 		add_action( 'admin_print_scripts-widgets.php', array( $this, 'enqueue_admin_scripts' ) );
@@ -214,8 +216,6 @@ class WP_Widget_Custom_HTML extends WP_Widget {
 		);
 
 		wp_enqueue_script( 'custom-html-widgets' );
-		wp_add_inline_script( 'custom-html-widgets', sprintf( 'wp.customHtmlWidgets.idBases.push( %s );', wp_json_encode( $this->id_base ) ) );
-
 		if ( empty( $settings ) ) {
 			$settings = array(
 				'disabled' => true,

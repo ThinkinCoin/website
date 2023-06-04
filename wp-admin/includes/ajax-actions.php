@@ -188,12 +188,7 @@ function wp_ajax_wp_compression_test() {
 	}
 
 	if ( ini_get( 'zlib.output_compression' ) || 'ob_gzhandler' === ini_get( 'output_handler' ) ) {
-		// Use `update_option()` on single site to mark the option for autoloading.
-		if ( is_multisite() ) {
-			update_site_option( 'can_compress_scripts', 0 );
-		} else {
-			update_option( 'can_compress_scripts', 0, 'yes' );
-		}
+		update_site_option( 'can_compress_scripts', 0 );
 		wp_die( 0 );
 	}
 
@@ -227,20 +222,10 @@ function wp_ajax_wp_compression_test() {
 			wp_die();
 		} elseif ( 'no' === $_GET['test'] ) {
 			check_ajax_referer( 'update_can_compress_scripts' );
-			// Use `update_option()` on single site to mark the option for autoloading.
-			if ( is_multisite() ) {
-				update_site_option( 'can_compress_scripts', 0 );
-			} else {
-				update_option( 'can_compress_scripts', 0, 'yes' );
-			}
+			update_site_option( 'can_compress_scripts', 0 );
 		} elseif ( 'yes' === $_GET['test'] ) {
 			check_ajax_referer( 'update_can_compress_scripts' );
-			// Use `update_option()` on single site to mark the option for autoloading.
-			if ( is_multisite() ) {
-				update_site_option( 'can_compress_scripts', 1 );
-			} else {
-				update_option( 'can_compress_scripts', 1, 'yes' );
-			}
+			update_site_option( 'can_compress_scripts', 1 );
 		}
 	}
 
@@ -260,7 +245,7 @@ function wp_ajax_imgedit_preview() {
 
 	check_ajax_referer( "image_editor-$post_id" );
 
-	require_once ABSPATH . 'wp-admin/includes/image-edit.php';
+	include_once ABSPATH . 'wp-admin/includes/image-edit.php';
 
 	if ( ! stream_preview_image( $post_id ) ) {
 		wp_die( -1 );
@@ -2664,7 +2649,7 @@ function wp_ajax_image_editor() {
 	}
 
 	check_ajax_referer( "image_editor-$attachment_id" );
-	require_once ABSPATH . 'wp-admin/includes/image-edit.php';
+	include_once ABSPATH . 'wp-admin/includes/image-edit.php';
 
 	$msg = false;
 
@@ -3768,7 +3753,7 @@ function wp_ajax_parse_embed() {
 		$wp_embed->usecache = false;
 	}
 
-	if ( is_ssl() && str_starts_with( $url, 'http://' ) ) {
+	if ( is_ssl() && 0 === strpos( $url, 'http://' ) ) {
 		// Admin is ssl and the user pasted non-ssl URL.
 		// Check if the provider supports ssl embeds and use that for the preview.
 		$ssl_shortcode = preg_replace( '%^(\\[embed[^\\]]*\\])http://%i', '$1https://', $shortcode );
@@ -4176,7 +4161,7 @@ function wp_ajax_install_theme() {
 	}
 
 	require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
-	require_once ABSPATH . 'wp-admin/includes/theme.php';
+	include_once ABSPATH . 'wp-admin/includes/theme.php';
 
 	$api = themes_api(
 		'theme_information',
@@ -4421,7 +4406,7 @@ function wp_ajax_delete_theme() {
 		wp_send_json_error( $status );
 	}
 
-	require_once ABSPATH . 'wp-admin/includes/theme.php';
+	include_once ABSPATH . 'wp-admin/includes/theme.php';
 
 	$result = delete_theme( $stylesheet );
 
@@ -4469,7 +4454,7 @@ function wp_ajax_install_plugin() {
 	}
 
 	require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
-	require_once ABSPATH . 'wp-admin/includes/plugin-install.php';
+	include_once ABSPATH . 'wp-admin/includes/plugin-install.php';
 
 	$api = plugins_api(
 		'plugin_information',

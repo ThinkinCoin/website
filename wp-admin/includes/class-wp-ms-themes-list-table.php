@@ -322,7 +322,7 @@ class WP_MS_Themes_List_Table extends WP_List_Table {
 	}
 
 	/**
-	 * @return string[] Array of column titles keyed by their column name.
+	 * @return array
 	 */
 	public function get_columns() {
 		$columns = array(

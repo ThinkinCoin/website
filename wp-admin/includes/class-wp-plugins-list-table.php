@@ -451,8 +451,7 @@ class WP_Plugins_List_Table extends WP_List_Table {
 
 	/**
 	 * @global string $status
-	 *
-	 * @return string[] Array of column titles keyed by their column name.
+	 * @return array
 	 */
 	public function get_columns() {
 		global $status;
@@ -1022,7 +1021,8 @@ class WP_Plugins_List_Table extends WP_List_Table {
 
 		list( $columns, $hidden, $sortable, $primary ) = $this->get_column_info();
 
-		$auto_updates = (array) get_site_option( 'auto_update_plugins', array() );
+		$auto_updates      = (array) get_site_option( 'auto_update_plugins', array() );
+		$available_updates = get_site_transient( 'update_plugins' );
 
 		foreach ( $columns as $column_name => $column_display_name ) {
 			$extra_classes = '';

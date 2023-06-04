@@ -226,8 +226,7 @@
 	 */
 	scaleChanged : function( postid, x, el ) {
 		var w = $('#imgedit-scale-width-' + postid), h = $('#imgedit-scale-height-' + postid),
-		warn = $('#imgedit-scale-warn-' + postid), w1 = '', h1 = '',
-		scaleBtn = $('#imgedit-scale-button');
+		warn = $('#imgedit-scale-warn-' + postid), w1 = '', h1 = '';
 
 		if ( false === this.validateNumeric( el ) ) {
 			return;
@@ -243,10 +242,8 @@
 
 		if ( ( h1 && h1 > this.hold.oh ) || ( w1 && w1 > this.hold.ow ) ) {
 			warn.css('visibility', 'visible');
-			scaleBtn.prop('disabled', true);
 		} else {
 			warn.css('visibility', 'hidden');
-			scaleBtn.prop('disabled', false);
 		}
 	},
 
@@ -438,7 +435,7 @@
 	 *
 	 * @return {boolean|void} Executes a post request that refreshes the page
 	 *                        when the action is performed.
-	 *                        Returns false if an invalid action is given,
+	 *                        Returns false if a invalid action is given,
 	 *                        or when the action cannot be performed.
 	 */
 	action : function(postid, nonce, action) {
