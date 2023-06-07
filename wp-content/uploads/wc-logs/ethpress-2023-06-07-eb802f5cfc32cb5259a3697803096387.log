@@ -1,0 +1,15 @@
+06-07-2023 @ 01:30:21 - Plugin::activate: options = Array
+(
+    [db_version] => 1.1
+    [api_url] => 
+    [woocommerce_login_form_show] => 
+    [woocommerce_register_form_show] => 
+    [woocommerce_after_checkout_registration_form_show] => 
+    [woocommerce_account_details_link_button_show] => 
+    [login_button_label] => 
+    [link_button_label] => 
+    [register_button_label] => 
+    [redirect_url] => 
+)
+
+06-07-2023 @ 01:47:50 - Address::have_db_users: res = 

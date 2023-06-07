@@ -1,9 +1,9 @@
 === Tutor Academy ===
 Contributors: TheMagnifico52
 Requires at least: 5.0
-Tested up to: 6.1
+Tested up to: 6.2
 Requires PHP: 7.2
-Stable tag: 1.6
+Stable tag: 1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-logo, one-column, two-columns, wide-blocks, block-styles, editor-style, sticky-post, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, full-width-template, threaded-comments, theme-options, left-sidebar, right-sidebar, grid-layout, rtl-language-support, blog, e-commerce, education
@@ -105,6 +105,9 @@ Font Awesome Free 5.6.3 by @fontawesome - https://fontawesome.com
 * Updated customizer settings.
 * Added general setting options.
 
+= 1.7
+
+* Updated customizer.
 
 == Theme Changes ==
 

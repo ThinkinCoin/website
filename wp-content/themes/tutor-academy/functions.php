@@ -14,6 +14,10 @@ if ( ! defined( 'ONLINE_TUTOR_TEXT' ) ) {
     define( 'ONLINE_TUTOR_TEXT', __( 'Tutor Academy Pro','tutor-academy' ));
 }
 
+if ( ! defined( 'ONLINE_TUTOR_BUY_TEXT' ) ) {
+    define( 'ONLINE_TUTOR_BUY_TEXT', __( 'Buy Tutor Academy Pro','tutor-academy' ));
+}
+
 function tutor_academy_admin_scripts() {
     // demo CSS
     wp_enqueue_style( 'tutor-academy-demo-css', get_theme_file_uri( 'assets/css/demo.css' ) );
