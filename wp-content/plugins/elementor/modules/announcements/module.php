@@ -88,18 +88,18 @@ class Module extends BaseApp {
 	 * @return array[]
 	 */
 	private function get_raw_announcements(): array {
-		return [
+		$raw_announcements = [
 			[
-				'title' => 'Create smarter with Elementor AI',
-				'description' => '<p>Instantly turn your ideas into original text and custom code with a free trial of Elementor AI installed on the newest versions of Elementor.</p>
+				'title' => 'Picture perfect: Introducing the AI image generator',
+				'description' => '<p>Generate new images or edit existing ones with text to image prompts.</p>
 				<ul>
-					<li>Effortlessly write professional copy about any topic, in any tone. Then instantly translate it to twenty-five languages.</li>
-					<li>No code? No problem. Generate Custom Code, CSS, and HTML with a prompt</li>
-					<li>Coming soon:  A picture might be worth a thousand words, but all you need is a short description to generate the perfect image for your site.</li>
+					<li>Use generative fill to edit, add, or erase content in existing images or expand them beyond their original size and aspect ratio.</li>
+					<li>Choose from twenty-nine preset styles that will supercharge your prompts and check out the image-prompt gallery for inspiration. </li>
+					<li>Create custom code, write content, and generate images with Elementor’s comprehensive AI toolbox.</li>
 				</ul>',
 				'media' => [
 					'type' => 'image',
-					'src' => ELEMENTOR_ASSETS_URL . 'images/announcement.png',
+					'src' => ELEMENTOR_ASSETS_URL . 'images/announcement.png?' . ELEMENTOR_VERSION,
 				],
 				'cta' => [
 					[
@@ -119,33 +119,10 @@ class Module extends BaseApp {
 					],
 				],
 			],
-			[
-				'title' => 'Activate Containers for Brilliant Layouts',
-				'description' => 'Take advantage of the full power of Containers in Elementor to create slick, pixel-perfect, responsive layouts, plus improve the performance of your website. Follow these steps: <strong>Switch Flexbox Container to ‘Active’ and Save.</strong>',
-				'media' => [
-					'type' => 'image',
-					'src' => ELEMENTOR_ASSETS_URL . 'images/containers-announcement.png',
-				],
-				'cta' => [
-					[
-						'label' => 'Activate Container',
-						'variant' => 'primary',
-						'target' => '_blank',
-						'url' => ElementorSettings::get_url() . '#tab-experiments',
-					],
-					[
-						'label' => 'Try It First',
-						'target' => '_blank',
-						'url' => 'https://go.elementor.com/whats-new-popup/',
-					],
-				],
-				'triggers' => [
-					[
-						'action' => 'isFlexContainerInactive',
-					],
-				],
-			],
 		];
+
+		// DO NOT USE THIS FILTER
+		return apply_filters( 'elementor/announcements/raw_announcements', $raw_announcements );
 	}
 
 	/**
@@ -179,10 +156,15 @@ class Module extends BaseApp {
 	}
 
 	public function __construct() {
+		parent::__construct();
+
+		add_action( 'elementor/init', [ $this, 'on_elementor_init' ] );
+	}
+
+	public function on_elementor_init() {
 		if ( empty( $this->get_active_announcements() ) ) {
 			return;
 		}
-		parent::__construct();
 
 		add_action( 'elementor/editor/footer', function () {
 			$this->render_app_wrapper();

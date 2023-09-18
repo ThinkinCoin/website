@@ -1,0 +1,40 @@
+2023-09-16T02:21:14+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/www/html/website/wp-content/plugins/tutor/models/LessonModel.php:112
+Stack trace:
+#0 /var/www/html/website/wp-content/plugins/tutor/classes/Ajax.php(108): Tutor\Models\LessonModel::update_lesson_reading_info()
+#1 /var/www/html/website/wp-includes/class-wp-hook.php(310): TUTOR\Ajax->sync_video_playback()
+#2 /var/www/html/website/wp-includes/class-wp-hook.php(334): WP_Hook->apply_filters()
+#3 /var/www/html/website/wp-includes/plugin.php(517): WP_Hook->do_action()
+#4 /var/www/html/website/wp-admin/admin-ajax.php(188): do_action()
+#5 {main}
+  thrown in /var/www/html/website/wp-content/plugins/tutor/models/LessonModel.php on line 112
+
+2023-09-16T02:21:17+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/www/html/website/wp-content/plugins/tutor/models/LessonModel.php:112
+Stack trace:
+#0 /var/www/html/website/wp-content/plugins/tutor/classes/Ajax.php(108): Tutor\Models\LessonModel::update_lesson_reading_info()
+#1 /var/www/html/website/wp-includes/class-wp-hook.php(310): TUTOR\Ajax->sync_video_playback()
+#2 /var/www/html/website/wp-includes/class-wp-hook.php(334): WP_Hook->apply_filters()
+#3 /var/www/html/website/wp-includes/plugin.php(517): WP_Hook->do_action()
+#4 /var/www/html/website/wp-admin/admin-ajax.php(188): do_action()
+#5 {main}
+  thrown in /var/www/html/website/wp-content/plugins/tutor/models/LessonModel.php on line 112
+
+2023-09-16T02:21:19+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/www/html/website/wp-content/plugins/tutor/models/LessonModel.php:112
+Stack trace:
+#0 /var/www/html/website/wp-content/plugins/tutor/classes/Ajax.php(108): Tutor\Models\LessonModel::update_lesson_reading_info()
+#1 /var/www/html/website/wp-includes/class-wp-hook.php(310): TUTOR\Ajax->sync_video_playback()
+#2 /var/www/html/website/wp-includes/class-wp-hook.php(334): WP_Hook->apply_filters()
+#3 /var/www/html/website/wp-includes/plugin.php(517): WP_Hook->do_action()
+#4 /var/www/html/website/wp-admin/admin-ajax.php(188): do_action()
+#5 {main}
+  thrown in /var/www/html/website/wp-content/plugins/tutor/models/LessonModel.php on line 112
+
+2023-09-16T02:21:20+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in /var/www/html/website/wp-content/plugins/tutor/models/LessonModel.php:112
+Stack trace:
+#0 /var/www/html/website/wp-content/plugins/tutor/classes/Ajax.php(108): Tutor\Models\LessonModel::update_lesson_reading_info()
+#1 /var/www/html/website/wp-includes/class-wp-hook.php(310): TUTOR\Ajax->sync_video_playback()
+#2 /var/www/html/website/wp-includes/class-wp-hook.php(334): WP_Hook->apply_filters()
+#3 /var/www/html/website/wp-includes/plugin.php(517): WP_Hook->do_action()
+#4 /var/www/html/website/wp-admin/admin-ajax.php(188): do_action()
+#5 {main}
+  thrown in /var/www/html/website/wp-content/plugins/tutor/models/LessonModel.php on line 112
+

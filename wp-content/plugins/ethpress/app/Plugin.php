@@ -52,6 +52,9 @@ class Plugin
         add_action( 'login_form', [ __CLASS__, 'register_scripts' ], 9 );
         add_action( 'login_form', [ __CLASS__, 'login_enqueue_scripts' ] );
         add_action( 'login_form', [ ETHPRESS_NS . '\\Front', 'login_form' ] );
+        add_action( 'register_form', [ __CLASS__, 'register_scripts' ], 9 );
+        add_action( 'register_form', [ __CLASS__, 'login_enqueue_scripts' ] );
+        add_action( 'register_form', [ ETHPRESS_NS . '\\Front', 'register_form' ] );
         $defopts = [
             'woocommerce_login_form_show'                       => '0',
             'woocommerce_register_form_show'                    => '0',

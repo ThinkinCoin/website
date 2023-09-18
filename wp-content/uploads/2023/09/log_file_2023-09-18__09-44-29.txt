@@ -1,0 +1,52 @@
+
+---Downloaded files---
+The import files for: Marketplace were successfully downloaded!
+Initial max execution time = 300
+Files info:
+Site URL = https://thinkincoin.com/website
+Data file = /var/www/html/website/wp-content/uploads/2023/09/demo-content-import-file_2023-09-18__09-44-29.xml
+Widget file = /var/www/html/website/wp-content/uploads/2023/09/demo-widgets-import-file_2023-09-18__09-44-29.json
+Customizer
+
+---Importing widgets---
+Sidebar : 
+
+Search - No Title - Widget already exists
+Recent Posts - No Title - Widget already exists
+Recent Comments - No Title - Widget already exists
+Categories - No Title - Widget already exists
+
+Page Sidebar : 
+
+Archives - No Title - Imported
+Categories - No Title - Imported
+Meta - No Title - Imported
+
+Footer Widget 1 : 
+
+Text - No Title - Widget already exists
+Text - No Title - Widget already exists
+
+Footer Widget 2 : 
+
+Navigation Menu - Quick Links - Widget already exists
+
+Footer Widget 3 : 
+
+Navigation Menu - Resources - Widget already exists
+
+Footer Widget 4 : 
+
+Navigation Menu - Support - Widget already exists
+
+Footer Social Media : 
+
+Custom HTML - No Title - Widget already exists
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---tutormate_after_import---
+

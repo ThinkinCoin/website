@@ -947,7 +947,7 @@ class Options
                     <?php 
         } else {
             
-            if ( 'disabled' === $disabled ) {
+            if ( !\losnappas\Ethpress\ethpress_fs()->can_use_premium_code() ) {
                 ?>
                         <h2 class="description"><?php 
                 echo  '<a href="' . \losnappas\Ethpress\ethpress_fs()->get_upgrade_url() . '">' . __( 'Upgrade to use this feature!', 'ethpress' ) . '</a>' ;
@@ -1021,7 +1021,7 @@ class Options
                     <?php 
         } else {
             
-            if ( 'disabled' === $disabled ) {
+            if ( !\losnappas\Ethpress\ethpress_fs()->can_use_premium_code() ) {
                 ?>
                         <h2 class="description"><?php 
                 echo  '<a href="' . \losnappas\Ethpress\ethpress_fs()->get_upgrade_url() . '">' . __( 'Upgrade to use this feature!', 'ethpress' ) . '</a>' ;
@@ -1104,7 +1104,7 @@ class Options
                     <?php 
         } else {
             
-            if ( 'disabled' === $disabled ) {
+            if ( !\losnappas\Ethpress\ethpress_fs()->can_use_premium_code() ) {
                 ?>
                         <h2 class="description"><?php 
                 echo  '<a href="' . \losnappas\Ethpress\ethpress_fs()->get_upgrade_url() . '">' . __( 'Upgrade to use this feature!', 'ethpress' ) . '</a>' ;
@@ -1187,7 +1187,7 @@ class Options
                     <?php 
         } else {
             
-            if ( 'disabled' === $disabled ) {
+            if ( !\losnappas\Ethpress\ethpress_fs()->can_use_premium_code() ) {
                 ?>
                         <h2 class="description"><?php 
                 echo  '<a href="' . \losnappas\Ethpress\ethpress_fs()->get_upgrade_url() . '">' . __( 'Upgrade to use this feature!', 'ethpress' ) . '</a>' ;

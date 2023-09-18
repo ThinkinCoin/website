@@ -1,3 +1,49 @@
+##### [Version 3.6.7](https://github.com/Codeinwp/neve/compare/v3.6.6...v3.6.7) (2023-08-22)
+
+- [Fix] Addressed a json_decode issue in utilities.php that could potentially arise depending on the value from the database
+- [Fix] Fixed the way error messages are displayed within the error notice on the WooCommerce My Account page
+- [Fix] Confusing palette when changing it in the customizer
+- [Fix] Errors on the widgets page with WordPress 6.3
+- [Fix] Install plugin buttons appear on the About us page in the dashboard for users that do not have permission to install plugins
+- Increase WordPress minimum required version to 5.5
+- Update Google Fonts
+
+##### [Version 3.6.6](https://github.com/Codeinwp/neve/compare/v3.6.5...v3.6.6) (2023-08-03)
+
+- [Fix] Solve customizer permissions on multisite
+- [Fix] Add aria-label on the dropdown of the sidebar menu
+- [Fix] Incorrect author displayed on sticky posts with Feedzy Pro plugin
+- Introducing a new presentational tab dedicated to Otter within the About Us page of Neve Dashboard
+- Improve compatibility with WPML
+
+##### [Version 3.6.5](https://github.com/Codeinwp/neve/compare/v3.6.4...v3.6.5) (2023-07-17)
+
+- [Fix] Deprecated notice in HFG Footer
+- [Fix] About page display when using Whitelabel
+- [Fix] AMP compatibility with Standard Template Mode
+- [Fix] React script loop on Starter Sites page
+- Update Google Fonts
+- Update SDK
+
+##### [Version 3.6.4](https://github.com/Codeinwp/neve/compare/v3.6.3...v3.6.4) (2023-06-16)
+
+- [Fix] reported error for non-admin
+
+##### [Version 3.6.3](https://github.com/Codeinwp/neve/compare/v3.6.2...v3.6.3) (2023-06-15)
+
+- [Fix] Customizer link location
+
+##### [Version 3.6.2](https://github.com/Codeinwp/neve/compare/v3.6.1...v3.6.2) (2023-06-15)
+
+- [Feat] Dedicated Settings page
+- [Fix] Header cart icon color with multiple headers
+- [Fix] Sidebar Gradient
+- [Fix] Toggle the aria-pressed ARIA for the menu caret
+- [Fix] Alignment for mobile nav when set to center
+- Added filter for welcome discount
+- Update Visual Regression base images
+- Update Google Fonts
+
 ##### [Version 3.6.1](https://github.com/Codeinwp/neve/compare/v3.6.0...v3.6.1) (2023-05-30)
 
 - [Fix] Solve compatibility check

@@ -1,0 +1,46 @@
+
+---Downloaded files---
+The import files for: Instructor were successfully downloaded!
+Initial max execution time = 300
+Files info:
+Site URL = https://thinkincoin.com/website
+Data file = /var/www/html/website/wp-content/uploads/2023/09/demo-content-import-file_2023-09-18__09-39-53.xml
+Widget file = /var/www/html/website/wp-content/uploads/2023/09/demo-widgets-import-file_2023-09-18__09-39-53.json
+Customizer
+
+---Importing widgets---
+Sidebar : 
+
+Search - No Title - Imported
+Recent Posts - No Title - Imported
+Recent Comments - No Title - Imported
+Categories - No Title - Imported
+
+Footer Widget 1 : 
+
+Text - No Title - Imported
+Text - No Title - Imported
+
+Footer Widget 2 : 
+
+Navigation Menu - Quick Links - Imported
+
+Footer Widget 3 : 
+
+Navigation Menu - Resources - Imported
+
+Footer Widget 4 : 
+
+Navigation Menu - Support - Imported
+
+Footer Social Media : 
+
+Custom HTML - No Title - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---tutormate_after_import---
+

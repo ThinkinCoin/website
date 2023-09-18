@@ -2183,7 +2183,7 @@ body.elementor-page .wrapper {
 }
 
 .header-menu-sidebar-bg {
-  background-color: var(--bgcolor);
+  background: var(--bgcolor);
   color: var(--color);
   position: relative;
   display: flex;
@@ -2431,7 +2431,7 @@ body.elementor-page .wrapper {
 [class*="row-inner"],
 .header-menu-sidebar-bg {
   position: relative;
-  background-image: var(--bgimage, none);
+  background: var(--bgimage, var(--bgcolor, #fff));
   background-position: var(--bgposition, center);
   background-repeat: no-repeat;
   background-size: cover;

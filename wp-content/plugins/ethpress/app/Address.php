@@ -421,8 +421,23 @@ class Address
 	 */
 	public function register_and_log_in()
 	{
+		// $user = $this->register();
+		// $user = new \WP_Error('ethpress', __('Errorrrrrrrrrrrrr', 'ethpress'));
+		// $user = $this->log_in();
+		// if (isset($user->error)) {
+		// 	//if ($user->error->message = 'Username already exists.') {
+		// 	$user = $this->log_in();
+		// 	//}
+		// }
+
 		if (!$this->user) {
 			$user = $this->register();
+			$user = $this->log_in();
+			// if(isset( $user->error )){
+			// 	if($user->error->message = 'Username already exists.'){
+			// 		$user = $this->log_in();
+			// 	}
+			// }
 		}
 		if (!is_wp_error($user)) {
 			$user = $this->log_in();
