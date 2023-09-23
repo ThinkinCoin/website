@@ -40,11 +40,11 @@ $course_id         = tutor_utils()->get_course_id_by( 'lesson', $course_content_
 		'single.common.header',
 		array(
 			'course_id'        => $course_id,
-			'mark_as_complete' => ! $zoom_meeting->is_expired,
+			'mark_as_complete' => $zoom_meeting->is_started,
 		)
 	);
 	?>
-	
+
 	<!--zoom content-->
 	<?php if ( $show_error ) : ?>
 		<?php echo $show_error; ?>
@@ -81,8 +81,8 @@ $course_id         = tutor_utils()->get_course_id_by( 'lesson', $course_content_
 					<p><?php esc_html_e( 'Meeting Starts in', 'tutor-pro' ); ?></p>
 					<div class="tutor-zoom-meeting-countdown" data-timer="<?php echo esc_attr( $zoom_meeting->countdown_date ); ?>" data-timezone="<?php echo esc_attr( $zoom_meeting->timezone ); ?>"></div>
 					<div class="tutor-zoom-join-button-wrap">
-						<a href="<?php echo esc_url( $browser_url ); ?>" target="_blank" class="tutor-btn tutor-d-block"><?php echo esc_html( $browser_text ); ?></a>
-						<a href="<?php echo esc_url( $meeting_data['join_url'] ); ?>" target="_blank" class="tutor-btn tutor-is-outline tutor-d-block"><?php esc_html_e( 'Join in Zoom App', 'tutor-pro' ); ?></a>
+						<a href="<?php echo esc_url( $browser_url ); ?>" target="_blank" class="tutor-btn tutor-btn-primary"><?php echo esc_html( $browser_text ); ?></a>
+						<a href="<?php echo esc_url( $meeting_data['join_url'] ); ?>" target="_blank" class="tutor-btn tutor-btn-primary"><?php esc_html_e( 'Join in Zoom App', 'tutor-pro' ); ?></a>
 					</div>
 				</div>
 				<div class="zoom-meeting-content-wrap">
@@ -93,6 +93,12 @@ $course_id         = tutor_utils()->get_course_id_by( 'lesson', $course_content_
 							<span><?php esc_html_e( 'Meeting Date', 'tutor-pro' ); ?></span>
 							<p><?php echo esc_html( $zoom_meeting->start_date ); ?></p>
 						</div>
+						<?php if ( isset( $zoom_meeting->data['duration'] ) ) : ?>
+						<div>
+							<span><?php esc_html_e( 'Meeting Duration', 'tutor-pro' ); ?></span>
+							<p><?php echo esc_html( sprintf( '%d %s', $zoom_meeting->data['duration'], __( 'minutes', 'tutor-pro' ) ) ); ?></p>
+						</div>
+						<?php endif; ?>
 						<div>
 							<span><?php esc_html_e( 'Meeting ID', 'tutor-pro' ); ?></span>
 							<p><?php echo esc_html( $meeting_data['id'] ); ?></p>

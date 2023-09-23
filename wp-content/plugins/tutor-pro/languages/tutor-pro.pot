@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-08-28 11:45+0000\n"
+"POT-Creation-Date: 2023-09-19 09:34+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -58,6 +58,30 @@ msgstr ""
 msgid "Calendar"
 msgstr ""
 
+#: classes/ContentSecurity.php:66
+msgid "Content Security"
+msgstr ""
+
+#: classes/ContentSecurity.php:73
+msgid "Prevent Hotlinking"
+msgstr ""
+
+#: classes/ContentSecurity.php:75
+msgid "Use hotlink protection for your self-hosted images and videos"
+msgstr ""
+
+#: classes/ContentSecurity.php:80
+msgid "Copy Protection"
+msgstr ""
+
+#: classes/ContentSecurity.php:82
+msgid "Prevent right-click and copy actions on your website"
+msgstr ""
+
+#: classes/ContentSecurity.php:144
+msgid "Settings saved, but unable to modify the .htaccess file. Please review file permissions."
+msgstr ""
+
 #: classes/Course_Duplicator.php:57, classes/Course_Duplicator.php:58
 msgid "Duplicate"
 msgstr ""
@@ -94,51 +118,51 @@ msgstr ""
 msgid "Toggle to limit the number of active sessions for a concurrent user login."
 msgstr ""
 
-#: classes/DeviceManagement.php:405
+#: classes/DeviceManagement.php:406
 msgid "Maximum Active Sessions"
 msgstr ""
 
-#: classes/DeviceManagement.php:406
+#: classes/DeviceManagement.php:407
 msgid "Set the maximum number of active login sessions allowed per user."
 msgstr ""
 
-#: classes/DeviceManagement.php:509
+#: classes/DeviceManagement.php:510
 msgid "You have exceeded the maximum number of active login sessions allowed per user. "
 msgstr ""
 
-#: classes/DeviceManagement.php:511
+#: classes/DeviceManagement.php:512
 msgid "Clear All Active Logins"
 msgstr ""
 
-#: classes/DeviceManagement.php:682, addons/social-login/includes/Authentication/Authentication.php:46, addons/social-login/includes/Authentication/Authentication.php:203
+#: classes/DeviceManagement.php:683, addons/social-login/includes/Authentication/Authentication.php:46, addons/social-login/includes/Authentication/Authentication.php:203
 msgid "Something went wrong, please try again!"
 msgstr ""
 
-#: classes/DeviceManagement.php:712
+#: classes/DeviceManagement.php:713
 msgid "Invalid user meta ID"
 msgstr ""
 
-#: classes/DeviceManagement.php:733
+#: classes/DeviceManagement.php:734
 msgid "Clear Sessions"
 msgstr ""
 
-#: classes/DeviceManagement.php:757
+#: classes/DeviceManagement.php:758
 msgid "Session clear failed, please try again!"
 msgstr ""
 
-#: classes/DeviceManagement.php:755
+#: classes/DeviceManagement.php:756
 msgid "Session cleared successfully"
 msgstr ""
 
-#: classes/DeviceManagement.php:814
+#: classes/DeviceManagement.php:815
 msgid "Invalid User ID"
 msgstr ""
 
-#: classes/DeviceManagement.php:811
+#: classes/DeviceManagement.php:812
 msgid "Remove active login session failed"
 msgstr ""
 
-#: classes/DeviceManagement.php:806
+#: classes/DeviceManagement.php:807
 msgid "All the active login removed!"
 msgstr ""
 
@@ -199,35 +223,35 @@ msgstr ""
 msgid "Verified"
 msgstr ""
 
-#: classes/Enrollment_Expiry.php:90
+#: classes/Enrollment_Expiry.php:91
 msgid "Enrollment Expiration"
 msgstr ""
 
-#: classes/Enrollment_Expiry.php:92
+#: classes/Enrollment_Expiry.php:93
 msgid "Student's enrollment will be removed after this number of days. Set 0 for lifetime enrollment."
 msgstr ""
 
-#: classes/Enrollment_Expiry.php:175
+#: classes/Enrollment_Expiry.php:176
 msgid "days"
 msgstr ""
 
-#: classes/Enrollment_Expiry.php:175
+#: classes/Enrollment_Expiry.php:176
 msgid "day"
 msgstr ""
 
-#: classes/Enrollment_Expiry.php:175, classes/Enrollment_Expiry.php:208, addons/pmpro/classes/PaidMembershipsPro.php:594
+#: classes/Enrollment_Expiry.php:176, classes/Enrollment_Expiry.php:209, addons/pmpro/classes/PaidMembershipsPro.php:594
 msgid "Lifetime"
 msgstr ""
 
-#: classes/Enrollment_Expiry.php:179
+#: classes/Enrollment_Expiry.php:180
 msgid "Enrollment validity"
 msgstr ""
 
-#: classes/Enrollment_Expiry.php:213
+#: classes/Enrollment_Expiry.php:214
 msgid "Enrollment validity:"
 msgstr ""
 
-#: classes/Enrollment_Expiry.php:226
+#: classes/Enrollment_Expiry.php:227
 msgid "Enrollment valid until"
 msgstr ""
 
@@ -287,31 +311,31 @@ msgstr ""
 msgid "Enable to set the minimum video watch % for lesson completion, only works with Tutor Player."
 msgstr ""
 
-#: classes/General.php:362
+#: classes/General.php:363
 msgid "Set Required Percentage"
 msgstr ""
 
-#: classes/General.php:364
+#: classes/General.php:366
 msgid "Specify the minimum video watch % learners must watch to mark the lesson as complete."
 msgstr ""
 
-#: classes/Init.php:321
+#: classes/Init.php:345
 msgid "WARNING: YOU NEED TO INSTALL THE REQUIRED TUTOR LMS VERSION"
 msgstr ""
 
-#: classes/Init.php:324
+#: classes/Init.php:348
 msgid "It seems you have installed the wrong version of Tutor LMS. For a smoother Tutor LMS experience, you need to install the Tutor LMS Free latest version."
 msgstr ""
 
-#: classes/Init.php:329
+#: classes/Init.php:353
 msgid "Note: If only Tutor LMS Pro is installed, you will not be able to avail any of its’ features."
 msgstr ""
 
-#: classes/Init.php:349
+#: classes/Init.php:373
 msgid "Create a New Course"
 msgstr ""
 
-#: classes/Init.php:371
+#: classes/Init.php:395
 msgid "Course builder file exists."
 msgstr ""
 
@@ -491,15 +515,23 @@ msgstr ""
 msgid "Meeting Date"
 msgstr ""
 
-#: templates/single-zoom-meeting.php:97, addons/tutor-zoom/views/template/meeting-list.php:131
+#: templates/single-zoom-meeting.php:98, addons/tutor-zoom/views/template/meeting-editor.php:60
+msgid "Meeting Duration"
+msgstr ""
+
+#: templates/single-zoom-meeting.php:99
+msgid "minutes"
+msgstr ""
+
+#: templates/single-zoom-meeting.php:103, addons/tutor-zoom/views/template/meeting-list.php:131
 msgid "Meeting ID"
 msgstr ""
 
-#: templates/single-zoom-meeting.php:101, templates/single/course/zoom-meetings.php:60, addons/google-classroom/views/components/password-setup.php:9, addons/tutor-zoom/views/metabox/meetings.php:81, addons/tutor-zoom/views/template/contexts.php:9, addons/tutor-zoom/views/template/meeting-editor.php:97, addons/tutor-zoom/views/template/meeting-list.php:145
+#: templates/single-zoom-meeting.php:107, templates/single/course/zoom-meetings.php:60, addons/google-classroom/views/components/password-setup.php:9, addons/tutor-zoom/views/metabox/meetings.php:81, addons/tutor-zoom/views/template/contexts.php:9, addons/tutor-zoom/views/template/meeting-editor.php:97, addons/tutor-zoom/views/template/meeting-list.php:145
 msgid "Password"
 msgstr ""
 
-#: templates/single-zoom-meeting.php:105, templates/single-zoom-meeting.php:71, templates/single/course/zoom-meetings.php:83, addons/google-meet/templates/meeting-parts/ongoing.php:37, addons/google-meet/views/pages/frontend-meetings.php:120, addons/tutor-zoom/views/template/meeting-list.php:160
+#: templates/single-zoom-meeting.php:111, templates/single-zoom-meeting.php:71, templates/single/course/zoom-meetings.php:83, addons/google-meet/templates/meeting-parts/ongoing.php:37, addons/google-meet/views/pages/frontend-meetings.php:120, addons/tutor-zoom/views/template/meeting-list.php:160
 msgid "Host Email"
 msgstr ""
 
@@ -559,7 +591,7 @@ msgstr ""
 msgid "Unlock Course depending on Restrict Content Permission."
 msgstr ""
 
-#: addons/tutor-assignments/tutor-assignments.php:30, addons/tutor-assignments/classes/Assignments.php:91, addons/tutor-assignments/classes/Assignments.php:103, addons/tutor-assignments/classes/Assignments.php:123, addons/tutor-assignments/classes/Assignments.php:140, addons/tutor-assignments/classes/Assignments_List.php:46, addons/tutor-notifications/classes/Notifications.php:197, addons/gradebook/views/pages/overview.php:98, addons/tutor-report/views/pages/courses/course-single.php:86, addons/tutor-report/views/pages/students/student-profile.php:179
+#: addons/tutor-assignments/tutor-assignments.php:30, addons/tutor-assignments/classes/Assignments.php:91, addons/tutor-assignments/classes/Assignments.php:103, addons/tutor-assignments/classes/Assignments.php:123, addons/tutor-assignments/classes/Assignments.php:140, addons/tutor-assignments/classes/Assignments_List.php:46, addons/tutor-notifications/classes/Notifications.php:198, addons/gradebook/views/pages/overview.php:98, addons/tutor-report/views/pages/courses/course-single.php:86, addons/tutor-report/views/pages/students/student-profile.php:179
 msgid "Assignments"
 msgstr ""
 
@@ -607,11 +639,11 @@ msgstr ""
 msgid "Start a course with multiple instructors by Tutor Multi Instructors"
 msgstr ""
 
-#: addons/tutor-notifications/tutor-notifications.php:37, addons/tutor-notifications/classes/Tutor_Notifications.php:95
+#: addons/tutor-notifications/tutor-notifications.php:34, addons/tutor-notifications/classes/Tutor_Notifications.php:100
 msgid "Notifications"
 msgstr ""
 
-#: addons/tutor-notifications/tutor-notifications.php:38
+#: addons/tutor-notifications/tutor-notifications.php:35
 msgid "Get notifications on frontend dashboard for specified tutor events."
 msgstr ""
 
@@ -831,6 +863,22 @@ msgstr ""
 msgid "USD"
 msgstr ""
 
+#: templates/email/to_student_assignment_evaluate.php:36, templates/email/to_student_quiz_completed.php:33
+msgid "Your score:"
+msgstr ""
+
+#: templates/email/to_student_assignment_evaluate.php:37, templates/email/to_student_quiz_completed.php:34, addons/gradebook/views/gradebook.php:49, addons/gradebook/views/gradebook.php:93
+msgid "out of"
+msgstr ""
+
+#: templates/email/to_student_assignment_evaluate.php:37, addons/tutor-assignments/classes/Assignments_List.php:168
+msgid "Pass"
+msgstr ""
+
+#: templates/email/to_student_assignment_evaluate.php:42, addons/tutor-email/classes/EmailData.php:81, addons/tutor-email/classes/EmailData.php:130
+msgid "Instructor Note"
+msgstr ""
+
 #: templates/email/to_student_assignment_evaluate.php:47
 msgid "Go to Assignment Review"
 msgstr ""
@@ -839,11 +887,11 @@ msgstr ""
 msgid "Course Instructor"
 msgstr ""
 
-#: templates/email/to_student_course_completed.php:50
+#: templates/email/to_student_course_completed.php:53
 msgid "Rate This Course"
 msgstr ""
 
-#: templates/email/to_student_course_completed.php:58, addons/tutor-certificate/classes/Certificate.php:207, addons/tutor-certificate/classes/Certificate.php:203
+#: templates/email/to_student_course_completed.php:63, addons/tutor-certificate/classes/Certificate.php:207, addons/tutor-certificate/classes/Certificate.php:203
 msgid "Download Certificate"
 msgstr ""
 
@@ -861,14 +909,6 @@ msgstr ""
 
 #: templates/email/to_student_question_answered.php:37
 msgid "Here is the answer- {answer}"
-msgstr ""
-
-#: templates/email/to_student_quiz_completed.php:33
-msgid "Your score:"
-msgstr ""
-
-#: templates/email/to_student_quiz_completed.php:34, addons/gradebook/views/gradebook.php:49, addons/gradebook/views/gradebook.php:93
-msgid "out of"
 msgstr ""
 
 #: templates/email/to_student_quiz_completed.php:39
@@ -1256,7 +1296,7 @@ msgstr ""
 msgid "Lesson"
 msgstr ""
 
-#: addons/content-drip/classes/ContentDrip.php:379, addons/tutor-notifications/classes/Notifications.php:356, addons/tutor-report/templates/courses.php:87, addons/tutor-report/templates/course_progress.php:35, addons/gradebook/views/pages/overview.php:95, addons/tutor-report/views/pages/overview.php:70, addons/tutor-report/views/pages/students/student-profile.php:229, addons/tutor-report/views/pages/students/student-profile.php:319
+#: addons/content-drip/classes/ContentDrip.php:379, addons/tutor-notifications/classes/Notifications.php:349, addons/tutor-report/templates/courses.php:87, addons/tutor-report/templates/course_progress.php:35, addons/gradebook/views/pages/overview.php:95, addons/tutor-report/views/pages/overview.php:70, addons/tutor-report/views/pages/students/student-profile.php:229, addons/tutor-report/views/pages/students/student-profile.php:319
 msgid "Quiz"
 msgstr ""
 
@@ -1386,7 +1426,7 @@ msgstr ""
 msgid "Bundle Overview"
 msgstr ""
 
-#: addons/enrollments/classes/Enrollments.php:52, addons/enrollments/classes/Enrollments.php:52, addons/tutor-notifications/classes/Notifications.php:409, addons/tutor-notifications/classes/Notifications.php:454
+#: addons/enrollments/classes/Enrollments.php:52, addons/enrollments/classes/Enrollments.php:52, addons/tutor-notifications/classes/Notifications.php:403, addons/tutor-notifications/classes/Notifications.php:449
 msgid "Enrollment"
 msgstr ""
 
@@ -1478,7 +1518,7 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
-#: addons/enrollments/views/enrollments.php:99, addons/gradebook/views/pages/gradebooks.php:263, addons/gradebook/views/pages/overview.php:91, addons/tutor-report/views/pages/students/student-table.php:30
+#: addons/enrollments/views/enrollments.php:99, addons/tutor-email/classes/Init.php:304, addons/gradebook/views/pages/gradebooks.php:263, addons/gradebook/views/pages/overview.php:91, addons/tutor-report/views/pages/students/student-table.php:30
 msgid "Name"
 msgstr ""
 
@@ -1754,15 +1794,15 @@ msgstr ""
 msgid "Submitted Assignments"
 msgstr ""
 
-#: addons/tutor-assignments/classes/Assignments.php:301
+#: addons/tutor-assignments/classes/Assignments.php:305
 msgid "An assignment is submitting currently, please submit previous one first"
 msgstr ""
 
-#: addons/tutor-assignments/classes/Assignments.php:326
+#: addons/tutor-assignments/classes/Assignments.php:330
 msgid "Answer has been added successfully"
 msgstr ""
 
-#: addons/tutor-assignments/classes/Assignments.php:417
+#: addons/tutor-assignments/classes/Assignments.php:421
 msgid "Maximum attachment upload size allowed is %d MB"
 msgstr ""
 
@@ -1785,10 +1825,6 @@ msgstr ""
 #: addons/tutor-assignments/classes/Assignments_List.php:139
 msgctxt "assignment delete"
 msgid " Delete"
-msgstr ""
-
-#: addons/tutor-assignments/classes/Assignments_List.php:168
-msgid "Pass"
 msgstr ""
 
 #: addons/tutor-assignments/classes/Assignments_List.php:174
@@ -2135,7 +2171,7 @@ msgstr ""
 msgid "Lesson Preview"
 msgstr ""
 
-#: addons/tutor-email/classes/EmailData.php:23, addons/tutor-notifications/classes/Tutor_Notifications.php:108, addons/tutor-report/views/pages/overview.php:40, addons/tutor-report/views/pages/overview.php:173, addons/tutor-report/views/pages/courses/course-single.php:173
+#: addons/tutor-email/classes/EmailData.php:23, addons/tutor-notifications/classes/Tutor_Notifications.php:113, addons/tutor-report/views/pages/overview.php:40, addons/tutor-report/views/pages/overview.php:173, addons/tutor-report/views/pages/courses/course-single.php:173
 msgid "Course Enrolled"
 msgstr ""
 
@@ -2183,7 +2219,7 @@ msgstr ""
 msgid "We would really appreciate it if you can post a review on the course and the instructor. Your valuable feedback would help us improve the content on our site and improve the learning experience."
 msgstr ""
 
-#: addons/tutor-email/classes/EmailData.php:59, addons/tutor-notifications/classes/Tutor_Notifications.php:168
+#: addons/tutor-email/classes/EmailData.php:59, addons/tutor-notifications/classes/Tutor_Notifications.php:173
 msgid "Removed From Course"
 msgstr ""
 
@@ -2195,7 +2231,7 @@ msgstr ""
 msgid "Headline you are enrolled in New Course"
 msgstr ""
 
-#: addons/tutor-email/classes/EmailData.php:68, addons/tutor-notifications/classes/Tutor_Notifications.php:128
+#: addons/tutor-email/classes/EmailData.php:68, addons/tutor-notifications/classes/Tutor_Notifications.php:133
 msgid "Assignment Graded"
 msgstr ""
 
@@ -2223,15 +2259,11 @@ msgstr ""
 msgid "Comment created by instructor of the course {course_name}"
 msgstr ""
 
-#: addons/tutor-email/classes/EmailData.php:81, addons/tutor-email/classes/EmailData.php:130
-msgid "Instructor Note"
-msgstr ""
-
 #: addons/tutor-email/classes/EmailData.php:82, addons/tutor-email/classes/EmailData.php:131
 msgid "What does it take to be successful? Ask around and you will find different answers to the formula of success. The truth is, success leaves clues and you can achieve."
 msgstr ""
 
-#: addons/tutor-email/classes/EmailData.php:85, addons/tutor-notifications/classes/Pusher.php:217, addons/tutor-notifications/classes/Tutor_Notifications.php:138
+#: addons/tutor-email/classes/EmailData.php:85, addons/tutor-notifications/classes/Pusher.php:217, addons/tutor-notifications/classes/Tutor_Notifications.php:143
 msgid "New Announcement Posted"
 msgstr ""
 
@@ -2263,7 +2295,7 @@ msgstr ""
 msgid "<p>Assertively incentivize prospective users before alternative imperatives. Quickly strategize best-of-breed testing procedures after high-payoff human capital.</p><p>Seamlessly incentivize diverse quality vectors before clicks-and-mortar collaboration and idea-sharing. Dramatically fashion just in time partnerships without distinctive scenarios. Quickly predominate principle-centered results through corporate alignments.</p>"
 msgstr ""
 
-#: addons/tutor-email/classes/EmailData.php:109, addons/tutor-email/classes/EmailData.php:116, addons/tutor-notifications/classes/Tutor_Notifications.php:148
+#: addons/tutor-email/classes/EmailData.php:109, addons/tutor-email/classes/EmailData.php:116, addons/tutor-notifications/classes/Tutor_Notifications.php:153
 msgid "Q&A Message Answered"
 msgstr ""
 
@@ -2519,7 +2551,7 @@ msgstr ""
 msgid "You may reply to this email to communicate with the {admin_user}."
 msgstr ""
 
-#: addons/tutor-email/classes/EmailData.php:304, addons/tutor-notifications/classes/Tutor_Notifications.php:185
+#: addons/tutor-email/classes/EmailData.php:304, addons/tutor-notifications/classes/Tutor_Notifications.php:190
 msgid "Instructor Application Accepted"
 msgstr ""
 
@@ -2531,7 +2563,7 @@ msgstr ""
 msgid "Welcome you on Board"
 msgstr ""
 
-#: addons/tutor-email/classes/EmailData.php:314, addons/tutor-notifications/classes/Tutor_Notifications.php:195
+#: addons/tutor-email/classes/EmailData.php:314, addons/tutor-notifications/classes/Tutor_Notifications.php:200
 msgid "Instructor Application Rejected"
 msgstr ""
 
@@ -2539,7 +2571,7 @@ msgstr ""
 msgid "Feedback on your application to become an instructor on {site_name}"
 msgstr ""
 
-#: addons/tutor-email/classes/EmailData.php:324, addons/tutor-notifications/classes/Tutor_Notifications.php:213
+#: addons/tutor-email/classes/EmailData.php:324, addons/tutor-notifications/classes/Tutor_Notifications.php:218
 msgid "Instructor Application Received"
 msgstr ""
 
@@ -2691,8 +2723,20 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
+#: addons/tutor-email/classes/Init.php:256, addons/google-classroom/views/email/auto-registration-verification.php:33, addons/tutor-report/views/pages/overview.php:389, addons/tutor-report/views/pages/overview.php:442, addons/tutor-report/views/pages/students/student-table.php:34
+msgid "Email"
+msgstr ""
+
+#: addons/tutor-email/classes/Init.php:258
+msgid "Email Settings"
+msgstr ""
+
 #: addons/tutor-email/classes/Init.php:265
 msgid "Email Meta"
+msgstr ""
+
+#: addons/tutor-email/classes/Init.php:272
+msgid "Email Template Logo"
 msgstr ""
 
 #: addons/tutor-email/classes/Init.php:274
@@ -2701,6 +2745,22 @@ msgstr ""
 
 #: addons/tutor-email/classes/Init.php:275
 msgid "jpg, .jpeg or .png."
+msgstr ""
+
+#: addons/tutor-email/classes/Init.php:281
+msgid "Email Logo Height"
+msgstr ""
+
+#: addons/tutor-email/classes/Init.php:283
+msgid "Set the height of your email logo in pixels"
+msgstr ""
+
+#: addons/tutor-email/classes/Init.php:288
+msgid "Disable Email Banner"
+msgstr ""
+
+#: addons/tutor-email/classes/Init.php:290
+msgid "Enable to hide email banner"
 msgstr ""
 
 #: addons/tutor-email/classes/Init.php:295
@@ -2713,6 +2773,50 @@ msgstr ""
 
 #: addons/tutor-email/classes/Init.php:298
 msgid "jpg, png."
+msgstr ""
+
+#: addons/tutor-email/classes/Init.php:305
+msgid "Sender's Name"
+msgstr ""
+
+#: addons/tutor-email/classes/Init.php:307
+msgid "The name under which all the emails will be sent"
+msgstr ""
+
+#: addons/tutor-email/classes/Init.php:312
+msgid "E-Mail Address"
+msgstr ""
+
+#: addons/tutor-email/classes/Init.php:313
+msgid "Reply to E-Mail"
+msgstr ""
+
+#: addons/tutor-email/classes/Init.php:315
+msgid "The E-Mail address from which all emails will be sent"
+msgstr ""
+
+#: addons/tutor-email/classes/Init.php:320
+msgid "E-Mail Footer Text"
+msgstr ""
+
+#: addons/tutor-email/classes/Init.php:321
+msgid "Footer text for E-mail"
+msgstr ""
+
+#: addons/tutor-email/classes/Init.php:322
+msgid "2022 All Rights Reserved"
+msgstr ""
+
+#: addons/tutor-email/classes/Init.php:323
+msgid "Privacy & Policy"
+msgstr ""
+
+#: addons/tutor-email/classes/Init.php:323
+msgid "Terms & Conditions"
+msgstr ""
+
+#: addons/tutor-email/classes/Init.php:324
+msgid "The text to appear in E-Mail template footer"
 msgstr ""
 
 #: addons/tutor-email/classes/Init.php:329
@@ -2751,7 +2855,7 @@ msgstr ""
 msgid "Email Per Cron Execution"
 msgstr ""
 
-#: addons/tutor-email/classes/Init.php:370
+#: addons/tutor-email/classes/Init.php:371
 msgid "Number of emails you'd like to send per cron execution"
 msgstr ""
 
@@ -2759,128 +2863,128 @@ msgstr ""
 msgid "New Instructors"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Ajax.php:73, addons/tutor-notifications/classes/Ajax.php:96, addons/tutor-notifications/classes/Ajax.php:119
+#: addons/tutor-notifications/classes/Ajax.php:82, addons/tutor-notifications/classes/Ajax.php:109, addons/tutor-notifications/classes/Ajax.php:136
 msgid "Something went wrong. Please try again later"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:54, addons/tutor-notifications/classes/Notifications.php:98, addons/tutor-notifications/classes/Notifications.php:139
+#: addons/tutor-notifications/classes/Notifications.php:61, addons/tutor-notifications/classes/Notifications.php:103, addons/tutor-notifications/classes/Notifications.php:143
 msgid "Instructorship"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:56
+#: addons/tutor-notifications/classes/Notifications.php:63
 msgctxt "instructorship-approved-text"
 msgid "Congratulations"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:57
+#: addons/tutor-notifications/classes/Notifications.php:64
 msgctxt "instructorship-approved-text"
 msgid "your application to be an instructor has been approved."
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:100
+#: addons/tutor-notifications/classes/Notifications.php:105
 msgctxt "instructorship-rejected-text"
 msgid "your instructorship application has been declined."
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:152
+#: addons/tutor-notifications/classes/Notifications.php:156
 msgctxt "instructor-application-received"
 msgid "you have received a new application from"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:153
+#: addons/tutor-notifications/classes/Notifications.php:157
 msgctxt "instructor-application-received"
 msgid "for Instructorship."
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:199
+#: addons/tutor-notifications/classes/Notifications.php:200
 msgctxt "grades-submitted-text"
 msgid "Hi"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:200
+#: addons/tutor-notifications/classes/Notifications.php:201
 msgctxt "grades-submitted-text"
 msgid "your"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:201
+#: addons/tutor-notifications/classes/Notifications.php:202
 msgctxt "grades-submitted-text"
 msgid "has been graded. Check it out."
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:246
+#: addons/tutor-notifications/classes/Notifications.php:248
 msgid "Announcements"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:248
+#: addons/tutor-notifications/classes/Notifications.php:250
 msgctxt "announcement-text"
 msgid "A new announcement has been posted by"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:248
+#: addons/tutor-notifications/classes/Notifications.php:250
 msgctxt "announcement-text"
 msgid "An announcement has been updated by"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:249
+#: addons/tutor-notifications/classes/Notifications.php:251
 msgctxt "announcement-text"
 msgid "of"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:306
+#: addons/tutor-notifications/classes/Notifications.php:301
 msgid "Q&A"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:308
+#: addons/tutor-notifications/classes/Notifications.php:303
 msgctxt "qa-answer-posted"
 msgid "A new answer has been posted by"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:309
+#: addons/tutor-notifications/classes/Notifications.php:304
 msgctxt "qa-answer-posted"
 msgid "in"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:310
+#: addons/tutor-notifications/classes/Notifications.php:305
 msgctxt "qa-answer-posted"
 msgid "'s Q&A."
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:357
+#: addons/tutor-notifications/classes/Notifications.php:351
 msgctxt "quiz-attempt-text"
-msgid "<span class=\"tutor-color-secondary\">Your quiz result for</span> %s <span class=\"tutor-color-secondary\">of</span> %s <span class=\"tutor-color-secondary\">has been published.</span>"
+msgid "<span class=\"tutor-color-secondary\">Your quiz result for</span> %1$s <span class=\"tutor-color-secondary\">of</span> %2$s <span class=\"tutor-color-secondary\">has been published.</span>"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:359
+#: addons/tutor-notifications/classes/Notifications.php:353
 msgctxt "quiz-attempt-text"
 msgid "Your quiz result for"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:360
+#: addons/tutor-notifications/classes/Notifications.php:354
 msgctxt "quiz-attempt-text"
 msgid "of"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:361
+#: addons/tutor-notifications/classes/Notifications.php:355
 msgctxt "quiz-attempt-text"
 msgid "has been published."
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:411
+#: addons/tutor-notifications/classes/Notifications.php:405
 msgctxt "got-enrolled-text"
 msgid "Congratulations, you have been successfully enrolled in"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:455
+#: addons/tutor-notifications/classes/Notifications.php:452
 msgctxt "enrollment-cancelled-text"
-msgid "%s, <span class=\"tutor-color-secondary\">your enrollment request for</span> %s <span class=\"tutor-color-secondary\">has been declined.</span>"
+msgid "%1$s, <span class=\"tutor-color-secondary\">your enrollment request for</span> %2$s <span class=\"tutor-color-secondary\">has been declined.</span>"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:457
+#: addons/tutor-notifications/classes/Notifications.php:454
 msgctxt "enrollment-cancelled-text"
 msgid "your enrollment request for"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Notifications.php:458
+#: addons/tutor-notifications/classes/Notifications.php:455
 msgctxt "enrollment-cancelled-text"
 msgid "has been declined."
 msgstr ""
@@ -2961,143 +3065,148 @@ msgstr ""
 msgid "✕"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:61
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:62
 msgctxt "notification-panel"
 msgid "Notifications"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:62
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:63
 msgctxt "notification-panel"
 msgid "Mark as Read"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:63
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:64
 msgctxt "notification-panel"
 msgid "Mark as Unread"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:64
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:65
 msgctxt "notification-panel"
 msgid "No Notifications Yet"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:65
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:66
 msgctxt "notification-panel"
 msgid "Stay tuned! Information about your activity will show up here."
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:66
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:67
 msgctxt "notification-panel"
 msgid "a few seconds ago"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:67
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:68
 msgctxt "notification-panel"
 msgid "a minute ago"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:68
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:69
 msgctxt "notification-panel"
 msgid "minutes ago"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:69
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:70
 msgctxt "notification-panel"
 msgid "an hour ago"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:70
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:71
 msgctxt "notification-panel"
 msgid "hours ago"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:71
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:72
 msgctxt "notification-panel"
 msgid "months"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:97
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:102
 msgid "Notifications Settings"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:103
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:108
 msgid "Notifications for Students"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:104, addons/tutor-notifications/classes/Tutor_Notifications.php:181, addons/tutor-notifications/classes/Tutor_Notifications.php:209
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:109, addons/tutor-notifications/classes/Tutor_Notifications.php:186, addons/tutor-notifications/classes/Tutor_Notifications.php:214
 msgid "Notification Status"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:112, addons/tutor-notifications/classes/Tutor_Notifications.php:122, addons/tutor-notifications/classes/Tutor_Notifications.php:132, addons/tutor-notifications/classes/Tutor_Notifications.php:142, addons/tutor-notifications/classes/Tutor_Notifications.php:152, addons/tutor-notifications/classes/Tutor_Notifications.php:162, addons/tutor-notifications/classes/Tutor_Notifications.php:189, addons/tutor-notifications/classes/Tutor_Notifications.php:199, addons/tutor-notifications/classes/Tutor_Notifications.php:217
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:117, addons/tutor-notifications/classes/Tutor_Notifications.php:127, addons/tutor-notifications/classes/Tutor_Notifications.php:137, addons/tutor-notifications/classes/Tutor_Notifications.php:147, addons/tutor-notifications/classes/Tutor_Notifications.php:157, addons/tutor-notifications/classes/Tutor_Notifications.php:167, addons/tutor-notifications/classes/Tutor_Notifications.php:194, addons/tutor-notifications/classes/Tutor_Notifications.php:204, addons/tutor-notifications/classes/Tutor_Notifications.php:222
 msgid "On Site"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:113, addons/tutor-notifications/classes/Tutor_Notifications.php:123, addons/tutor-notifications/classes/Tutor_Notifications.php:133, addons/tutor-notifications/classes/Tutor_Notifications.php:143, addons/tutor-notifications/classes/Tutor_Notifications.php:153, addons/tutor-notifications/classes/Tutor_Notifications.php:163, addons/tutor-notifications/classes/Tutor_Notifications.php:172, addons/tutor-notifications/classes/Tutor_Notifications.php:190, addons/tutor-notifications/classes/Tutor_Notifications.php:200, addons/tutor-notifications/classes/Tutor_Notifications.php:218
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:118, addons/tutor-notifications/classes/Tutor_Notifications.php:128, addons/tutor-notifications/classes/Tutor_Notifications.php:138, addons/tutor-notifications/classes/Tutor_Notifications.php:148, addons/tutor-notifications/classes/Tutor_Notifications.php:158, addons/tutor-notifications/classes/Tutor_Notifications.php:168, addons/tutor-notifications/classes/Tutor_Notifications.php:177, addons/tutor-notifications/classes/Tutor_Notifications.php:195, addons/tutor-notifications/classes/Tutor_Notifications.php:205, addons/tutor-notifications/classes/Tutor_Notifications.php:223
 msgid "Push"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:115
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:120
 msgid "Notification when a student enrolls in a course."
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:118
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:123
 msgid "Cancel Enrollment"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:125
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:130
 msgid "Notification when a student's enrollment is cancelled."
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:135
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:140
 msgid "When an instructor grades a submitted assignment of the student."
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:145
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:150
 msgid "Notification for new announcements posted by the instructor."
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:155
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:160
 msgid "When someone answers one of the student’s Q&A."
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:158
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:163
 msgid "Feedback Submitted for Quiz Attempt"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:165
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:170
 msgid "Student receives feedback for a quiz attempt."
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:174
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:179
 msgid "An instructor/admin deletes a student from the enrollment list."
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:180
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:185
 msgid "Notifications for Instructors"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:192
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:197
 msgid "Submitted instructor registration application is accepted by the admin."
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:202
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:207
 msgid "Submitted instructor registration application is rejected by the admin."
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:207
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:212
 msgid "Admin Notification"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:208
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:213
 msgid "Notifications for Admin"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:220
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:225
 msgid "When you receive an application from someone wanting to register as an instructor"
 msgstr ""
 
-#: addons/tutor-notifications/classes/Tutor_Notifications.php:265
+#: addons/tutor-notifications/classes/Tutor_Notifications.php:270
 msgid "Send on-site notification to all students of this course."
+msgstr ""
+
+#. translators: The placeholder is a human_time_diff
+#: addons/tutor-notifications/classes/Utils.php:80
+msgid "%s ago"
 msgstr ""
 
 #: addons/tutor-prerequisites/classes/Prerequisites.php:56, addons/tutor-prerequisites/classes/Prerequisites.php:73
@@ -4056,10 +4165,6 @@ msgstr ""
 msgid "You are now enrolled in a course on %site_url% from Google Classroom %class_name%. Your validated credentials for %site_url% are attached below."
 msgstr ""
 
-#: addons/google-classroom/views/email/auto-registration-verification.php:33, addons/tutor-report/views/pages/overview.php:389, addons/tutor-report/views/pages/overview.php:442, addons/tutor-report/views/pages/students/student-table.php:34
-msgid "Email"
-msgstr ""
-
 #: addons/google-meet/includes/Assets/Enqueue.php:109
 msgid "Now"
 msgstr ""
@@ -4844,51 +4949,51 @@ msgstr ""
 msgid "If checked, any users/guest can view this lesson without enroll course"
 msgstr ""
 
-#: addons/tutor-email/views/pages/email-edit.php:70
+#: addons/tutor-email/views/pages/email-edit.php:71
 msgid "Send a Test Mail"
 msgstr ""
 
-#: addons/tutor-email/views/pages/email-edit.php:81
+#: addons/tutor-email/views/pages/email-edit.php:82
 msgid "Template Content"
 msgstr ""
 
-#: addons/tutor-email/views/pages/email-edit.php:96
+#: addons/tutor-email/views/pages/email-edit.php:97
 msgid "Subject"
 msgstr ""
 
-#: addons/tutor-email/views/pages/email-edit.php:98
+#: addons/tutor-email/views/pages/email-edit.php:99
 msgid "Edit the subject of your email"
 msgstr ""
 
-#: addons/tutor-email/views/pages/email-edit.php:101
+#: addons/tutor-email/views/pages/email-edit.php:102
 msgid "Add the Email Subject"
 msgstr ""
 
-#: addons/tutor-email/views/pages/email-edit.php:108
+#: addons/tutor-email/views/pages/email-edit.php:109
 msgid "Edit the Email Heading of your email"
 msgstr ""
 
-#: addons/tutor-email/views/pages/email-edit.php:111
+#: addons/tutor-email/views/pages/email-edit.php:112
 msgid "Add an Email Heading"
 msgstr ""
 
-#: addons/tutor-email/views/pages/email-edit.php:118
+#: addons/tutor-email/views/pages/email-edit.php:119
 msgid "Edit additional content of your email"
 msgstr ""
 
-#: addons/tutor-email/views/pages/email-edit.php:147
+#: addons/tutor-email/views/pages/email-edit.php:148
 msgid "Email Before Button"
 msgstr ""
 
-#: addons/tutor-email/views/pages/email-edit.php:149
+#: addons/tutor-email/views/pages/email-edit.php:150
 msgid "Add a CTA text to appear on top of your Action Button"
 msgstr ""
 
-#: addons/tutor-email/views/pages/email-edit.php:159
+#: addons/tutor-email/views/pages/email-edit.php:160
 msgid "Email Footer Text"
 msgstr ""
 
-#: addons/tutor-email/views/pages/email-edit.php:176
+#: addons/tutor-email/views/pages/email-edit.php:177
 msgid "Template Preview"
 msgstr ""
 
@@ -5250,10 +5355,6 @@ msgstr ""
 
 #: addons/tutor-zoom/views/template/contexts.php:10
 msgid "Host Mail"
-msgstr ""
-
-#: addons/tutor-zoom/views/template/meeting-editor.php:60
-msgid "Meeting Duration"
 msgstr ""
 
 #: addons/tutor-zoom/views/template/meeting-editor.php:85

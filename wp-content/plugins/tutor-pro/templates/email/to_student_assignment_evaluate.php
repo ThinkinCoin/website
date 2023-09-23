@@ -31,15 +31,15 @@ $bg_image_url = apply_filters( 'tutor_email_bg', TUTOR_EMAIL()->default_bg );
 				<?php endif; ?>>
 				<?php require TUTOR_PRO()->path . 'templates/email/email_heading_content.php'; ?>
 
-				<table class="tutor-email-datatable" width=100%"">
+				<table class="tutor-email-datatable" width="100%">
 					<tr>
-						<td>Your score:</td>
-						<td><strong>{assignment_score} out of {assignment_max_mark} Pass</strong></td>
+						<td><?php esc_html_e( 'Your score:', 'tutor-pro' ); ?></td>
+						<td><strong>{assignment_score}  <?php esc_html_e( 'out of', 'tutor-pro' ); ?> {assignment_max_mark}  <?php esc_html_e( 'Pass', 'tutor-pro' ); ?></strong></td>
 					</tr>
 				</table>
 
 				<div class="tutor-panel-block">
-					<p data-source="email-block-heading">Instructor Note</p>
+					<p data-source="email-block-heading"><?php esc_html_e( 'Instructor Note', 'tutor-pro' ); ?></p>
 					<p style="margin-bottom: 0;" data-source="email-block-content">{assignment_comment}</p>
 				</div>
 

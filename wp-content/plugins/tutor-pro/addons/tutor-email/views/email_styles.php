@@ -38,7 +38,7 @@
 .tutor-email-warning span {padding-top: 2px;}
 .tutor-email-buttons{margin: 0;}
 .tutor-email-buttons-flex {display: flex; align-items: center; justify-content: center;}
-.tutor-email-buttons a, .tutor-email-buttons-flex a{ display: inline-block;padding: 10px 40px;}
+.tutor-email-buttons a, .tutor-email-buttons-flex a{ display: inline-block;padding: 10px 40px;font-size: 15px;margin: 6px;}
 .tutor-email-buttons a {display: inline-flex;vertical-align: middle;}
 .tutor-email-buttons-flex a > * {display: inline-block;vertical-align: middle;}
 /* .tutor-email-buttons a span{padding-top: 5px;} */
@@ -103,6 +103,12 @@
 	line-height: 1.2;
 	font-size: 13px;
 }
+@media only screen and (min-width: 688px) and (max-width:992px) {
+	.tutor-email-buttons a, .tutor-email-buttons-flex a {display: inline-block;padding: 8px 18px;font-size: 12px;}
+}
+@media only screen and (max-width:688px) {
+	.tutor-email-buttons a, .tutor-email-buttons-flex a {display: inline-block;padding: 8px 16px;font-size: 10px;}
+}
 @media only screen and (max-width: 768px) {
 	.tutor-email-body{background-color: #fff;padding: 0;}
 	.tutor-email-wrapper{margin:0;max-width: 100%;}
@@ -119,7 +125,9 @@
 	.tutor-email-buttons-flex {flex-direction: column;}
 	.tutor-email-buttons-flex > a {margin-bottom: 10px;}
 	.tutor-email-buttons-flex > a:last-child {margin-bottom: 30px;}
+	.tutor-email-buttons a, .tutor-email-buttons-flex a {display: inline-block;padding: 8px 18px;font-size: 12px;}
 }
+
 .receipient_input{
 	width: 100% !important;
 	min-height: 48px;

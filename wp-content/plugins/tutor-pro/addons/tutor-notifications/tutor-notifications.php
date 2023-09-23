@@ -1,15 +1,12 @@
 <?php
 /**
- * Plugin Name: Tutor Notifications
- * Plugin URI: https://www.themeum.com/product/tutor-notifications
- * Description: Users will get sitewide notifications related to different tutor actions.
- * Author: Themeum
- * Version: 1.0.0
- * Author URI: http://themeum.com
- * Requires at least: 4.5
- * Tested up to: 5.8
- * Text Domain: tutor-notifications
- * Domain Path: /languages/
+ * Notifications related to different tutor actions.
+ *
+ * @package TutorPro\Addons
+ * @subpackage Notification
+ * @author Themeum <support@themeum.com>
+ * @link https://themeum.com
+ * @since 1.9.10
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -27,30 +24,30 @@ add_filter( 'tutor_addons_lists_config', 'tutor_notifications_config' );
 
 /**
  * Tutor notifications config
- * 
- * @param  array $config
- * 
- * @return array $config
+ *
+ * @param  array $config config.
+ *
+ * @return array config
  */
 function tutor_notifications_config( $config ) {
-	$newConfig = array(
+	$new_config = array(
 		'name'        => __( 'Notifications', 'tutor-pro' ),
 		'description' => __( 'Get notifications on frontend dashboard for specified tutor events.', 'tutor-pro' ),
 	);
 
-	$basicConfig = (array) tutor_notifications();
-	$newConfig   = array_merge( $newConfig, $basicConfig );
+	$basic_config = (array) tutor_notifications();
+	$new_config   = array_merge( $new_config, $basic_config );
 
-	$config[ plugin_basename( TUTOR_NOTIFICATIONS_FILE ) ] = $newConfig;
+	$config[ plugin_basename( TUTOR_NOTIFICATIONS_FILE ) ] = $new_config;
 	return $config;
 }
 
-/**
- * Tutor notifications
- * 
- * @return object $info
- */
 if ( ! function_exists( 'tutor_notifications' ) ) {
+	/**
+	 * Tutor notifications
+	 *
+	 * @return object $info
+	 */
 	function tutor_notifications() {
 		$info = array(
 			'path'         => plugin_dir_path( TUTOR_NOTIFICATIONS_FILE ),
@@ -64,7 +61,6 @@ if ( ! function_exists( 'tutor_notifications' ) ) {
 	}
 }
 
-// Include the init class for initialization.
-include 'classes/Init.php';
+require 'classes/Init.php';
 $tutor_notifications = new TUTOR_NOTIFICATIONS\Init();
-$tutor_notifications->run(); //Boom, lift off.
+$tutor_notifications->run();

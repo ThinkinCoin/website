@@ -5,7 +5,7 @@ Tags: lms, course, elearning, education, learning management system
 Requires at least: 5.3
 Tested up to: 6.3
 Requires PHP: 7.1
-Stable tag: 2.2.4
+Stable tag: 2.3.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -19,7 +19,7 @@ You can create challenging and fun quizzes, interactive lessons, powerful report
 
 👉 [Tutor LMS Pro](https://www.themeum.com/product/tutor-lms/)
 👉 [Tutor LMS Themes](https://www.themeum.com/wordpress-themes/) 
-👉 [Live Demo](https://demo.themeum.com/tutor/)
+👉 [Live Demo](https://demo.themeum.com/plugins/tutor/)
 👉 [Documentation](https://docs.themeum.com/tutor-lms/)
 
 You can also join our official private Facebook Group to become a part of the growing community.
@@ -315,6 +315,20 @@ These key integrations with Tutor LMS extend its capabilities for a more powerfu
 31. Mobile Responsive: Highly responsive UI designed for quality user experience
 
 == Changelog ==
+
+= 2.3.0 - September 20, 2023
+
+New: Secure your Tutor LMS site content with Hotlink protection
+New: Disable right-click for Tutor LMS site content to prevent copying
+New: Recommended YouTube videos will be hidden on Tutor Player
+New: Added course review pop-up when a course is automatically completed
+New: Course permalink base is now updatable
+Update: For live lessons, the “Mark as complete” button will only appear once the Zoom/Google Meet meeting has started.
+Update: Tutor LMS settings navigation bar is now sticky
+Fix: Resolved email formatting issues on Gmail and Outlook web versions
+Fix: Resolved the on-site notification system’s incorrect time issue
+Fix: Various translation related issues
+Fix: Resolved known security issues
 
 = 2.2.4 - August 28, 2023
 

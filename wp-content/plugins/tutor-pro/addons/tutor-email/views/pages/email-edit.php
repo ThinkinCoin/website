@@ -19,33 +19,34 @@ $email_back_url    = add_query_arg(
 		'page'     => 'tutor_settings',
 		'tab_page' => 'email_notification',
 	),
-	admin_url('admin.php')
+	admin_url( 'admin.php' )
 );
-$arrow_left        = esc_url(TUTOR_EMAIL()->url . 'assets/images/arrow-left.svg');
-$get_request       = isset($_GET) ? $_GET : null;
+$arrow_left        = esc_url( TUTOR_EMAIL()->url . 'assets/images/arrow-left.svg' );
+$get_request       = isset( $_GET ) ? $_GET : null;
 $recipient         = $active_tab_data['edit_email_data'];
 $recipient_data    = $recipient['mail'];
 $email_template    = $recipient_data['template'];
 $field_key         = $get_request['to'] . '.' . $get_request['edit'];
 $field_name        = "tutor_option[{$get_request['to']}][{$get_request['edit']}]";
-$email_option_data = $this->get($field_key, 'off');
-$option_data       = isset(get_option('email_template_data')[$get_request['to']][$get_request['edit']]) ? get_option('email_template_data')[$get_request['to']][$get_request['edit']] : null;
+$email_option_data = $this->get( $field_key, 'off' );
+$option_data       = isset( get_option( 'email_template_data' )[ $get_request['to'] ][ $get_request['edit'] ] ) ? get_option( 'email_template_data' )[ $get_request['to'] ][ $get_request['edit'] ] : null;
 
-$label             = isset($option_data['label']) ? $option_data['label'] : null;
-$subject           = isset($option_data['subject']) ? $option_data['subject'] : null;
-$heading           = isset($option_data['heading']) ? $option_data['heading'] : null;
-$message           = isset($option_data['message']) ? $option_data['message'] : null;
-$before_button     = isset($option_data['before_button']) ? $option_data['before_button'] : null;
-$footer            = isset($option_data['footer_text']) ? $option_data['footer_text'] : null;
-$block_heading     = isset($option_data['block_heading']) ? $option_data['block_heading'] : null;
-$block_content     = isset($option_data['block_content']) ? $option_data['block_content'] : null;
+$label         = isset( $option_data['label'] ) ? $option_data['label'] : null;
+$subject       = isset( $option_data['subject'] ) ? $option_data['subject'] : null;
+$heading       = isset( $option_data['heading'] ) ? $option_data['heading'] : null;
+$message       = isset( $option_data['message'] ) ? $option_data['message'] : null;
+$before_button = isset( $option_data['before_button'] ) ? $option_data['before_button'] : null;
+$footer        = isset( $option_data['footer_text'] ) ? $option_data['footer_text'] : null;
+$block_heading = isset( $option_data['block_heading'] ) ? $option_data['block_heading'] : null;
+$block_content = isset( $option_data['block_content'] ) ? $option_data['block_content'] : null;
+
 
 ?>
 <section class="tutor-backend-settings-page email-manage-page" style="margin-left: -20px;">
 	<header class="header-wrapper tutor-px-32 tutor-py-24">
 		<div class="tutor-mb-16">
-			<a href="<?php echo esc_url($email_back_url); ?>" class="prev-page">
-				<img src="<?php echo esc_url($arrow_left); ?>" alt="arrow-left">
+			<a href="<?php echo esc_url( $email_back_url ); ?>" class="prev-page">
+				<img src="<?php echo esc_url( $arrow_left ); ?>" alt="arrow-left">
 				<span class="tutor-fs-7 tutor-pl-2">Back</span>
 			</a>
 		</div>
@@ -105,7 +106,7 @@ $block_content     = isset($option_data['block_content']) ? $option_data['block_
 						<label class="tutor-form-label tutor-d-flex tutor-align-center">
 							<span>Email heading </span>
 							<div class="tooltip-wrap tooltip-icon">
-								<span class="tooltip-txt tooltip-right"><?php _e('Edit the Email Heading of your email', 'tutor-pro'); ?></span>
+								<span class="tooltip-txt tooltip-right"><?php esc_html_e( 'Edit the Email Heading of your email', 'tutor-pro' ); ?></span>
 							</div>
 						</label>
 						<input type="text" name="email-heading" class="tutor-form-control" placeholder="<?php _e('Add an Email Heading', 'tutor-pro'); ?>" value="<?php echo esc_html($heading); ?>" required>

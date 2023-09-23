@@ -45,11 +45,16 @@ $bg_image_url = apply_filters( 'tutor_email_bg', TUTOR_EMAIL()->default_bg );
 				<div data-source="email-before-button" class="tutor-email-before-button tutor-h-center email-mb-30">{before_button}</div>
 
 				<div class="tutor-email-buttons-flex tutor-h-center">
-					<a target="_blank" class="tutor-email-button" href="{course_url}" data-source="email-btn-url">
-						<img src="<?php echo esc_url( TUTOR_EMAIL()->url . 'assets/images/star.png' ); ?>" alt="star">
-						<span><?php esc_html_e( 'Rate This Course', 'tutor-pro' ); ?></span>
-					</a>
 					<?php
+					if ( get_tutor_option( 'enable_course_review' ) ) {
+						?>
+							<a target="_blank" class="tutor-email-button" href="{course_url}" data-source="email-btn-url">
+								<img src="<?php echo esc_url( TUTOR_EMAIL()->url . 'assets/images/star.png' ); ?>" alt="star">
+								<span><?php esc_html_e( 'Rate This Course', 'tutor-pro' ); ?></span>
+							</a>
+							<?php
+					}
+
 					if ( isset( $course_id ) ) {
 						$certificate_template = get_post_meta( $course_id, 'tutor_course_certificate_template', true );
 						if ( 'none' !== $certificate_template && ! empty( $certificate_url ) ) {

@@ -86,10 +86,11 @@ class Enrollment_Expiry {
 		}
 
 		$args['general']['fields']['_tutor_course_settings[enrollment_expiry]'] = array(
-			'type'  => 'number',
-			'label' => __( 'Enrollment Expiration', 'tutor-pro' ),
-			'value' => (int) tutor_utils()->get_course_settings( get_the_ID(), 'enrollment_expiry', 0 ),
-			'desc'  => __( 'Student\'s enrollment will be removed after this number of days. Set 0 for lifetime enrollment.', 'tutor-pro' ),
+			'type'        => 'number',
+			'number_type' => 'integer',
+			'label'       => __( 'Enrollment Expiration', 'tutor-pro' ),
+			'value'       => (int) tutor_utils()->get_course_settings( get_the_ID(), 'enrollment_expiry', 0 ),
+			'desc'        => __( 'Student\'s enrollment will be removed after this number of days. Set 0 for lifetime enrollment.', 'tutor-pro' ),
 		);
 
 		return $args;

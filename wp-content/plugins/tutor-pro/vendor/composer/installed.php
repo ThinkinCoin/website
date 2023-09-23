@@ -7,7 +7,7 @@
         'aliases' => array(
             0 => '2.x-dev',
         ),
-        'reference' => '9750f152c0e8e68249fb54e5181649a36ed13538',
+        'reference' => '2980663abae9d39135710acef35082398bbb9637',
         'name' => 'tutor-pro/dependencies',
         'dev' => false,
     ),
@@ -209,7 +209,7 @@
             'aliases' => array(
                 0 => '2.x-dev',
             ),
-            'reference' => '9750f152c0e8e68249fb54e5181649a36ed13538',
+            'reference' => '2980663abae9d39135710acef35082398bbb9637',
             'dev_requirement' => false,
         ),
         'web-token/jwt-core' => array(

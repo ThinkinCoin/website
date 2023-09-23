@@ -1,6 +1,6 @@
 <?php
 /**
- * E-mail addon init
+ * E-mail addon init.
  *
  * @package TutorPro\Addon
  * @subpackage Email
@@ -253,9 +253,9 @@ class Init {
 		//phpcs:enable
 
 		$attr['email_notification'] = array(
-			'label'           => __( 'Email', 'tutor' ),
+			'label'           => __( 'Email', 'tutor-pro' ),
 			'slug'            => 'email_notification',
-			'desc'            => __( 'Email Settings', 'tutor' ),
+			'desc'            => __( 'Email Settings', 'tutor-pro' ),
 			'template'        => 'basic',
 			'icon'            => 'tutor-icon-envelope',
 			'template_path'   => $template_path,
@@ -269,7 +269,7 @@ class Init {
 						array(
 							'key'   => 'tutor_email_template_logo_id',
 							'type'  => 'upload_full',
-							'label' => __( 'Email Template Logo', 'tutor' ),
+							'label' => __( 'Email Template Logo', 'tutor-pro' ),
 							'desc'  => array(
 								'file_size'    => __( '100x36 pixels, Max height: 50px;', 'tutor-pro' ),
 								'file_support' => __( 'jpg, .jpeg or .png.', 'tutor-pro' ),
@@ -278,16 +278,16 @@ class Init {
 						array(
 							'key'     => 'email_logo_height',
 							'type'    => 'number',
-							'label'   => __( 'Email Logo Height', 'tutor' ),
+							'label'   => __( 'Email Logo Height', 'tutor-pro' ),
 							'default' => 30,
-							'desc'    => __( 'Set the height of your email logo in pixels', 'tutor' ),
+							'desc'    => __( 'Set the height of your email logo in pixels', 'tutor-pro' ),
 						),
 						array(
 							'key'     => 'email_disable_banner',
 							'type'    => 'toggle_switch',
-							'label'   => __( 'Disable Email Banner', 'tutor' ),
+							'label'   => __( 'Disable Email Banner', 'tutor-pro' ),
 							'default' => 'off',
-							'desc'    => __( 'Enable to hide email banner', 'tutor' ),
+							'desc'    => __( 'Enable to hide email banner', 'tutor-pro' ),
 						),
 						array(
 							'key'   => 'email_template_bg',
@@ -301,27 +301,27 @@ class Init {
 						array(
 							'key'         => 'email_from_name',
 							'type'        => 'text',
-							'label'       => __( 'Name', 'tutor' ),
-							'placeholder' => __( 'Sener\'s Name', 'tutor' ),
+							'label'       => __( 'Name', 'tutor-pro' ),
+							'placeholder' => __( 'Sender\'s Name', 'tutor-pro' ),
 							'default'     => get_option( 'blogname' ),
-							'desc'        => __( 'The name under which all the emails will be sent', 'tutor' ),
+							'desc'        => __( 'The name under which all the emails will be sent', 'tutor-pro' ),
 						),
 						array(
 							'key'         => 'email_from_address',
 							'type'        => 'email',
-							'label'       => __( 'E-Mail Address', 'tutor' ),
-							'placeholder' => __( 'Reply to E-Mail', 'tutor' ),
+							'label'       => __( 'E-Mail Address', 'tutor-pro' ),
+							'placeholder' => __( 'Reply to E-Mail', 'tutor-pro' ),
 							'default'     => wp_get_current_user()->user_email,
-							'desc'        => __( 'The E-Mail address from which all emails will be sent', 'tutor' ),
+							'desc'        => __( 'The E-Mail address from which all emails will be sent', 'tutor-pro' ),
 						),
 						array(
 							'key'         => 'email_footer_text',
 							'type'        => 'editor_full',
-							'label'       => __( 'E-Mail Footer Text', 'tutor' ),
-							'placeholder' => __( 'Footer text for E-mail', 'tutor' ),
-							'default'     => '<p style="text-align:center;color:#757C8E;">{site_name} © ' . __( '2022 All Rights Reserved', 'tutor' ) . '.</p>
-							<p style="text-align:center;color:#41454F;padding-bottom:30px;"><a style="text-decoration: none;color: inherit;" href="#">' . __( 'Privacy & Policy', 'tutor' ) . '</a> <span>⋅</span> <a style="text-decoration: none;color: inherit;" href="#">' . __( 'Terms & Conditions', 'tutor' ) . '</a></p>',
-							'desc'        => __( 'The text to appear in E-Mail template footer', 'tutor' ),
+							'label'       => __( 'E-Mail Footer Text', 'tutor-pro' ),
+							'placeholder' => __( 'Footer text for E-mail', 'tutor-pro' ),
+							'default'     => '<p style="text-align:center;color:#757C8E;">{site_name} © ' . __( '2022 All Rights Reserved', 'tutor-pro' ) . '.</p>
+							<p style="text-align:center;color:#41454F;padding-bottom:30px;"><a style="text-decoration: none;color: inherit;" href="#">' . __( 'Privacy & Policy', 'tutor-pro' ) . '</a> <span>⋅</span> <a style="text-decoration: none;color: inherit;" href="#">' . __( 'Terms & Conditions', 'tutor-pro' ) . '</a></p>',
+							'desc'        => __( 'The text to appear in E-Mail template footer', 'tutor-pro' ),
 						),
 					),
 				),
@@ -363,11 +363,12 @@ class Init {
 							'desc'    => __( 'Add the frequency mode in <strong>Second(s)</strong> which the Cron Setup will run', 'tutor-pro' ),
 						),
 						array(
-							'key'     => 'tutor_bulk_email_limit',
-							'label'   => __( 'Email Per Cron Execution', 'tutor-pro' ),
-							'type'    => 'number',
-							'default' => '10',
-							'desc'    => __( 'Number of emails you\'d like to send per cron execution', 'tutor-pro' ),
+							'key'         => 'tutor_bulk_email_limit',
+							'label'       => __( 'Email Per Cron Execution', 'tutor-pro' ),
+							'type'        => 'number',
+							'number_type' => 'integer',
+							'default'     => '10',
+							'desc'        => __( 'Number of emails you\'d like to send per cron execution', 'tutor-pro' ),
 						),
 					),
 				),

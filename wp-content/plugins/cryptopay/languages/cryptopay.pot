@@ -1,0 +1,1003 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: CryptoPay\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-15 15:19+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.3.1\n"
+"X-Domain: cryptopay"
+
+#: app/Lang.php:58
+msgid ""
+"A transaction was caught, but execution aborted due to an error on Websocket."
+" Please specify a supported Websocket address."
+msgstr ""
+
+#: app/Settings.php:105
+msgid "Accept subscription payments (Via manual renewal)"
+msgstr ""
+
+#: app/EvmBased.php:351 app/EvmBased.php:807 app/EvmBased.php:825
+#: app/EvmBased.php:865
+msgid "Active/Passive"
+msgstr ""
+
+#: app/EvmBased.php:443 app/EvmBased.php:846 app/Settings.php:226
+#: app/Settings.php:274
+msgid "Add new"
+msgstr ""
+
+#: app/EvmBased.php:442
+msgid "Add the blockchain networks you accept to receive payments."
+msgstr ""
+
+#. Description of the plugin
+msgid "All In One Cryptocurrency Payments for WordPress"
+msgstr ""
+
+#: app/Pages/TransactionPage.php:115
+msgid "Amount"
+msgstr ""
+
+#: app/Lang.php:23
+msgid "Amount to be paid:"
+msgstr ""
+
+#: views/feedback.php:12
+msgid "An error occurred while sending your feedback."
+msgstr ""
+
+#: app/Lang.php:45
+msgid ""
+"An unexpected error has occurred, please try again or contact the site "
+"administrator."
+msgstr ""
+
+#: app/Settings.php:215
+msgid "Auto price update (Min)"
+msgstr ""
+
+#: app/Settings.php:71
+msgid "Backend confirmation"
+msgstr ""
+
+#: app/Settings.php:303 app/Settings.php:308
+msgid "Backup"
+msgstr ""
+
+#: app/EvmBased.php:786
+msgid ""
+"Because the default RPC addresses of blockchain networks are public and used "
+"by everyone. Sometimes they can restrict you so some times you need a "
+"special RPC address."
+msgstr ""
+
+#. Author of the plugin
+msgid "BeycanPress"
+msgstr ""
+
+#: app/EvmBased.php:415
+msgid ""
+"Binance Wallet is only available on (BNB Smart Chain and Ethereum Mainnet)."
+msgstr ""
+
+#: app/EvmBased.php:384
+msgid "Block confirmation count"
+msgstr ""
+
+#: views/woocommerce/details.php:8
+msgid "Blockchain Network"
+msgstr ""
+
+#: app/Settings.php:209
+msgid "Buy custom converters"
+msgstr ""
+
+#: app/EvmBased.php:796
+msgid "Chain ID"
+msgstr ""
+
+#: app/EvmBased.php:753
+msgid "Chain ID cannot be empty."
+msgstr ""
+
+#: app/Lang.php:60
+msgid "Change"
+msgstr ""
+
+#: app/Lang.php:61
+msgid "Change network"
+msgstr ""
+
+#: app/Lang.php:48
+msgid "Checking form data! Please wait..."
+msgstr ""
+
+#: app/Settings.php:116
+msgid "Checkout"
+msgstr ""
+
+#: views/woocommerce/pending.php:1
+msgid "click to pay"
+msgstr ""
+
+#: app/Settings.php:128
+msgid "Completed"
+msgstr ""
+
+#: app/Lang.php:21
+msgid "Connection error!"
+msgstr ""
+
+#: app/Lang.php:36
+msgid "Connection rejected!"
+msgstr ""
+
+#: app/Lang.php:46
+msgid "Continue payment process"
+msgstr ""
+
+#: app/EvmBased.php:854
+msgid "Contract address"
+msgstr ""
+
+#: app/Settings.php:294
+msgid "Converter API"
+msgstr ""
+
+#: app/Pages/TransactionPage.php:118
+msgid "Created at"
+msgstr ""
+
+#: app/Settings.php:268 app/Settings.php:280
+msgid "Cryptocurrency symbol or fiat money symbol (ISO Code)"
+msgstr ""
+
+#. Name of the plugin
+#: app/Pages/HomePage.php:37 app/Pages/HomePage.php:45
+#: app/WooCommerce/Gateway.php:17 app/WooCommerce/Gateway.php:78
+#: views/pages/home-page/index.php:3
+msgid "CryptoPay"
+msgstr ""
+
+#: app/Pages/HomePage.php:37
+msgid "CryptoPay new products"
+msgstr ""
+
+#: views/woocommerce/details.php:4
+msgid "CryptoPay Payment details"
+msgstr ""
+
+#: views/details.php:3
+msgid "CryptoPay payment details"
+msgstr ""
+
+#: app/Settings.php:108
+msgid ""
+"CryptoPay will work directly if manual payments are enabled in the "
+"subscription setting. You can enable this setting for CryptoPay to work when "
+"this setting is off."
+msgstr ""
+
+#: app/EvmBased.php:845
+msgid "Currencies"
+msgstr ""
+
+#: app/EvmBased.php:765
+msgid "Currency contract address cannot be empty."
+msgstr ""
+
+#: app/EvmBased.php:767
+msgid "Currency contract address must consist of 42 characters."
+msgstr ""
+
+#: app/Settings.php:202
+msgid "Currency converter"
+msgstr ""
+
+#: app/Settings.php:256
+msgid "Currency price cannot be empty."
+msgstr ""
+
+#: app/EvmBased.php:763 app/Settings.php:254
+msgid "Currency symbol cannot be empty."
+msgstr ""
+
+#: app/Settings.php:225
+msgid "Custom prices"
+msgstr ""
+
+#: app/WooCommerce/Checkout.php:59 app/WooCommerce/Gateway.php:149
+msgid "Customer has chosen CryptoPay payment method, payment is pending."
+msgstr ""
+
+#: app/Settings.php:83
+msgid "Dark"
+msgstr ""
+
+#: app/Settings.php:49
+msgid "Data deletion status"
+msgstr ""
+
+#: views/pages/debug-logs.php:3
+msgid "Debug logs"
+msgstr ""
+
+#: app/Settings.php:56
+msgid "Debugging"
+msgstr ""
+
+#: app/EvmBased.php:838
+msgid "Decimals"
+msgstr ""
+
+#: app/Settings.php:82
+msgid "Default"
+msgstr ""
+
+#: app/Pages/TransactionPage.php:119 app/Pages/TransactionPage.php:155
+msgid "Delete"
+msgstr ""
+
+#: views/pages/debug-logs.php:10
+msgid "Delete old logs"
+msgstr ""
+
+#: app/WooCommerce/Gateway.php:81
+msgid "Description"
+msgstr ""
+
+#: app/Lang.php:54
+msgid "Detected"
+msgstr ""
+
+#: app/Lang.php:55
+msgid "Download"
+msgstr ""
+
+#: app/WooCommerce/Gateway.php:70
+msgid "Enable"
+msgstr ""
+
+#: app/WooCommerce/Gateway.php:69
+msgid "Enable/Disable"
+msgstr ""
+
+#: app/Api.php:382
+msgid "Endpoint not found!"
+msgstr ""
+
+#: app/EvmBased.php:357
+msgid "ENS Domain"
+msgstr ""
+
+#: app/EvmBased.php:359
+msgid "ENS Domain just can working on the Ethereum"
+msgstr ""
+
+#: app/Lang.php:62
+msgid "ENS Domain: "
+msgstr ""
+
+#: app/Lang.php:47
+msgid "Error processing checkout. Please try again."
+msgstr ""
+
+#: app/EvmBased.php:346
+msgid "EVM Based settings"
+msgstr ""
+
+#: app/EvmBased.php:801
+msgid "Explorer URL"
+msgstr ""
+
+#: app/EvmBased.php:755
+msgid "Explorer URL cannot be empty."
+msgstr ""
+
+#: views/pages/transaction-page/form.php:16
+msgid "Failed"
+msgstr ""
+
+#: app/Lang.php:44
+msgid ""
+"Failed to match network with corresponding payout wallet. Please notify the "
+"site administrator of the situation."
+msgstr ""
+
+#: app/Settings.php:371 app/Settings.php:372 views/feedback.php:3
+msgid "Feedback"
+msgstr ""
+
+#: views/pages/transaction-page/form.php:35
+msgid "Filter"
+msgstr ""
+
+#: views/pages/transaction-page/form.php:27
+msgid "Filter by network"
+msgstr ""
+
+#: views/pages/transaction-page/form.php:11
+msgid "Filter by status"
+msgstr ""
+
+#: app/Settings.php:44
+msgid "General settings"
+msgstr ""
+
+#: app/Settings.php:228
+msgid "Get more info"
+msgstr ""
+
+#: app/EvmBased.php:827
+msgid "Get paid in native currency?"
+msgstr ""
+
+#: app/EvmBased.php:809
+msgid "Get paid in this network?"
+msgstr ""
+
+#: app/Pages/TransactionPage.php:111
+msgid "Hash"
+msgstr ""
+
+#: views/feedback.php:16
+msgid ""
+"Here you can let us know about the features that would be beneficial to "
+"everyone if added to the plugin."
+msgstr ""
+
+#: app/Pages/HomePage.php:46
+msgid "Home"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://beycanpress.com"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://beycanpress.com/cryptopay"
+msgstr ""
+
+#: app/EvmBased.php:360
+msgid ""
+"If you have an ENS domain, you can enter it here. It will only be shown for "
+"QR payments on the Ethereum network."
+msgstr ""
+
+#: app/Settings.php:74
+msgid ""
+"If you open this break, let's assume that the user left the page during the "
+"payment, his internet was lost or his computer was shut down. When this "
+"setting is on, when the user comes back to the site and looks at their "
+"orders, the payment status of the order is checked while the order page is "
+"loaded, and if the transaction is successful, the order is confirmed. It "
+"also happens when an admin enters the Order transaction page."
+msgstr ""
+
+#: app/EvmBased.php:792
+msgid ""
+"If you want to enable QR payments on this network, please provide a "
+"Websocket URL."
+msgstr ""
+
+#: app/Settings.php:228
+msgid ""
+"If your currency is not available in the current API. You can define a "
+"special value for it."
+msgstr ""
+
+#: app/EvmBased.php:813 app/EvmBased.php:859
+msgid "Image"
+msgstr ""
+
+#: IonCube/Loader.php:37
+msgid ""
+"In order to use the \"CryptoPay\" Plugin, please enter your license "
+"(purchase) code in the license field in the settings section."
+msgstr ""
+
+#: app/Lang.php:32
+msgid "Insufficient balance!"
+msgstr ""
+
+#: app/Settings.php:107
+msgid ""
+"It is possible to receive automatic payments in cryptocurrencies in various "
+"ways, but automatic payments will not be introduced because malicious "
+"customers can use this situation to steal the customer's funds."
+msgstr ""
+
+#: app/Lang.php:26
+msgid "Loading..."
+msgstr ""
+
+#: views/pages/debug-logs.php:16
+msgid "Logs not found!"
+msgstr ""
+
+#: app/EvmBased.php:434
+msgid "Mainnet info"
+msgstr ""
+
+#: app/Api.php:238 app/Api.php:331 app/Api.php:371
+msgid "Model not found!"
+msgstr ""
+
+#: app/Lang.php:52
+msgid "Moralis API key not set! Please contact the site administrator."
+msgstr ""
+
+#: views/details.php:8
+msgid "Name: "
+msgstr ""
+
+#: app/EvmBased.php:821
+msgid "Native currency"
+msgstr ""
+
+#: app/EvmBased.php:759
+msgid "Native currency Decimals cannot be empty."
+msgstr ""
+
+#: app/EvmBased.php:757
+msgid "Native currency symbol cannot be empty."
+msgstr ""
+
+#: app/Pages/TransactionPage.php:114
+msgid "Network"
+msgstr ""
+
+#: app/EvmBased.php:778
+msgid "Network name"
+msgstr ""
+
+#: app/EvmBased.php:749
+msgid "Network name cannot be empty."
+msgstr ""
+
+#: app/EvmBased.php:783
+msgid "Network RPC URL"
+msgstr ""
+
+#: app/EvmBased.php:751
+msgid "Network RPC URL cannot be empty."
+msgstr ""
+
+#: app/Settings.php:91
+msgid "Network sorting"
+msgstr ""
+
+#: app/EvmBased.php:440
+msgid "Networks"
+msgstr ""
+
+#: views/pages/home-page/product.php:3
+msgid "New"
+msgstr ""
+
+#: app/Lang.php:63
+msgid ""
+"No active currencies were found on this network. Please report this to the "
+"administrator."
+msgstr ""
+
+#: app/Settings.php:92
+msgid "No active networks found!"
+msgstr ""
+
+#: app/Services.php:78
+msgid "No network is active, please activate at least one network!"
+msgstr ""
+
+#: app/Lang.php:40
+msgid ""
+"No working wallet or qr payment service was found on this network. Please "
+"make sure you have a {networkName} wallet working on the browser or contact "
+"the administrator regarding the situation."
+msgstr ""
+
+#: app/Lang.php:56
+msgid "Open In App"
+msgstr ""
+
+#: app/Lang.php:16
+msgid "Open in explorer"
+msgstr ""
+
+#: app/Lang.php:33
+msgid "Open wallet"
+msgstr ""
+
+#: app/Lang.php:12
+msgid "Order amount:"
+msgstr ""
+
+#: app/WooCommerce/Gateway.php:87
+msgid "Order button text"
+msgstr ""
+
+#: app/Pages/TransactionPage.php:112
+msgid "Order ID"
+msgstr ""
+
+#: app/Lang.php:11
+msgid "Order ID:"
+msgstr ""
+
+#: app/Settings.php:117
+msgid "Order pay"
+msgstr ""
+
+#: app/WooCommerce/Register.php:41
+msgid "Order transactions"
+msgstr ""
+
+#: app/WooCommerce/Gateway.php:89
+msgid "Pay button on the checkout page"
+msgstr ""
+
+#: app/Lang.php:51
+msgid "Pay by transfer to address (QR Code)"
+msgstr ""
+
+#: app/Lang.php:24
+msgid "Pay now"
+msgstr ""
+
+#: app/Lang.php:25
+msgid "Pay with {name}"
+msgstr ""
+
+#: app/Lang.php:34
+msgid "Payment address:"
+msgstr ""
+
+#: app/Settings.php:124
+msgid "Payment complete order status"
+msgstr ""
+
+#: app/Api.php:314
+msgid "Payment completed successfully"
+msgstr ""
+
+#: app/Lang.php:22
+msgid "Payment currency:"
+msgstr ""
+
+#: app/Lang.php:49
+msgid ""
+"Payment has been received, but there are mandatory fields in the payment "
+"form. Please click the \"Continue payment process\" button after completing "
+"them."
+msgstr ""
+
+#: app/WooCommerce/Gateway.php:147
+msgid "Payment is awaited."
+msgstr ""
+
+#: app/Api.php:324
+msgid "Payment not verified via Blockchain"
+msgstr ""
+
+#: app/WooCommerce/Register.php:230
+msgid "Payment not verified via Blockchain!"
+msgstr ""
+
+#: views/woocommerce/details.php:12
+msgid "Payment Price"
+msgstr ""
+
+#: app/Settings.php:80
+msgid "Payment process theme"
+msgstr ""
+
+#: app/Settings.php:113
+msgid "Payment receiving area"
+msgstr ""
+
+#: app/Lang.php:28
+msgid "Payment rejected!"
+msgstr ""
+
+#: app/Lang.php:35
+msgid "Payment timed out!"
+msgstr ""
+
+#: views/pages/transaction-page/form.php:19
+msgid "Pending"
+msgstr ""
+
+#: app/EvmBased.php:422
+msgid ""
+"Phantom is only available on Ethereum (Currently only supports mainnet)."
+msgstr ""
+
+#: app/Api.php:200 app/Api.php:261
+msgid "Please enter a valid data."
+msgstr ""
+
+#: app/Lang.php:31
+msgid "Please try again!"
+msgstr ""
+
+#: app/Lang.php:19
+msgid ""
+"Please try to connect again by selecting network {networkName} from your "
+"wallet!"
+msgstr ""
+
+#: app/Lang.php:37
+msgid "Please wait..."
+msgstr ""
+
+#: views/feedback.php:18
+msgid "Please write your feedback here."
+msgstr ""
+
+#: app/Settings.php:283
+msgid "Price"
+msgstr ""
+
+#: views/details.php:16
+msgid "Price: "
+msgstr ""
+
+#: app/Settings.php:273
+msgid "Prices"
+msgstr ""
+
+#: app/WooCommerce/Gateway.php:90
+msgid "Proceed to CryptoPay"
+msgstr ""
+
+#: app/Settings.php:129
+msgid "Processing"
+msgstr ""
+
+#: app/Lang.php:53
+msgid "QR Code"
+msgstr ""
+
+#: app/Api.php:303
+msgid "Redirect links cannot finded!"
+msgstr ""
+
+#: views/pages/transaction-page/form.php:22
+msgid "Refunded"
+msgstr ""
+
+#: views/pages/transaction-page/form.php:36
+msgid "Reset"
+msgstr ""
+
+#: app/Lang.php:43
+msgid ""
+"RPC Address refused to connect (This is not an error!). Blockchain networks "
+"main RCP API addresses are public, so it can restrict you, in which case you "
+"need to get a unique RPC API address from any provider as stated in the "
+"documentation. Please report the situation to the site administrator."
+msgstr ""
+
+#: app/Pages/TransactionPage.php:126
+msgid "Search..."
+msgstr ""
+
+#: app/Lang.php:10
+msgid "Select network"
+msgstr ""
+
+#: app/Lang.php:18
+msgid "Select wallet"
+msgstr ""
+
+#: app/Lang.php:13
+msgid "Selected network:"
+msgstr ""
+
+#: views/feedback.php:19
+msgid "Send feedback"
+msgstr ""
+
+#: app/Settings.php:27
+msgid "Settings"
+msgstr ""
+
+#: app/EvmBased.php:395
+msgid "Specify the wallets you want to accept payments from."
+msgstr ""
+
+#: app/Pages/TransactionPage.php:116
+msgid "Status"
+msgstr ""
+
+#: views/details.php:24
+msgid "Status: "
+msgstr ""
+
+#: app/Pages/TransactionPage.php:94
+msgid "Successfully deleted!"
+msgstr ""
+
+#: app/EvmBased.php:833 app/EvmBased.php:849 app/Settings.php:265
+#: app/Settings.php:277
+msgid "Symbol"
+msgstr ""
+
+#: app/Settings.php:248
+msgid "Symbol cannot be empty."
+msgstr ""
+
+#: app/Settings.php:64
+msgid "Testnet"
+msgstr ""
+
+#: app/EvmBased.php:369
+msgid ""
+"The account address to which the payments will be transferred. (BEP20, ERC20,"
+" MetaMask, Trust Wallet, Binance Wallet )"
+msgstr ""
+
+#: app/Settings.php:59
+msgid ""
+"The Debug menu will appear when this setting is turned on and the log file "
+"is created."
+msgstr ""
+
+#: app/Settings.php:216
+msgid ""
+"The setting where you specify how long the price will be updated after the "
+"network and cryptocurrency has been selected."
+msgstr ""
+
+#: app/Settings.php:126
+msgid "The status to apply for WooCommerce order after payment is complete."
+msgstr ""
+
+#: app/Settings.php:78
+msgid "Theme"
+msgstr ""
+
+#: app/Lang.php:41
+msgid ""
+"There is currently a process on the wallet. Please try again after "
+"completing the relevant process."
+msgstr ""
+
+#: app/Api.php:157 app/Api.php:352 app/Lang.php:38 app/Services.php:157
+msgid ""
+"There was a problem converting currency! Make sure your currency value is "
+"available in the relevant API or you define a custom value for your currency."
+msgstr ""
+
+#: app/Api.php:168 app/Services.php:173
+msgid ""
+"There was a problem getting wallet address! Please make sure you enter a "
+"wallet (receiving) address!"
+msgstr ""
+
+#: app/WooCommerce/Gateway.php:83
+msgid "This controls the description which the user sees during checkout."
+msgstr ""
+
+#: app/WooCommerce/Gateway.php:77
+msgid "This controls the title which the user sees during checkout."
+msgstr ""
+
+#: app/Settings.php:60
+msgid ""
+"This setting has been added for the developer team rather than the users. If "
+"you open a support ticket to us due to a bug, we will use this setting to "
+"check the plugin progress."
+msgstr ""
+
+#: app/Settings.php:52
+msgid ""
+"This setting is passive come by default. You enable this setting. All data "
+"created by the plug-in will be deleted while removing the plug-in."
+msgstr ""
+
+#: app/WooCommerce/Gateway.php:75
+msgid "Title"
+msgstr ""
+
+#: app/Lang.php:50
+msgid "Token metadata not found!"
+msgstr ""
+
+#: app/Api.php:213
+msgid "Transaction already exists!"
+msgstr ""
+
+#: app/Lang.php:30
+msgid "Transaction create fail!"
+msgstr ""
+
+#: views/woocommerce/details.php:16
+msgid "Transaction Hash"
+msgstr ""
+
+#: views/details.php:34
+msgid "Transaction hash: "
+msgstr ""
+
+#: views/pages/transaction-page/index.php:3
+msgid "Transaction list"
+msgstr ""
+
+#: app/Api.php:273
+msgid "Transaction record not found!"
+msgstr ""
+
+#: app/Lang.php:39
+msgid "Transaction sent"
+msgstr ""
+
+#: app/Lang.php:29
+msgid "Transfer amount need to be bigger from zero!"
+msgstr ""
+
+#: app/EvmBased.php:408
+msgid "Trust Wallet is only available on mainnets."
+msgstr ""
+
+#: app/Pages/TransactionPage.php:117
+msgid "Updated at"
+msgstr ""
+
+#: app/Pages/TransactionPage.php:113
+msgid "User ID"
+msgstr ""
+
+#: views/pages/transaction-page/form.php:13
+msgid "Verified"
+msgstr ""
+
+#: app/Lang.php:27
+msgid "Waiting approval..."
+msgstr ""
+
+#: app/Lang.php:17
+msgid "Waiting confirmation..."
+msgstr ""
+
+#: app/Lang.php:14
+msgid "Waiting for block confirmations:"
+msgstr ""
+
+#: app/Lang.php:15
+msgid "Waiting for transaction confirmation..."
+msgstr ""
+
+#: app/EvmBased.php:367
+msgid "Wallet address"
+msgstr ""
+
+#: app/EvmBased.php:376
+msgid "Wallet address cannot be empty."
+msgstr ""
+
+#: app/EvmBased.php:378
+msgid "Wallet address must consist of 42 characters."
+msgstr ""
+
+#: app/Lang.php:20
+msgid "Wallet connection timed out!"
+msgstr ""
+
+#: app/Lang.php:42
+msgid "Wallet not found!"
+msgstr ""
+
+#: app/EvmBased.php:394
+msgid "Wallets"
+msgstr ""
+
+#: app/WooCommerce/Gateway.php:143
+msgid "Was directly approved by CryptoPay as the order amount was zero!"
+msgstr ""
+
+#: app/Lang.php:57
+msgid "Websocket connection failed!"
+msgstr ""
+
+#: app/EvmBased.php:789
+msgid "Websocket URL"
+msgstr ""
+
+#: app/Settings.php:210
+msgid "What is a currency converter?"
+msgstr ""
+
+#: app/Settings.php:67
+msgid "When you activate this setting, CryptoPay starts working on testnets."
+msgstr ""
+
+#: app/WooCommerce/Gateway.php:18
+msgid ""
+"With CryptoPay, your customers can easily pay with their cryptocurrencies."
+msgstr ""
+
+#: app/Settings.php:119
+msgid ""
+"With this setting, you can choose from where the user receives the payment. "
+"With the checkout option, payment will be taken directly from the checkout "
+"page before the order is created, and then the order will be created. After "
+"the order is created with the Order Pay option, payment will be received on "
+"the Order Pay page."
+msgstr ""
+
+#: app/Settings.php:100
+msgid "WooCommerce settings"
+msgstr ""
+
+#: app/Settings.php:227
+msgid ""
+"You can assign prices corresponding to fiat currencies to your own custom "
+"tokens."
+msgstr ""
+
+#: app/EvmBased.php:867
+msgid "You can easily activate or deactivate Token without deleting it."
+msgstr ""
+
+#: app/WooCommerce/Gateway.php:84
+msgid "You can pay with supported networks and cryptocurrencies."
+msgstr ""
+
+#: app/EvmBased.php:816
+msgid ""
+"You can upload an custom image for this network. If you'r not choose any "
+"image app will use default image."
+msgstr ""
+
+#: app/Lang.php:59
+msgid ""
+"You cannot connect to the websocket server because your domain is not in the "
+"list of allowed domains."
+msgstr ""
+
+#: app/Services.php:510
+msgid ""
+"You did not specify a wallet address in the \"CryptoPay {networkName} "
+"settings\", {networkName} network will not work. Please specify a wallet "
+"address first."
+msgstr ""
+
+#: app/EvmBased.php:773
+msgid "You must add at least one blockchain network!"
+msgstr ""
+
+#: app/Settings.php:250
+msgid "You must add at least one currency price"
+msgstr ""
+
+#: app/EvmBased.php:360
+msgid "Your ENS Domain must match the address you enter below."
+msgstr ""
+
+#: views/feedback.php:10
+msgid "Your feedback has been sent successfully."
+msgstr ""
+
+#: app/WooCommerce/Gateway.php:134 app/WooCommerce/Register.php:222
+msgid "Your order is complete."
+msgstr ""
+
+#: app/WooCommerce/Gateway.php:136 app/WooCommerce/Register.php:224
+msgid "Your order is processing."
+msgstr ""
+
+#: views/woocommerce/pending.php:1
+#, php-format
+msgid "Your order is waiting for payment, %s."
+msgstr ""

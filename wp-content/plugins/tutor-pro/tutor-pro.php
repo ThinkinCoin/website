@@ -4,7 +4,7 @@
  * Plugin URI: https://www.themeum.com/product/tutor-lms/
  * Description: Power up Tutor LMS plugins by Tutor Pro
  * Author: Themeum
- * Version: 2.2.4
+ * Version: 2.3.0
  * Author URI: http://themeum.com
  * Requires at least: 5.3
  * Tested up to: 6.3
@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Defined the tutor main file
  */
-define( 'TUTOR_PRO_VERSION', '2.2.4' );
+define( 'TUTOR_PRO_VERSION', '2.3.0' );
 define( 'TUTOR_PRO_FILE', __FILE__ );
 
 /**
@@ -36,7 +36,7 @@ define( 'TUTOR_PRO_FILE', __FILE__ );
  *
  * @since 2.1.10
  */
-define( 'TUTOR_CORE_REQ_VERSION', '2.2.4' );
+define( 'TUTOR_CORE_REQ_VERSION', '2.3.0' );
 /**
  * Load tutor-pro text domain for translation
  */

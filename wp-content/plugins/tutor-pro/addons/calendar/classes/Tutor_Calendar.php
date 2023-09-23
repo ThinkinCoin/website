@@ -103,7 +103,7 @@ class Tutor_Calendar {
                     break;
                 }
             }
-            $time_duration_in_sec = $time_duration_in_sec * $time_duration['value'];
+            $time_duration_in_sec = $time_duration_in_sec * (int) $time_duration['value'];
             if ( empty( $unlock_date ) ) {
                 $remaining_time = $assignment_created_time + $time_duration_in_sec;
             } else {

@@ -357,11 +357,13 @@ class General {
 			'control_video_lesson_completion',
 			$attr['course']['blocks']['block_lesson']['fields'],
 			array(
-				'key'     => 'required_percentage_to_complete_video_lesson',
-				'type'    => 'number',
-				'label'   => __( 'Set Required Percentage', 'tutor-pro' ),
-				'default' => '80',
-				'desc'    => __( 'Specify the minimum video watch % learners must watch to mark the lesson as complete.', 'tutor-pro' ),
+				'key'         => 'required_percentage_to_complete_video_lesson',
+				'type'        => 'number',
+				'number_type' => 'integer',
+				'label'       => __( 'Set Required Percentage', 'tutor-pro' ),
+				'default'     => 80,
+				'max'         => 100,
+				'desc'        => __( 'Specify the minimum video watch % learners must watch to mark the lesson as complete.', 'tutor-pro' ),
 			)
 		);
 

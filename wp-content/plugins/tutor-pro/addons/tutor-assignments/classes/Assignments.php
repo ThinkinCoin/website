@@ -175,6 +175,10 @@ class Assignments {
 		$assignment_option = tutor_utils()->avalue_dot( 'assignment_option', $_POST );
 		$attachments       = tutor_utils()->avalue_dot( 'tutor_assignment_attachments', $_POST );
 
+		if ( isset( $assignment_option['time_duration'], $assignment_option['time_duration']['value'] ) ) {
+			$assignment_option['time_duration']['value'] = (int) $assignment_option['time_duration']['value'];
+		}
+
 		$assignment_data = array(
 			'post_type'    => 'tutor_assignments',
 			'post_status'  => 'publish',
@@ -390,7 +394,7 @@ class Assignments {
 	 *
 	 * @param integer $assignment_id
 	 * @return array
-	 * 
+	 *
 	 * @since 1.0.0
 	 */
 	public function handle_assignment_attachment_uploads( $assignment_id = 0 ) {
@@ -492,14 +496,14 @@ class Assignments {
 
 	}
 
-	public function show_assignment_submitted_icon( $post, $lock_icon=false ) {
+	public function show_assignment_submitted_icon( $post, $lock_icon = false ) {
 		if ( $post->post_type === 'tutor_assignments' ) {
 			$is_submitted = tutor_utils()->is_assignment_submitted( $post->ID );
 
 			if ( $is_submitted && $is_submitted->comment_approved == 'submitted' ) {
 				echo "<input type='checkbox' class='tutor-form-check-input tutor-form-check-circle' disabled='disabled' readonly='readonly' checked='checked' />";
 			} else {
-				if($lock_icon) {
+				if ( $lock_icon ) {
 					echo '<i class="tutor-icon-lock-line tutor-fs-7 tutor-color-muted tutor-mr-4" area-hidden="true"></i>';
 				} else {
 					echo "<input type='checkbox' class='tutor-form-check-input tutor-form-check-circle' disabled='disabled' readonly='readonly' />";

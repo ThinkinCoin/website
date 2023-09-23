@@ -22,6 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 class Init {
+	//phpcs:disable Squiz.Commenting.VariableComment.Missing
 	public $version = TUTOR_PRO_VERSION;
 	public $path;
 	public $url;
@@ -38,6 +39,7 @@ class Init {
 	private $email_verification;
 	private $device_management;
 	private $instructor;
+	//phpcs:enable Squiz.Commenting.VariableComment.Missing
 
 	/**
 	 * Register hooks.
@@ -74,6 +76,11 @@ class Init {
 		}
 	}
 
+	/**
+	 * Load constructors assets.
+	 *
+	 * @return void
+	 */
 	public function load_constructors_asset() {
 		/**
 		 * Loading Autoloader
@@ -100,6 +107,7 @@ class Init {
 		$this->email_verification    = new EmailVerification();
 
 		new Filters();
+		new ContentSecurity();
 
 		$this->load_addons();
 
@@ -126,20 +134,22 @@ class Init {
 	}
 
 	/**
-	 * @param $className
+	 * Auto-Load class and the files
 	 *
-	 * Auto Load class and the files
+	 * @param string $class_name class name.
+	 *
+	 * @return void
 	 */
-	private function loader( $className ) {
-		if ( ! class_exists( $className ) ) {
-			$className = preg_replace(
+	private function loader( $class_name ) {
+		if ( ! class_exists( $class_name ) ) {
+			$class_name = preg_replace(
 				array( '/([a-z])([A-Z])/', '/\\\/' ),
 				array( '$1$2', DIRECTORY_SEPARATOR ),
-				$className
+				$class_name
 			);
 
-			$className = str_replace( 'TUTOR_PRO' . DIRECTORY_SEPARATOR, 'classes' . DIRECTORY_SEPARATOR, $className );
-			$file_name = $this->path . $className . '.php';
+			$class_name = str_replace( 'TUTOR_PRO' . DIRECTORY_SEPARATOR, 'classes' . DIRECTORY_SEPARATOR, $class_name );
+			$file_name = $this->path . $class_name . '.php';
 
 			if ( file_exists( $file_name ) && is_readable( $file_name ) ) {
 				require_once $file_name;
@@ -147,7 +157,11 @@ class Init {
 		}
 	}
 
-	// Run the TUTOR right now
+	/**
+	 * Run the plugin.
+	 *
+	 * @return void
+	 */
 	public function run() {
 		do_action( 'tutor_pro_before_run' );
 
@@ -161,7 +175,7 @@ class Init {
 	 */
 	public function tutor_pro_activate() {
 		$version = get_option( 'tutor_pro_version' );
-		// Save Option
+		// Save Option.
 		if ( ! $version ) {
 			update_option( 'tutor_pro_version', TUTOR_PRO_VERSION );
 		}
@@ -183,7 +197,7 @@ class Init {
 		if ( $migrated || ! $old_model || ! tutor_utils()->has_pmpro() ) {
 			// Already migrated
 			// or old one not saved yet
-			// PM pro not available
+			// PM pro not available.
 			return;
 		}
 
@@ -199,15 +213,25 @@ class Init {
 	}
 
 
+	/**
+	 * Includes helper files.
+	 *
+	 * @return void
+	 */
 	public function includes() {
 		include tutor_pro()->path . 'includes/functions.php';
 	}
 
+	/**
+	 * Load addons
+	 *
+	 * @return void
+	 */
 	public function load_addons() {
 
-		$addonsDir = array_filter( glob( tutor_pro()->path . 'addons' . DIRECTORY_SEPARATOR . '*' ), 'is_dir' );
-		if ( count( $addonsDir ) > 0 ) {
-			foreach ( $addonsDir as $key => $value ) {
+		$addons_dir = array_filter( glob( tutor_pro()->path . 'addons' . DIRECTORY_SEPARATOR . '*' ), 'is_dir' );
+		if ( count( $addons_dir ) > 0 ) {
+			foreach ( $addons_dir as $key => $value ) {
 				$addon_dir_name = str_replace( dirname( $value ) . DIRECTORY_SEPARATOR, '', $value );
 				$file_name      = tutor_pro()->path . 'addons' . DIRECTORY_SEPARATOR . $addon_dir_name . DIRECTORY_SEPARATOR . $addon_dir_name . '.php';
 				if ( file_exists( $file_name ) ) {

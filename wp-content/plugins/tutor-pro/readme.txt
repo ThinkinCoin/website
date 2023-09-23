@@ -1,11 +1,11 @@
-=== Tutor LMS Pro - eLearning and online course solution ===
+=== Tutor LMS - eLearning and online course solution ===
 Contributors: themeum
 Donate link: https://www.themeum.com
 Tags: lms, course, elearning, education, learning management system
 Requires at least: 5.3
 Tested up to: 6.3
-Requires PHP: 7.4
-Stable tag: 2.2.4
+Requires PHP: 7.1
+Stable tag: 2.3.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -30,7 +30,7 @@ Also check out our overview video [youtube https://www.youtube.com/watch?v=Eu9cV
 
 Tutor LMS is a completely free WordPress LMS plugin. It comes with premium high-quality add-ons that you can add to empower the core plugin more! This WordPress LMS plugin is lightweight with add-ons to enable certificates, e-mail notifications, shopping carts and so much more!
 
-🔥 [Get Tutor LMS] (https://www.themeum.com/product/tutor-lms/), the most advanced and powerful WordPress online course plugin.
+🔥 [Get Tutor LMS](https://www.themeum.com/product/tutor-lms/), the most advanced and powerful WordPress online course plugin.
 
 Create, customize, manage, and sell online courses by building a functional e-learning website with this free LMS plugin for WordPress.
 
@@ -46,55 +46,71 @@ Create, customize, manage, and sell online courses by building a functional e-le
 
 = Features =
 
-* Here are the most notable features of Tutor LMS plugin. If you need any further information, please feel free to contact us. Below are the best offerings of Tutor LMS.
-* Minimalistic and Unified Design
-* Frontend Course Builder
-* Unlimited Courses and Lessons
-* Course Preview
-* Intuitive Advance Course Builder
-* Frontend Student Dashboard
-* Personalised Dashboard for Each Roles (Admins, instructors, Students) 
-* Video lessons
-* Multiple video sources (self-hosted, YouTube, Vimeo, Presto Player, Embedded Video, etc)
-* Separate Teacher profiles
-* Lesson management
-* Dynamic drag and drop certificate builder
-* Advanced Quiz builder (Multiple quiz types)
-* Earning & commission allocation
-* Multiple withdrawal options
-* Purchase history
-* Styling options
-* Course widget
-* Teacher registration form
-* Course review and rating system
-* Q&A for students with the course teacher
-* Video poster (trailer/teaser)
-* Tracking course progress
-* Course difficulty level
-* Define course duration
-* Course marketplace
-* Add course requirements and instruction
-* Quiz Timer
-* Quiz Attempts
-* Centralized monetization settings
-* Spotlight mode
-* RTL ready
-* Page builder support
-* Gutenberg compatible
-* Content security
-* Advanced analytics And more
+Here are the most notable features of Tutor LMS plugin. If you need any further information, please feel free to contact us. Below are the best offerings of Tutor LMS.
 
-You can learn more about our product from [our website] (https://www.themeum.com/product/tutor-lms/).
+🏗️ Frontend Course Builder
+📚 Unlimited Courses and Lessons
+👁️ Course Preview
+🧩 Intuitive Advance Course Builder
+📊 Frontend Student Dashboard
+📌 Personalized Dashboard for Each Roles (Admins, instructors, Students)
+📽️ Video lessons
+📹 Multiple video sources (self-hosted, YouTube, Vimeo, Presto Player, Embedded Video, etc)
+👩‍🏫 Separate Teacher profiles
+📝 Lesson management
+🏆 Dynamic drag and drop certificate builder
+🧩 Advanced Quiz builder (Multiple quiz types)
+💰 Earning & commission allocation
+💸 Multiple withdrawal options
+📜 Purchase history
+🎨 Styling options
+📊 Course widget
+📝 Teacher registration form
+⭐ Course review and rating system
+❓ Q&A for students with the course teacher
+🎥 Video poster (trailer/teaser)
+🚀 Tracking course progress
+🌟 Course difficulty level
+⏳ Define course duration
+🌐 Course marketplace
+📋 Add course requirements and instruction
+⏱️ Quiz Timer
+📝 Quiz Attempts
+💳 Centralized monetization settings
+🔦 Spotlight mode
+🔄 RTL ready
+🏗️ Page builder support
+📚 Gutenberg compatible
+🔐 Content security
+📈 Advanced analytics And more
+📅 Content Drip
+👥 Enrolling Students Manually
+📊 Creating Custom Grading Scales in Tutor LMS
+🔔 Automated Notifications
+🎓 Course Bundles
+👩‍🏫 Multi-Instructor System
+🔐 Social Login for Enhanced Security
+🔒 Tutor LMS REST API Authentication Support
+👤 Manage Active Login Sessions
+🔐📱 Two-Factor Authentication
+🛡️ Fraud Protection
+📧 Email Verification
+🌐 International Language Support
+
+You can learn more about our product from [our website](https://www.themeum.com/product/tutor-lms/).
 
 = Tutor LMS Extended Features =
 
 Tutor LMS can be used by anyone looking to create a full-fledged learning management system. Some of the great applications of Tutor LMS include the following.
-* Blended learning
-* Community education
-* Online classroom
-* Training courses
-* Professional continuing education
-* These are just a few possibilities that Tutor LMS opens up for its users. There’s a whole new world of intuitive learning that’s yet to discover using this WordPress LMS plugin.
+
+👥 Blended learning
+🏫 Community education
+💻 Online classroom
+🎓 Training courses
+📚 Professional continuing education
+
+These are just a few possibilities that Tutor LMS opens up for its users. There’s a whole new world of intuitive learning that’s yet to discover using this WordPress LMS plugin.
+
 
 = MINIMALISTIC AND UNIFORM DESIGN =
 
@@ -167,19 +183,79 @@ Create online courses with the new Gutenberg editor without facing any issues wh
 
 Have the most secure learning management system when creating your online courses. Third parties cannot view the videos with the URL when you use our WordPress LMS plugin. It ensures that only enrolled students can have access to course videos.
 
+= SCHEDULE COURSE CONTENT WITH CONTENT DRIP =
+
+Tutor LMS’s Content Drip feature allows instructors to schedule when course content is released to students. Instructors can set lessons, topics, quizzes, etc., to unlock after a prerequisite is fulfilled or on specific future dates. Content is automatically made visible to students according to the preset schedule. This creates a structured learning path by releasing parts of the course over time. Students stay engaged as new content unlocks each day or week rather than all at once.
+
+= KEEP STUDENTS UPDATED WITH NOTIFICATIONS =
+
+The Advanced Notification System in Tutor LMS allows automated emails and push notifications to students. Notifications can be sent out for key events like new assignments, quiz reminders, content updates, enrollment confirmation, course completion, and more. You can customize notification frequency, timing, and messages.
+
+= COLLABORATE WITH EASE USING MULTIPLE INSTRUCTORS =
+
+The Multi-Instructor System in Tutor LMS allows you to assign multiple instructors to a single course. All instructors can manage and teach the course together. Great for collaborative course creation! Instructors can create their own lecture materials and quizzes within shared courses. Learner progress and analytics are available to all instructors. Smooth instructor collaboration leads to more engaging course content for students.
+
+= CREATE & SELL COURSE BUNDLES =
+
+Tutor LMS lets you combine multiple courses together into a packaged Course Bundle. You can bundle related courses to offer students a complete learning program. You can add any number of courses to a bundle to cover a varied range of topics for students. Course Bundles are a great way to provide bundles of curated content to students at a discounted bundle price.
+
+= CREATE PERSONALIZED COMPLETION CERTIFICATES = 
+
+With the Certificate Builder in Tutor LMS you can create and award customized completion certificates to students. You can use pre-made templates or design new certificates completely from scratch. Course creators can also showcase certificates on their course details pages, providing certificate previews to prospective students. Students can also share their certificates on social media to display their educational achievements.
+
+= AUTOMATE COMMISSION SPLITTING FOR COURSE CREATORS =
+
+The Commission Allocation tool provides an automated system for distributing commission earnings to instructors and admin in Tutor LMS. Commissions earned on course sales can be split with a set percentage going to the instructor who created the course and the rest going to the site admin. Tutor LMS has advanced money management settings to completely customize how admins want commissions to be split.
+
+= ENGAGE STUDENTS WITH LIVE VIDEO CONFERENCING =
+
+Conduct Live Video sessions with students within Tutor LMS courses & lessons and increase interaction with students and connect with them. Instructors can schedule real-time video meetings using integrated platforms like Google Meet and Zoom. Just share the meeting link and students can join with one click. Video sessions enable interactive class lectures, discussions, and collaboration. Instructors can screen share, answer questions in real-time, and engage students face-to-face online.
+
+= TRACK IN-DEPTH STUDENT PROGRESS =
+
+Robust grade tracking with weighted grading categories, attendance tracking, exporting options, and more for in-depth analysis.
+
+= SAVE TIME BY IMPORTING AND EXPORTING QUIZZES =
+
+The Quiz Import/Export feature allows you to reuse quizzes easily. You can export an existing quiz as a CSV file. Then import that CSV file into a new course to create an identical copy of the original quiz. This saves time compared to creating a new quiz from scratch. After importing, you can use the quiz as is or customize it as needed. You can also duplicate quizzes in Tutor LMS with a click of a button. It's a great way to share and reuse engaging quiz content.
+
+= TAKE CONTROL OF STUDENT ENROLLMENT =
+
+The Manual Enrollment tool allows Admins to manually add students to their courses in Tutor LMS. Admins can also unenroll students using the same list. The manual enrollment management system gives teachers flexibility and customization over course rosters within Tutor LMS.
+
+= ENABLE ONE-CLICK LOGIN =
+
+The Social Login feature allows students to register and log into Tutor LMS using their existing social media accounts, including Google, Facebook, Twitter, and more. This provides a streamlined, one-click login option for students versus creating new account credentials.
+
+= SAFEGUARD YOUR ELEARNING SITE WITH ROBUST SECURITY FEATURES =
+
+Tutor LMS offers security features to keep your site and users safe. Two-Factor Authentication adds an extra layer of security for more protection. Fraud Protection helps guard against suspicious activity. Email Verification requires users to confirm their addresses verifying legitimacy of new signups. These security tools give you peace of mind that your eLearning site and user data are secure.
+
 = PREMIUM FEATURE FOR TUTOR =
 
-* Tutor Report: Get powerful stats for a complete analysis of which courses are performing great with students and judge individual course popularity. Monitor reviews with this WordPress LMS plugin and manually change quiz grades right from the panel.
-* Tutor Email: Sending emails to students and teachers has been made automated in Tutor. You can send course enrollment, course completion, and quiz completion email to both students and teachers automatically. Customize email templates easily using the Email Template Editor that comes with the WordPress LMS plugin.
-* Tutor Certificates: Offer beautifully designed certificates for completed courses to students. You can upload your own certificates with this amazing add-on that comes with this WordPress LMS plugin. We also have a drag & drop Certificate builder 
-* Tutor Course Preview: Unlock a few courses for students to try out before they enroll in a lesson. This boosts conversion rates and allows target students to get the feel of the lessons.
-* Tutor Course Attachment: Include all the class materials in pdf, doc, etc. format for students to download. Attach lesson files, course outlines, and every other information as an attachment with Tutor.
-* Tutor Multi Instructors: Add as many instructors as you want to individual courses. Enhance the course experience of students by having the option to have a great lineup of teachers.
-* Tutor Prerequisites: Define a certain set of courses that students need to complete before enrolling for a new course.
-* Tutor Assignments: Create assignments that students can submit easily with several useful settings to assess students smartly.
-* Tutor Paid Memberships Pro: Subscriptions are made easy with the Tutor Paid Membership pro addon. Using the Tutor Paid Memberships Pro plugin integration with Tutor LMS, include site-wise and category-wise subscriptions for your eLearning platform.
-* WooCommerce Subscriptions: Have all the subscription options supported by WooCommerce using the WooCommerce Subscriptions add-on. Earn higher revenue with the versatile subscription options in WooCommerce.
-* Frontend Course Builder: Build your course on the go using the frontend course builder in the Tutor LMS plugin. Instructors can see how their course looks live without even having to go backend. The industry-first frontend course builder in any WordPress LMS plugin ever.
+Here are the key points from the README text file, highlighted in bold:
+
+* **Tutor Report:** Get powerful stats for a complete analysis of which courses are performing great with students and judge individual course popularity. Monitor reviews with this WordPress LMS plugin and manually change quiz grades right from the panel.
+
+* **Tutor Email:** Sending emails to students and teachers has been made automated in Tutor. You can send course enrollment, course completion, and quiz completion email to both students and teachers automatically. Customize email templates easily using the Email Template Editor that comes with the WordPress LMS plugin.
+
+* **Tutor Certificates:** Offer beautifully designed certificates for completed courses to students. You can upload your own certificates with this amazing add-on that comes with this WordPress LMS plugin. We also have a drag & drop Certificate builder.
+
+* **Tutor Course Preview:** Unlock a few courses for students to try out before they enroll in a lesson. This boosts conversion rates and allows target students to get the feel of the lessons.
+
+* **Tutor Course Attachment:** Include all the class materials in pdf, doc, etc. format for students to download. Attach lesson files, course outlines, and every other information as an attachment with Tutor.
+
+* **Tutor Multi Instructors:** Add as many instructors as you want to individual courses. Enhance the course experience of students by having the option to have a great lineup of teachers.
+
+* **Tutor Prerequisites:** Define a certain set of courses that students need to complete before enrolling for a new course.
+
+* **Tutor Assignments:** Create assignments that students can submit easily with several useful settings to assess students smartly.
+
+* **Tutor Paid Memberships Pro:** Subscriptions are made easy with the Tutor Paid Membership pro addon. Using the Tutor Paid Memberships Pro plugin integration with Tutor LMS, include site-wise and category-wise subscriptions for your eLearning platform.
+
+* **WooCommerce Subscriptions:** Have all the subscription options supported by WooCommerce using the WooCommerce Subscriptions add-on. Earn higher revenue with the versatile subscription options in WooCommerce.
+
+* **Frontend Course Builder:** Build your course on the go using the frontend course builder in the Tutor LMS plugin. Instructors can see how their course looks live without even having to go backend. The industry-first frontend course builder in any WordPress LMS plugin ever.
 
 ** 5 Pro Question Patterns: **
 * Short Answer
@@ -188,6 +264,21 @@ Have the most secure learning management system when creating your online course
 * Image Answering
 * Ordering
 Looking for the best LMS for WordPress? Get Tutor and start your e-learning website immediately.
+
+= Expanded Features through Integrations =
+
+Tutor LMS integrates with various third-party tools and services to enhance features and functionality. Some key integrations include:
+
+ChatGPT - Use the power of ChatGPT in Tutor LMS
+Weglot - Translate course content into multiple languages
+BunnyNet - Generate human-like audio files from the course text
+Zoom - Enable live video conferencing within courses
+Google Meet- Enables video meetings and communication for online courses
+Divi Builder, Oxygen Builder, Elementor- These page builders allow customization of the eLearning platform and course content.
+GamiPress- Gamifies the platform by awarding points and achievements to learners for their progress.
+
+
+These key integrations with Tutor LMS extend its capabilities for a more powerful and connected learning management system.
 
 == Screenshots ==
 
@@ -224,6 +315,20 @@ Looking for the best LMS for WordPress? Get Tutor and start your e-learning webs
 31. Mobile Responsive: Highly responsive UI designed for quality user experience
 
 == Changelog ==
+
+= 2.3.0 - September 20, 2023
+
+New: Secure your Tutor LMS site content with Hotlink protection
+New: Disable right-click for Tutor LMS site content to prevent copying
+New: Recommended YouTube videos will be hidden on Tutor Player
+New: Added course review pop-up when a course is automatically completed
+New: Course permalink base is now updatable
+Update: For live lessons, the “Mark as complete” button will only appear once the Zoom/Google Meet meeting has started.
+Update: Tutor LMS settings navigation bar is now sticky
+Fix: Resolved email formatting issues on Gmail and Outlook web versions
+Fix: Resolved the on-site notification system’s incorrect time issue
+Fix: Various translation related issues
+Fix: Resolved known security issues
 
 = 2.2.4 - August 28, 2023
 
@@ -287,7 +392,7 @@ Fix: GradeBook settings were allowing a minimum percentile value higher than the
 Fix: Addressed conflicts with export_settings ID with other vendors
 Fix: Fix translation-related issues
 
-= 2.2.1 - Jun 5, 2023
+= 2.2.1 - June 05, 2023
 
 New: Added Authentication for Tutor LMS Rest API, providing secure access.
 Update: Made various security enhancements.
@@ -327,10 +432,10 @@ Fix: Enrol button need to click twice from course details
 = 2.1.8 - March 1, 2023
 
 New: Introduced ChatGPT integration for content generation
-Improvement: Missing translation strings for dynamic texts like date has been added 
+Improvement: Missing translation strings for dynamic texts like date has been added
 Fix: In Q&A, student reply to emails were being sent back to the student instead of the instructor
 Fix: For built-in emails, placeholder texts in email message content for Email to Students were not being replaced with values
-Fix: Admins were unable to delete course reviews from the list on the "LMS Reports" page of the Admin panel
+Fix: Admins were unable to delete course reviews from the list on the “LMS Reports” page of the Admin panel
 
 = 2.1.7 - February 14, 2023
 
@@ -762,7 +867,7 @@ Update: The grace period is now removed from the setting as it was redundant
 Update: Setup wizard skip option now redirects to courses page
 Update: Introducing WP 5.9 Compatibility for Tutor LMS 2.0
 Update: Introducing WPML Compatibility for Tutor LMS 2.0
-Update: PHP-8 compatibility for Tutor LMS 2.0 
+Update: PHP-8 compatibility for Tutor LMS 2.0
 Fix: My course pagination issue in the dashboard section
 Fix: Blocked instructors showing up as a new Instructor in the report overview
 Fix: Quiz attempts remained in review and no result is showing pending
@@ -790,7 +895,7 @@ Fix: Pagination issues on the dashboard withdrawal tab
 Fix: Second Zoom live lesson not working properly
 Fix: Download certificate button issue without course completion
 
-= 2.0.0-beta.2 - January 25, 2022 =
+= 2.0.0-beta.2 - January 25, 2022
 
 New: Student and instructor public profile layout option in settings
 Update: Add translation security to the export page
@@ -798,7 +903,7 @@ Update: Confirmation modal added to import, delete & apply history data
 Fix: Student can submit quiz even after time expired issue fixed
 Fix: Student can upload multiple files while submitting Assignment
 Fix: Fixed Fatal error if users didn't have the compatible Tutor Pro installed
-Fix: Gradebook broken message issue fixed 
+Fix: Gradebook broken message issue fixed
 Fix: PHP notice and warning errors fixed
 Fix: Quiz attempt details table doesn't show all contents properly
 Fix: Division by zero on pagination is fixed
@@ -813,23 +918,23 @@ Fix: Issue for login page if there is no redirection page issue is fixed
 Fix: Replaced Q&A static date to dynamic date
 Fix: Fixed wrong display name on quiz attempt table
 Fix: Settings page input field enter modal issue fixed
-Fix: Pre-requisites not showing up on course page 
+Fix: Pre-requisites not showing up on course page
 
-= 2.0.0-beta - January 18, 2022 =
+= 2.0.0-beta - January 18, 2022
 
 New: Visually appealing appearance with a more unified design system
 New: Edit email template content from the editor without having to override the plugin
 New: Exclusive in-house designed email templates for each event
 New: Personalized dashboard for instructors and students focused towards task automation
 New: ​​Notification bar on top of the dashboard to let learners and instructors stay updated
-New: Improved Analytics with more extensive statistics 
+New: Improved Analytics with more extensive statistics
 New: New Q/A features for instant and more engaging communication
-New: Event calendar with handy features to organize events, schedule assignments, and more. 
-New: New Assignment features with the option to retake and add instructor's feedback. 
+New: Event calendar with handy features to organize events, schedule assignments, and more.
+New: New Assignment features with the option to retake and add instructor's feedback.
 New: Announcement tab in the course detail page
-New: Preview certificate before downloading upon completing the course 
-New: Use preset or custom color palettes to configure entire site's colors 
-New: Brand new Quiz interface with a new student window and other handy settings 
+New: Preview certificate before downloading upon completing the course
+New: Use preset or custom color palettes to configure entire site's colors
+New: Brand new Quiz interface with a new student window and other handy settings
 New: Collect all of your reviews and ratings in one centralized location
 Update: Dynamic membership plan on the right sidebar of the course details page
 Update: Enhanced Instructor list and public profile layouts with Backend & Frontend preview
@@ -847,7 +952,7 @@ New: Precaution alert before upgrading to major release of Tutor
 Update: Added Compatibility with WordPress 5.9 and Block Based Theme
 Fix: Security issue and XSS vulnerabillity fixes
 
-= 1.9.14 - January 11, 2022 =
+= 1.9.14 - January 20, 2022 =
 
 New: Now you can add Videos using a Shortcode
 Fix: Issue of HTML codes disappearing after saving a Quiz
@@ -857,14 +962,14 @@ Update: Better user input field sanitization ensure SQL Injection
 Update: Better security of HTML output of user-provided input
 Update: XSS vulnerability protection is made stronger
 
-= 1.9.13 - January 10, 2022 =
+= 1.9.13 - December 20, 2021 =
 
-Fix: Wrong assignment list in student reports page at backend dashboard
-Fix: User diplay name issue in analytics page at frontend dashboard
+Update: Security Update
 
-= 1.9.12 - October 27, 2021 =
+= 1.9.12 - December 14, 2021 =
 
-Fix: Custom certificate template not downloading
+Update: Security Update
+Fix: Instructor can access Withdrawal Requests Issue
 
 = 1.9.11 - October 18, 2021 =
 
@@ -893,8 +998,6 @@ Fix: Date picker format not applying issue for all the places in Tutor LMS
 Fix: On reveal mode for Quiz, user couldn't go forward if the answer was wrong
 Fix: User can type characters in the date field
 Fix: View Quiz Attempts URL show nothing when clicked
-
-New: Analytics page for instructor in frontend dashboard
 
 = 1.9.8 - September 02, 2021 =
 
@@ -1042,6 +1145,10 @@ Fix: Empty data insert & redundant hooks calling on course attachments addons
 Fix: Empty meta data insert for lesson
 Fix: Content drip option not loading in the classic editor's lesson editing page
 
+= 1.8.8 - April 05, 2021 =
+
+Fix: Patched Local File Inclusion vulnerability (Props to WPScan)
+
 = 1.8.7 - April 01, 2021 =
 
 Update: Improved Queuing system for Tutor LMS announcement and content drip email
@@ -1142,14 +1249,14 @@ Fix: User access issue in Zoom meeting list
 = 1.7.8 - January 07, 2021 =
 
 Update: Quality of certificates' PDF files improved
-Update: A clear all filter button on the course filter page added
+Update: A clear all filters button on the course filter page added
 Update: Monetization activation issue while deactivating WooCommerce plugin
 Fix: Course lesson and assignment auto-draft issue in course builder
 Fix: PDF certificate not downloading on Firefox web browser
 Fix: Wrong course eligibility status on Paid Membership Pro plugin activation
 Fix: Conjunction sign "&" not working issue in the assignments description section
 Fix: Courses in draft status showing issue while showing category lists from the archives
-Fix: CSS issue while selecting quiz time limit
+Fix: CSS issue while selecting quiz time limit.
 
 = 1.7.7 - December 30, 2020 =
 
@@ -1160,7 +1267,7 @@ Fix: Fatal error on course archive and shortcode page for misconfigured monetiza
 Fix: Auto-save email notification issue on frontend course builder
 Fix: Lesson preview access issue for admin
 
-= 1.7.6 - December 14, 2020 =
+= 1.7.6 - December 04, 2020 =
 
 New: Added translation support on email notification templates.
 Update: Q&A timestamp is now aligned with WordPress timezone settings.
@@ -1255,7 +1362,6 @@ New: Added 6 new action hooks
 do_action('tutor_after_student_signup', $user_id);
 do_action('tutor_enrollment/after/cancel', $enrol_id);
 do_action('tutor_enrollment/after/delete', $enrol_id);
-do_action('tutor_enrollment/after/complete', $enrol_id);
 do_action('tutor_announcements/after/save', $announcement_id);
 do_action('tutor_quiz/attempt/submitted/feedback', $attempt_id);
 ```
@@ -1326,490 +1432,7 @@ Fix: {enroll_time} parameter issue in Q&A email notification template
 Fix: Special Character & Content issue in Q&A email notification template
 Fix: Maximum Number of students for Course Enrolment
 
-= 1.6.2 - 14 May, 2020 =
-
-* New: Display Name preference on the certificate, added settings to Dashboard > Settings > Profile
-* New: Quiz status pending if contains open ended and short questions.
-* New: Custom HTML support for quiz question description
-* Update: Course status 'Publish' to 'Published' in dashboard
-* Fix: Tutor LMS > Enrollments is showing same date for all items
-* Fix: Does not show 11th course on Dashboard
-* Fix: Check file extension while uploading the video
-* Fix: Wrong link in withdraw preference in dashboard
-* Fix: What Will I Learn section is hidden for enrolled students
-* Fix: Missing translations in dashboard
-
-= 1.6.1 - 29 April, 2020 =
-
-* New: Course Completion Process. Flexible and Strict mode. in strict mode, students have to complete all lessons and pass all quizzes in order to complete any course.
-* New: Quiz question validation, all type of quiz are now under validation except quiz ordering type
-* New: hook, `tutor/course/enrol_status_change/after`
-* New: utils method, `get_course_by_enrol_id($enrol_id)`;
-* Added utils method, `course_enrol_status_change($enrol_id = false, $new_status = '')`;
-* Update: curriculum content add button group design, now it's link style button.
-* Update: course completion progress bar, is now counting quiz attempts and assignment. It will show 100% progress when you done all lessons, quiz, and assignments.
-* Fix: Tutor is sending the Course Enrollment email to the instructor without completing the payment
-* Fix: quiz question description div print even if the description is not exist
-
-= 1.6.0 - 16 April, 2020 =
-
-* New: Quiz Export/Import add-on (Pro)
-* New: Method `tutils()->cancel_course_enrol()`
-* New: Function `is_single_course();`
-* New: Action hook `do_action('tutor_new_instructor_after', $user_id);` at register instructor and apply as an instructor
-* New: action hook `do_action(“tutor_course_builder_before_quiz_btn_action”, $quiz_id);`
-* Update: Certificate generator PDF compatibility with PHP 7.3
-* Remove: Options from the _tutorobject JavaScript Variable
-* Fix: Email notification showing raw variable {instructor_username}
-* Fix: Paid Membership Pro expiration issue
-* Fix: ability to empty and deleting empty additional meta fields from the post_meta.
-* Fix: Earning option enable if the marketplace was selected during the setup wizard
-
-= 1.5.5 - 25 February, 2020 =
-
-* New: Custom links now supported in Dashboard menu
-* New: Dashboard headers added in shortcode/oxygen dashboard template
-* Update: All purchase history items now sorted by descending order
-* Fix: Create new account translate issue. templates/global/login.php line number 79
-* Fix: Dashboard page load and logout issue by Shortcode
-* Fix: Guest add to cart issue on course archive page for both WooCommerce and EDD
-* Fix: Course Settings single tab toggle click hide issue fix
-* Fix: Active links with page in the dashboard for shortcode/oxygen
-* Fix: E-Mail to Students on Quiz Completed is now working (Pro)
-
-= 1.5.4 - 11 February, 2020 =
-
-* Fix: An infinite loop in frontend course builder for SEO related plugin activation: `classes/Shortcode.php`line number `53`
-* Fix: Maintenance mode override for wp-login.php page
-* Improvement: Frontend dashboard performance
-
-= 1.5.3 - 04 February, 2020 =
-
-* New: Go auto next after finish lesson (When no video)
-* New: Nonce field at add instructor form to determine that request comes from the dedicated page.
-* Update: Instructor approved/blocked by ajax request in post method with the nonce check (Security Update)
-
-= 1.5.2 - 29 January, 2020 =
-
-* Tutor LMS plugin is now running under 'plugins_loaded' hook (Architectural update)
-* New: hide frontend admin bar based on the option check
-* Update: Preview lesson got the full view with unenrolled behavior (Pro)
-* Fixed docs links in edit quiz modal in the quiz builder
-* Fix: reviews database query reviews now query with or without user ID
-* Fix: wishlist query, added where post type = courses and post_status = publish
-* Fix: ask the question from assignments and quiz page.
-* Fix: permission issue for auto-installation tutor plugin
-
-= 1.5.1 - 06 January, 2020 =
-
-* Certificate verification public URL (Pro)
-* New: filter `apply_filters('tutor_courses_base_slug', $course_post_type)`
-* New: fitler `apply_filters('tutor_lesson_base_slug', $lesson_post_type)`
-* Fix: lesson editor content post issue, some content sometime not saved before.
-* Fix: file system issue after update option hook, while create maintance mode file.
-
-= 1.5.0 - 24 December, 2019 =
-
-* New: BuddyPress Integration (TutorLMS Pro)
-* New: Go next lesson after ending video lesson
-* New: Hide course-product from shop page.
-* New: action hook `do_action('tutor_quiz/start/before', $quiz_id, $user_id);`
-* New: action hook `do_action('tutor_quiz/start/after', $quiz_id, $user_id, $attempt_id);`
-* New: filter `apply_filters('is_completed_course', $is_completed, $course_id, $user_id)`
-
-= 1.4.9 - 12 December, 2019 =
-
-* Fix: fatal error when tutor LMS regular version is not exists
-
-= 1.4.8 - 10 December, 2019 =
-
-* New: Restrict Content Pro Integration (TutorLMS Pro)
-* New: Course Details Page elements enable / disable
-* New: action hook `do_action( "tutor_save_course_after", $post_ID, $post);`
-* New: action hook `do_action('tutor/course/started', $course_id);`
-* New: action hook `do_action('tutor/lesson/created', $lesson_id);`
-* Fix: implode parameter in utils `utils()->get_total_quiz_attempts_by_course_ids()`;
-
-= 1.4.7 - 28 November, 2019 =
-
-* New: Next Previous Lesson|quiz|assignments
-* New: User Profile Update From Backend and Frontend Dashboard is now synced, no matters it's from media or browser file input.
-* New: Quiz description implementation
-* New: `tutor_single_quiz_content()` to get quiz description within Standard Loop
-
-= 1.4.6 - 11 November, 2019 =
-
-* New: Maintenance Mode
-* New: Frontend course edit link from Course Edit Page Admin bar LINK
-* Fix: bug during add topic in course builder
-* Fix: certificate download fatal error related microtime() in tutor-pro version
-
-= 1.4.5 - 21 October, 2019 =
-
-* New: Disable Course Review option
-* Update: removed media uploader on dashboard profile photo upload added native file upload system.
-* Update: Time GMT from WordPress settings
-* Fix: course start and continue to lesson order fixed
-
-= 1.4.4 - 16 October, 2019 =
-
-* Fix: quiz question sortable sorting item
-* Update: quiz draggable answer drop accessibility
-* Fix: prevented fatal error in single quiz question with no option and trying to finish quiz.
-
-= 1.4.3 - 11 October, 2019 =
-
-* New: Reset Password, Tutor LMS native login system
-* New: re-generate tutor pages, create new page if any issue on those page.
-* New: Added quiz attempt view by student (TutorLMS Pro)
-* New: function `tutor_action_field()` to generate tutor action field within form
-* New: Instructor can delete submitted assignment.
-* New: `tutor_redirect_back()` Redirect to back or a specific URL and terminate the script.
-* New: `tutor_get_template_html( $template_name, $variables = array() );` function, it will return view as HTML code, usefull for E-Mail
-* New: Frontend Course Builder Page Logo Upload Option, Settings > General > Tutor LMS Pro Settings
-* Update: Options is now expandable, pass additional options params to  filter `tutor/options/extend/attr`
-* Update: User Login controlling by Tutor
-* Update: media upload field improved with media delete option
-* Remove: Quiz Deprecated code.
-* Fix: Touch supports for quiz Sortable / draggable items
-* Fix: Quiz matching question type repeated issue
-* Fix: Admin gets automatically added when review course
-* Fix: Instructor total course does not update after deleting a course
-* Fix: Updated time to tutor_time() to get WordPress UTC time
-
-= 1.4.2 - 25 September, 2019 =
-
-* New: Greadbook Addons in the Tutor LMS Pro version
-* New: action hook after quiz attempt end, `do_action('tutor_quiz/attempt_ended', $attempt);`, `do_action('tutor_quiz/attempt_analysing/before', $attempt);`
-* New: Assignment submmiting / submitted flag to lesson sidebar in lesson single page
-* New: Template support from Tutor Pro
-* New: action hook after addon enable disable,
-do_action('tutor_addon_before_enable_disable');
-do_action('tutor_addon_before_enable', $addonFieldName);
-do_action('tutor_addon_after_enable', $addonFieldName);
-do_action('tutor_addon_before_disable', $addonFieldName);
-do_action('tutor_addon_after_disable', $addonFieldName);
-do_action('tutor_addon_after_enable_disable');
-* Update: Tutor Settings page URL is now updating when change settings page
-* Fix: Rating placing issue, sometime it missed rating value, but it will never hapen again.
-* Fix: `.tutor-icon-angle-left` `.tutor-icon-angle-right` toggle during lesson single sidebar show hide
-* Update: Addon icons
-
-= 1.4.1 - 10 September, 2019 =
-
-* New: utils method `get_course_settings($course_id = 0, $key = null, $default = false)`
-* New: `get_tutor_course_settings($course_id = 0, $key = null, $default = false);`
-* New: Content Drip Addon (Pro)
-* New: Course settings with developer support
-* New: tutor_alert() function to print various type of alert, warning, success, danger
-
-= 1.4.0 - 30 August, 2019 =
-
-* New: Page builder support on the lesson.
-* New: Enrollments list on in admin area, admin can now cancel, approve enrolment or delete. (Pro)
-* New: Manually enrollment student to a course  (Pro)
-* New: students quiz attempts on the frontend
-* New: Sticky lesson sidebar on the spotlight mode
-* New: Course permalink on the dashboard Most Popular Courses
-* New: Quiz Questions Order settings, Student answer to quiz questions as per order. 4 types of order, (random, sorting, asc, desc)
-* New: Redirect to the current course page after register.
-* New: Review update from dashboard > review > Given
-* New: Received reviews on all courses in dashboard
-* New: Assignment submission validation for the answer.
-* New: Quiz question options validation and correct answer validation
-* Fix: save and continue to click on question edit modal, open question lists immediately under a quiz.
-* Fix: text formatting issue in the quiz, some of the single or double quote comes with a slash. used `stripslashes();`
-* Fix: some default value issue on the quiz.
-* Fix: quiz page spotlight mode.
-* Fix: Multiples text translation issues
-* Fix: Chart-js Initiate in the pro version
-* Fix: Report Datepicker css/js in the frontend dashboard
-* Fix: Rating delete issues, it was actually report.js loading issues
-* Fix: Multiple E-Mail template loading issue
-* Update: Turned off reload the page while tutor settings save.
-
-= 1.3.9 - 19 August, 2019 =
-
-* Fix: Resetting Paid Membership Pro plugins settings when saving tutor settings.
-* Fix: quiz question issue when no settings saved.
-* Fix: Complete lesson button responsive issue
-
-= 1.3.8 - 09 August, 2019 =
-
-* Fix: `tutor_get_template()` function, it's now checking template from child-theme also, if template not found in the child theme, then it will look from the parent theme.
-* Fix: Show/Hide browse Q&A based on settings.
-* Fix: create_certificate under init hook from Tutor Certificate Addon (Pro)
-
-= 1.3.7 - 08 August, 2019 =
-
-* New: WooCommerce Subscriptions Addon in the pro version
-* Added action hook `do_action('tutor_is_enrolled_before', $course_id, $user_id);` and filter hook `apply_filters('tutor_is_enrolled', $getEnrolledInfo, $course_id, $user_id);`
-* New: user social links ability from frontend dashboard
-* Fix: Quiz attempt allowed 0 issue has been fixed. Strictly checking if it's zero, then it will be no limit
-* Fix: Tutor LMS Pro addon loading issue on the windows machine
-* Fix: query public profile user by user_nicename instead of user_login
-* Fix: touch event on click Lessn and Q&A navigation in mobile
-* Update: student public profile design updated
-
-= 1.3.6 - 05 August, 2019 =
-
-* New: Centralized course monetization partner system, it's moved to under monetization tab in the settings. A centralized system to select course selling platform
-* New: Tutor Assignments on the free versions add-on lists to notify users
-* New: a function `get_tutor_option($key = null, $default = false)` to get tutor option, an alies of `tutils()->get_option($key, $default);`
-* New: a function `update_tutor_option($key = null, $value = false)` to update tutor option, an alies of `tutils()->update_option($key, $value);`
-* New: Paid Membership Pro for subscription plan (Pro)
-* Fix: WC Notice print when adding to cart course
-* Fix: Single course template loading issue
-
-= 1.3.5 - 29 July, 2019 =
-
-* New: Direct publish course from frontend course builder if the current user is an administrator
-* New: a helper method to get course type `tutils()->price_type()`
-* New: course type (free or paid) to the course editor from
-* New: Filter to change template path apply_filters('tutor_get_template_path', $template_location, $template)
-* Update: `is_course_purchasable()` is now checking if there is any course type. if it free, then it will return false under 'is_course_paid' filter
-* Fix: add to wishlists, it didn't work on multiple courses wishlists
-* Fix: duplicate entry for the topic in the course builder
-
-= 1.3.4 - 23 July, 2019 =
-
-* New: Frontend Drag and Drop Course Builder with quiz builder and assignment creation options
-* New: Lifetime deal license checking and validation to get regular update and pro features in the pro version.
-* New: add new instructor action hook and filter hook,
-`do_action('tutor_add_new_instructor_form_fields_before'); `, `do_action('tutor_add_new_instructor_form_fields_after');`, `do_action('tutor_add_new_instructor_before');`, `do_action('tutor_add_new_instructor_after', $user_id);`, `apply_filters('add_new_instructor_data', $userdata)`
-* New: Dashboard subpage and dashboard menu item load permission basis
-* New: Topic toggle in lesson single page and information about toggle icon added
-* New: Course content is now linkable on the enrolled course page
-* New: Filter `apply_filters('get_tutor_load_template_variables', $variables);` at `tutor_load_template()` function
-New: action hook `do_action('tutor_load_template_before', $template, $variables);`, `do_action('tutor_load_template_before_after', $template, $variables);` at `tutor_load_template()` function
-* New: create and attached product with course while creating a course from frontend
-* New: Full-Screen Mode, students now can learn the lesson in full-screen mode without any inturruption.
-* New: Enable disable settings for YouTube and Vimeo Video default player
-* New: a new helper functions called `tutils()`, it's alies of `tutor_utils()`
-* Fix: complete lesson button from mobile view.
-* Update: Tutor frontend dashboard menu title now could be string or array with the `show_ui` key in the`array()`, show_ui key will be true or false to show it in the menu item visible or not.
-* Fix: Total Enrolled count in course details page
-* Fix: Course content looping count, lesson exact count by course content in the lesson.
-* Fix: some addon loading issue, tutor pro classes autoloading issue"
-* Fix: Delete video meta when select none from the video source in the course and lesson option.
-
-= 1.3.3 - 21 June, 2019 =
-
-* New: Tutor Assignment Addon in the pro version
-* New: Upgrade to pro text in plugin action links if Tutor Pro LMS does not exist or not installed
-* New: tutor_assignments course post type
-* New: `tutor_course_contents_post_types` course content filter
-* Rename: categories to course categories
-* Update: some template hook modified
-* Fix: tutor pro function checking `function_exists('tutor_pro');`
-* Fix: `wp_enqueue_editor()` in Assets class frontend frontend_scripts method conflict issue with divi builder
-
-= 1.3.2 - 29 May, 2019 =
-
-* New: centralized tutor version upgrading system by a dedicated class called `Upgrader`
-* New: add to cart guest mode in WooCommerce integration based on Tutor LMS > settings > woocommerce
-* New: Gutenberg support on course edit page based on settings
-* New: Automatic free plugin install from pro when the pro version is activated but the free plugin does not exist (pro)
-* New: nice notice bar for install or activate free version from pro (pro)
-* New: Pro text in the tutor LMS dashboard menu when Tutor Pro plugin installed and activated
-* Update: a design for course listing, removed hover and moved it to straight course gird footer
-* Fix: a Gutenberg bug related post author on course post type, usually post_author column saved 0 if course edit with Gutenberg, we fixed this issue.
-* Fix: a template condition in the course description
-* Remove: license restriction for features, it required now for auto-update (pro)
-* Fix: Response design all issue fixed
-* Fix: array count check and return issue in utils
-* Fix: a bug in dashboard/settings, withdraw menu removed from subscriber/users dashboard, and only shown in the instructor's dashboard.
-
-= 1.3.1 - 22 May, 2019 =
-
-* New: status in the purchase history list
-* New: Shortcode for the coruse query, full shortcode `[tutor_course id="20,64" exclude_ids="567,332" category="18,19" order="desc" count="3"]`
-* New: a simple shortcode builder to build [tutor_course] Shortcode from classic editor
-* New: Tutor course widget to display course to sidebar
-* New: `utils()->get_raw_course_price($course_id)`, it will be return to your regular price and sale price as object
-* New: Course page edit by Pagebuilder integration which supports frontend editing
-* New: `$size = 'post-thumbnail',` Arguments at function `get_tutor_course_thumbnail()` And `get_tutor_course_thumbnail_src();`
-* Fix: Hide zero rating count in the course loop grid
-* Fix: some translation issue
-* Changed: a template the_content(), reordered position in course single page
-* Upgraded: course url upgrade to plural format, courses
-
-= 1.3.0 - 17 May, 2019 =
-
-* New: Flash Msg ability to show flash msg in a different view or different action
-* New: Styling, change default color scheme
-* New: return at tutor_course_loop_thumbnail() based on $echo condition
-* New: Purchase history from the dashboard
-* New: Become Instructor Button on student dashboard based on settings
-* New: Enable Disable Course Market place, default Tutor LMS will be single instructor format.
-* Fix: a template div closing/return issue in dashboard > reviews menu
-* Fix: Tutor course content export-import in WordPress way
-* Fix: Some responsive issue in course details and lesson page
-* Reduced: Instructor and Student Registration form field. removed phone number and profile bio filed from the registration page.
-* Moved: tutor icon CSS file from tutor-front.css file to individually
-
-= 1.2.20 - 10 May, 2019 =
-
-* New: Reset Password from Tutor dashboard
-* New: Course Category Image
-* New: my course delete / trash from the dashboard
-* New: profile photo upload from dashboard profile edit page
-* New: Profile Edit from settings page
-* Fix: a default value issue in option checkbox
-* Fix: a permission issue for administrator while attempt to edit other authors course
-* Fix: course post type in rewrite URL, if it changes via the filter
-* Remove: Gutenburg Addon for tutor dashboard as it's not necessary, now dashboard comes with settings > selected dashboard page.
-* Renamed: Gutenberg blocks label
-
-= 1.2.13 - 26 April, 2019 =
-
-* New: Instructor role to the administrator during plugin activation
-* Fix: Course Permission options settings, it was shown always log-in page
-* Fix: Enable students to show reviews wrote on their profile from settings
-* Fix: Show completed course settings
-
-= 1.2.12 - 25 April, 2019 =
-
-* New: Synced role with tutor instructor role when changing it from WP User Edit page
-* New: Flatpro theme compatibility
-* Fix: Some design issue in quiz builder
-* Fix: WooCommerce price error when WC is not exists
-* Remove: Edit Icon on true/false type question in the quiz builder
-
-= 1.2.11 - 24 April, 2019 =
-
-* New: few action hooks at the quiz
-* New: a filter hook to support pro version more perfectly
-
-= 1.2.1 - 23 April, 2019 =
-
-* New: email field type at withdrawals methods form generator
-* New: addon lists added to regular version when the pro is not exists
-* Fix: Some design issue in quiz builder
-* Fix: Paypal E-Mail field name, physical address field name at e-check method
-
-= 1.2.0 - 19 April, 2019 =
-
-* New: Earning calculation, report, statements at front dashboard
-* New: multiple withdraw method with development support, withdraw confirmation, approved, reject from admin
-* New: database table , `{$wpdb->prefix}tutor_earnings`,  `{$wpdb->prefix}tutor_withdraws`
-* New: RTL CSS support
-* New: Footer text only on Tutor LMS pages in admin dashboard
-* New: a default parameter of $instructor_id = 0 on `tutor_utils()->get_courses_by_instructor()`
-* New: second parameter `$post_status = 'publish'` on  `tutor_utils()->get_courses_by_instructor()`, `$post_status = 'any'` will be return any type of course belongs with current or given user id
-* Fix: Storefront theme compatibility container width
-* Fix: Available Instructors Display on the Course edit page
-* Fix: muiltiple course order issue by WooCommerce
-* Fix: Another author post edit prevented by Tutor
-* Changed: Student dashboard to Tutor Dashboard, shortcode, templates, url
-
-= 1.1.1 - 29 March, 2019 =
-
-* Fix: quiz builder init sortable question types on load quiz via $.ajax();
-* New: Storefront Theme compatibility
-
-= 1.1.0 - 28 March, 2019 =
-
-* Fix: Multiple Instructor, search feature working when pro is not exists
-* Fix: an issue in time update when time limit 0 in quiz attempt, it was return in front-js middle point, so rest of js not worked
-
-= 1.0.9 - 28 March, 2019 =
-
-* Limit: Quiz Question 5 types
-* Update: course saving message to course related words
-* Fix: is course complete check an issue if user not logged in return false
-* Fix: an issue: in WooCommerce discount coupon for course
-* Fix: Lesson slug will be updated instantly right after update lesson content and title
-* Changed: Some text, spelling
-
-= 1.0.8 - 25 March, 2019 =
-
-* New: WooCommerce and EDD support to sell courses
-
-
-= 1.0.7 - 22 March, 2019 =
-
-* New: Radio input type at options panel
-* New: required indication for required fields in add new instructor page from admin panel
-* Update: Moved some option select to radio
-* Update: Attempts allowed field slider to number field
-* Update: Removed zero decimal value from the course complete progress bar
-* Fix: redirect back to the quiz after quiz attempt submit
-* Fix: No time limit quiz attempt finishing instantly, it should be no time limit
-* Fix: video poster field show hide based on video source at the course, lesson
-
-= 1.0.6 - 20 March, 2019 =
-
-* New: Drop tutor LMS related database table while uninstalling
-* Update: option tab design
-* Fix: Fix a condition of adding autoload class
-
-= 1.0.5 - 18 March, 2019 =
-
-* Updated Rating and review, added individual 5 stars, 4 stars, 3 stars, 2 stars, 1 star rating count with the meter
-
-= 1.0.4 - 15 March, 2019 =
-
-* New: Social share
-* New: course author should be the auto instructor
-* Update: Show login form in enrolment box when the user in guest mode and trying to purchase/enroll a course
-* Fix: Question and answer query for instructor which course only belongs with him.
-* Fix: rating and review placing issue, some time it was stuck
-* New: translation pot file and languages directory
-* Fix: Few known bugs
-
-
-= 1.0.3 - 08 March, 2019 =
-
-* New: onclick topic title slide topic body in course builder
-* New: Add new instructor from instructors > add new instructor, in the dashboard
-* Remove: some commented unused code
-* Remove: Save and exit button in quiz builder
-* Remove: some console.log() at javascript files
-* Update: course level input select to radio
-* Update: Moved question type in the top in quiz builder question
-* Update: Course builder lesson and quiz design
-* Update: Quiz attempt view for the instructor
-* Update: quiz attempts query for instructor and removed attempts which are not submitted yet.
-* Fix: Frontend Template compatible, .tutor-container class CSS
-* Fix: Perfectly topic toggle arrow down up, on click in course builder
-* Fix: some buttons hover CSS in the quiz, course builder
-* Fix: When Tutor Pro does not exist, get enroll button will be in course loop with the free price
-* Fix: Ability to check multiple answers instant right after add question in quiz question type multiple_choice
-* Fix: Image answering question type result in the quiz
-* Fix: a bug in quiz attempt review, it was multi-time decrease when mark as incorrect, not actually marked.
-* Fix: Few known bugs
-
-= 1.0.2 - 06 March, 2019 =
-
-* New: button save, save and closed in quiz modal
-* New: Registering user and redirect to Dashboard URL
-* New: questions sorting in quiz builder
-* New: question specific class in quiz answer options
-* Update: Quiz attempt design with questions
-* Update: some text, typo
-* Fix: instructor database query in instructor lists
-* Fix: query randomized questions limit by quiz
-* Fix: Starting quiz for first time return 0, it should redirect to the quiz page
-
-= 1.0.1 - 05 March, 2019 =
-
-* Added a course_column in attempts table
-* Showed his courses attempts on instructors panel
-* Added v.1, added v.1.0.0 compatibility
-* Showed full courses comment in guest/public view of single course
-* Renamed tags to skills
-* Fixed few bugs, improved performance
-
-= 1.0.0 - 01 March, 2019 =
-
-* Added Quiz, quiz builder, course builder
-* Fixed huge bugs from alpha version
-* Stable Release
-
-= 1.0.0-alpha - 06 Feb, 2019 =
-
-* Alpha Release
+[View the full changelog](https://github.com/themeum/tutor/blob/master/.github/changelog.md#tutorlms-changelog)
 
 == Upgrade Notice ==
 
