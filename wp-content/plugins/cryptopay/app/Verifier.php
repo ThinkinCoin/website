@@ -79,7 +79,7 @@ class Verifier
         if (empty($transactions)) return;
 
         $uniqueTransactions = [];
-        foreach($transactions as $transaction) {
+        foreach ($transactions as $transaction) {
             $order = json_decode($transaction->order);
             if (isset($order->id)) {
                 $uniqueTransactions[$order->id] = $transaction;
@@ -88,7 +88,11 @@ class Verifier
 
         $transactions = array_values($uniqueTransactions);
 
+        // no pending transactions
+        if (empty($transactions)) return;
+
         $this->debug('Verifying pending transactions');
+
         foreach ($transactions as $transaction) {
             
             $order = json_decode($transaction->order);
@@ -100,11 +104,14 @@ class Verifier
                     continue;
                 }
 
-                $this->debug('Verifying transaction', 'INFO', [
-                    'hash' > $this->hash,
-                ]);
-
                 $result = $this->verifyTransaction($transaction);
+
+                $this->debug('Verifying transaction (VERIFIER)', 'INFO', [
+                    'hash' => $transaction->hash,
+                    'network' => $network,
+                    'order' => $order,
+                    'status' => $result
+                ]);
 
                 if (is_null($result)) continue;
 
@@ -117,6 +124,7 @@ class Verifier
                 $this->debug('Payment finished (VERIFIER)', 'INFO', [
                     'hash' => $transaction->hash,
                     'network' => $network,
+                    'order' => $order,
                     'status' => $result
                 ]);
                 
@@ -134,7 +142,7 @@ class Verifier
 
             } catch (\Exception $e) {
                 $this->model->updateStatusToFailedByHash($transaction->hash);
-                $this->debug('Error while verifying transaction', 'ERROR', [
+                $this->debug('Error while verifying transaction (VERIFIER)', 'ERROR', [
                     'hash' => $transaction->hash,
                     'network' => $network,
                     'error' => $e->getMessage()

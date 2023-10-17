@@ -8,6 +8,7 @@ use \BeycanPress\CryptoPay\Settings;
 use \BeycanPress\CryptoPay\PluginHero\Hook;
 use \BeycanPress\CryptoPay\PluginHero\Helpers;
 use \BeycanPress\CryptoPay\Pages\TransactionPage;
+use \BeycanPress\CryptoPay\Models\OrderTransaction;
 
 class Register
 {

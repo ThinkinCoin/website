@@ -79,6 +79,7 @@ do_action( 'tutor_dashboard/before/wrap' );
 					);
 					?>
 				</div>
+					
 
 				<div class="tutor-user-info tutor-ml-24">
 					<?php
@@ -88,7 +89,15 @@ do_action( 'tutor_dashboard/before/wrap' );
 						?>
 						<div class="tutor-fs-4 tutor-fw-medium tutor-color-black tutor-dashboard-header-username">
 							<?php echo esc_html( $user->display_name ); ?>
-						</div>
+							
+						<!-- badges -->
+							<div class="user-achivements"><?php $content = '[mycred_my_badges width="30px" display="horizontal" show="all"]';
+					echo do_shortcode($content);?>
+				</div>
+							
+							
+					</div>
+					
 						<div class="tutor-dashboard-header-stats">
 							<div class="tutor-dashboard-header-ratings">
 								<?php tutor_utils()->star_rating_generator_v2( $instructor_rating->rating_avg, $instructor_rating->rating_count, true ); ?>
@@ -103,13 +112,16 @@ do_action( 'tutor_dashboard/before/wrap' );
 							</div>
 							<div class="tutor-fs-4 tutor-fw-medium tutor-dashboard-header-username">
 								<?php echo esc_html( $user->display_name ); ?>
-							</div>
-						</div>
+							</div>					
+					</div>
+									
 						<?php
 					}
 					?>
 				</div>
+				
 			</div>
+			
 			<div class="tutor-header-right-side tutor-col-md-6 tutor-d-flex tutor-justify-end tutor-mt-20 tutor-mt-md-0">
 				<div class="tutor-d-flex tutor-align-center">
 					<?php

@@ -64,9 +64,20 @@ use Tutor_Starter\Traits\Header_Components;
                 </div>
             <?php endif; ?>
             <?php if ( class_exists( '\TUTOR\Utils' ) && is_user_logged_in() ) : ?>
-                <div class="tutor-header-profile-menu-items">
+                <div class="tutor-header-profile-menu-items"> 
                     <?php Header_Components::tutor_multi_column_dropdown(); ?>
-                </div><!-- .tutor-header-profile-menu -->
+					
+                </div>
+			<div class="user_achievement">
+				<?php $content = '[mycred_my_balance wrapper=0 title_el="" balance_el=""]';
+echo do_shortcode($content);?>
+			
+				
+				<!--  <?php $content = '[mycred_my_badges width="MYCRED_BADGE_WIDTH" display="horizontal" show="all"]';
+echo do_shortcode($content);?> -->
+				
+			</div>
+			<!-- .tutor-header-profile-menu -->
             <?php endif; ?>
             <?php if ( ! is_user_logged_in() || is_customize_preview() ) : ?>
                 <?php if ( true === get_theme_mod( 'cta_text_toggle', true ) ) : ?>

@@ -2,8 +2,8 @@
 
 /**
  * Plugin Name: CryptoPay
- * Version:     1.6.0
- * Plugin URI:  https://beycanpress.com/cryptopay
+ * Version:     1.6.2
+ * Plugin URI:  https://beycanpress.com/cryptopay/
  * Description: All In One Cryptocurrency Payments for WordPress
  * Author:      BeycanPress
  * Author URI:  https://beycanpress.com
@@ -20,7 +20,7 @@
 if (extension_loaded('ionCube Loader')) {
     // Load plugin
     require __DIR__ . '/vendor/autoload.php';
-    $GLOBALS['cryptopay_version'] = '1.6.0';
+    $GLOBALS['cryptopay_version'] = '1.6.2';
     new \BeycanPress\CryptoPay\Loader(__FILE__);
 } else {
     add_action('admin_notices', function() {

@@ -61,6 +61,7 @@ class Lang
             "changeNetwork" => esc_html__('Change network', 'cryptopay'),
             "ensDomain" => esc_html__('ENS Domain: ', 'cryptopay'),
             "notFoundAnyCurrency" => esc_html__('No active currencies were found on this network. Please report this to the administrator.', 'cryptopay'),
+            "paymentCompleting" => esc_html__('Payment is being completed, please wait...', 'cryptopay'),
         ];
     }
 

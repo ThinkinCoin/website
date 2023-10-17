@@ -62,8 +62,12 @@ class Services
         string $addon, bool $confirmation = true, array $data = []
     ) : string
     {
-        $autoLoad = isset($data['autoLoad']) ? $data['autoLoad'] : false;
         $pluginUrl = Plugin::$instance->pluginUrl;
+        $jsProviders = Hook::callFilter('js_providers', [
+            'EvmChains' => Plugin::$instance->addScript('evm-chains-provider.js')
+        ]);
+
+        $autoLoad = isset($data['autoLoad']) ? $data['autoLoad'] : false;
 
         $walletImages = [
             'qr' => $pluginUrl . 'assets/images/wallets/qr.png',
@@ -84,30 +88,34 @@ class Services
             $data['init'] = $init;
         }
 
+        $theme = Hook::callFilter('theme', Settings::get('theme'));
+        $theme = Hook::callFilter('theme_'. $addon, $theme);
+
         $data = array_merge([
             'hooks' => [],
             'callbacks' => [],
             'addon' => $addon,
+            'theme' => $theme,
             'autoLoad'=> $autoLoad,
             'networks' => $networks,
             'transactionRecord' => true,
             'confirmation' => $confirmation,
+            'license' => Settings::get('license'),
             'apiUrl' => Plugin::$instance->apiUrl,
+            'providers' => array_keys($jsProviders),
             'imagesUrl' => $pluginUrl . 'assets/images/',
             'version' => Plugin::$instance->pluginVersion,
             'debug' => boolval(Settings::get('debugging')),
             'lang' => Hook::callFilter('lang', Lang::get()),
-            'logo' =>  $pluginUrl . 'assets/images/icon-256x256.png',
             'ensDomain' => Settings::get('ensDomainForEthereum'),
-            'theme' => Hook::callFilter('theme', Settings::get('theme')),
-            'providers' => array_keys(Hook::callFilter('js_providers', [])),
+            'logo' =>  $pluginUrl . 'assets/images/icon-256x256.png',
             'walletImages' => Hook::callFilter('wallet_images', $walletImages),
             'webSocketUrl' => "https://qr-verifier-7c7fab6cf733.herokuapp.com/",
             'autoPriceUpdateMin' => Settings::get('autoPriceUpdateMin') ?? 0.5,
-            'providerConfig' => Hook::callFilter('provider_config', [
+            'providerConfig' => [
                 'testnet' => boolval(Settings::get('testnet')),
                 'wcProjectId' => "454e2fe5f5c378d9490742a44bbd1b5d",
-            ])
+            ]
         ], $data);
 
         Plugin::$instance->addScript('/cryptopay/js/chunk-vendors.js');
@@ -115,7 +123,7 @@ class Services
         Plugin::$instance->addStyle('/cryptopay/css/chunk-vendors.css');
         Plugin::$instance->addStyle('/cryptopay/css/app.css');
         
-        $deps = array_values(Hook::callFilter('js_providers', []));
+        $deps = array_values($jsProviders);
         $key = Plugin::$instance->addScript('main.min.js', array_merge(['jquery'], $deps));
         $key = !empty($deps) ? array_shift($deps) : $key;
         wp_localize_script($key, 'CryptoPay', $data);
@@ -141,7 +149,7 @@ class Services
         ]);
 
         Plugin::$instance->debug('Calculating payment amount (SERVICES)');
-        $paymentAmount = self::calculatePaymentAmont(
+        $paymentAmount = self::calculatePaymentAmount(
             $data['order']['currency'], 
             (object) $paymentCurrency, 
             $data['order']['amount'], 
@@ -256,7 +264,6 @@ class Services
 
         Plugin::$instance->debug('Getting wallet address');
         $receiver = self::getWalletAddress($data->network->code);
-        $receiver = Hook::callFilter('receiver_' . $data->addon, $receiver, $data);
 
         return [
             'receiver' => $receiver,
@@ -337,7 +344,8 @@ class Services
      */
     public static function getWalletAddress(string $code) : ?string
     {
-        return Settings::get($code . 'WalletAddress') ?? null;
+        $walletAddress = Settings::get($code . 'WalletAddress') ?? null;
+        return Hook::callFilter('wallet_address_' . $code, $walletAddress);
     }
 
     /**
@@ -396,15 +404,22 @@ class Services
     }
 
     /**
+     * @return array
+     */
+    public static function getModels() : array
+    {
+        return Hook::callFilter('models', [
+            'woocommerce' => new Models\OrderTransaction()
+        ]);
+    }
+    
+    /**
      * @param string $addon
      * @return object|null
      */    
     public static function getModelByAddon(string $addon) : ?object
     {
-        $models = Hook::callFilter('models', [
-            'woocommerce' => new Models\OrderTransaction()
-        ]);
-
+        $models = self::getModels();
         return isset($models[$addon]) ? $models[$addon] : null;
     }
 
@@ -428,12 +443,12 @@ class Services
 
     /**
      * @param string $orderCurrency
-     * @param object $cryptoCurrency
+     * @param object $paymentCurrency
      * @param float $amount
      * @param object $network
      * @return float|null
      */
-    public static function calculatePaymentAmont(
+    public static function calculatePaymentAmount(
         string $orderCurrency, object $paymentCurrency, float $amount, object $network
     ) : ?float
     {

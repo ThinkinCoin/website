@@ -35,35 +35,15 @@ class Mo_API_Authentication_License {
 		self::emit_css();
 		?>
 
-		<!-- Important JSForms -->
-		<input type="hidden" value="<?php echo esc_attr( mo_api_authentication_is_customer_registered() ); ?>" id="mo_customer_registered">
-		<form style="display:none;" id="loginform"
-			action="<?php echo esc_attr( get_option( 'host_name' ) ) . '/moas/login'; ?>"
-			target="_blank" method="post">
-			<?php wp_nonce_field( 'mo_api_authentication_goto_login_xecurify', 'mo_api_authentication_goto_login_fields_xecurify' ); ?>			
-			<input type="email" name="username" value="<?php echo esc_attr( get_option( 'mo_api_authentication_admin_email' ) ); ?>"/>
-			<input type="text" name="redirectUrl"
-				value="<?php echo esc_attr( get_option( 'host_name' ) ) . '/moas/initializepayment'; ?>"/>
-			<input type="text" name="requestOrigin" id="requestOrigin"/>
-		</form>
-		<form style="display:none;" id="viewlicensekeys"
-			action="<?php echo esc_attr( get_option( 'host_name' ) ) . '/moas/login'; ?>"
-			target="_blank" method="post">
-			<?php wp_nonce_field( 'mo_api_authentication_goto_license_keys', 'mo_api_authentication_goto_license_keys_fields_xecurify' ); ?>			
-			<input type="email" name="username" value="<?php echo esc_attr( get_option( 'mo_api_authentication_admin_email' ) ); ?>"/>
-			<input type="text" name="redirectUrl"
-				value="<?php echo esc_attr( get_option( 'host_name' ) ) . '/moas/viewlicensekeys'; ?>"/>
-		</form>
-		<!-- End Important JSForms -->
 		<script>
-		function mo_show_popup_feature(popup_id){
-			document.getElementById(popup_id).style.visibility = "visible";
-			document.getElementById(popup_id).style.opacity = "1";
-		}
-		function mo_hide_popup_feature(popup_id){
-			document.getElementById(popup_id).style.opacity = "0";
-			document.getElementById(popup_id).style.visibility = "hidden";
-		}
+			function mo_show_popup_feature(popup_id){
+				document.getElementById(popup_id).style.visibility = "visible";
+				document.getElementById(popup_id).style.opacity = "1";
+			}
+			function mo_hide_popup_feature(popup_id){
+				document.getElementById(popup_id).style.opacity = "0";
+				document.getElementById(popup_id).style.visibility = "hidden";
+			}
 		</script>
 		<div style="margin-left: 0px;margin-right: 30px;" class="row">
 			<div class="mo_api_authentication_support_layout" style="padding-left: 20px; padding-top: 15px;padding-bottom: 15px;">
@@ -770,29 +750,17 @@ class Mo_API_Authentication_License {
 		<!-- JSForms Controllers -->
 		<script>
 
-			function customplanupgrade() {
-				planType = document.getElementById('wp-rest-api-custom-plan-select').value;
-				upgradeform(planType);
-			}
-
 			function upgradeform(planType) {
 				if(planType === "") {
 					location.href = "https://wordpress.org/plugins/wp-rest-api-authentication/";
 					return;
-				} else {
-					jQuery('#requestOrigin').val(planType);
-					if(jQuery('#mo_customer_registered').val()==1)
-						jQuery('#loginform').submit();
-					else{
-						location.href = jQuery('#mobacktoaccountsetup').attr('href');
-					}
+				} 
+				else {
+					const url = `https://portal.miniorange.com/initializepayment?requestOrigin=${planType}`;            
+					window.open(url, "_blank");					
 				}
-
 			}
 
-			function getlicensekeys() {
-				jQuery('#viewlicensekeys').submit();
-			}
 		</script>
 		<!-- End JSForms Controllers -->
 		<?php

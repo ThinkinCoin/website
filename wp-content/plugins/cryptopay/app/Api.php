@@ -144,7 +144,7 @@ class Api extends AbstractApi
         ]);
 
         $this->debug('Calculating payment amount (API)');
-        $paymentAmount = Services::calculatePaymentAmont(
+        $paymentAmount = Services::calculatePaymentAmount(
             $this->order->currency, $this->order->paymentCurrency, $this->order->amount, $this->network
         );
 
@@ -275,8 +275,10 @@ class Api extends AbstractApi
                 ]);
             }
 
-            $this->debug('Verifying transaction', 'INFO', [
+            $this->debug('Verifying transaction (API)', 'INFO', [
                 'hash' > $this->hash,
+                'network' => $this->network,
+                'order' => $this->order,
             ]);
             try {
                 $this->data->status = (new Verifier($this->model))->verifyTransaction($transaction);
@@ -339,7 +341,7 @@ class Api extends AbstractApi
     public function currencyConverter() : void
     {   
         $this->debug('Currency converter process');
-        $paymentAmount = Services::calculatePaymentAmont(
+        $paymentAmount = Services::calculatePaymentAmount(
             $this->order->currency, $this->order->paymentCurrency, $this->order->amount, $this->network
         );
 
@@ -360,15 +362,19 @@ class Api extends AbstractApi
      */
     public function verifyPendingTransactions() : void
     {
-        if ($this->model) {
-            $this->debug('Verify pending transactions process');
+        try {
+            $models = Services::getModels();
+
             $code = $this->request->getParam('code') ?? 'all';
-            (new Verifier($this->model))->verifyPendingTransactions(0, $code);
+            
+            foreach ($models as $model) {
+                (new Verifier($model))->verifyPendingTransactions($this->userId, $code);
+            }
 
             Response::success();
+        } catch (\Throwable $th) {
+            Response::error($th->getMessage());
         }
-
-        Response::error(esc_html__('Model not found!', 'cryptopay'), 'MOD103');
     }
 
     /**
