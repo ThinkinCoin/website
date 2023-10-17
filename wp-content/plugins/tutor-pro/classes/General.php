@@ -1,15 +1,33 @@
 <?php
+/**
+ * General class for hook logic
+ *
+ * @package TutorPro
+ *
+ * @since 2.0.0
+ */
 
 namespace TUTOR_PRO;
 
 use TUTOR\Input;
+use Tutor\Models\CourseModel;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+/**
+ * Class General
+ *
+ * @since 2.0.0
+ */
 class General {
 
+	/**
+	 * Register hooks
+	 *
+	 * @return void
+	 */
 	public function __construct() {
 		add_action( 'tutor_action_tutor_add_course_builder', array( $this, 'tutor_add_course_builder' ) );
 		add_filter( 'frontend_course_create_url', array( $this, 'frontend_course_create_url' ) );
@@ -19,15 +37,52 @@ class General {
 		add_filter( 'tutor_course_builder_logo_src', array( $this, 'tutor_course_builder_logo_src' ) );
 		add_filter( 'tutor_email_logo_src', array( $this, 'tutor_email_logo_src' ) );
 		add_filter( 'tutor_pages', array( $this, 'add_login_page' ), 10, 1 );
+
+		add_action( 'tutor_after_lesson_completion_button', array( $this, 'add_course_completion_button' ), 10, 4 );
+	}
+
+	/**
+	 * Show course completion button after all course content done.
+	 *
+	 * @since 2.4.0
+	 *
+	 * @param int   $course_id course id.
+	 * @param int   $user_id user id.
+	 * @param bool  $is_course_completed course completed or not.
+	 * @param array $course_stats course progress stats.
+	 *
+	 * @return void
+	 */
+	public function add_course_completion_button( $course_id, $user_id, $is_course_completed, $course_stats ) {
+		if ( false === $is_course_completed
+			&& $course_stats['completed_count'] === $course_stats['total_count']
+			&& CourseModel::can_complete_course( $course_id, $user_id ) ) {
+			?>
+			<div class="tutor-topbar-complete-btn tutor-mr-20">
+				<form method="post">
+					<?php wp_nonce_field( tutor()->nonce_action, tutor()->nonce ); ?>
+					<input type="hidden" name="course_id" value="<?php echo esc_attr( $course_id ); ?>"/>
+					<input type="hidden" name="tutor_action" value="tutor_complete_course"/>
+					<button type="submit" 
+						class="tutor-topbar-mark-btn tutor-btn tutor-btn-primary tutor-ws-nowrap"
+						name="complete_course" value="complete_course">
+						<span class="tutor-icon-circle-mark-line tutor-mr-8" area-hidden="true"></span>
+						<span><?php esc_html_e( 'Complete Course', 'tutor-pro' ); ?></span>
+					</button>
+				</form>
+			</div>
+			<?php
+		}
 	}
 
 	/**
 	 * Add login page
 	 *
-	 * @param array $pages
-	 * @return array
-	 *
 	 * @since 2.1.0
+	 *
+	 * @param array $pages page list.
+	 *
+	 * @return array
 	 */
 	public function add_login_page( array $pages ) {
 		return array( 'tutor_login_page' => __( 'Tutor Login', 'tutor' ) ) + $pages;
@@ -37,15 +92,18 @@ class General {
 	 * Process course submission from frontend course builder
 	 *
 	 * @since v.1.3.4
+	 *
+	 * @return void
 	 */
 	public function tutor_add_course_builder() {
-		// Checking nonce
 		tutor_utils()->checking_nonce();
+
 		$user_id          = get_current_user_id();
 		$course_post_type = tutor()->course_post_type;
 
-		$course_ID = (int) sanitize_text_field( tutor_utils()->array_get( 'course_ID', $_POST ) );
-		$post_ID   = (int) sanitize_text_field( tutor_utils()->array_get( 'post_ID', $_POST ) );
+		//phpcs:ignore WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase
+		$course_ID = Input::post( 'course_ID', 0, Input::TYPE_INT );
+		$post_ID   = Input::post( 'post_ID', 0, Input::TYPE_INT );
 
 		if ( ! tutor_utils()->can_user_edit_course( $user_id, $post_ID ) ) {
 			wp_send_json_error( array( 'message' => __( 'Access Denied', 'tutor-pro' ) ) );
@@ -58,12 +116,12 @@ class General {
 		 * Update the post
 		 */
 
-		$content   = wp_kses_post( tutor_utils()->array_get( 'content', $_POST ) );
-		$title     = sanitize_text_field( tutor_utils()->array_get( 'title', $_POST ) );
-		$tax_input = tutor_utils()->array_get( 'tax_input', $_POST );
-		$slug      = sanitize_text_field( $_POST['post_name'] );
+		$content   = Input::post( 'content', '', Input::TYPE_KSES_POST );
+		$title     = Input::post( 'title', '' );
+		$tax_input = tutor_utils()->array_get( 'tax_input', $_POST ); //phpcs:ignore
+		$slug      = Input::post( 'post_name', '' );
 
-		$postData = array(
+		$post_data = array(
 			'ID'           => $post_ID,
 			'post_title'   => $title,
 			'post_content' => $content,
@@ -73,23 +131,23 @@ class General {
 		// Publish or Pending...
 		$message       = null;
 		$show_modal    = true;
-		$submit_action = tutor_utils()->array_get( 'course_submit_btn', $_POST );
+		$submit_action = Input::post( 'course_submit_btn', '' );
 
-		if ( $submit_action === 'save_course_as_draft' ) {
-			$postData['post_status'] = 'draft';
-			$message                 = __( 'Course has been saved as a draft.', 'tutor-pro' );
-			$show_modal              = false;
-		} elseif ( $submit_action === 'submit_for_review' ) {
-			$postData['post_status'] = 'pending';
-			$message                 = __( 'Course has been submitted for review.', 'tutor-pro' );
-		} elseif ( $submit_action == 'publish_course' ) {
+		if ( 'save_course_as_draft' === $submit_action ) {
+			$post_data['post_status'] = 'draft';
+			$message                  = __( 'Course has been saved as a draft.', 'tutor-pro' );
+			$show_modal               = false;
+		} elseif ( 'submit_for_review' === $submit_action ) {
+			$post_data['post_status'] = 'pending';
+			$message                  = __( 'Course has been submitted for review.', 'tutor-pro' );
+		} elseif ( 'publish_course' === $submit_action ) {
 			$can_publish_course = (bool) tutor_utils()->get_option( 'instructor_can_publish_course' );
 			if ( $can_publish_course || current_user_can( 'administrator' ) ) {
-				$postData['post_status'] = 'publish';
-				$message                 = __( 'Course has been published.', 'tutor-pro' );
+				$post_data['post_status'] = 'publish';
+				$message                  = __( 'Course has been published.', 'tutor-pro' );
 			} else {
-				$postData['post_status'] = 'pending';
-				$message                 = __( 'Course has been submitted for review.', 'tutor-pro' );
+				$post_data['post_status'] = 'pending';
+				$message                  = __( 'Course has been submitted for review.', 'tutor-pro' );
 			}
 		}
 
@@ -104,7 +162,7 @@ class General {
 				)
 			);
 		}
-		wp_update_post( $postData );
+		wp_update_post( $post_data );
 
 		/**
 		 * Setting Thumbnail
@@ -120,7 +178,7 @@ class General {
 				$taxonomy_obj = get_taxonomy( $taxonomy );
 				if ( ! $taxonomy_obj ) {
 					/* translators: %s: taxonomy name */
-					_doing_it_wrong( __FUNCTION__, sprintf( __( 'Invalid taxonomy: %s.' ), $taxonomy ), '4.4.0' );
+					_doing_it_wrong( __FUNCTION__, sprintf( __( 'Invalid taxonomy: %s.' ), $taxonomy ), '4.4.0' );//phpcs:ignore
 					continue;
 				}
 
@@ -132,13 +190,7 @@ class General {
 			}
 		}
 
-		/**
-		 * Adding support for do_action();
-		 */
-		// Removing below both action to avoid multiple fire
-		// do_action( "save_post_{$course_post_type}", $post_ID, $post, $update );
-		// do_action( 'save_post', $post_ID, $post, $update );
-		do_action( 'save_tutor_course', $post_ID, $postData );
+		do_action( 'save_tutor_course', $post_ID, $post_data );
 
 		if ( wp_doing_ajax() ) {
 			wp_send_json_success();
@@ -172,9 +224,9 @@ class General {
 
 
 	/**
-	 * @return string
-	 *
 	 * Frontend Course builder url
+	 *
+	 * @return string
 	 */
 	public function frontend_course_create_url() {
 		return tutor_utils()->get_tutor_dashboard_page_permalink( 'create-course' );
@@ -182,18 +234,18 @@ class General {
 
 
 	/**
-	 * @param $template
+	 * Include Dashboard
+	 *
+	 * @param string $template template.
 	 *
 	 * @return bool|string
-	 *
-	 * Include Dashboard
 	 */
 	public function fs_course_builder( $template ) {
 		global $wp_query;
 
 		if ( $wp_query->is_page ) {
 			$student_dashboard_page_id = (int) tutor_utils()->get_option( 'tutor_dashboard_page_id' );
-			if ( $student_dashboard_page_id === get_the_ID() ) {
+			if ( get_the_ID() === $student_dashboard_page_id ) {
 				if ( tutor_utils()->array_get( 'tutor_dashboard_page', $wp_query->query_vars ) === 'create-course' ) {
 					if ( is_user_logged_in() ) {
 						$template = tutor_get_template( 'dashboard.create-course' );
@@ -208,6 +260,13 @@ class General {
 	}
 
 
+	/**
+	 * Extend settings options.
+	 *
+	 * @param array $attr settings options.
+	 *
+	 * @return array
+	 */
 	public function extend_settings_option( $attr ) {
 
 		$pages = tutor_utils()->get_pages();
@@ -229,7 +288,7 @@ class General {
 			'key'         => 'hide_admin_bar_for_users',
 			'type'        => 'toggle_switch',
 			'label'       => __( 'Hide Admin Bar and Restrict Access to WP Admin for Instructors', 'tutor' ),
-			'label_title' => __( '', 'tutor' ),
+			'label_title' => '',
 			'default'     => 'off',
 			'desc'        => __( 'Enable this to hide the WordPress Admin Bar from Frontend site, and restrict access to the WP Admin panel.', 'tutor' ),
 		);
@@ -244,7 +303,7 @@ class General {
 			'type'        => 'toggle_switch',
 			'label'       => __( 'Redirect Instructor to "My Courses" once Publish button is Clicked', 'tutor' ),
 			'default'     => 'off',
-			'label_title' => __( '', 'tutor' ),
+			'label_title' => '',
 			'desc'        => __( 'Enable to Redirect an Instructor to the "My Courses" Page once he clicks on the "Publish" button', 'tutor' ),
 		);
 
@@ -326,14 +385,16 @@ class General {
 		);
 
 		// TODO implement later.
-		// $attr['design']['blocks']['course-details']['fields'][0]['group_options'][] = array(
-		// 'key'         => 'enable_sticky_topbar',
-		// 'type'        => 'toggle_single',
-		// 'label'       => __( 'Sticky Topbar', 'tutor-pro' ),
-		// 'label_title' => __( 'Disable', 'tutor-pro' ),
-		// 'default'     => 'off',
-		// 'desc'        => __( 'Enable sticky topbar on course details on scroll', 'tutor-pro' ),
-		// );
+		/**
+		* $attr['design']['blocks']['course-details']['fields'][0]['group_options'][] = array(
+		* 'key'         => 'enable_sticky_topbar',
+		* 'type'        => 'toggle_single',
+		* 'label'       => __( 'Sticky Topbar', 'tutor-pro' ),
+		* 'label_title' => __( 'Disable', 'tutor-pro' ),
+		* 'default'     => 'off',
+		* 'desc'        => __( 'Enable sticky topbar on course details on scroll', 'tutor-pro' ),
+		* );
+		*/
 
 		/**
 		 * Lesson video completion control.
@@ -370,6 +431,13 @@ class General {
 		return $attr;
 	}
 
+	/**
+	 * Course builder logo src
+	 *
+	 * @param string $url url.
+	 *
+	 * @return string
+	 */
 	public function tutor_course_builder_logo_src( $url ) {
 		$media_id = (int) get_tutor_option( 'tutor_frontend_course_page_logo_id' );
 		if ( $media_id ) {
@@ -378,6 +446,14 @@ class General {
 		return $url;
 	}
 
+	/**
+	 * Email logo src
+	 *
+	 * @param string $url url.
+	 * @param mixed  $size size.
+	 *
+	 * @return string
+	 */
 	public function tutor_email_logo_src( $url = null, $size = null ) {
 
 		$media_id = (int) get_tutor_option( 'tutor_email_template_logo_id' );

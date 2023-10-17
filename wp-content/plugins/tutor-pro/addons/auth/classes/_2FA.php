@@ -30,7 +30,14 @@ class _2FA {
 	 * @return void
 	 */
 	public function __construct() {
-		add_action( 'template_redirect', array( $this, 'get_login_otp_page' ) );
+		/**
+		 * Hook `template_redirect` to `template_include`
+		 * for elementor custom header footer support.
+		 *
+		 * @since 2.4.0
+		 */
+		add_filter( 'template_include', array( $this, 'get_login_otp_page' ), 999 );
+
 		add_filter( 'wp_authenticate_user', array( $this, 'check_login' ), 11, 2 );
 		add_action( 'wp_ajax_nopriv_tutor_verify_login_otp', array( $this, 'verify_login_otp' ) );
 	}
@@ -40,16 +47,19 @@ class _2FA {
 	 *
 	 * @since 2.1.9
 	 *
-	 * @return void
+	 * @param string $template template path.
+	 *
+	 * @return string template path.
 	 */
-	public function get_login_otp_page() {
+	public function get_login_otp_page( $template ) {
 		if ( 'tutor-2fa' === Input::get( 'step' ) && null !== SessionHelper::get( 'tutor_login_otp' ) ) {
 			$template = tutor_auth()->views . 'login-otp.php';
 			if ( file_exists( $template ) ) {
-				include_once $template;
-				exit;
+				return $template;
 			}
 		}
+
+		return $template;
 	}
 
 	/**

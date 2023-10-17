@@ -122,24 +122,8 @@ class PageController {
 		$student_page  = Input::get( 'lp', 0, Input::TYPE_INT );
 		$start_student = max( 0, ( $student_page - 1 ) * $per_student );
 
-		$student_items = $wpdb->get_results(
-			"SELECT ID FROM {$wpdb->posts} AS posts
-			WHERE posts.post_type = 'tutor_enrolled'
-				AND posts.post_status = 'completed'
-				AND posts.post_parent = {$current_id}
-			GROUP BY post_author
-		"
-		);
-
-		$student_items = is_array( $student_items ) ? count( $student_items ) : 0;
-		$student_list  = $wpdb->get_results(
-			"SELECT post_author, ID, post_date, post_parent FROM {$wpdb->posts} AS posts
-			WHERE posts.post_type = 'tutor_enrolled'
-				AND posts.post_status = 'completed'
-				AND posts.post_parent = {$current_id}
-			GROUP BY post_author
-			ORDER BY ID DESC LIMIT {$start_student},{$per_student}"
-		);
+		$student_items = tutils()->count_enrolled_users_by_course( $current_id );
+		$student_list  = tutils()->get_students( $start_student, $per_student, '', $current_id );
 		$instructors   = tutor_utils()->get_instructors_by_course( $current_id );
 
 		$per_review    = tutor_utils()->get_option( 'pagination_per_page' );

@@ -11,7 +11,9 @@
 
 namespace TUTOR_ASSIGNMENTS;
 
+use TUTOR\Course;
 use TUTOR\Input;
+use Tutor\Models\CourseModel;
 
 class Assignments {
 
@@ -32,6 +34,8 @@ class Assignments {
 		add_action( 'wp_ajax_delete_tutor_course_assignment_submission', array( $this, 'delete_tutor_course_assignment_submission' ) );
 		add_action( 'delete_tutor_course_progress', array( $this, 'delete_tutor_course_progress' ), 10, 2 );
 		add_action( 'wp_ajax_tutor_remove_assignment_attachment', array( __CLASS__, 'remove_assignment_attachment' ) );
+
+		add_action( 'tutor_assignment/evaluate/after', array( $this, 'do_auto_course_complete' ), 10, 3 );
 
 	}
 
@@ -496,12 +500,46 @@ class Assignments {
 
 	}
 
+	/**
+	 * Do auto course complete after evaluate an assignment.
+	 *
+	 * @since 2.4.0
+	 *
+	 * @param int $submitted_id submission id.
+	 * @param int $course_id course id.
+	 * @param int $user_id user id.
+	 *
+	 * @return void
+	 */
+	public function do_auto_course_complete( $submitted_id, $course_id, $user_id ) {
+		if ( CourseModel::can_autocomplete_course( $course_id, $user_id ) ) {
+			CourseModel::mark_course_as_completed( $course_id, $user_id );
+			Course::set_review_popup_data( $user_id, $course_id );
+		}
+	}
+
+	/**
+	 * Show check icon for assignment.
+	 *
+	 * @param object  $post post.
+	 * @param boolean $lock_icon lock icon.
+	 *
+	 * @return void
+	 */
 	public function show_assignment_submitted_icon( $post, $lock_icon = false ) {
-		if ( $post->post_type === 'tutor_assignments' ) {
+		if ( 'tutor_assignments' === $post->post_type ) {
 			$is_submitted = tutor_utils()->is_assignment_submitted( $post->ID );
 
-			if ( $is_submitted && $is_submitted->comment_approved == 'submitted' ) {
-				echo "<input type='checkbox' class='tutor-form-check-input tutor-form-check-circle' disabled='disabled' readonly='readonly' checked='checked' />";
+			if ( $is_submitted && 'submitted' === $is_submitted->comment_approved ) {
+				$result       = self::get_assignment_result( $post->ID, get_current_user_id() );
+				$result_class = '';
+				if ( 'pending' === $result ) {
+					$result_class = 'tutor-check-pending';
+				}
+				if ( 'fail' === $result ) {
+					$result_class = 'tutor-check-fail';
+				}
+				echo "<input type='checkbox' class='tutor-form-check-input tutor-form-check-circle " . esc_attr( $result_class ) . "' disabled='disabled' readonly='readonly' checked='checked' />";
 			} else {
 				if ( $lock_icon ) {
 					echo '<i class="tutor-icon-lock-line tutor-fs-7 tutor-color-muted tutor-mr-4" area-hidden="true"></i>';
@@ -643,5 +681,32 @@ class Assignments {
 		);
 		$evaluate      = get_comment_meta( $id, 'evaluate_time', true );
 		return $evaluate ? (int) $evaluate : 0;
+	}
+
+	/**
+	 * Get assignment result.
+	 *
+	 * @since 2.4.0
+	 *
+	 * @param int $assignment_id assignment id.
+	 * @param int $user_id user id.
+	 *
+	 * @return string pending, pass, fail.
+	 */
+	public static function get_assignment_result( $assignment_id, $user_id ) {
+		$submitted_assignment = tutor_utils()->is_assignment_submitted( $assignment_id, $user_id );
+		$submit_id            = $submitted_assignment->comment_ID ?? 0;
+		$is_reviewed          = get_comment_meta( $submit_id, 'evaluate_time', true );
+		if ( ! $is_reviewed ) {
+			return 'pending';
+		}
+
+		$pass_mark  = tutor_utils()->get_assignment_option( $submitted_assignment->comment_post_ID, 'pass_mark' );
+		$given_mark = get_comment_meta( $submitted_assignment->comment_ID, 'assignment_mark', true );
+		if ( $given_mark >= $pass_mark ) {
+			return 'pass';
+		} else {
+			return 'fail';
+		}
 	}
 }

@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-09-19 09:34+0000\n"
+"POT-Creation-Date: 2023-10-16 04:34+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -54,7 +54,7 @@ msgstr ""
 msgid "Search..."
 msgstr ""
 
-#: classes/Assets.php:124, addons/calendar/calendar.php:31, addons/calendar/classes/Tutor_Calendar.php:31
+#: classes/Assets.php:124, addons/calendar/calendar.php:31, addons/calendar/classes/Tutor_Calendar.php:35
 msgid "Calendar"
 msgstr ""
 
@@ -255,67 +255,71 @@ msgstr ""
 msgid "Enrollment valid until"
 msgstr ""
 
-#: classes/General.php:51, addons/quiz-import-export/classes/QuizImportExport.php:255, addons/tutor-assignments/classes/Assignments.php:78, addons/tutor-multi-instructors/classes/MultiInstructors.php:216, addons/course-bundle/src/Frontend/MyBundleList.php:158
+#: classes/General.php:70
+msgid "Complete Course"
+msgstr ""
+
+#: classes/General.php:109, addons/quiz-import-export/classes/QuizImportExport.php:255, addons/tutor-assignments/classes/Assignments.php:82, addons/tutor-multi-instructors/classes/MultiInstructors.php:216, addons/course-bundle/src/Frontend/MyBundleList.php:158
 msgid "Access Denied"
 msgstr ""
 
-#: classes/General.php:92, classes/General.php:84
+#: classes/General.php:150, classes/General.php:142
 msgid "Course has been submitted for review."
 msgstr ""
 
-#: classes/General.php:89
+#: classes/General.php:147
 msgid "Course has been published."
 msgstr ""
 
-#: classes/General.php:80
+#: classes/General.php:138
 msgid "Course has been saved as a draft."
 msgstr ""
 
-#: classes/General.php:272
+#: classes/General.php:331
 msgid "Position of the Enrollment Box in Mobile View"
 msgstr ""
 
-#: classes/General.php:275
+#: classes/General.php:334
 msgid "On Page Top"
 msgstr ""
 
-#: classes/General.php:276
+#: classes/General.php:335
 msgid "On Page Bottom"
 msgstr ""
 
-#: classes/General.php:278
+#: classes/General.php:337
 msgid "You can decide where you want to show Enrollment Box on your Course Details page by selecting an option from here"
 msgstr ""
 
-#: classes/General.php:302
+#: classes/General.php:361
 msgid "Generate WooCommerce Order"
 msgstr ""
 
-#: classes/General.php:322
+#: classes/General.php:381
 msgid "Sticky Sidebar"
 msgstr ""
 
-#: classes/General.php:323
+#: classes/General.php:382
 msgid "Disable"
 msgstr ""
 
-#: classes/General.php:325
+#: classes/General.php:384
 msgid "Enable sticky sidebar on course details on scroll"
 msgstr ""
 
-#: classes/General.php:349
+#: classes/General.php:410
 msgid "Video Lesson Completion Control"
 msgstr ""
 
-#: classes/General.php:351
+#: classes/General.php:412
 msgid "Enable to set the minimum video watch % for lesson completion, only works with Tutor Player."
 msgstr ""
 
-#: classes/General.php:363
+#: classes/General.php:424
 msgid "Set Required Percentage"
 msgstr ""
 
-#: classes/General.php:366
+#: classes/General.php:427
 msgid "Specify the minimum video watch % learners must watch to mark the lesson as complete."
 msgstr ""
 
@@ -339,32 +343,132 @@ msgstr ""
 msgid "Course builder file exists."
 msgstr ""
 
-#: classes/Instructor.php:46
-msgid "Account Summary"
-msgstr ""
-
-#: classes/Instructor.php:65
-msgid "Earnings:"
+#: classes/Instructor.php:61, addons/tutor-email/classes/Init.php:223, addons/course-bundle/views/backend/bundle-list.php:334, addons/google-classroom/views/components/class-list.php:132, addons/google-meet/views/pages/frontend-meetings.php:135, addons/google-meet/views/pages/meetings.php:157, addons/gradebook/views/pages/gradebooks.php:110, addons/tutor-zoom/views/template/meeting-list.php:176, addons/tutor-zoom/views/template/meeting-list.php:233
+msgid "Edit"
 msgstr ""
 
 #: classes/Instructor.php:69
+msgid "Edit Instructor"
+msgstr ""
+
+#: classes/Instructor.php:83
+msgid "First Name"
+msgstr ""
+
+#: classes/Instructor.php:88
+msgid "Enter First Name"
+msgstr ""
+
+#: classes/Instructor.php:88, classes/Instructor.php:99
+msgid "Only alphanumeric & space are allowed"
+msgstr ""
+
+#: classes/Instructor.php:94
+msgid "Last Name"
+msgstr ""
+
+#: classes/Instructor.php:99
+msgid "Enter Last Name"
+msgstr ""
+
+#: classes/Instructor.php:106
+msgid "Username"
+msgstr ""
+
+#: classes/Instructor.php:113
+msgid "Enter Username"
+msgstr ""
+
+#: classes/Instructor.php:113
+msgid "Only alphanumeric and underscore are allowed"
+msgstr ""
+
+#: classes/Instructor.php:118
+msgid "Phone Number"
+msgstr ""
+
+#: classes/Instructor.php:120, classes/Instructor.php:152
+msgid "(Optional)"
+msgstr ""
+
+#: classes/Instructor.php:126
+msgid "Enter Phone Number"
+msgstr ""
+
+#: classes/Instructor.php:126, addons/tutor-assignments/views/pages/submitted_assignment.php:115
+msgid "Only number is allowed"
+msgstr ""
+
+#: classes/Instructor.php:134
+msgid "Email Address"
+msgstr ""
+
+#: classes/Instructor.php:140
+msgid "Enter Your Email"
+msgstr ""
+
+#: classes/Instructor.php:150
+msgid "Bio"
+msgstr ""
+
+#: classes/Instructor.php:167, addons/enrollments/views/enrollment-modal.php:128, addons/tutor-chatgpt/views/api-key-modal.php:60, addons/tutor-chatgpt/views/prompt-modal.php:50, addons/google-meet/includes/TopicsEvent/TopicsEvent.php:59, addons/google-meet/views/metabox/index.php:96, addons/google-meet/views/modal/confirmation-modal.php:43, addons/google-meet/views/modal/dynamic-modal-content.php:114, addons/gradebook/views/pages/gradebooks.php:234, addons/gradebook/views/pages/gradebooks.php:312, addons/tutor-zoom/views/template/meeting-editor.php:127, addons/course-bundle/templates/dashboard/my-bundles/my-bundles.php:276
+msgid "Cancel"
+msgstr ""
+
+#: classes/Instructor.php:170, addons/tutor-chatgpt/views/api-key-modal.php:64
+msgid "Save"
+msgstr ""
+
+#: classes/Instructor.php:192
+msgid "You are not allowed to do this action"
+msgstr ""
+
+#: classes/Instructor.php:199
+msgid "First name field is required"
+msgstr ""
+
+#: classes/Instructor.php:200
+msgid "Last name field is required"
+msgstr ""
+
+#: classes/Instructor.php:256
+msgid "Instructor has been updated successfully"
+msgstr ""
+
+#: classes/Instructor.php:259, addons/auth/classes/Recaptcha.php:99, addons/course-bundle/src/Ajax.php:68
+msgid "Something went wrong"
+msgstr ""
+
+#: classes/Instructor.php:273
+msgid "Account Summary"
+msgstr ""
+
+#: classes/Instructor.php:292
+msgid "Earnings:"
+msgstr ""
+
+#: classes/Instructor.php:296
 msgid "Withdrawal:"
 msgstr ""
 
-#: classes/Instructor.php:73
+#: classes/Instructor.php:300
 msgid "Balance:"
 msgstr ""
 
-#: classes/Instructor.php:79
+#: classes/Instructor.php:306
 msgid "Withdrawable: "
 msgstr ""
 
-#: classes/Instructor_Percentage.php:43
-msgid "Instructor Settings"
+#: classes/Instructor_Percentage.php:57, classes/Instructor_Percentage.php:108, addons/tutor-report/classes/Analytics.php:1145
+msgid "Commission"
 msgstr ""
 
-#: classes/Instructor_Percentage.php:47, addons/tutor-report/classes/Analytics.php:1145
-msgid "Commission"
+#: classes/Instructor_Percentage.php:75
+msgid "Amount"
+msgstr ""
+
+#: classes/Instructor_Percentage.php:104
+msgid "Instructor Settings"
 msgstr ""
 
 #: classes/Quiz.php:117
@@ -591,7 +695,7 @@ msgstr ""
 msgid "Unlock Course depending on Restrict Content Permission."
 msgstr ""
 
-#: addons/tutor-assignments/tutor-assignments.php:30, addons/tutor-assignments/classes/Assignments.php:91, addons/tutor-assignments/classes/Assignments.php:103, addons/tutor-assignments/classes/Assignments.php:123, addons/tutor-assignments/classes/Assignments.php:140, addons/tutor-assignments/classes/Assignments_List.php:46, addons/tutor-notifications/classes/Notifications.php:198, addons/gradebook/views/pages/overview.php:98, addons/tutor-report/views/pages/courses/course-single.php:86, addons/tutor-report/views/pages/students/student-profile.php:179
+#: addons/tutor-assignments/tutor-assignments.php:30, addons/tutor-assignments/classes/Assignments.php:95, addons/tutor-assignments/classes/Assignments.php:107, addons/tutor-assignments/classes/Assignments.php:127, addons/tutor-assignments/classes/Assignments.php:144, addons/tutor-assignments/classes/Assignments_List.php:46, addons/tutor-notifications/classes/Notifications.php:198, addons/gradebook/views/pages/overview.php:98, addons/tutor-report/views/pages/courses/course-single.php:86, addons/tutor-report/views/pages/students/student-profile.php:179
 msgid "Assignments"
 msgstr ""
 
@@ -599,7 +703,7 @@ msgstr ""
 msgid "Tutor assignments is a great way to assign tasks to students."
 msgstr ""
 
-#: addons/tutor-certificate/tutor-certificate.php:29, addons/tutor-certificate/classes/Certificate.php:884, addons/tutor-certificate/classes/init.php:126
+#: addons/tutor-certificate/tutor-certificate.php:29, addons/tutor-certificate/classes/Certificate.php:934, addons/tutor-certificate/classes/init.php:126, addons/tutor-report/templates/elements/course-students.php:42
 msgid "Certificate"
 msgstr ""
 
@@ -699,7 +803,7 @@ msgstr ""
 msgid "Instructor"
 msgstr ""
 
-#: templates/buddypress/message_thread_recipients.php:58, addons/tutor-email/classes/EmailData.php:41, addons/tutor-email/classes/EmailData.php:73, addons/tutor-email/classes/EmailData.php:89, addons/tutor-email/classes/EmailData.php:127, addons/tutor-email/classes/EmailData.php:151, addons/tutor-email/classes/EmailData.php:166, addons/tutor-email/classes/EmailData.php:179, addons/tutor-email/classes/EmailData.php:379, addons/tutor-report/templates/overview.php:223, addons/tutor-report/templates/students.php:94, addons/tutor-assignments/views/pages/assignments.php:94, addons/tutor-assignments/views/pages/submitted_assignment.php:43, addons/tutor-report/views/pages/overview.php:313, addons/tutor-report/views/pages/overview.php:386, addons/tutor-report/views/pages/courses/course-single.php:214, addons/tutor-report/views/pages/courses/course-single.php:410, addons/tutor-report/views/pages/reviews/reviews-page.php:15
+#: templates/buddypress/message_thread_recipients.php:58, addons/tutor-email/classes/EmailData.php:41, addons/tutor-email/classes/EmailData.php:73, addons/tutor-email/classes/EmailData.php:89, addons/tutor-email/classes/EmailData.php:127, addons/tutor-email/classes/EmailData.php:151, addons/tutor-email/classes/EmailData.php:166, addons/tutor-email/classes/EmailData.php:179, addons/tutor-email/classes/EmailData.php:379, addons/tutor-report/templates/overview.php:223, addons/tutor-report/templates/students.php:94, addons/tutor-assignments/views/pages/assignments.php:94, addons/tutor-assignments/views/pages/submitted_assignment.php:43, addons/tutor-report/templates/elements/course-students.php:27, addons/tutor-report/views/pages/overview.php:313, addons/tutor-report/views/pages/overview.php:386, addons/tutor-report/views/pages/courses/course-single.php:325, addons/tutor-report/views/pages/reviews/reviews-page.php:15
 msgid "Student"
 msgstr ""
 
@@ -891,7 +995,7 @@ msgstr ""
 msgid "Rate This Course"
 msgstr ""
 
-#: templates/email/to_student_course_completed.php:63, addons/tutor-certificate/classes/Certificate.php:207, addons/tutor-certificate/classes/Certificate.php:203
+#: templates/email/to_student_course_completed.php:63, addons/tutor-certificate/classes/Certificate.php:222, addons/tutor-certificate/classes/Certificate.php:218
 msgid "Download Certificate"
 msgstr ""
 
@@ -949,10 +1053,6 @@ msgstr ""
 
 #: addons/auth/classes/HoneyPot.php:44
 msgid "Spam request catched!"
-msgstr ""
-
-#: addons/auth/classes/Recaptcha.php:99, addons/course-bundle/src/Ajax.php:68
-msgid "Something went wrong"
 msgstr ""
 
 #: addons/auth/classes/Recaptcha.php:104
@@ -1083,15 +1183,15 @@ msgstr ""
 msgid "This is an automatically generated email. Please do not reply to this email."
 msgstr ""
 
-#: addons/auth/classes/_2FA.php:163
+#: addons/auth/classes/_2FA.php:173
 msgid "OTP code required"
 msgstr ""
 
-#: addons/auth/classes/_2FA.php:185
+#: addons/auth/classes/_2FA.php:195
 msgid "OTP not matched."
 msgstr ""
 
-#: addons/auth/classes/_2FA.php:180
+#: addons/auth/classes/_2FA.php:190
 msgid "OTP matched. Redirecting..."
 msgstr ""
 
@@ -1132,7 +1232,7 @@ msgstr ""
 msgid "Enable / Disable BuddyPress group activity feeds"
 msgstr ""
 
-#: addons/buddypress/classes/BuddyPressGroups.php:162, addons/tutor-report/classes/Analytics.php:88, addons/tutor-report/templates/statements.php:42, addons/tutor-report/templates/students.php:64, addons/tutor-report/views/pages/report.php:15, addons/tutor-report/views/pages/courses/course-single.php:319
+#: addons/buddypress/classes/BuddyPressGroups.php:162, addons/tutor-report/classes/Analytics.php:88, addons/tutor-report/templates/statements.php:42, addons/tutor-report/templates/students.php:64, addons/tutor-report/views/pages/report.php:15, addons/tutor-report/views/pages/courses/course-single.php:234
 msgid "Courses"
 msgstr ""
 
@@ -1208,27 +1308,27 @@ msgstr ""
 msgid "Assign this course to BuddyPress Groups"
 msgstr ""
 
-#: addons/calendar/classes/Tutor_Calendar.php:114, addons/calendar/classes/Tutor_Calendar.php:159, addons/tutor-assignments/views/modal/assignments.php:58
+#: addons/calendar/classes/Tutor_Calendar.php:120, addons/calendar/classes/Tutor_Calendar.php:165, addons/tutor-assignments/views/modal/assignments.php:58
 msgid "Weeks"
 msgstr ""
 
-#: addons/calendar/classes/Tutor_Calendar.php:115, addons/calendar/classes/Tutor_Calendar.php:160, addons/content-drip/views/content-drip-lesson.php:93, addons/tutor-assignments/views/modal/assignments.php:59
+#: addons/calendar/classes/Tutor_Calendar.php:121, addons/calendar/classes/Tutor_Calendar.php:166, addons/content-drip/views/content-drip-lesson.php:93, addons/tutor-assignments/views/modal/assignments.php:59
 msgid "Days"
 msgstr ""
 
-#: addons/calendar/classes/Tutor_Calendar.php:116, addons/calendar/classes/Tutor_Calendar.php:161, addons/tutor-assignments/views/modal/assignments.php:60, addons/tutor-zoom/views/template/meeting-editor.php:66
+#: addons/calendar/classes/Tutor_Calendar.php:122, addons/calendar/classes/Tutor_Calendar.php:167, addons/tutor-assignments/views/modal/assignments.php:60, addons/tutor-zoom/views/template/meeting-editor.php:66
 msgid "Hours"
 msgstr ""
 
-#: addons/calendar/classes/Tutor_Calendar.php:119, addons/calendar/classes/Tutor_Calendar.php:121, addons/calendar/classes/Tutor_Calendar.php:122, addons/calendar/classes/Tutor_Calendar.php:166, addons/tutor-assignments/classes/Assignments_List.php:91
+#: addons/calendar/classes/Tutor_Calendar.php:125, addons/calendar/classes/Tutor_Calendar.php:127, addons/calendar/classes/Tutor_Calendar.php:128, addons/calendar/classes/Tutor_Calendar.php:172, addons/tutor-assignments/classes/Assignments_List.php:91
 msgid "No Limit"
 msgstr ""
 
-#: addons/calendar/classes/Tutor_Calendar.php:157
+#: addons/calendar/classes/Tutor_Calendar.php:163
 msgid "Seconds"
 msgstr ""
 
-#: addons/calendar/classes/Tutor_Calendar.php:158, addons/tutor-zoom/views/template/meeting-editor.php:65
+#: addons/calendar/classes/Tutor_Calendar.php:164, addons/tutor-zoom/views/template/meeting-editor.php:65
 msgid "Minutes"
 msgstr ""
 
@@ -1292,7 +1392,7 @@ msgstr ""
 msgid "To access this %s you have to pass the quiz"
 msgstr ""
 
-#: addons/content-drip/classes/ContentDrip.php:378, addons/tutor-report/templates/courses.php:77, addons/tutor-report/templates/course_progress.php:27, addons/tutor-report/views/pages/courses/course-single.php:220, addons/tutor-report/views/pages/courses/course-table.php:36, addons/tutor-report/views/pages/students/student-profile.php:225, addons/tutor-report/views/pages/students/student-profile.php:299
+#: addons/content-drip/classes/ContentDrip.php:378, addons/tutor-report/templates/courses.php:77, addons/tutor-report/templates/course_progress.php:27, addons/tutor-report/templates/elements/course-students.php:33, addons/tutor-report/views/pages/courses/course-table.php:36, addons/tutor-report/views/pages/students/student-profile.php:225, addons/tutor-report/views/pages/students/student-profile.php:299
 msgid "Lesson"
 msgstr ""
 
@@ -1300,7 +1400,7 @@ msgstr ""
 msgid "Quiz"
 msgstr ""
 
-#: addons/content-drip/classes/ContentDrip.php:380, addons/tutor-report/templates/courses.php:82, addons/tutor-report/templates/course_progress.php:31, addons/tutor-assignments/views/pages/submitted_assignment.php:57, addons/tutor-report/views/pages/courses/course-single.php:223, addons/tutor-report/views/pages/courses/course-table.php:39, addons/tutor-report/views/pages/students/student-profile.php:233, addons/tutor-report/views/pages/students/student-profile.php:339
+#: addons/content-drip/classes/ContentDrip.php:380, addons/tutor-report/templates/courses.php:82, addons/tutor-report/templates/course_progress.php:31, addons/tutor-assignments/views/pages/submitted_assignment.php:57, addons/tutor-report/templates/elements/course-students.php:36, addons/tutor-report/views/pages/courses/course-table.php:39, addons/tutor-report/views/pages/students/student-profile.php:233, addons/tutor-report/views/pages/students/student-profile.php:339
 msgid "Assignment"
 msgstr ""
 
@@ -1478,10 +1578,6 @@ msgstr ""
 msgid "Select a course/bundle"
 msgstr ""
 
-#: addons/enrollments/views/enrollment-modal.php:128, addons/tutor-chatgpt/views/api-key-modal.php:60, addons/tutor-chatgpt/views/prompt-modal.php:50, addons/google-meet/includes/TopicsEvent/TopicsEvent.php:59, addons/google-meet/views/metabox/index.php:96, addons/google-meet/views/modal/confirmation-modal.php:43, addons/google-meet/views/modal/dynamic-modal-content.php:114, addons/gradebook/views/pages/gradebooks.php:234, addons/gradebook/views/pages/gradebooks.php:312, addons/tutor-zoom/views/template/meeting-editor.php:127, addons/course-bundle/templates/dashboard/my-bundles/my-bundles.php:276
-msgid "Cancel"
-msgstr ""
-
 #: addons/enrollments/views/enrollment-modal.php:132
 msgid "Enroll Now"
 msgstr ""
@@ -1514,7 +1610,7 @@ msgstr ""
 msgid "Delete Permanently"
 msgstr ""
 
-#: addons/enrollments/views/enrollments.php:93, addons/tutor-report/templates/overview.php:226, addons/tutor-report/templates/statements.php:59, addons/tutor-report/templates/students.php:81, addons/tutor-report/templates/student_details.php:67, templates/single/course/zoom-meetings.php:57, addons/course-bundle/views/backend/bundle-list.php:177, addons/tutor-assignments/views/pages/assignments.php:100, addons/tutor-report/views/pages/overview.php:265, addons/tutor-report/views/pages/overview.php:316, addons/tutor-zoom/views/template/meeting-list-loader.php:127, addons/tutor-report/views/pages/courses/course-single.php:413, addons/tutor-report/views/pages/reviews/reviews-page.php:19, addons/tutor-report/views/pages/sales/sales-page.php:33, addons/tutor-report/views/pages/students/student-profile.php:381
+#: addons/enrollments/views/enrollments.php:93, addons/tutor-report/templates/overview.php:226, addons/tutor-report/templates/statements.php:59, addons/tutor-report/templates/students.php:81, addons/tutor-report/templates/student_details.php:67, templates/single/course/zoom-meetings.php:57, addons/course-bundle/views/backend/bundle-list.php:177, addons/tutor-assignments/views/pages/assignments.php:100, addons/tutor-report/views/pages/overview.php:265, addons/tutor-report/views/pages/overview.php:316, addons/tutor-zoom/views/template/meeting-list-loader.php:127, addons/tutor-report/views/pages/courses/course-single.php:328, addons/tutor-report/views/pages/reviews/reviews-page.php:19, addons/tutor-report/views/pages/sales/sales-page.php:33, addons/tutor-report/views/pages/students/student-profile.php:381
 msgid "Date"
 msgstr ""
 
@@ -1674,7 +1770,7 @@ msgstr ""
 msgid "Final Grade"
 msgstr ""
 
-#: addons/gradebook/views/gradebook.php:58, addons/tutor-certificate/classes/init.php:209, addons/course-bundle/views/backend/bundle-list.php:161
+#: addons/gradebook/views/gradebook.php:58, addons/tutor-certificate/classes/init.php:211, addons/course-bundle/views/backend/bundle-list.php:161
 msgid "Title"
 msgstr ""
 
@@ -1786,23 +1882,23 @@ msgstr ""
 msgid "Let users register & login through social network like Facebook, Google, etc."
 msgstr ""
 
-#: addons/tutor-assignments/classes/Assignments.php:83
+#: addons/tutor-assignments/classes/Assignments.php:87
 msgid "Assignment deleted"
 msgstr ""
 
-#: addons/tutor-assignments/classes/Assignments.php:90
+#: addons/tutor-assignments/classes/Assignments.php:94
 msgid "Submitted Assignments"
 msgstr ""
 
-#: addons/tutor-assignments/classes/Assignments.php:305
+#: addons/tutor-assignments/classes/Assignments.php:309
 msgid "An assignment is submitting currently, please submit previous one first"
 msgstr ""
 
-#: addons/tutor-assignments/classes/Assignments.php:330
+#: addons/tutor-assignments/classes/Assignments.php:334
 msgid "Answer has been added successfully"
 msgstr ""
 
-#: addons/tutor-assignments/classes/Assignments.php:421
+#: addons/tutor-assignments/classes/Assignments.php:425
 msgid "Maximum attachment upload size allowed is %d MB"
 msgstr ""
 
@@ -1814,7 +1910,7 @@ msgstr ""
 msgid "Started"
 msgstr ""
 
-#: addons/tutor-assignments/classes/Assignments_List.php:130, addons/tutor-report/templates/courses.php:106, addons/tutor-report/templates/students.php:145, addons/tutor-report/views/pages/courses/course-single.php:280, addons/tutor-report/views/pages/courses/course-table.php:81, addons/tutor-report/views/pages/students/student-table.php:77
+#: addons/tutor-assignments/classes/Assignments_List.php:130, addons/tutor-report/templates/courses.php:106, addons/tutor-report/templates/students.php:145, addons/tutor-report/templates/elements/course-students.php:105, addons/tutor-report/views/pages/courses/course-table.php:81, addons/tutor-report/views/pages/students/student-table.php:77
 msgid "Details"
 msgstr ""
 
@@ -1835,39 +1931,39 @@ msgstr ""
 msgid "Pending"
 msgstr ""
 
-#: addons/tutor-certificate/classes/Certificate.php:244, addons/tutor-certificate/classes/Certificate.php:290
+#: addons/tutor-certificate/classes/Certificate.php:259, addons/tutor-certificate/classes/Certificate.php:305
 msgid "Certificate Template"
 msgstr ""
 
-#: addons/tutor-certificate/classes/Certificate.php:443
+#: addons/tutor-certificate/classes/Certificate.php:458
 msgid "Course not yet completed"
 msgstr ""
 
-#: addons/tutor-certificate/classes/Certificate.php:454
+#: addons/tutor-certificate/classes/Certificate.php:469
 msgid "Certificate Image Error"
 msgstr ""
 
-#: addons/tutor-certificate/classes/Certificate.php:635
+#: addons/tutor-certificate/classes/Certificate.php:632
 msgid "%s hour"
 msgid_plural "%s hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: addons/tutor-certificate/classes/Certificate.php:638
+#: addons/tutor-certificate/classes/Certificate.php:635
 msgid "%s minute"
 msgid_plural "%s minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: addons/tutor-certificate/classes/Certificate.php:847
+#: addons/tutor-certificate/classes/Certificate.php:872, addons/tutor-certificate/views/single-certificate.php:58
 msgid "Course Completion Certificate"
 msgstr ""
 
-#: addons/tutor-certificate/classes/Certificate.php:848
+#: addons/tutor-certificate/classes/Certificate.php:873, addons/tutor-certificate/views/single-certificate.php:59
 msgid "My course completion certificate for"
 msgstr ""
 
-#: addons/tutor-certificate/classes/Certificate.php:885
+#: addons/tutor-certificate/classes/Certificate.php:935
 msgid "Certificate of completion"
 msgstr ""
 
@@ -1891,79 +1987,87 @@ msgstr ""
 msgid "Authorised name will be printed under signature."
 msgstr ""
 
-#: addons/tutor-certificate/classes/init.php:150
-msgid "Company Name"
+#: addons/tutor-certificate/classes/init.php:146
+msgid "Enter authorised name"
 msgstr ""
 
 #: addons/tutor-certificate/classes/init.php:151
-msgid "Authorised Company Name"
+msgid "Company Name"
 msgstr ""
 
 #: addons/tutor-certificate/classes/init.php:152
+msgid "Authorised Company Name"
+msgstr ""
+
+#: addons/tutor-certificate/classes/init.php:153
 msgid "Authorised company name will be printed under authorised name."
 msgstr ""
 
-#: addons/tutor-certificate/classes/init.php:166
-msgid "Show instructor name on certificate"
-msgstr ""
-
-#: addons/tutor-certificate/classes/init.php:167, addons/tutor-certificate/classes/init.php:175
-msgid ""
+#: addons/tutor-certificate/classes/init.php:154
+msgid "Enter authorised company name"
 msgstr ""
 
 #: addons/tutor-certificate/classes/init.php:168
+msgid "Show instructor name on certificate"
+msgstr ""
+
+#: addons/tutor-certificate/classes/init.php:169, addons/tutor-certificate/classes/init.php:177
+msgid ""
+msgstr ""
+
+#: addons/tutor-certificate/classes/init.php:170
 msgid "Show instructor name on certificate before Authorised Name"
 msgstr ""
 
-#: addons/tutor-certificate/classes/init.php:174
+#: addons/tutor-certificate/classes/init.php:176
 msgid "Certificate link in course completion email"
 msgstr ""
 
-#: addons/tutor-certificate/classes/init.php:176
+#: addons/tutor-certificate/classes/init.php:178
 msgid "Send certificate link along with the course completion email. Student must be logged in to access the certificate if public view is not enabled."
 msgstr ""
 
-#: addons/tutor-certificate/classes/init.php:181
+#: addons/tutor-certificate/classes/init.php:183
 msgid "Upload Signature"
 msgstr ""
 
-#: addons/tutor-certificate/classes/init.php:183
+#: addons/tutor-certificate/classes/init.php:185
 msgid "Upload a signature that will be printed at certificate"
 msgstr ""
 
-#: addons/tutor-certificate/classes/init.php:201
+#: addons/tutor-certificate/classes/init.php:203
 msgid "Showcase Certificate"
 msgstr ""
 
-#: addons/tutor-certificate/classes/init.php:203
+#: addons/tutor-certificate/classes/init.php:205
 msgid "Enable to show certificate on course details"
 msgstr ""
 
-#: addons/tutor-certificate/classes/init.php:210
+#: addons/tutor-certificate/classes/init.php:212
 msgid "Insert your title here"
 msgstr ""
 
-#: addons/tutor-certificate/classes/init.php:211
+#: addons/tutor-certificate/classes/init.php:213
 msgid "Enter a title for the certificate showcase section."
 msgstr ""
 
-#: addons/tutor-certificate/classes/init.php:212
+#: addons/tutor-certificate/classes/init.php:214
 msgid "Earn a certificate"
 msgstr ""
 
-#: addons/tutor-certificate/classes/init.php:218, addons/course-bundle/templates/dashboard/frontend-bundle-builder.php:104
+#: addons/tutor-certificate/classes/init.php:220, addons/course-bundle/templates/dashboard/frontend-bundle-builder.php:104
 msgid "Description"
 msgstr ""
 
-#: addons/tutor-certificate/classes/init.php:219
+#: addons/tutor-certificate/classes/init.php:221
 msgid "Insert your description here"
 msgstr ""
 
-#: addons/tutor-certificate/classes/init.php:220
+#: addons/tutor-certificate/classes/init.php:222
 msgid "Enter a description for the certificate showcase section."
 msgstr ""
 
-#: addons/tutor-certificate/classes/init.php:223
+#: addons/tutor-certificate/classes/init.php:225
 msgid "Add this certificate to your resume to demonstrate your skills & increase your chances of getting noticed."
 msgstr ""
 
@@ -1975,32 +2079,44 @@ msgstr ""
 msgid "Certificate Signature"
 msgstr ""
 
-#: addons/tutor-certificate/views/single-certificate.php:57
+#: addons/tutor-certificate/views/single-certificate.php:103
 msgid "Credential ID"
 msgstr ""
 
-#: addons/tutor-certificate/views/single-certificate.php:66
+#: addons/tutor-certificate/views/single-certificate.php:112
 msgid "Issued By"
 msgstr ""
 
-#: addons/tutor-certificate/views/single-certificate.php:75
+#: addons/tutor-certificate/views/single-certificate.php:121
 msgid "Issued Date"
 msgstr ""
 
-#: addons/tutor-certificate/views/single-certificate.php:89
+#: addons/tutor-certificate/views/single-certificate.php:135
 msgid "PDF"
 msgstr ""
 
-#: addons/tutor-certificate/views/single-certificate.php:92
+#: addons/tutor-certificate/views/single-certificate.php:138
 msgid "JPG"
 msgstr ""
 
-#: addons/tutor-certificate/views/single-certificate.php:100
+#: addons/tutor-certificate/views/single-certificate.php:146
 msgid "Copy Credential URL"
 msgstr ""
 
-#: addons/tutor-certificate/views/single-certificate.php:106
+#: addons/tutor-certificate/views/single-certificate.php:152
 msgid "Print Now"
+msgstr ""
+
+#: addons/tutor-certificate/views/single-certificate.php:160, addons/social-login/includes/Settings/Settings.php:84
+msgid "Facebook"
+msgstr ""
+
+#: addons/tutor-certificate/views/single-certificate.php:163, addons/social-login/includes/Settings/Settings.php:107
+msgid "Twitter"
+msgstr ""
+
+#: addons/tutor-certificate/views/single-certificate.php:166
+msgid "LinkedIn"
 msgstr ""
 
 #: addons/tutor-certificate/views/template_metabox.php:25
@@ -2125,10 +2241,6 @@ msgstr ""
 
 #: addons/tutor-chatgpt/views/api-key-modal.php:37
 msgid "and paste it here to connect ChatGPT with your Tutor LMS website."
-msgstr ""
-
-#: addons/tutor-chatgpt/views/api-key-modal.php:64
-msgid "Save"
 msgstr ""
 
 #: addons/tutor-chatgpt/views/prompt-modal.php:25
@@ -2719,10 +2831,6 @@ msgstr ""
 msgid "second"
 msgstr ""
 
-#: addons/tutor-email/classes/Init.php:223, addons/course-bundle/views/backend/bundle-list.php:334, addons/google-classroom/views/components/class-list.php:132, addons/google-meet/views/pages/frontend-meetings.php:135, addons/google-meet/views/pages/meetings.php:157, addons/gradebook/views/pages/gradebooks.php:110, addons/tutor-zoom/views/template/meeting-list.php:176, addons/tutor-zoom/views/template/meeting-list.php:233
-msgid "Edit"
-msgstr ""
-
 #: addons/tutor-email/classes/Init.php:256, addons/google-classroom/views/email/auto-registration-verification.php:33, addons/tutor-report/views/pages/overview.php:389, addons/tutor-report/views/pages/overview.php:442, addons/tutor-report/views/pages/students/student-table.php:34
 msgid "Email"
 msgstr ""
@@ -3233,7 +3341,7 @@ msgstr ""
 msgid "Statements"
 msgstr ""
 
-#: addons/tutor-report/classes/Analytics.php:100, addons/tutor-report/views/pages/overview.php:115, addons/tutor-report/views/pages/report.php:18, addons/tutor-report/views/pages/courses/course-single.php:98, addons/tutor-report/views/pages/courses/course-single.php:205, addons/tutor-report/views/pages/courses/course-single.php:322
+#: addons/tutor-report/classes/Analytics.php:100, addons/tutor-report/templates/elements/course-students.php:18, addons/tutor-report/views/pages/overview.php:115, addons/tutor-report/views/pages/report.php:18, addons/tutor-report/views/pages/courses/course-single.php:98, addons/tutor-report/views/pages/courses/course-single.php:237
 msgid "Students"
 msgstr ""
 
@@ -3253,15 +3361,15 @@ msgstr ""
 msgid "Enrolled"
 msgstr ""
 
-#: addons/tutor-report/classes/Analytics.php:1098, addons/tutor-report/classes/Analytics.php:1120, addons/tutor-report/classes/Report.php:505, addons/tutor-report/templates/course_details.php:198
+#: addons/tutor-report/classes/Analytics.php:1098, addons/tutor-report/classes/Analytics.php:1120, addons/tutor-report/classes/Report.php:505, addons/tutor-report/templates/course_details.php:203
 msgid "Discount"
 msgstr ""
 
-#: addons/tutor-report/classes/Analytics.php:1103, addons/tutor-report/classes/Analytics.php:1125, addons/tutor-report/classes/Report.php:500, addons/tutor-report/templates/course_details.php:206
+#: addons/tutor-report/classes/Analytics.php:1103, addons/tutor-report/classes/Analytics.php:1125, addons/tutor-report/classes/Report.php:500, addons/tutor-report/templates/course_details.php:211
 msgid "Refund"
 msgstr ""
 
-#: addons/tutor-report/classes/Analytics.php:1115, addons/tutor-report/classes/Analytics.php:1135, addons/tutor-report/templates/course_details.php:190, addons/tutor-report/templates/earnings.php:37, addons/tutor-report/templates/earnings.php:147, addons/tutor-report/templates/overview.php:128, addons/tutor-report/views/pages/overview.php:165, addons/tutor-report/views/pages/courses/course-single.php:165
+#: addons/tutor-report/classes/Analytics.php:1115, addons/tutor-report/classes/Analytics.php:1135, addons/tutor-report/templates/course_details.php:195, addons/tutor-report/templates/earnings.php:37, addons/tutor-report/templates/earnings.php:147, addons/tutor-report/templates/overview.php:128, addons/tutor-report/views/pages/overview.php:165, addons/tutor-report/views/pages/courses/course-single.php:165
 msgid "Total Earning"
 msgstr ""
 
@@ -3273,7 +3381,7 @@ msgstr ""
 msgid "Fees"
 msgstr ""
 
-#: addons/tutor-report/classes/PageController.php:391
+#: addons/tutor-report/classes/PageController.php:375
 msgid "Invalid student id"
 msgstr ""
 
@@ -3281,47 +3389,47 @@ msgstr ""
 msgid "Total Learners"
 msgstr ""
 
-#: addons/tutor-report/templates/course_details.php:19, addons/tutor-report/templates/course_details.php:22
+#: addons/tutor-report/templates/course_details.php:23, addons/tutor-report/templates/course_details.php:26
 msgid "Invalid course"
 msgstr ""
 
-#: addons/tutor-report/templates/course_details.php:52
+#: addons/tutor-report/templates/course_details.php:57
 msgid "Published Date"
 msgstr ""
 
-#: addons/tutor-report/templates/course_details.php:61, addons/tutor-report/views/pages/courses/course-single.php:33
+#: addons/tutor-report/templates/course_details.php:66, addons/tutor-report/views/pages/courses/course-single.php:33
 msgid "Last Update"
 msgstr ""
 
-#: addons/tutor-report/templates/course_details.php:82, addons/tutor-report/templates/overview.php:43
+#: addons/tutor-report/templates/course_details.php:87, addons/tutor-report/templates/overview.php:43
 msgid "Total Student"
 msgstr ""
 
-#: addons/tutor-report/templates/course_details.php:88, addons/tutor-report/views/pages/students/student-profile.php:104
+#: addons/tutor-report/templates/course_details.php:93, addons/tutor-report/views/pages/students/student-profile.php:104
 msgid "In Progress Courses"
 msgstr ""
 
-#: addons/tutor-report/templates/course_details.php:94, addons/tutor-report/views/pages/students/student-profile.php:87
+#: addons/tutor-report/templates/course_details.php:99, addons/tutor-report/views/pages/students/student-profile.php:87
 msgid "Completed Courses"
 msgstr ""
 
-#: addons/tutor-report/templates/course_details.php:100, addons/tutor-report/views/pages/overview.php:85, addons/tutor-report/views/pages/students/student-profile.php:198
+#: addons/tutor-report/templates/course_details.php:105, addons/tutor-report/views/pages/overview.php:85, addons/tutor-report/views/pages/students/student-profile.php:198
 msgid "Questions"
 msgstr ""
 
-#: addons/tutor-report/templates/course_details.php:112
+#: addons/tutor-report/templates/course_details.php:117
 msgid "Assignment Submit"
 msgstr ""
 
-#: addons/tutor-report/templates/course_details.php:132, addons/tutor-report/templates/earnings.php:89, addons/tutor-report/templates/overview.php:68
+#: addons/tutor-report/templates/course_details.php:137, addons/tutor-report/templates/earnings.php:89, addons/tutor-report/templates/overview.php:68
 msgid "Today"
 msgstr ""
 
-#: addons/tutor-report/templates/course_details.php:138, addons/tutor-report/templates/earnings.php:95, addons/tutor-report/templates/overview.php:74
+#: addons/tutor-report/templates/course_details.php:143, addons/tutor-report/templates/earnings.php:95, addons/tutor-report/templates/overview.php:74
 msgid "Monthly"
 msgstr ""
 
-#: addons/tutor-report/templates/course_details.php:144, addons/tutor-report/templates/earnings.php:101, addons/tutor-report/templates/overview.php:80
+#: addons/tutor-report/templates/course_details.php:149, addons/tutor-report/templates/earnings.php:101, addons/tutor-report/templates/overview.php:80
 msgid "Yearly"
 msgstr ""
 
@@ -3369,7 +3477,7 @@ msgstr ""
 msgid "Total Course"
 msgstr ""
 
-#: addons/tutor-report/templates/overview.php:49, addons/tutor-report/views/pages/overview.php:130, addons/tutor-report/views/pages/report.php:16, addons/tutor-report/views/pages/courses/course-single.php:402, addons/tutor-report/views/pages/students/student-profile.php:373
+#: addons/tutor-report/templates/overview.php:49, addons/tutor-report/views/pages/overview.php:130, addons/tutor-report/views/pages/report.php:16, addons/tutor-report/views/pages/courses/course-single.php:317, addons/tutor-report/views/pages/students/student-profile.php:373
 msgid "Reviews"
 msgstr ""
 
@@ -3433,7 +3541,7 @@ msgstr ""
 msgid "Total Enrolled"
 msgstr ""
 
-#: addons/tutor-report/templates/overview.php:184, addons/tutor-report/views/pages/overview.php:221, addons/tutor-report/views/pages/overview.php:268, addons/tutor-report/views/pages/courses/course-single.php:325
+#: addons/tutor-report/templates/overview.php:184, addons/tutor-report/views/pages/overview.php:221, addons/tutor-report/views/pages/overview.php:268, addons/tutor-report/views/pages/courses/course-single.php:240
 msgid "Rating"
 msgstr ""
 
@@ -3441,7 +3549,7 @@ msgstr ""
 msgid "Recent Reviews"
 msgstr ""
 
-#: addons/tutor-report/templates/overview.php:229, addons/tutor-report/views/pages/overview.php:322, addons/tutor-report/views/pages/courses/course-single.php:416, addons/tutor-report/views/pages/reviews/reviews-page.php:25, addons/tutor-report/views/pages/students/student-profile.php:387
+#: addons/tutor-report/templates/overview.php:229, addons/tutor-report/views/pages/overview.php:322, addons/tutor-report/views/pages/courses/course-single.php:331, addons/tutor-report/views/pages/reviews/reviews-page.php:25, addons/tutor-report/views/pages/students/student-profile.php:387
 msgid "Feedback"
 msgstr ""
 
@@ -3509,7 +3617,7 @@ msgstr ""
 msgid "Course Overview"
 msgstr ""
 
-#: addons/tutor-report/templates/student_details.php:73, addons/tutor-report/views/pages/courses/course-single.php:226, addons/tutor-report/views/pages/students/student-profile.php:237
+#: addons/tutor-report/templates/student_details.php:73, addons/tutor-report/templates/elements/course-students.php:39, addons/tutor-report/views/pages/students/student-profile.php:237
 msgid "Progress"
 msgstr ""
 
@@ -3952,7 +4060,7 @@ msgstr ""
 msgid "Bundle Thumbnail"
 msgstr ""
 
-#: addons/course-bundle/templates/single/bundle-authors.php:20, addons/tutor-report/views/pages/overview.php:100, addons/course-bundle/views/backend/components/bundle-authors.php:18, addons/tutor-report/views/pages/courses/course-single.php:307
+#: addons/course-bundle/templates/single/bundle-authors.php:20, addons/tutor-report/views/pages/overview.php:100, addons/course-bundle/views/backend/components/bundle-authors.php:18, addons/tutor-report/views/pages/courses/course-single.php:222
 msgid "Instructors"
 msgstr ""
 
@@ -4591,7 +4699,7 @@ msgstr ""
 msgid "Meeting Link"
 msgstr ""
 
-#: addons/google-meet/views/pages/frontend-meetings.php:141, addons/gradebook/views/pages/gradebooks.php:114, addons/tutor-zoom/views/template/meeting-list.php:182, addons/course-bundle/templates/dashboard/my-bundles/my-bundles.php:246, addons/tutor-report/views/pages/courses/course-single.php:458
+#: addons/google-meet/views/pages/frontend-meetings.php:141, addons/gradebook/views/pages/gradebooks.php:114, addons/tutor-zoom/views/template/meeting-list.php:182, addons/course-bundle/templates/dashboard/my-bundles/my-bundles.php:246, addons/tutor-report/views/pages/courses/course-single.php:373
 msgid "Delete"
 msgstr ""
 
@@ -4773,10 +4881,6 @@ msgstr ""
 msgid "Enter your Google Client ID here"
 msgstr ""
 
-#: addons/social-login/includes/Settings/Settings.php:84
-msgid "Facebook"
-msgstr ""
-
 #: addons/social-login/includes/Settings/Settings.php:87
 msgid "Enable Facebook Login"
 msgstr ""
@@ -4787,10 +4891,6 @@ msgstr ""
 
 #: addons/social-login/includes/Settings/Settings.php:95
 msgid "Enter your Facebook App ID here"
-msgstr ""
-
-#: addons/social-login/includes/Settings/Settings.php:107
-msgid "Twitter"
 msgstr ""
 
 #: addons/social-login/includes/Settings/Settings.php:110
@@ -4895,10 +4995,6 @@ msgstr ""
 
 #: addons/tutor-assignments/views/pages/submitted_assignment.php:112
 msgid "Your Points"
-msgstr ""
-
-#: addons/tutor-assignments/views/pages/submitted_assignment.php:115
-msgid "Only number is allowed"
 msgstr ""
 
 #: addons/tutor-assignments/views/pages/submitted_assignment.php:118
@@ -5137,6 +5233,14 @@ msgstr ""
 msgid "Selected course should be complete before enroll this course."
 msgstr ""
 
+#: addons/tutor-report/templates/elements/course-students.php:30, addons/tutor-report/views/pages/students/student-profile.php:221
+msgid "Enroll Date"
+msgstr ""
+
+#: addons/tutor-report/templates/elements/course-students.php:45
+msgid "Certificate Issued"
+msgstr ""
+
 #: addons/tutor-report/templates/elements/period-calendar.php:2
 msgid "Earnings Graph"
 msgstr ""
@@ -5177,7 +5281,7 @@ msgstr ""
 msgid "New Registered Teachers"
 msgstr ""
 
-#: addons/tutor-report/views/pages/overview.php:439, addons/tutor-report/views/pages/courses/course-single.php:316
+#: addons/tutor-report/views/pages/overview.php:439, addons/tutor-report/views/pages/courses/course-single.php:231
 msgid "Teacher"
 msgstr ""
 
@@ -5524,11 +5628,7 @@ msgid_plural "%s Ratings"
 msgstr[0] ""
 msgstr[1] ""
 
-#: addons/tutor-report/views/pages/courses/course-single.php:217, addons/tutor-report/views/pages/students/student-profile.php:221
-msgid "Enroll Date"
-msgstr ""
-
-#: addons/tutor-report/views/pages/courses/course-single.php:385, addons/tutor-report/views/pages/students/student-profile.php:48
+#: addons/tutor-report/views/pages/courses/course-single.php:300, addons/tutor-report/views/pages/students/student-profile.php:48
 msgid "View Profile"
 msgstr ""
 
@@ -5573,7 +5673,15 @@ msgid "Assignment: "
 msgstr ""
 
 #: ./assets/js/admin.js:1, ./assets/js/instructor-rate.js:1, ./assets/js/front.js:1, ./addons/auth/assets/js/settings.js:1, ./addons/calendar/assets/js/Calendar.js:1, ./addons/calendar/assets/js/Context.js:1, ./addons/course-bundle/assets/js/backend.js:1, ./addons/course-bundle/assets/js/common.js:1, ./addons/course-bundle/assets/js/frontend.js:1, ./addons/enrollments/assets/js/enroll.js:1, ./addons/google-classroom/assets/js/classroom-dashboard.js:1, ./addons/google-classroom/assets/js/classroom-frontend.js:1, ./addons/google-meet/assets/js/scripts.js:1, ./addons/gradebook/assets/js/gradebook.js:1, ./addons/quiz-import-export/assets/js/quiz-import-export.js:1, ./addons/social-login/assets/js/scripts.js:1, ./addons/tutor-assignments/assets/js/assignment.js:1, ./addons/tutor-certificate/assets/js/html-to-image.js:1, ./addons/tutor-chatgpt/assets/js/chatgpt.js:1, ./addons/tutor-email/assets/js/email-template.js:1, ./addons/tutor-notifications/assets/js/registrar.js:1, ./addons/tutor-notifications/assets/js/tutor-notifications.js:1, ./addons/tutor-notifications/assets/js/tutor-push-notification.js:1, ./addons/tutor-report/assets/js/FileSaver.min.js:1, ./addons/tutor-report/assets/js/analytics.js:1, ./addons/tutor-report/assets/js/export.js:1, ./addons/tutor-report/assets/js/report.js:1, ./addons/tutor-wpml/assets/js/duplicate.js:1, ./addons/tutor-zoom/assets/js/admin.js:1, ./addons/tutor-zoom/assets/js/common.js:1, ./addons/tutor-zoom/assets/js/frontend.js:1
-msgid "Deadline:"
+msgid "Deadline: "
+msgstr ""
+
+#: ./assets/js/admin.js:1, ./assets/js/instructor-rate.js:1, ./assets/js/front.js:1, ./addons/auth/assets/js/settings.js:1, ./addons/calendar/assets/js/Calendar.js:1, ./addons/calendar/assets/js/Context.js:1, ./addons/course-bundle/assets/js/backend.js:1, ./addons/course-bundle/assets/js/common.js:1, ./addons/course-bundle/assets/js/frontend.js:1, ./addons/enrollments/assets/js/enroll.js:1, ./addons/google-classroom/assets/js/classroom-dashboard.js:1, ./addons/google-classroom/assets/js/classroom-frontend.js:1, ./addons/google-meet/assets/js/scripts.js:1, ./addons/gradebook/assets/js/gradebook.js:1, ./addons/quiz-import-export/assets/js/quiz-import-export.js:1, ./addons/social-login/assets/js/scripts.js:1, ./addons/tutor-assignments/assets/js/assignment.js:1, ./addons/tutor-certificate/assets/js/html-to-image.js:1, ./addons/tutor-chatgpt/assets/js/chatgpt.js:1, ./addons/tutor-email/assets/js/email-template.js:1, ./addons/tutor-notifications/assets/js/registrar.js:1, ./addons/tutor-notifications/assets/js/tutor-notifications.js:1, ./addons/tutor-notifications/assets/js/tutor-push-notification.js:1, ./addons/tutor-report/assets/js/FileSaver.min.js:1, ./addons/tutor-report/assets/js/analytics.js:1, ./addons/tutor-report/assets/js/export.js:1, ./addons/tutor-report/assets/js/report.js:1, ./addons/tutor-wpml/assets/js/duplicate.js:1, ./addons/tutor-zoom/assets/js/admin.js:1, ./addons/tutor-zoom/assets/js/common.js:1, ./addons/tutor-zoom/assets/js/frontend.js:1
+msgid "Unlocked on: "
+msgstr ""
+
+#: ./assets/js/admin.js:1, ./assets/js/instructor-rate.js:1, ./assets/js/front.js:1, ./addons/auth/assets/js/settings.js:1, ./addons/calendar/assets/js/Calendar.js:1, ./addons/calendar/assets/js/Context.js:1, ./addons/course-bundle/assets/js/backend.js:1, ./addons/course-bundle/assets/js/common.js:1, ./addons/course-bundle/assets/js/frontend.js:1, ./addons/enrollments/assets/js/enroll.js:1, ./addons/google-classroom/assets/js/classroom-dashboard.js:1, ./addons/google-classroom/assets/js/classroom-frontend.js:1, ./addons/google-meet/assets/js/scripts.js:1, ./addons/gradebook/assets/js/gradebook.js:1, ./addons/quiz-import-export/assets/js/quiz-import-export.js:1, ./addons/social-login/assets/js/scripts.js:1, ./addons/tutor-assignments/assets/js/assignment.js:1, ./addons/tutor-certificate/assets/js/html-to-image.js:1, ./addons/tutor-chatgpt/assets/js/chatgpt.js:1, ./addons/tutor-email/assets/js/email-template.js:1, ./addons/tutor-notifications/assets/js/registrar.js:1, ./addons/tutor-notifications/assets/js/tutor-notifications.js:1, ./addons/tutor-notifications/assets/js/tutor-push-notification.js:1, ./addons/tutor-report/assets/js/FileSaver.min.js:1, ./addons/tutor-report/assets/js/analytics.js:1, ./addons/tutor-report/assets/js/export.js:1, ./addons/tutor-report/assets/js/report.js:1, ./addons/tutor-wpml/assets/js/duplicate.js:1, ./addons/tutor-zoom/assets/js/admin.js:1, ./addons/tutor-zoom/assets/js/common.js:1, ./addons/tutor-zoom/assets/js/frontend.js:1
+msgid "Unlock Date: "
 msgstr ""
 
 #: ./assets/js/admin.js:1, ./assets/js/instructor-rate.js:1, ./assets/js/front.js:1, ./addons/auth/assets/js/settings.js:1, ./addons/calendar/assets/js/Calendar.js:1, ./addons/calendar/assets/js/Context.js:1, ./addons/course-bundle/assets/js/backend.js:1, ./addons/course-bundle/assets/js/common.js:1, ./addons/course-bundle/assets/js/frontend.js:1, ./addons/enrollments/assets/js/enroll.js:1, ./addons/google-classroom/assets/js/classroom-dashboard.js:1, ./addons/google-classroom/assets/js/classroom-frontend.js:1, ./addons/google-meet/assets/js/scripts.js:1, ./addons/gradebook/assets/js/gradebook.js:1, ./addons/quiz-import-export/assets/js/quiz-import-export.js:1, ./addons/social-login/assets/js/scripts.js:1, ./addons/tutor-assignments/assets/js/assignment.js:1, ./addons/tutor-certificate/assets/js/html-to-image.js:1, ./addons/tutor-chatgpt/assets/js/chatgpt.js:1, ./addons/tutor-email/assets/js/email-template.js:1, ./addons/tutor-notifications/assets/js/registrar.js:1, ./addons/tutor-notifications/assets/js/tutor-notifications.js:1, ./addons/tutor-notifications/assets/js/tutor-push-notification.js:1, ./addons/tutor-report/assets/js/FileSaver.min.js:1, ./addons/tutor-report/assets/js/analytics.js:1, ./addons/tutor-report/assets/js/export.js:1, ./addons/tutor-report/assets/js/report.js:1, ./addons/tutor-wpml/assets/js/duplicate.js:1, ./addons/tutor-zoom/assets/js/admin.js:1, ./addons/tutor-zoom/assets/js/common.js:1, ./addons/tutor-zoom/assets/js/frontend.js:1
@@ -5778,6 +5886,10 @@ msgstr ""
 
 #: ./assets/js/admin.js:1, ./assets/js/instructor-rate.js:1, ./assets/js/front.js:1, ./addons/auth/assets/js/settings.js:1, ./addons/calendar/assets/js/Calendar.js:1, ./addons/calendar/assets/js/Context.js:1, ./addons/course-bundle/assets/js/backend.js:1, ./addons/course-bundle/assets/js/common.js:1, ./addons/course-bundle/assets/js/frontend.js:1, ./addons/enrollments/assets/js/enroll.js:1, ./addons/google-classroom/assets/js/classroom-dashboard.js:1, ./addons/google-classroom/assets/js/classroom-frontend.js:1, ./addons/google-meet/assets/js/scripts.js:1, ./addons/gradebook/assets/js/gradebook.js:1, ./addons/quiz-import-export/assets/js/quiz-import-export.js:1, ./addons/social-login/assets/js/scripts.js:1, ./addons/tutor-assignments/assets/js/assignment.js:1, ./addons/tutor-certificate/assets/js/html-to-image.js:1, ./addons/tutor-chatgpt/assets/js/chatgpt.js:1, ./addons/tutor-email/assets/js/email-template.js:1, ./addons/tutor-notifications/assets/js/registrar.js:1, ./addons/tutor-notifications/assets/js/tutor-notifications.js:1, ./addons/tutor-notifications/assets/js/tutor-push-notification.js:1, ./addons/tutor-report/assets/js/FileSaver.min.js:1, ./addons/tutor-report/assets/js/analytics.js:1, ./addons/tutor-report/assets/js/export.js:1, ./addons/tutor-report/assets/js/report.js:1, ./addons/tutor-wpml/assets/js/duplicate.js:1, ./addons/tutor-zoom/assets/js/admin.js:1, ./addons/tutor-zoom/assets/js/common.js:1, ./addons/tutor-zoom/assets/js/frontend.js:1
 msgid "The image dimensions need to be 602x124px"
+msgstr ""
+
+#: ./assets/js/admin.js:1, ./assets/js/instructor-rate.js:1, ./assets/js/front.js:1, ./addons/auth/assets/js/settings.js:1, ./addons/calendar/assets/js/Calendar.js:1, ./addons/calendar/assets/js/Context.js:1, ./addons/course-bundle/assets/js/backend.js:1, ./addons/course-bundle/assets/js/common.js:1, ./addons/course-bundle/assets/js/frontend.js:1, ./addons/enrollments/assets/js/enroll.js:1, ./addons/google-classroom/assets/js/classroom-dashboard.js:1, ./addons/google-classroom/assets/js/classroom-frontend.js:1, ./addons/google-meet/assets/js/scripts.js:1, ./addons/gradebook/assets/js/gradebook.js:1, ./addons/quiz-import-export/assets/js/quiz-import-export.js:1, ./addons/social-login/assets/js/scripts.js:1, ./addons/tutor-assignments/assets/js/assignment.js:1, ./addons/tutor-certificate/assets/js/html-to-image.js:1, ./addons/tutor-chatgpt/assets/js/chatgpt.js:1, ./addons/tutor-email/assets/js/email-template.js:1, ./addons/tutor-notifications/assets/js/registrar.js:1, ./addons/tutor-notifications/assets/js/tutor-notifications.js:1, ./addons/tutor-notifications/assets/js/tutor-push-notification.js:1, ./addons/tutor-report/assets/js/FileSaver.min.js:1, ./addons/tutor-report/assets/js/analytics.js:1, ./addons/tutor-report/assets/js/export.js:1, ./addons/tutor-report/assets/js/report.js:1, ./addons/tutor-wpml/assets/js/duplicate.js:1, ./addons/tutor-zoom/assets/js/admin.js:1, ./addons/tutor-zoom/assets/js/common.js:1, ./addons/tutor-zoom/assets/js/frontend.js:1
+msgid "Instructor data updated!"
 msgstr ""
 
 #: ./assets/js/admin.js:1, ./assets/js/instructor-rate.js:1, ./assets/js/front.js:1, ./addons/auth/assets/js/settings.js:1, ./addons/calendar/assets/js/Calendar.js:1, ./addons/calendar/assets/js/Context.js:1, ./addons/course-bundle/assets/js/backend.js:1, ./addons/course-bundle/assets/js/common.js:1, ./addons/course-bundle/assets/js/frontend.js:1, ./addons/enrollments/assets/js/enroll.js:1, ./addons/google-classroom/assets/js/classroom-dashboard.js:1, ./addons/google-classroom/assets/js/classroom-frontend.js:1, ./addons/google-meet/assets/js/scripts.js:1, ./addons/gradebook/assets/js/gradebook.js:1, ./addons/quiz-import-export/assets/js/quiz-import-export.js:1, ./addons/social-login/assets/js/scripts.js:1, ./addons/tutor-assignments/assets/js/assignment.js:1, ./addons/tutor-certificate/assets/js/html-to-image.js:1, ./addons/tutor-chatgpt/assets/js/chatgpt.js:1, ./addons/tutor-email/assets/js/email-template.js:1, ./addons/tutor-notifications/assets/js/registrar.js:1, ./addons/tutor-notifications/assets/js/tutor-notifications.js:1, ./addons/tutor-notifications/assets/js/tutor-push-notification.js:1, ./addons/tutor-report/assets/js/FileSaver.min.js:1, ./addons/tutor-report/assets/js/analytics.js:1, ./addons/tutor-report/assets/js/export.js:1, ./addons/tutor-report/assets/js/report.js:1, ./addons/tutor-wpml/assets/js/duplicate.js:1, ./addons/tutor-zoom/assets/js/admin.js:1, ./addons/tutor-zoom/assets/js/common.js:1, ./addons/tutor-zoom/assets/js/frontend.js:1

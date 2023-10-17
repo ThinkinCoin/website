@@ -5,7 +5,7 @@ Tags: lms, course, elearning, education, learning management system, certificate
 Requires at least: 4.5
 Tested up to: 5.8
 Requires PHP: 7.0
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -76,6 +76,11 @@ If you’re using a responsive theme, then Tutor LMS will look great across all 
 Tutor enables you to use any third party plugins without facing any compatibility issues. You can integrate and use the WordPress LMS plugin easily in your existing site without any trouble.
 
 == Changelog ==
+
+= 1.0.5 - October 16, 2023 =
+
+Update: Improve Certificate Resolution & Reduce Download Time Duration
+Update: Remove tutor logo from certificate builder
 
 = 1.0.4 - May 18, 2022 =
 

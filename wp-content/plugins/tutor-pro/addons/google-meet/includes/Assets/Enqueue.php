@@ -97,7 +97,7 @@ class Enqueue {
 
 			wp_enqueue_style(
 				'tutor-pro-google-meet-jquery-ui-timepicker',
-				$plugin_data['assets'] . 'css/jquery-ui-timepicker.min.css',
+				$plugin_data['assets'] . 'css/jquery-ui-timepicker.css',
 				array(),
 				filemtime( $plugin_data['path'] . 'assets/css/google-meet.css' ),
 			);
