@@ -1,4 +1,4 @@
-/*! elementor - v3.13.3 - 28-05-2023 */
+/*! elementor - v3.19.0 - 07-02-2024 */
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -747,6 +747,7 @@ var CommandBase = /*#__PURE__*/function (_CommandInfra) {
      * Validate `arg.container` & `arg.containers`.
      *
      * @param {{}} args
+     * @deprecated since 3.7.0, extend `$e.modules.editor.CommandContainerBase` or `$e.modules.editor.CommandContainerInternalBase` instead.
      *
      * @throws {Error}
      */
@@ -755,7 +756,7 @@ var CommandBase = /*#__PURE__*/function (_CommandInfra) {
     value: function requireContainer() {
       var _this = this;
       var args = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.args;
-      _deprecation.default.deprecated('requireContainer', '3.7.0', 'Extend `$e.modules.editor.CommandContainerBase` or `$e.modules.editor.CommandContainerInternalBase`');
+      _deprecation.default.deprecated('requireContainer()', '3.7.0', 'Extend `$e.modules.editor.CommandContainerBase` or `$e.modules.editor.CommandContainerInternalBase`');
       if (!args.container && !args.containers) {
         throw Error('container or containers are required.');
       }
@@ -854,7 +855,9 @@ var CommandInfra = /*#__PURE__*/function (_ArgsObject) {
   (0, _createClass2.default)(CommandInfra, [{
     key: "currentCommand",
     get:
-    // TODO - Remove backwards compatibility.
+    /**
+     * @deprecated since 3.7.0, use `this.command` instead.
+     */
     function get() {
       _deprecation.default.deprecated('this.currentCommand', '3.7.0', 'this.command');
       return this.command;
@@ -1428,31 +1431,31 @@ module.exports = _interopRequireDefault, module.exports.__esModule = true, modul
   \**********************************************************************/
 /***/ ((module) => {
 
-function _iterableToArrayLimit(arr, i) {
-  var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"];
-  if (null != _i) {
-    var _s,
-      _e,
-      _x,
-      _r,
-      _arr = [],
-      _n = !0,
-      _d = !1;
+function _iterableToArrayLimit(r, l) {
+  var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
+  if (null != t) {
+    var e,
+      n,
+      i,
+      u,
+      a = [],
+      f = !0,
+      o = !1;
     try {
-      if (_x = (_i = _i.call(arr)).next, 0 === i) {
-        if (Object(_i) !== _i) return;
-        _n = !1;
-      } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0);
-    } catch (err) {
-      _d = !0, _e = err;
+      if (i = (t = t.call(r)).next, 0 === l) {
+        if (Object(t) !== t) return;
+        f = !1;
+      } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0);
+    } catch (r) {
+      o = !0, n = r;
     } finally {
       try {
-        if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return;
+        if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return;
       } finally {
-        if (_d) throw _e;
+        if (o) throw n;
       }
     }
-    return _arr;
+    return a;
   }
 }
 module.exports = _iterableToArrayLimit, module.exports.__esModule = true, module.exports["default"] = module.exports;
@@ -1587,14 +1590,14 @@ module.exports = _toPropertyKey, module.exports.__esModule = true, module.export
   \********************************************************/
 /***/ ((module) => {
 
-function _typeof(obj) {
+function _typeof(o) {
   "@babel/helpers - typeof";
 
-  return (module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
-    return typeof obj;
-  } : function (obj) {
-    return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-  }, module.exports.__esModule = true, module.exports["default"] = module.exports), _typeof(obj);
+  return (module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+    return typeof o;
+  } : function (o) {
+    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports), _typeof(o);
 }
 module.exports = _typeof, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
@@ -1671,10 +1674,16 @@ $e.modules.editor = {
 
 // TODO: Remove, BC.
 $e.modules.document = {
+  /**
+   * @deprecated since 3.7.0, use `$e.modules.editor.document.CommandHistoryBase` instead.
+   */
   get CommandHistory() {
     elementorDevTools.deprecation.deprecated('$e.modules.document.CommandHistory', '3.7.0', '$e.modules.editor.document.CommandHistoryBase');
     return $e.modules.editor.document.CommandHistoryBase;
   },
+  /**
+   * @deprecated since 3.7.0, use `$e.modules.editor.document.CommandHistoryDebounceBase` instead.
+   */
   get CommandHistoryDebounce() {
     elementorDevTools.deprecation.deprecated('$e.modules.CommandHistoryDebounce', '3.7.0', '$e.modules.editor.document.CommandHistoryDebounceBase');
     return $e.modules.editor.document.CommandHistoryDebounceBase;

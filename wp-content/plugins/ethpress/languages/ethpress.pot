@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the EthPress package.
 msgid ""
 msgstr ""
-"Project-Id-Version: EthPress 2.1.0\n"
+"Project-Id-Version: EthPress 2.2.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ethpress\n"
-"POT-Creation-Date: 2023-05-02 07:09:46+00:00\n"
+"POT-Creation-Date: 2023-10-27 10:04:00+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,31 +24,31 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
 
-#: app/Address.php:120
-msgid "Bad address."
-msgstr ""
-
-#: app/Address.php:189
-msgid "No user for this address exists."
-msgstr ""
-
-#: app/Address.php:326 app/Address.php:333
-msgid "No matching address."
-msgstr ""
-
-#: app/Address.php:357
-msgid "You have not registered on this site; we cannot log you in"
-msgstr ""
-
-#: app/Address.php:386
+#: app/Address.php:69 app/Address.php:441
 msgid "Empty username."
 msgstr ""
 
-#: app/Address.php:391
+#: app/Address.php:128
+msgid "Bad address."
+msgstr ""
+
+#: app/Address.php:225
+msgid "No user for this address exists."
+msgstr ""
+
+#: app/Address.php:381 app/Address.php:388
+msgid "No matching address."
+msgstr ""
+
+#: app/Address.php:412
+msgid "You have not registered on this site; we cannot log you in"
+msgstr ""
+
+#: app/Address.php:446
 msgid "Username already exists."
 msgstr ""
 
-#: app/Address.php:400
+#: app/Address.php:455
 msgid "Error during creation"
 msgstr ""
 
@@ -131,7 +131,7 @@ msgid "WalletConnect Settings"
 msgstr ""
 
 #: app/Admin/Options.php:327 app/Admin/Options.php:331
-#: app/Admin/Options.php:335 app/Plugin.php:143
+#: app/Admin/Options.php:335 app/Plugin.php:147
 msgid "WalletConnect Project ID"
 msgstr ""
 
@@ -161,7 +161,7 @@ msgstr ""
 msgid "Strings Settings"
 msgstr ""
 
-#: app/Admin/Options.php:420 app/Front.php:79 app/Plugin.php:399
+#: app/Admin/Options.php:420 app/Front.php:79 app/Plugin.php:405
 msgid "Log In With a Crypto Wallet"
 msgstr ""
 
@@ -189,7 +189,7 @@ msgstr ""
 msgid "Upgrade to use this feature!"
 msgstr ""
 
-#: app/Admin/Options.php:459 app/Front.php:133 app/Plugin.php:400
+#: app/Admin/Options.php:459 app/Front.php:133 app/Plugin.php:406
 msgid "Link Your Crypto Wallets"
 msgstr ""
 
@@ -201,7 +201,7 @@ msgstr ""
 msgid "The Link button text can be set there."
 msgstr ""
 
-#: app/Admin/Options.php:498 app/Front.php:207 app/Plugin.php:401
+#: app/Admin/Options.php:498 app/Front.php:207 app/Plugin.php:407
 msgid "Register With a Crypto Wallet"
 msgstr ""
 
@@ -213,7 +213,7 @@ msgstr ""
 msgid "The Register button text can be set there."
 msgstr ""
 
-#: app/Admin/Options.php:532 app/Linker.php:94
+#: app/Admin/Options.php:532 app/Linker.php:111
 #. translators: wallet address
 msgid "Success! Address %s is now linked to your account."
 msgstr ""
@@ -335,7 +335,7 @@ msgstr ""
 msgid "Check to the Link Wallet button on the WooCommerce Account Details page."
 msgstr ""
 
-#: app/Admin/Options.php:1081
+#: app/Admin/Options.php:1103
 msgid "Settings"
 msgstr ""
 
@@ -343,17 +343,13 @@ msgstr ""
 msgid "Enable JavaScript to log in with a crypto wallet."
 msgstr ""
 
-#: app/Linker.php:62
+#: app/Linker.php:40
+msgid "Invalid request."
+msgstr ""
+
+#: app/Linker.php:77
 #. translators: wallet address
 msgid "Address %1$s... is already linked to an account. Doing nothing."
-msgstr ""
-
-#: app/Linker.php:130
-msgid "Signature mismatch. Try again."
-msgstr ""
-
-#: app/Linker.php:133
-msgid "Invalid request."
 msgstr ""
 
 #: app/Linker.php:148
@@ -382,79 +378,103 @@ msgstr ""
 msgid "Linking your account to your crypto wallet."
 msgstr ""
 
-#: app/Login.php:39
+#: app/Login.php:38
 msgid "Invalid input"
 msgstr ""
 
-#: app/Login.php:91 app/Plugin.php:288
+#: app/Login.php:94 app/Plugin.php:293
 msgid "Logged in"
 msgstr ""
 
-#: app/Login.php:101
-msgid "Signature err, try again."
-msgstr ""
-
-#: app/Login.php:172
+#: app/Login.php:173
 #. translators: blog name.
 msgid "Log in to %1$s"
 msgstr ""
 
-#: app/Login.php:207
+#: app/Login.php:208
 msgid "Bad nonce, please refresh."
 msgstr ""
 
-#: app/Login.php:214
+#: app/Login.php:215
 msgid "No address specified."
 msgstr ""
 
-#: app/Plugin.php:140
+#: app/Plugin.php:144
 msgid ""
 "%1$sImportant:%2$s %3$s must be set in the EthPress plugin "
 "%6$ssettings%5$s. You can get it from %4$sWalletConnect.com%5$s"
 msgstr ""
 
-#: app/Plugin.php:282
+#: app/Plugin.php:287
 msgid "Choose your login method"
 msgstr ""
 
-#: app/Plugin.php:283
+#: app/Plugin.php:288
 msgid "Error: cannot detect crypto wallet"
 msgstr ""
 
-#: app/Plugin.php:284
+#: app/Plugin.php:289
 msgid "Waiting for your permission"
 msgstr ""
 
-#: app/Plugin.php:285
+#: app/Plugin.php:290
 msgid "Fetching login phrase..."
 msgstr ""
 
-#: app/Plugin.php:286
+#: app/Plugin.php:291
 msgid "Waiting for your signature"
 msgstr ""
 
-#: app/Plugin.php:287
+#: app/Plugin.php:292
 msgid "Verifying signature..."
 msgstr ""
 
-#: app/Plugin.php:289
+#: app/Plugin.php:294
 msgid "Login aborted"
 msgstr ""
 
-#: app/Plugin.php:290
+#: app/Plugin.php:295
 msgid "Log In"
 msgstr ""
 
-#: app/Plugin.php:291
+#: app/Plugin.php:296
 msgid "Scan a QR code with your wallet, https://walletconnect.org"
 msgstr ""
 
-#: app/Plugin.php:292
+#: app/Plugin.php:297
 msgid "Browser add-on and mobile app, https://metamask.io"
 msgstr ""
 
-#: app/Plugin.php:345
+#: app/Plugin.php:298
+msgid "Missing signature"
+msgstr ""
+
+#: app/Plugin.php:351
 msgid "Log out first"
+msgstr ""
+
+#: app/Signature.php:164
+msgid ""
+"Signature can not be verified for address \"%3$s\", message \"%1$s\" and "
+"signature \"%2$s\""
+msgstr ""
+
+#: app/Signature.php:170
+msgid ""
+"Failed to verify signature locally for address \"%3$s\", message \"%1$s\" "
+"and signature \"%2$s\""
+msgstr ""
+
+#: app/Signature.php:176
+msgid ""
+"Failed to verify signature remotely for address \"%3$s\", message \"%1$s\" "
+"and signature \"%2$s\""
+msgstr ""
+
+#: app/Signature.php:181
+msgid ""
+"Failed to verify signature. The address \"%4$s\" extracted for address "
+"\"%3$s\", message \"%1$s\" and signature \"%2$s\""
 msgstr ""
 
 #: app/UM.php:57 app/UM.php:60

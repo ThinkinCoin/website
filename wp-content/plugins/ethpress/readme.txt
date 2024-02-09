@@ -3,8 +3,8 @@ Contributors: lynn999, ethereumicoio, freemius
 Donate link: https://etherscan.io/address/0x106417f7265e15c1aae52f76809f171578e982a9
 Tags: login, metamask, ethereum, web3, trust wallet, bitcoin, cryptocurrency, crypto wallet, walletconnect, NFT
 Requires at least: 4.6
-Tested up to: 6.2.0
-Stable tag: 2.1.0
+Tested up to: 6.4.0
+Stable tag: 2.2.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires PHP: 5.4
@@ -250,6 +250,35 @@ $redirect_to = apply_filters('ethpress_login_redirect', $redirect_to, $requested
 
 == Changelog ==
 
+= 2.2.3 =
+
+* Error reporting enhancements
+
+= 2.2.2 =
+
+* Error reporting enhancements
+* l10n enhancements
+* Fix warnings for options save
+
+= 2.2.1 =
+
+* `Username already exists` error fix second attempt
+* Old DB structure check improved
+* General error reporting improved
+* freemius library version update
+
+= 2.2.0 =
+
+* `Username already exists` error fix
+* Crypto wallet register button is added on the default WordPress Register page
+
+= 2.1.2 =
+
+* web3modal lib update to v2.7.1
+
+= 2.1.1 =
+
+* freemius library version update
 
 = 2.1.0 =
 

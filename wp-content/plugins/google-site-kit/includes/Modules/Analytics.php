@@ -36,9 +36,8 @@ use Google\Site_Kit\Core\Permissions\Permissions;
 use Google\Site_Kit\Core\REST_API\Data_Request;
 use Google\Site_Kit\Core\Tags\Guards\Tag_Environment_Type_Guard;
 use Google\Site_Kit\Core\Tags\Guards\Tag_Verify_Guard;
+use Google\Site_Kit\Core\Site_Health\Debug_Data;
 use Google\Site_Kit\Core\Util\Date;
-use Google\Site_Kit\Core\Util\Debug_Data;
-use Google\Site_Kit\Core\Util\Feature_Flags;
 use Google\Site_Kit\Core\Util\Method_Proxy_Trait;
 use Google\Site_Kit\Core\Util\BC_Functions;
 use Google\Site_Kit\Core\Util\Sort;
@@ -50,7 +49,6 @@ use Google\Site_Kit\Modules\Analytics\Settings;
 use Google\Site_Kit\Modules\Analytics\Tag_Guard;
 use Google\Site_Kit\Modules\Analytics\Web_Tag;
 use Google\Site_Kit\Modules\Analytics\Proxy_AccountTicket;
-use Google\Site_Kit\Modules\Analytics\Advanced_Tracking;
 use Google\Site_Kit_Dependencies\Google\Service\Analytics as Google_Service_Analytics;
 use Google\Site_Kit_Dependencies\Google\Service\AnalyticsReporting as Google_Service_AnalyticsReporting;
 use Google\Site_Kit_Dependencies\Google\Service\AnalyticsReporting\GetReportsRequest as Google_Service_AnalyticsReporting_GetReportsRequest;
@@ -63,7 +61,6 @@ use Google\Site_Kit_Dependencies\Google\Service\AnalyticsReporting\Metric as Goo
 use Google\Site_Kit_Dependencies\Google\Service\AnalyticsReporting\OrderBy as Google_Service_AnalyticsReporting_OrderBy;
 use Google\Site_Kit_Dependencies\Google\Service\Analytics\Accounts as Google_Service_Analytics_Accounts;
 use Google\Site_Kit_Dependencies\Google\Service\Analytics\Account as Google_Service_Analytics_Account;
-use Google\Site_Kit_Dependencies\Google\Service\Analytics\Webproperties as Google_Service_Analytics_Webproperties;
 use Google\Site_Kit_Dependencies\Google\Service\Analytics\Webproperty as Google_Service_Analytics_Webproperty;
 use Google\Site_Kit_Dependencies\Google\Service\Analytics\Profile as Google_Service_Analytics_Profile;
 use Google\Site_Kit_Dependencies\Google\Service\Exception as Google_Service_Exception;
@@ -120,8 +117,6 @@ final class Analytics extends Module
 		add_action( 'wp_head', $this->get_method_proxy( 'print_tracking_opt_out' ), 0 );
 		// For Web Stories plugin.
 		add_action( 'web_stories_story_head', $this->get_method_proxy( 'print_tracking_opt_out' ), 0 );
-		// Analytics tag placement logic.
-		add_action( 'template_redirect', $this->get_method_proxy( 'register_tag' ) );
 
 		add_filter(
 			'googlesitekit_proxy_setup_mode',
@@ -132,32 +127,14 @@ final class Analytics extends Module
 			}
 		);
 
-		( new Advanced_Tracking( $this->context ) )->register();
-
 		// Ensure that the data available state is reset when the property changes.
-		add_action(
-			'update_option_googlesitekit_analytics_settings',
+		$this->get_settings()->on_change(
 			function( $old_value, $new_value ) {
 				if ( $old_value['propertyID'] !== $new_value['propertyID'] ) {
 					$this->reset_data_available();
 				}
-			},
-			10,
-			2
-		);
-
-		add_filter(
-			'googlesitekit_dashboard_sharing_data',
-			function ( $data ) {
-				if ( Feature_Flags::enabled( 'ga4Reporting' ) && ! $this->authentication->is_authenticated() ) {
-					$settings              = $this->get_settings()->get();
-					$data['dashboardView'] = $settings['dashboardView'];
-				}
-
-				return $data;
 			}
 		);
-
 	}
 
 	/**
@@ -252,7 +229,7 @@ final class Analytics extends Module
 	public function get_debug_fields() {
 		$settings = $this->get_settings()->get();
 
-		return array(
+		$fields = array(
 			'analytics_account_id'  => array(
 				'label' => __( 'Analytics account ID', 'google-site-kit' ),
 				'value' => $settings['accountID'],
@@ -274,6 +251,8 @@ final class Analytics extends Module
 				'debug' => $settings['useSnippet'] ? 'yes' : 'no',
 			),
 		);
+
+		return $fields;
 	}
 
 	/**
@@ -341,41 +320,8 @@ final class Analytics extends Module
 
 		$new_settings = array();
 
-		if ( ! Feature_Flags::enabled( 'ga4Reporting' ) ) {
-			// UA-SPECIFIC Provisioning callback only.
-			$web_property_id = htmlspecialchars( $input->filter( INPUT_GET, 'webPropertyId' ) );
-			$profile_id      = htmlspecialchars( $input->filter( INPUT_GET, 'profileId' ) );
-
-			if ( ! $web_property_id || ! $profile_id ) {
-				// If ga4Reporting is not enabled and UA property or profile IDs are missing, something went wrong.
-				wp_safe_redirect(
-					$this->context->admin_url( 'dashboard', array( 'error_code' => 'callback_missing_parameter' ) )
-				);
-				exit;
-			}
-
-			// Retrieve the internal web property id.
-			try {
-				$web_property = $this->get_service( 'analytics' )->management_webproperties->get( $account_id, $web_property_id );
-			} catch ( Exception $e ) {
-				wp_safe_redirect(
-					$this->context->admin_url( 'dashboard', array( 'error_code' => 'property_not_found' ) )
-				);
-				exit;
-			}
-
-			$new_settings['internalWebPropertyID'] = $web_property->getInternalWebPropertyId();
-			$new_settings['propertyID']            = $web_property_id;
-			$new_settings['profileID']             = $profile_id;
-		}
-
 		// At this point, account creation was successful.
 		$new_settings['accountID'] = $account_id;
-
-		if ( Feature_Flags::enabled( 'ga4Reporting' ) ) {
-			// For GA4-SPECIFIC provisioning callback, switch to GA4 dashboard view.
-			$new_settings['dashboardView'] = 'google-analytics-4';
-		}
 
 		$this->get_settings()->merge( $new_settings );
 
@@ -405,6 +351,8 @@ final class Analytics extends Module
 	 * @return array Map of datapoints to their definitions.
 	 */
 	protected function get_datapoint_definitions() {
+		$shareable = true;
+
 		$datapoints = array(
 			'GET:accounts-properties-profiles' => array( 'service' => 'analytics' ),
 			'POST:create-account-ticket'       => array(
@@ -424,21 +372,19 @@ final class Analytics extends Module
 			),
 			'GET:goals'                        => array(
 				'service'   => 'analytics',
-				'shareable' => Feature_Flags::enabled( 'dashboardSharing' ),
+				'shareable' => $shareable,
 			),
 			'GET:profiles'                     => array( 'service' => 'analytics' ),
 			'GET:properties-profiles'          => array( 'service' => 'analytics' ),
 			'GET:report'                       => array(
 				'service'   => 'analyticsreporting',
-				'shareable' => Feature_Flags::enabled( 'dashboardSharing' ),
+				'shareable' => $shareable,
 			),
 		);
 
-		if ( Feature_Flags::enabled( 'ga4Reporting' ) ) {
-			unset( $datapoints['POST:create-account-ticket'] );
-			unset( $datapoints['POST:create-profile'] );
-			unset( $datapoints['POST:create-property'] );
-		}
+		unset( $datapoints['POST:create-account-ticket'] );
+		unset( $datapoints['POST:create-profile'] );
+		unset( $datapoints['POST:create-property'] );
 
 		return $datapoints;
 	}
@@ -670,14 +616,7 @@ final class Analytics extends Module
 						$date_ranges[] = array( $compare_start_date, $compare_end_date );
 					}
 				} else {
-					$date_range    = $data['dateRange'] ?: 'last-28-days';
-					$date_ranges[] = Date::parse_date_range( $date_range, $data['compareDateRanges'] ? 2 : 1 );
-
-					// When using multiple date ranges, it changes the structure of the response,
-					// where each date range becomes an item in a list.
-					if ( ! empty( $data['multiDateRange'] ) ) {
-						$date_ranges[] = Date::parse_date_range( $date_range, 1, 1, true );
-					}
+					$date_ranges[] = Date::parse_date_range( 'last-28-days' );
 				}
 
 				$date_ranges = array_map(
@@ -1303,6 +1242,9 @@ final class Analytics extends Module
 
 	/**
 	 * Registers the Analytics tag.
+	 *
+	 * This method is currently unused and is kept for reference until this module
+	 * is entirely removed.
 	 *
 	 * @since 1.24.0
 	 */

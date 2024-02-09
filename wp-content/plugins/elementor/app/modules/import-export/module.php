@@ -43,6 +43,10 @@ class Module extends BaseModule {
 
 	const NO_WRITE_PERMISSIONS_KEY = 'no-write-permissions';
 
+	const THIRD_PARTY_ERROR = 'third-party-error';
+
+	const DOMDOCUMENT_MISSING = 'domdocument-missing';
+
 	const OPTION_KEY_ELEMENTOR_IMPORT_SESSIONS = 'elementor_import_sessions';
 
 	const OPTION_KEY_ELEMENTOR_REVERT_SESSIONS = 'elementor_revert_sessions';
@@ -50,6 +54,7 @@ class Module extends BaseModule {
 	const META_KEY_ELEMENTOR_IMPORT_SESSION_ID = '_elementor_import_session_id';
 
 	const META_KEY_ELEMENTOR_EDIT_MODE = '_elementor_edit_mode';
+	const IMPORT_PLUGINS_ACTION = 'import-plugins';
 
 	/**
 	 * Assigning the export process to a property, so we can use the process from outside the class.
@@ -330,6 +335,7 @@ class Module extends BaseModule {
 	 */
 	public function import_kit( string $path, array $settings, bool $split_to_chunks = false ): array {
 		$this->ensure_writing_permissions();
+		$this->ensure_DOMDocument_exists();
 
 		$this->import = new Import( $path, $settings );
 		$this->import->register_default_runners();
@@ -441,6 +447,22 @@ class Module extends BaseModule {
 		$page_id = Tools::PAGE_ID;
 
 		add_action( "elementor/admin/after_create_settings/{$page_id}", [ $this, 'register_settings_tab' ] );
+
+		// TODO 18/04/2023 : This needs to be moved to the runner itself after https://elementor.atlassian.net/browse/HTS-434 is done.
+		if ( self::IMPORT_PLUGINS_ACTION === ElementorUtils::get_super_global_value( $_SERVER, 'HTTP_X_ELEMENTOR_ACTION' ) ) {
+			add_filter( 'woocommerce_create_pages', [ $this, 'empty_pages' ], 10, 0 );
+		}
+		// TODO ^^^
+	}
+
+	/**
+	 * Prevent the creation of the default WooCommerce pages (Cart, Checkout, etc.)
+	 *
+	 * TODO 18/04/2023 : This needs to be moved to the runner itself after https://elementor.atlassian.net/browse/HTS-434 is done.
+	 * @return array
+	 */
+	public function empty_pages(): array {
+		return [];
 	}
 
 	private function ensure_writing_permissions() {
@@ -469,6 +491,12 @@ class Module extends BaseModule {
 		// 2. If the dir doesn't exist, the parent dir has to be writable (wp uploads dir), so we can create it.
 		if ( $permissions[ Server::KEY_PATH_ELEMENTOR_UPLOADS_DIR ]['exists'] && ! $permissions[ Server::KEY_PATH_ELEMENTOR_UPLOADS_DIR ]['write'] ) {
 			throw new \Error( self::NO_WRITE_PERMISSIONS_KEY );
+		}
+	}
+
+	private function ensure_DOMDocument_exists() {
+		if ( ! class_exists( 'DOMDocument' ) ) {
+			throw new \Error( self::DOMDOCUMENT_MISSING );
 		}
 	}
 
@@ -523,11 +551,20 @@ class Module extends BaseModule {
 					break;
 			}
 		} catch ( \Error $e ) {
+			if ( isset( $this->import ) ) {
+				$this->import->finalize_import_session_option();
+			}
+
 			Plugin::$instance->logger->get_logger()->error( $e->getMessage(), [
 				'meta' => [
 					'trace' => $e->getTraceAsString(),
 				],
 			] );
+
+			if ( isset( $this->import ) && $this->is_third_party_class( $e->getTrace()[0]['class'] ) ) {
+				wp_send_json_error( self::THIRD_PARTY_ERROR, 500 );
+			}
+
 			wp_send_json_error( $e->getMessage(), 500 );
 		}
 	}
@@ -588,7 +625,7 @@ class Module extends BaseModule {
 		$conflicts = $uploaded_kit['conflicts'];
 
 		if ( ! empty( $file_url ) ) {
-			Plugin::$instance->uploads_manager->remove_file_or_dir( dirname( $file_name ) );
+			Plugin::$instance->uploads_manager->remove_temp_file_or_dir( dirname( $file_name ) );
 		}
 
 		if ( isset( $manifest['plugins'] ) && ! current_user_can( 'install_plugins' ) ) {
@@ -624,6 +661,12 @@ class Module extends BaseModule {
 		// get_settings_config() added manually because the frontend Ajax request doesn't trigger the get_init_settings().
 		$import['configData'] = $this->get_config_data();
 
+		Plugin::$instance->logger->get_logger()->info(
+			sprintf( 'Selected import runners: %1$s',
+				implode( ', ', $import['runners'] )
+			)
+		);
+
 		wp_send_json_success( $import );
 	}
 
@@ -640,6 +683,15 @@ class Module extends BaseModule {
 
 		// get_settings_config() added manually because the frontend Ajax request doesn't trigger the get_init_settings().
 		$import['configData'] = $this->get_config_data();
+
+		if ( ! empty( $import['status'] ) ) {
+			Plugin::$instance->logger->get_logger()->info(
+				sprintf( 'Import runner completed: %1$s %2$s',
+					$import['runner'],
+					( 'success' === $import['status'] ? '✓' : '✗' )
+				)
+			);
+		}
 
 		wp_send_json_success( $import );
 	}
@@ -659,7 +711,7 @@ class Module extends BaseModule {
 			throw new \Error( 'Could not read the exported file.' );
 		}
 
-		Plugin::$instance->uploads_manager->remove_file_or_dir( dirname( $file_name ) );
+		Plugin::$instance->uploads_manager->remove_temp_file_or_dir( dirname( $file_name ) );
 
 		$result = [
 			'manifest' => $export['manifest'],
@@ -713,8 +765,8 @@ class Module extends BaseModule {
 			$post_type_object = get_post_type_object( $post_type );
 
 			$summary_titles['content'][ $post_type ] = [
-				'single' => $post_type_object->labels->singular_name,
-				'plural' => $post_type_object->label,
+				'single' => $post_type_object->labels->singular_name ?? '',
+				'plural' => $post_type_object->label ?? '',
 			];
 		}
 
@@ -726,14 +778,14 @@ class Module extends BaseModule {
 				// CPT data appears in two arrays:
 				// 1. content object: in order to show the export summary when completed in getLabel function
 				$summary_titles['content'][ $custom_post_type ] = [
-					'single' => $custom_post_types_object->labels->singular_name,
-					'plural' => $custom_post_types_object->label,
+					'single' => $custom_post_types_object->labels->singular_name ?? '',
+					'plural' => $custom_post_types_object->label ?? '',
 				];
 
 				// 2. customPostTypes object: in order to actually export the data
 				$summary_titles['content']['customPostTypes'][ $custom_post_type ] = [
-					'single' => $custom_post_types_object->labels->singular_name,
-					'plural' => $custom_post_types_object->label,
+					'single' => $custom_post_types_object->labels->singular_name ?? '',
+					'plural' => $custom_post_types_object->label ?? '',
 				];
 			}
 		}
@@ -830,5 +882,27 @@ class Module extends BaseModule {
 		$document = $this->get_elementor_document( $page_id );
 
 		return $document ? $document->get_edit_url() : '';
+	}
+
+	/**
+	 * @param string $class
+	 *
+	 * @return bool
+	 */
+	public function is_third_party_class( $class ) {
+		$allowed_classes = [
+			'Elementor\\',
+			'ElementorPro\\',
+			'WP_',
+			'wp_',
+		];
+
+		foreach ( $allowed_classes as $allowed_class ) {
+			if ( str_starts_with( $class, $allowed_class ) ) {
+				return false;
+			}
+		}
+
+		return true;
 	}
 }

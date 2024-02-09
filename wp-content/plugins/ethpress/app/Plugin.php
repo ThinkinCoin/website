@@ -52,6 +52,9 @@ class Plugin
         add_action( 'login_form', [ __CLASS__, 'register_scripts' ], 9 );
         add_action( 'login_form', [ __CLASS__, 'login_enqueue_scripts' ] );
         add_action( 'login_form', [ ETHPRESS_NS . '\\Front', 'login_form' ] );
+        add_action( 'register_form', [ __CLASS__, 'register_scripts' ], 9 );
+        add_action( 'register_form', [ __CLASS__, 'login_enqueue_scripts' ] );
+        add_action( 'register_form', [ ETHPRESS_NS . '\\Front', 'register_form' ] );
         $defopts = [
             'woocommerce_login_form_show'                       => '0',
             'woocommerce_register_form_show'                    => '0',
@@ -213,7 +216,8 @@ class Plugin
         $get_nonce_nonce = wp_create_nonce( 'ethpress_get_message' );
         $options = get_site_option( 'ethpress' );
         $wallet_connect_project_id = ( empty($options['wallet_connect_project_id']) ? self::WALLET_CONNECT_DEFAULT_PROJECT_ID : esc_attr( $options['wallet_connect_project_id'] ) );
-        $theme_mode = esc_attr( $options['theme_mode'] );
+        $ethpress_theme_mode = ( isset( $options['theme_mode'] ) ? $options['theme_mode'] : "light" );
+        $theme_mode = esc_attr( $ethpress_theme_mode );
         $inline_script = [
             'wallet_connect_project_id' => $wallet_connect_project_id,
             'theme_mode'                => $theme_mode,
@@ -234,6 +238,7 @@ class Plugin
             'heading'                  => esc_html__( 'Log In', 'ethpress' ),
             'walletconnectButtonTitle' => esc_html__( 'Scan a QR code with your wallet, https://walletconnect.org', 'ethpress' ),
             'metamaskButtonTitle'      => esc_html__( 'Browser add-on and mobile app, https://metamask.io', 'ethpress' ),
+            'missingSignature'         => esc_html__( 'Missing signature', 'ethpress' ),
         ],
         ];
         /**

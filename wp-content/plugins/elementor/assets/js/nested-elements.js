@@ -1,4 +1,4 @@
-/*! elementor - v3.13.3 - 28-05-2023 */
+/*! elementor - v3.19.0 - 07-02-2024 */
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -189,14 +189,14 @@ module.exports = _toPropertyKey, module.exports.__esModule = true, module.export
   \********************************************************/
 /***/ ((module) => {
 
-function _typeof(obj) {
+function _typeof(o) {
   "@babel/helpers - typeof";
 
-  return (module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
-    return typeof obj;
-  } : function (obj) {
-    return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-  }, module.exports.__esModule = true, module.exports["default"] = module.exports), _typeof(obj);
+  return (module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+    return typeof o;
+  } : function (o) {
+    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports), _typeof(o);
 }
 module.exports = _typeof, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
@@ -250,10 +250,10 @@ module.exports = _typeof, module.exports.__esModule = true, module.exports["defa
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if (chunkId === "modules_nested-elements_assets_js_editor_module_js") return "765551b6f9005a42004c.bundle.js";
-/******/ 			if (chunkId === "vendors-node_modules_prop-types_index_js-node_modules_babel_runtime_helpers_defineProperty_js-fe2f09") return "468f41fa91dee0f38b7d.bundle.js";
-/******/ 			if (chunkId === "modules_nested-elements_assets_js_editor_nested-element-types-base_js") return "adea2c8e99ec77c3e05d.bundle.js";
-/******/ 			if (chunkId === "modules_nested-elements_assets_js_editor_views_view_js") return "96124ada3ba05750eec1.bundle.js";
+/******/ 			if (chunkId === "modules_nested-elements_assets_js_editor_module_js") return "f9b37afff6a65f7b9541.bundle.js";
+/******/ 			if (chunkId === "vendors-node_modules_prop-types_index_js-node_modules_babel_runtime_helpers_slicedToArray_js") return "fd6a00ae23a1bc2c6190.bundle.js";
+/******/ 			if (chunkId === "modules_nested-elements_assets_js_editor_nested-element-types-base_js") return "e8a7573e654d921656ab.bundle.js";
+/******/ 			if (chunkId === "modules_nested-elements_assets_js_editor_views_view_js") return "46e544e5863270fc32f2.bundle.js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
@@ -301,6 +301,7 @@ module.exports = _typeof, module.exports.__esModule = true, module.exports["defa
 /******/ 					script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 				}
 /******/ 				script.setAttribute("data-webpack", dataWebpackPrefix + key);
+/******/ 		
 /******/ 				script.src = url;
 /******/ 			}
 /******/ 			inProgress[url] = [done];
@@ -331,7 +332,10 @@ module.exports = _typeof, module.exports.__esModule = true, module.exports["defa
 /******/ 				scriptUrl = document.currentScript.src;
 /******/ 			if (!scriptUrl) {
 /******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
 /******/ 			}
 /******/ 		}
 /******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
@@ -386,7 +390,7 @@ module.exports = _typeof, module.exports.__esModule = true, module.exports["defa
 /******/ 								}
 /******/ 							};
 /******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
-/******/ 						} else installedChunks[chunkId] = 0;
+/******/ 						}
 /******/ 					}
 /******/ 				}
 /******/ 		};
@@ -448,7 +452,7 @@ elementorCommon.elements.$window.on('elementor:init-components', function () {
   elementor.modules.nestedElements = __webpack_require__.e(/*! import() */ "modules_nested-elements_assets_js_editor_module_js").then(__webpack_require__.bind(__webpack_require__, /*! ../editor/module */ "../modules/nested-elements/assets/js/editor/module.js"));
   elementor.modules.nestedElements.then(function (module) {
     elementor.modules.nestedElements = new module.default();
-    elementor.modules.elements.types.NestedElementBase = Promise.all(/*! import() */[__webpack_require__.e("vendors-node_modules_prop-types_index_js-node_modules_babel_runtime_helpers_defineProperty_js-fe2f09"), __webpack_require__.e("modules_nested-elements_assets_js_editor_nested-element-types-base_js")]).then(__webpack_require__.bind(__webpack_require__, /*! ./nested-element-types-base */ "../modules/nested-elements/assets/js/editor/nested-element-types-base.js"));
+    elementor.modules.elements.types.NestedElementBase = Promise.all(/*! import() */[__webpack_require__.e("vendors-node_modules_prop-types_index_js-node_modules_babel_runtime_helpers_slicedToArray_js"), __webpack_require__.e("modules_nested-elements_assets_js_editor_nested-element-types-base_js")]).then(__webpack_require__.bind(__webpack_require__, /*! ./nested-element-types-base */ "../modules/nested-elements/assets/js/editor/nested-element-types-base.js"));
     elementor.modules.elements.types.NestedElementBase.then(function (nestedElementBaseModule) {
       elementor.modules.elements.types.NestedElementBase = nestedElementBaseModule.default;
       __webpack_require__.e(/*! import() */ "modules_nested-elements_assets_js_editor_views_view_js").then(__webpack_require__.bind(__webpack_require__, /*! ./views/view */ "../modules/nested-elements/assets/js/editor/views/view.js")).then(function (View) {

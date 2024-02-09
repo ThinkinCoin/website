@@ -1,0 +1,2 @@
+2023-09-20 12:11:29==>File:/var/www/html/website/wp-includes/class-wp-hook.php::User Id:1::Line:310::Function:ets_tutor_lms_load_discord_roles::10004:Unknown Guild
+2023-09-20 12:43:08==>File:/var/www/html/website/wp-includes/class-wp-hook.php::User Id:1::Line:310::Function:ets_tutor_lms_load_discord_roles::10004:Unknown Guild

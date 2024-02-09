@@ -120,30 +120,75 @@ class Signature
      */
     public static function verify( $message, $signature, $coinbase )
     {
+        return self::verify2( $message, $signature, $coinbase )[0];
+    }
+    
+    /**
+     * Verifies a signature and provides a message in case of an error
+     *
+     * @since 0.1.0
+     *
+     * @param string $message   Message that was signed.
+     * @param string $signature Matching signature.
+     * @param string $coinbase  Public address used to sign the signature.
+     * @return array The valid boolean value as the first and an error message or NULL as the second
+     */
+    public static function verify2( $message, $signature, $coinbase )
+    {
         $address = null;
         
         if ( empty($signature) || empty($coinbase) || !is_string( $signature ) || !is_string( $coinbase ) ) {
             Logger::log( "verify failed for: {$message}, {$signature}, {$coinbase}" );
-            return false;
+            return [ false, sprintf(
+                __( 'Signature can not be verified for address "%3$s", message "%1$s" and signature "%2$s"', 'ethpress' ),
+                $message,
+                $signature,
+                $coinbase
+            ) ];
         }
         
         
         if ( self::_check_ecrecovers_with_php() ) {
             $address = self::extract_address_with_php( $message, $signature );
+            
+            if ( !is_string( $address ) ) {
+                Logger::log( "verify failed for: {$message}, {$signature}, {$coinbase}: address is not a string" );
+                return [ false, sprintf(
+                    __( 'Failed to verify signature locally for address "%3$s", message "%1$s" and signature "%2$s"', 'ethpress' ),
+                    $message,
+                    $signature,
+                    $coinbase
+                ) ];
+            }
+        
         } else {
             $address = self::extract_address_with_api( $message, $signature );
+            
+            if ( !is_string( $address ) ) {
+                Logger::log( "verify failed for: {$message}, {$signature}, {$coinbase}: address is not a string" );
+                return [ false, sprintf(
+                    __( 'Failed to verify signature remotely for address "%3$s", message "%1$s" and signature "%2$s"', 'ethpress' ),
+                    $message,
+                    $signature,
+                    $coinbase
+                ) ];
+            }
+        
         }
         
-        
-        if ( !is_string( $address ) ) {
-            Logger::log( "verify failed for: {$message}, {$signature}, {$coinbase}: address is not a string" );
-            return false;
-        }
         
         if ( strtolower( $coinbase ) !== strtolower( $address ) ) {
             Logger::log( "verify failed for: {$message}, {$signature}, {$coinbase}, {$address}: address !== coinbase" );
+            return [ false, sprintf(
+                __( 'Failed to verify signature. The address "%4$s" extracted for address "%3$s", message "%1$s" and signature "%2$s"', 'ethpress' ),
+                $message,
+                $signature,
+                $coinbase,
+                $address
+            ) ];
         }
-        return strtolower( $coinbase ) === strtolower( $address );
+        
+        return [ true, null ];
     }
     
     protected static function _check_ecrecovers_with_php()

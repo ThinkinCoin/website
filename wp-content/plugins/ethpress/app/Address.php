@@ -54,14 +54,22 @@ class Address
 	 *
 	 * @since 0.1.0
 	 *
-	 * @return (\WP_User|null) This address's user object or null
+	 * @return (\WP_User|null|\WP_Error) This address's user object, \WP_Error or null
 	 */
 	public function get_user()
 	{
 		if ($this->user) {
 			return $this->user;
 		}
-		return self::find_by_address($this->coinbase);
+
+		$userlogin_max_length = 60;
+		$address = substr($this->coinbase, 0, $userlogin_max_length);
+		$address = trim($address);
+		if (empty($address)) {
+			return new \WP_Error('ethpress', __('Empty username.', 'ethpress'));
+		}
+
+		return self::find_by_address($address);
 	}
 
 	/**
@@ -137,30 +145,53 @@ class Address
 	 */
 	public static function have_db_users()
 	{
-		// check table count and write to options.
-		$options = get_site_option('ethpress');
-		// Logger::log("Address::have_db_users: options0 = " . print_r($options, true));
-		if (isset($options['have_db_users'])) {
-			return boolval($options['have_db_users']);
+		$cache_key = 'have_db_users';
+		$cache_group = 'ethpress';
+		$have_db_users = wp_cache_get($cache_key, $cache_group);
+		if (false === $have_db_users) {
+			global $wpdb;
+			$table = $wpdb->base_prefix . Plugin::$tables['addresses'];
+
+			$dbname = DB_NAME;
+			// phpcs:ignore -- cache.
+			$res = $wpdb->get_var(
+				$wpdb->prepare(
+					// @see https://stackoverflow.com/a/8829122/4256005
+					"SELECT count(*) FROM information_schema.TABLES WHERE (TABLE_SCHEMA = %s) AND (TABLE_NAME = %s)",
+					[
+						$dbname,
+						$table,
+					]
+				)
+			);
+			if (is_null($res)) {
+				// DB error
+				Logger::log("Address::have_db_users: " . $wpdb->last_error);
+				throw new \WP_Error('ethpress', $wpdb->last_error);
+			}
+
+			if (0 === intval($res)) {
+				$have_db_users = 0;
+			} else {
+				// phpcs:ignore -- cache.
+				$res = $wpdb->get_var(
+					$wpdb->prepare(
+						"SELECT COUNT(*) FROM %i",
+						$table
+					)
+				);
+				// Logger::log("Address::have_db_users: res = " . print_r($res, true));
+				if (is_null($res)) {
+					// DB error
+					Logger::log("Address::have_db_users: " . $wpdb->last_error);
+					throw new \WP_Error('ethpress', $wpdb->last_error);
+				}
+				$have_db_users = intval(intval($res) > 0);
+			}
+			// 1 minute cache
+			wp_cache_set($cache_key, $have_db_users, $cache_group, 60);
 		}
-
-		global $wpdb;
-		$table = $wpdb->base_prefix . Plugin::$tables['addresses'];
-
-		// phpcs:ignore -- cache.
-		$res = $wpdb->get_var(
-			$wpdb->prepare(
-				// phpcs:ignore -- table name
-				"SELECT COUNT(*) FROM $table"
-			)
-		);
-		Logger::log("Address::have_db_users: res = " . print_r($res, true));
-		$res = intval($res) > 0;
-		$options['have_db_users'] = intval($res);
-		update_site_option('ethpress', $options);
-		// Logger::log("Address::have_db_users: options1 = " . print_r($options, true));
-
-		return $res;
+		return boolval($have_db_users);
 	}
 
 	/**
@@ -170,7 +201,12 @@ class Address
 	 */
 	private function attach_owner()
 	{
-		$this->user = $this->get_user();
+		$user = $this->get_user();
+		if (is_wp_error($user)) {
+			Logger::log("Address::attach_owner: " . $user->get_error_message());
+			return;
+		}
+		$this->user = $user;
 	}
 
 	/**
@@ -178,7 +214,7 @@ class Address
 	 *
 	 * @since 0.1.0
 	 *
-	 * @return void
+	 * @return (\WP_User|\WP_Error)
 	 */
 	public function create()
 	{
@@ -189,6 +225,7 @@ class Address
 			return new \WP_Error('ethpress', __('No user for this address exists.', 'ethpress'));
 		}
 		update_user_meta($this->user->ID, "ethpress", $this->coinbase);
+		return $this->user;
 	}
 
 	/**
@@ -200,11 +237,14 @@ class Address
 	public function delete()
 	{
 		$user = $this->get_user();
+		if (is_wp_error($user)) {
+			Logger::log("Address::delete: " . $user->get_error_message());
+		}
 		if (self::have_db_users()) {
 			// backwards compatibility
 			$where  = [];
 			$format = [];
-			if (!empty($user)) {
+			if (!empty($user) && !is_wp_error($user)) {
 				$where['user_id'] = $user->ID;
 				$format[]         = '%d';
 			}
@@ -232,7 +272,7 @@ class Address
 			}
 		}
 
-		if (!empty($user)) {
+		if (!empty($user) && !is_wp_error($user)) {
 			delete_user_meta($user->ID, "ethpress");
 		}
 	}
@@ -247,7 +287,41 @@ class Address
 	{
 		global $wpdb;
 		$user = null;
-		if (self::have_db_users()) {
+		// @see https://stackoverflow.com/a/16039508/4256005
+		$user0 = reset(
+			get_users(
+				[
+					'meta_key' => "ethpress",
+					'meta_value' => $address,
+					'number' => 1,
+				]
+			)
+		);
+		if (false === $user0) {
+			// @see https://stackoverflow.com/a/16039508/4256005
+			$user0 = reset(
+				get_users(
+					[
+						'meta_key' => "ethpress",
+						'meta_value' => strtolower($address),
+						'number' => 1,
+					]
+				)
+			);
+		}
+		if (false === $user0) {
+			// backwards compatibility 2
+			$user0 = get_user_by('login', $address);
+		}
+		if (false === $user0) {
+			// backwards compatibility 2
+			$user0 = get_user_by('login', strtolower($address));
+		}
+		if ($user0) {
+			$user = $user0;
+		}
+
+		if (is_null($user) && self::have_db_users()) {
 			// backwards compatibility
 			$table = $wpdb->base_prefix . Plugin::$tables['addresses'];
 
@@ -272,25 +346,6 @@ class Address
 				// if ( isset( $id ) ) {
 				// 	$this->ID = $id;
 				// }
-			}
-		}
-		if (is_null($user)) {
-			// @see https://stackoverflow.com/a/16039508/4256005
-			$user0 = reset(
-				get_users(
-					[
-						'meta_key' => "ethpress",
-						'meta_value' => $address,
-						'number' => 1,
-					]
-				)
-			);
-			if (false === $user0) {
-				// backwards compatibility 2
-				$user0 = get_user_by('login', $address);
-			}
-			if ($user0) {
-				$user = $user0;
 			}
 		}
 		return $user;
@@ -422,12 +477,9 @@ class Address
 	public function register_and_log_in()
 	{
 		if (!$this->user) {
-			$user = $this->register();
+			$this->register();
 		}
-		if (!is_wp_error($user)) {
-			$user = $this->log_in();
-		}
-		return $user;
+		return $this->log_in();
 	}
 
 	/**
