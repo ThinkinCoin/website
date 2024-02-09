@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: EthPress 1.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ethpress\n"
-"POT-Creation-Date: 2022-01-25 10:29+0700\n"
-"PO-Revision-Date: 2022-01-25 10:30+0700\n"
+"POT-Creation-Date: 2023-10-23 10:25+0700\n"
+"PO-Revision-Date: 2023-10-23 10:33+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -27,109 +27,227 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-3: freemius\n"
 "X-Poedit-SearchPathExcluded-4: app/Dependencies\n"
 "X-Poedit-SearchPathExcluded-5: public\n"
+"X-Poedit-SearchPathExcluded-6: web3modalLogin\n"
 
-#: app/Address.php:107
-msgid "Bad address."
-msgstr "Dirección errónea."
-
-#: app/Address.php:167
-msgid "No user for this address exists."
-msgstr "No existe ningún usuario para esta dirección."
-
-#: app/Address.php:282 app/Address.php:290
-msgid "No matching address."
-msgstr "La dirección no coincide."
-
-#: app/Address.php:313
-msgid "You have not registered on this site; we cannot log you in"
-msgstr "No te has registrado en este sitio; no puedes iniciar sesión"
-
-#: app/Address.php:341
+#: app/Address.php:69 app/Address.php:441
 msgid "Empty username."
 msgstr "Nombre de usuario vacío."
 
-#: app/Address.php:346
+#: app/Address.php:128
+msgid "Bad address."
+msgstr "Dirección errónea."
+
+#: app/Address.php:225
+msgid "No user for this address exists."
+msgstr "No existe ningún usuario para esta dirección."
+
+#: app/Address.php:381 app/Address.php:388
+msgid "No matching address."
+msgstr "La dirección no coincide."
+
+#: app/Address.php:412
+msgid "You have not registered on this site; we cannot log you in"
+msgstr "No te has registrado en este sitio; no puedes iniciar sesión"
+
+#: app/Address.php:446
 msgid "Username already exists."
 msgstr "Disculpa, este usuario ya existe."
 
-#: app/Address.php:355
+#: app/Address.php:455
 msgid "Error during creation"
 msgstr "Error durante la creación"
 
-#: app/Admin/Options.php:25 app/Widgets/Button.php:33
+#: app/Admin/Options.php:30 app/Widgets/Button.php:36
 msgid "EthPress"
 msgstr "EthPress"
 
-#: app/Admin/Options.php:55
+#: app/Admin/Options.php:65
+msgid "Standard"
+msgstr "Estándar"
+
+#: app/Admin/Options.php:117
+msgid "Settings saved."
+msgstr "Ajustes guardados."
+
+#: app/Admin/Options.php:133
 msgid "EthPress Options Page"
 msgstr "Página de opciones de EthPress"
 
-#: app/Admin/Options.php:56
+#: app/Admin/Options.php:134
 msgid "The MetaMask login plugin."
 msgstr "El plugin de inicio de sesión MetaMask."
 
-#: app/Admin/Options.php:61
+#: app/Admin/Options.php:141
 msgid "Opens in new tab"
 msgstr "Se abre en una pestaña nueva"
 
-#: app/Admin/Options.php:64
+#: app/Admin/Options.php:141
 msgid "Developer's wallet, etherscan.io"
 msgstr "Cartera del desarrollador, etherscan.io"
 
-#: app/Admin/Options.php:66
+#: app/Admin/Options.php:141
 msgid "Donate to support development!"
 msgstr "¡Dona para apoyar el desarrollo!"
 
-#: app/Admin/Options.php:66
+#: app/Admin/Options.php:141
 msgid "For fiat, find the charity link on wp plugin directory."
 msgstr ""
 "Para fiat, encontrar el enlace de donación en el directorio del plugin wp."
 
-#: app/Admin/Options.php:74
-msgid "Rate EthPress on wp plugin directory!"
-msgstr "Valora EthPress en el directorio del plugin wp!"
+#: app/Admin/Options.php:147 app/Admin/Options.php:241
+#, php-format
+msgid ""
+"If you like <strong>EthPress</strong> please leave us a %1$s rating. A huge "
+"thanks in advance!"
+msgstr ""
+"Si te gusta <strong>EthPress</strong>, déjanos una calificación de %1$s. "
+"¡Muchísimas gracias de antemano!"
 
-#: app/Admin/Options.php:78
+#: app/Admin/Options.php:154
 msgid "Awesome Premium Features"
 msgstr "Impresionantes Funciones Premium"
 
-#: app/Admin/Options.php:79
+#: app/Admin/Options.php:155
 msgid "Managed Verification Service and more."
 msgstr "Servicio de verificación administrada y más."
 
-#: app/Admin/Options.php:81
+#: app/Admin/Options.php:157
 msgid "Upgrade Now!"
 msgstr "¡Actualizar ahora!"
 
-#: app/Admin/Options.php:145
+#: app/Admin/Options.php:232
+msgid "Save Changes"
+msgstr "Guardar cambios"
+
+#: app/Admin/Options.php:233
+msgid "Are you sure you want to delete all EthPress options?"
+msgstr "¿Está seguro de que desea eliminar todas las opciones de EthPress?"
+
+#: app/Admin/Options.php:233
+msgid "Reset"
+msgstr "Reiniciar"
+
+#: app/Admin/Options.php:268
 msgid "Main Settings"
 msgstr "Ajustes principales"
 
-#: app/Admin/Options.php:151
-msgid "Verification service"
-msgstr "Servicio de verificación"
+#: app/Admin/Options.php:288
+msgid "WooCommerce Settings"
+msgstr "Configuración de WooCommerce"
 
-#: app/Admin/Options.php:158
-msgid "Managed Verification Service"
-msgstr "Servicio de verificación gestionada"
+#: app/Admin/Options.php:309
+msgid "WalletConnect Settings"
+msgstr "Configuración de WalletConnect"
 
-#: app/Admin/Options.php:166
-msgid "Login Display Settings"
-msgstr "Configuración de pantalla de inicio de sesión"
+#: app/Admin/Options.php:327 app/Admin/Options.php:331
+#: app/Admin/Options.php:335 app/Plugin.php:147
+msgid "WalletConnect Project ID"
+msgstr "ID del proyecto WalletConnect"
 
-#: app/Admin/Options.php:172
-msgid "WooCommerce Login Form"
-msgstr "Formulario de inicio de sesión de WooCommerce"
+#: app/Admin/Options.php:334
+#, php-format
+msgid ""
+"The %1$s should be set there. You can get it from %2$sWalletConnect.com%3$s. "
+"Follow this %4$svideo guide%3$s if unsure."
+msgstr ""
+"El %1$s debe establecerse allí. Puede obtenerlo en %2$sWalletConnect.com"
+"%3$s. Siga esta %4$svídeo guía%3$s si no está seguro."
 
-#: app/Admin/Options.php:179
-msgid "WooCommerce Register Form"
-msgstr "Formulario de registro de WooCommerce"
+#: app/Admin/Options.php:359
+msgid "Web3 Login Form"
+msgstr "Formulario de inicio de sesión Web3"
 
-#: app/Admin/Options.php:186
-msgid "WooCommerce Checkout Page Register Form"
-msgstr "Formulario de registro de la página de pago de WooCommerce"
+#: app/Admin/Options.php:378
+msgid "Theme Mode"
+msgstr "Modo temático"
 
-#: app/Admin/Options.php:217 app/Admin/Options.php:254
+#: app/Admin/Options.php:383
+msgid "Dark Mode"
+msgstr "Modo oscuro"
+
+#: app/Admin/Options.php:385
+msgid "Light Mode"
+msgstr "Modo de luz"
+
+#: app/Admin/Options.php:404
+msgid "Strings Settings"
+msgstr "Configuración de cadenas"
+
+#: app/Admin/Options.php:420 app/Front.php:79 app/Plugin.php:405
+msgid "Log In With a Crypto Wallet"
+msgstr "Inicia sesión con una Cartera Crypto"
+
+#: app/Admin/Options.php:427
+msgid "Login button label"
+msgstr "Etiqueta del botón de inicio de sesión"
+
+#: app/Admin/Options.php:433
+msgid "The Login button text can be set there."
+msgstr "El texto del botón Iniciar sesión se puede configurar allí."
+
+#: app/Admin/Options.php:437 app/Admin/Options.php:476
+#: app/Admin/Options.php:515 app/Admin/Options.php:549
+#: app/Admin/Options.php:669 app/Admin/Options.php:728
+#: app/Admin/Options.php:789 app/Admin/Options.php:852
+#: app/Admin/Options.php:921 app/Admin/Options.php:989
+msgid "Upgrade to keep using this feature!"
+msgstr "¡Actualice para seguir usando esta función!"
+
+#: app/Admin/Options.php:441 app/Admin/Options.php:480
+#: app/Admin/Options.php:519 app/Admin/Options.php:553
+#: app/Admin/Options.php:673 app/Admin/Options.php:732
+#: app/Admin/Options.php:793 app/Admin/Options.php:856
+#: app/Admin/Options.php:925 app/Admin/Options.php:993
+msgid "Upgrade to use this feature!"
+msgstr "¡Actualice para utilizar esta función!"
+
+#: app/Admin/Options.php:459 app/Front.php:133 app/Plugin.php:406
+msgid "Link Your Crypto Wallets"
+msgstr "Enlaza tus cripto carteras"
+
+#: app/Admin/Options.php:466
+msgid "Link button label"
+msgstr "Etiqueta del botón de enlace"
+
+#: app/Admin/Options.php:472
+msgid "The Link button text can be set there."
+msgstr "El texto del botón Enlace se puede configurar allí."
+
+#: app/Admin/Options.php:498 app/Front.php:207 app/Plugin.php:407
+msgid "Register With a Crypto Wallet"
+msgstr "Regístrese con una billetera criptográfica"
+
+#: app/Admin/Options.php:505
+msgid "Register button label"
+msgstr "Etiqueta del botón de registro"
+
+#: app/Admin/Options.php:511
+msgid "The Register button text can be set there."
+msgstr "El texto del botón Registrar se puede configurar allí."
+
+#: app/Admin/Options.php:532 app/Linker.php:94
+#, php-format
+msgid "Success! Address %s is now linked to your account."
+msgstr "¡Éxito! La dirección %s ahora está vinculada a su cuenta."
+
+#: app/Admin/Options.php:539
+msgid "The account link success message"
+msgstr "El mensaje de éxito del enlace de cuenta"
+
+#: app/Admin/Options.php:545
+#, php-format
+msgid ""
+"The successful account link message. The %s can be used to insert the "
+"account address linked."
+msgstr ""
+"El mensaje de enlace de cuenta exitoso. El %s se puede utilizar para "
+"insertar la dirección de la cuenta vinculada."
+
+#: app/Admin/Options.php:579
+msgid "Verification Service API URL"
+msgstr "URL de la API del servicio de verificación"
+
+#: app/Admin/Options.php:585 app/Admin/Options.php:710
 msgid ""
 "Your PHP installation has the necessary PHP extension to do verifications on "
 "your server, so there is nothing to configure."
@@ -137,7 +255,7 @@ msgstr ""
 "Su instalación PHP tiene la extensión PHP necesaria para hacer "
 "verificaciones en su servidor, por lo que no hay nada que configurar."
 
-#: app/Admin/Options.php:225
+#: app/Admin/Options.php:597
 #, php-format
 msgid ""
 "Use an API or install %1$sPHP-GMP%2$s or %3$sPHP-BCMath%2$s to verify "
@@ -146,60 +264,52 @@ msgstr ""
 "Utilice una API o instale %1$sPHP-GMP%2$s o %3$sPHP-BCMath%2$s para "
 "verificar las firmas de Ethereum."
 
-#: app/Admin/Options.php:233
+#: app/Admin/Options.php:616
 #, php-format
 msgid "To deploy your own verification service, see %1$s."
 msgstr "Para implementar su propio servicio de verificación, consulte %1$s."
 
-#: app/Admin/Options.php:274
+#: app/Admin/Options.php:656
+msgid "Redirect URL"
+msgstr "Redireccionar URL"
+
+#: app/Admin/Options.php:663
+msgid "The page to redirect after a successful login"
+msgstr "La página para redirigir después de un inicio de sesión exitoso"
+
+#: app/Admin/Options.php:704
+msgid "Managed Verification Service"
+msgstr "Servicio de verificación gestionada"
+
+#: app/Admin/Options.php:718
 msgid "Use Managed Verification Service"
 msgstr "Utilice el servicio de verificación administrada"
 
-#: app/Admin/Options.php:275
+#: app/Admin/Options.php:722
 msgid "Check to use the Managed Verification Service."
 msgstr "Marque para utilizar el servicio de verificación administrada."
 
-#: app/Admin/Options.php:279
-msgid "Upgrade to keep using the Managed Verification Service API feature!"
-msgstr ""
-"¡Actualice para seguir usando la función de API del servicio de verificación "
-"administrada!"
+#: app/Admin/Options.php:774
+msgid "WooCommerce Login Form"
+msgstr "Formulario de inicio de sesión de WooCommerce"
 
-#: app/Admin/Options.php:283
-msgid "Upgrade to use the Managed Verification Service API feature!"
-msgstr ""
-"¡Actualice para usar la función de API del servicio de verificación "
-"administrada!"
-
-#: app/Admin/Options.php:320
+#: app/Admin/Options.php:779
 msgid "Show on WooCommerce Login Form?"
 msgstr "¿Mostrar en el formulario de inicio de sesión de WooCommerce?"
 
-#: app/Admin/Options.php:321
+#: app/Admin/Options.php:783
 msgid "Check to show EthPress login button on the WooCommerce Login Form."
 msgstr ""
 "Marque para mostrar el botón de inicio de sesión de EthPress en el "
 "formulario de inicio de sesión de WooCommerce."
 
-#: app/Admin/Options.php:325
-msgid "Upgrade to keep using the WooCommerce Login Form feature!"
-msgstr ""
-"¡Actualice para seguir usando la función de formulario de inicio de sesión "
-"de WooCommerce!"
-
-#: app/Admin/Options.php:329
-msgid "Upgrade to use the WooCommerce Login Form feature!"
-msgstr ""
-"¡Actualice para usar la función de formulario de inicio de sesión de "
-"WooCommerce!"
-
-#: app/Admin/Options.php:335 app/Admin/Options.php:386
-#: app/Admin/Options.php:437
+#: app/Admin/Options.php:798 app/Admin/Options.php:862
+#: app/Admin/Options.php:930 app/Admin/Options.php:998
 msgid "Install WooCommerce to use this feature!"
 msgstr "¡Instale WooCommerce para usar esta función!"
 
-#: app/Admin/Options.php:335 app/Admin/Options.php:386
-#: app/Admin/Options.php:437
+#: app/Admin/Options.php:798 app/Admin/Options.php:862
+#: app/Admin/Options.php:930 app/Admin/Options.php:998
 msgid ""
 "WooCommerce is a customizable, open-source eCommerce platform built on "
 "WordPress."
@@ -207,196 +317,225 @@ msgstr ""
 "WooCommerce es una plataforma de comercio electrónico de código abierto "
 "personalizable construida en WordPress."
 
-#: app/Admin/Options.php:371
+#: app/Admin/Options.php:837
+msgid "WooCommerce Register Form"
+msgstr "Formulario de registro de WooCommerce"
+
+#: app/Admin/Options.php:842
 msgid "Show on WooCommerce Register Form?"
 msgstr "¿Mostrar en el formulario de registro de WooCommerce?"
 
-#: app/Admin/Options.php:372
+#: app/Admin/Options.php:846
 msgid ""
 "Check to show EthPress register button on the WooCommerce Register Form."
 msgstr ""
 "Marque para mostrar el botón de registro de EthPress en el formulario de "
 "registro de WooCommerce."
 
-#: app/Admin/Options.php:376
-msgid "Upgrade to keep using the WooCommerce Register Form feature!"
+#: app/Admin/Options.php:867 app/Admin/Options.php:935
+msgid ""
+"Check the Administration > Settings > General > Membership: Anyone can "
+"register box to use this feature."
 msgstr ""
-"¡Actualice para seguir usando la función de formulario de registro de "
-"WooCommerce!"
+"Marque la casilla Administración > Configuración > General > Membresía: "
+"cualquiera puede registrarse para usar esta función."
 
-#: app/Admin/Options.php:380
-msgid "Upgrade to use the WooCommerce Register Form feature!"
-msgstr ""
-"¡Actualice para usar la función de formulario de registro de WooCommerce!"
+#: app/Admin/Options.php:906
+msgid "WooCommerce Checkout Page Register Form"
+msgstr "Formulario de registro de la página de pago de WooCommerce"
 
-#: app/Admin/Options.php:422
+#: app/Admin/Options.php:911
 msgid "Show on the WooCommerce Checkout page?"
 msgstr "¿Mostrar en la página de pago de WooCommerce?"
 
-#: app/Admin/Options.php:423
+#: app/Admin/Options.php:915
 msgid ""
 "Check to show EthPress register button on the WooCommerce Checkout page."
 msgstr ""
 "Marque para mostrar el botón de registro de EthPress en la página de pago de "
 "WooCommerce."
 
-#: app/Admin/Options.php:427
+#: app/Admin/Options.php:974
+msgid "WooCommerce Account Details Link Wallet Form"
+msgstr "Formulario de billetera de enlace de detalles de cuenta de WooCommerce"
+
+#: app/Admin/Options.php:979
+msgid "Show the Link Wallet button on the WooCommerce Account Details page?"
+msgstr ""
+"¿Mostrar el botón Vincular billetera en la página Detalles de la cuenta de "
+"WooCommerce?"
+
+#: app/Admin/Options.php:983
 msgid ""
-"Upgrade to keep using the WooCommerce Register on a Checkout page feature!"
+"Check to the Link Wallet button on the WooCommerce Account Details page."
 msgstr ""
-"¡Actualice para seguir usando la función de registro de WooCommerce en una "
-"página de pago!"
+"Consulte el botón Vincular billetera en la página Detalles de la cuenta de "
+"WooCommerce."
 
-#: app/Admin/Options.php:431
-msgid "Upgrade to use the WooCommerce Register on a Checkout page feature!"
-msgstr ""
-"¡Actualice para usar el registro de WooCommerce en una función de página de "
-"pago!"
-
-#: app/Admin/Options.php:508
+#: app/Admin/Options.php:1078
 msgid "Settings"
 msgstr "Ajustes"
 
-#: app/Front.php:28 app/Front.php:74
+#: app/Front.php:31 app/Front.php:159
 msgid "Enable JavaScript to log in with a crypto wallet."
 msgstr ""
 "Habilite JavaScript para iniciar sesión con tu cartera de criptomonedas."
 
-#: app/Front.php:60
-msgid "Log In With a Crypto Wallet"
-msgstr "Inicia sesión con una Cartera Crypto"
-
-#: app/Front.php:106
-msgid "Register With a Crypto Wallet"
-msgstr "Regístrese con una billetera criptográfica"
-
-#: app/Linker.php:58
+#: app/Linker.php:66
 #, php-format
 msgid "Address %1$s... is already linked to an account. Doing nothing."
 msgstr "Dirección %1$s... ya está vinculada a una cuenta. No hacer nada."
 
-#: app/Linker.php:80
-#, php-format
-msgid ""
-"Success! Address %1$s... is now linked to your account. You may close this "
-"dialog, or link another address."
-msgstr ""
-"¡Éxito! Dirección %1$s... ahora está vinculado a tu cuenta. Puedes cerrar "
-"este cuadro de diálogo o vincular otra dirección."
-
-#: app/Linker.php:99
+#: app/Linker.php:123
 msgid "Signature mismatch. Try again."
 msgstr "Desajuste de firma. Vuelve a intentarlo."
 
-#: app/Linker.php:102
+#: app/Linker.php:126
 msgid "Invalid request."
 msgstr "Petición incorrecta."
 
-#: app/Linker.php:116
+#: app/Linker.php:141
 msgid "Associate a wallet with your account"
 msgstr "Asocia una cartera crypto con tu cuenta"
 
-#: app/Linker.php:118
+#: app/Linker.php:143
 msgid ""
 "Account and address have been linked successfully. You may close this dialog."
 msgstr ""
 "La cuenta y la dirección se han vinculado correctamente. Puedes cerrar este "
 "cuadro de diálogo."
 
-#: app/Linker.php:119
+#: app/Linker.php:144
 msgid "Aborted"
 msgstr "Abortado"
 
-#: app/Linker.php:120
+#: app/Linker.php:145
 msgid "Link a Wallet"
 msgstr "Vincular una cartera"
 
-#: app/Linker.php:121
+#: app/Linker.php:146
 msgid "Fetching verification phrase..."
 msgstr "Obteniendo la frase de verificación..."
 
-#: app/Linker.php:149
+#: app/Linker.php:175
 msgid "Linking your account to your crypto wallet."
 msgstr "Vinculando tu cuenta a tu crypto cartera."
 
-#: app/Login.php:35
+#: app/Login.php:39
 msgid "Invalid input"
 msgstr "Entrada inválida"
 
-#: app/Login.php:63 app/Plugin.php:183
+#: app/Login.php:91 app/Plugin.php:293
 msgid "Logged in"
 msgstr "Registrado en"
 
-#: app/Login.php:70
+#: app/Login.php:101
 msgid "Signature err, try again."
 msgstr "Firma err, vuelve a intentarlo."
 
-#: app/Login.php:128
+#: app/Login.php:168
 #, php-format
 msgid "Log in to %1$s"
 msgstr "Inicia sesión en %1$s"
 
-#: app/Login.php:161
+#: app/Login.php:202
 msgid "Bad nonce, please refresh."
 msgstr "Mal nonce, por favor refresca."
 
-#: app/Login.php:168
+#: app/Login.php:209
 msgid "No address specified."
 msgstr "No se ha especificado ninguna dirección."
 
-#: app/Plugin.php:177
+#: app/Plugin.php:144
+#, php-format
+msgid ""
+"%1$sImportant:%2$s %3$s must be set in the EthPress plugin %6$ssettings%5$s. "
+"You can get it from %4$sWalletConnect.com%5$s"
+msgstr ""
+"%1$sImportante:%2$s %3$s deben configurarse en el complemento EthPress "
+"%6$ssettings%5$s. Puedes obtenerlo en %4$sWalletConnect.com%5$s"
+
+#: app/Plugin.php:287
 msgid "Choose your login method"
 msgstr "Elije tu método de inicio de sesión"
 
-#: app/Plugin.php:178
+#: app/Plugin.php:288
 msgid "Error: cannot detect crypto wallet"
 msgstr "Error: no se puede detectar la cripto cartera"
 
-#: app/Plugin.php:179
+#: app/Plugin.php:289
 msgid "Waiting for your permission"
 msgstr "Esperando tu permiso"
 
-#: app/Plugin.php:180
+#: app/Plugin.php:290
 msgid "Fetching login phrase..."
 msgstr "Obteniendo la frase de inicio de sesión..."
 
-#: app/Plugin.php:181
+#: app/Plugin.php:291
 msgid "Waiting for your signature"
 msgstr "Esperando tu firma"
 
-#: app/Plugin.php:182
+#: app/Plugin.php:292
 msgid "Verifying signature..."
 msgstr "Verificando la firma..."
 
-#: app/Plugin.php:184
+#: app/Plugin.php:294
 msgid "Login aborted"
 msgstr "Inicio de sesión abortado"
 
-#: app/Plugin.php:185
+#: app/Plugin.php:295
 msgid "Log In"
 msgstr "Iniciar sesión"
 
-#: app/Plugin.php:186
+#: app/Plugin.php:296
 msgid "Scan a QR code with your wallet, https://walletconnect.org"
 msgstr "Escanea un código QR con tu cartera, https://walletconnect.org"
 
-#: app/Plugin.php:187
+#: app/Plugin.php:297
 msgid "Browser add-on and mobile app, https://metamask.io"
 msgstr "Complemento del navegador y aplicación móvil, https://metamask.io"
 
-#: app/Plugin.php:237
+#: app/Plugin.php:298
+msgid "Missing signature"
+msgstr "Firma faltante"
+
+#: app/Plugin.php:351
 msgid "Log out first"
 msgstr "Cierra la sesión primero"
 
-#: app/Widgets/Button.php:31
+#: app/UM.php:57 app/UM.php:60
+msgid "EthPress Button"
+msgstr "EthPress el botón"
+
+#: app/UM.php:280
+msgid "Show EthPress button?"
+msgstr "¿Mostrar el botón EthPress?"
+
+#: app/UM.php:280
+msgid "Check to show the EthPress button"
+msgstr "Marque para mostrar el botón EthPress"
+
+#: app/UM.php:292
+msgid "The EthPess button label"
+msgstr "La etiqueta del botón EthPess"
+
+#: app/UM.php:292
+msgid "The button label text"
+msgstr "El texto de la etiqueta del botón"
+
+#: app/UM.php:303
+msgid "Blockchain Address"
+msgstr "Dirección de cadena de bloques"
+
+#: app/UM.php:311
+msgid "Title is required"
+msgstr "Se requiere título"
+
+#: app/Widgets/Button.php:34
 msgid "EthPress Widget"
 msgstr "EthPress Widget"
 
-#: app/Widgets/Button.php:70
-msgid "Link Your Crypto Wallets"
-msgstr "Enlaza tus cripto carteras"
-
-#: app/Widgets/Button.php:87
+#: app/Widgets/Button.php:84
 msgid "Title:"
 msgstr "Título:"
 
@@ -411,7 +550,7 @@ msgstr ""
 "Después de vincular una cripto cartera a tu cuenta, puedes usarla para "
 "iniciar sesión."
 
-#: ethpress.php:95
+#: ethpress.php:98
 #, php-format
 msgid ""
 "“%1$s” requires PHP %2$s (or newer) and WordPress %3$s (or newer) to "
@@ -422,6 +561,42 @@ msgstr ""
 "reciente) funcionen correctamente. Tu sitio está utilizando PHP %4$s y "
 "WordPress %5$s. Por favor, actualiza. El plugin se ha desactivado "
 "automáticamente."
+
+#~ msgid "Rate EthPress on wp plugin directory!"
+#~ msgstr "Valora EthPress en el directorio del plugin wp!"
+
+#~ msgid "Login Display Settings"
+#~ msgstr "Configuración de pantalla de inicio de sesión"
+
+#~ msgid "Upgrade to keep using the Managed Verification Service API feature!"
+#~ msgstr ""
+#~ "¡Actualice para seguir usando la función de API del servicio de "
+#~ "verificación administrada!"
+
+#~ msgid "Upgrade to use the Managed Verification Service API feature!"
+#~ msgstr ""
+#~ "¡Actualice para usar la función de API del servicio de verificación "
+#~ "administrada!"
+
+#~ msgid "Upgrade to keep using the WooCommerce Register Form feature!"
+#~ msgstr ""
+#~ "¡Actualice para seguir usando la función de formulario de registro de "
+#~ "WooCommerce!"
+
+#~ msgid "Upgrade to use the WooCommerce Register Form feature!"
+#~ msgstr ""
+#~ "¡Actualice para usar la función de formulario de registro de WooCommerce!"
+
+#~ msgid ""
+#~ "Upgrade to keep using the WooCommerce Register on a Checkout page feature!"
+#~ msgstr ""
+#~ "¡Actualice para seguir usando la función de registro de WooCommerce en "
+#~ "una página de pago!"
+
+#~ msgid "Upgrade to use the WooCommerce Register on a Checkout page feature!"
+#~ msgstr ""
+#~ "¡Actualice para usar el registro de WooCommerce en una función de página "
+#~ "de pago!"
 
 #~ msgid "Default API url:"
 #~ msgstr "URL api predeterminada:"

@@ -3,7 +3,7 @@ Contributors: mycred, wpexpertsio
 Tags: elementor, elementor addon, elementor widget, elements, page builder
 Requires at least: 4.8
 Tested up to: 6.3.2
-Stable tag: 1.2.3
+Stable tag: 1.2.4
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -59,14 +59,17 @@ For more information visit our **[Documentation Page](https://www.mycred.me/stor
 
 == Changelog ==
 
+= 1.2.4 =
+TWEAK - Added compatibility for the myCred v2.6.
+
 = 1.2.3 =
-New – Compatible with WordPress Version 6.3.2.
+TWEAK – Compatible with WordPress Version 6.3.2.
 
 = 1.2.2 =
-New – Compatible with WordPress Version 6.2.
+TWEAK – Compatible with WordPress Version 6.2.
 
 = 1.2.1 =
-New – Compatible with WordPress Version 5.8.1.
+TWEAK – Compatible with WordPress Version 5.8.1.
 
 = Version 1.2 =
 Improvement – Get plugin updates from wordpress.org

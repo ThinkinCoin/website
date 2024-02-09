@@ -11,7 +11,6 @@ namespace TutorPro\GoogleMeet\Frontend;
 
 use TutorPro\GoogleMeet\GoogleMeet;
 use TutorPro\GoogleMeet\Models\EventsModel;
-use TutorPro\GoogleMeet\Options\Options;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -30,7 +29,6 @@ class Frontend {
 	public function __construct() {
 		add_filter( 'tutor_dashboard/instructor_nav_items', __CLASS__ . '::register_dashboard_menu' );
 		add_action( 'load_dashboard_template_part_from_other_location', __CLASS__ . '::load_template' );
-		add_action( 'init', __CLASS__ . '::rewrite_rules' );
 		add_filter( 'template_include', __CLASS__ . '::load_meeting_template', 100 );
 		add_filter( 'tutor_google_meet_lesson_done', __CLASS__ . '::is_lesson_completed', 99, 3 );
 		add_action( 'tutor_course/single/before/topics', __CLASS__ . '::show_meeting_on_course_info_tab' );
@@ -77,20 +75,6 @@ class Frontend {
 			}
 		}
 		return $template;
-	}
-
-	/**
-	 * Rewrite rules if it is required
-	 *
-	 * @return void
-	 */
-	public static function rewrite_rules() {
-		$require_permalink_update = (bool) get_option( Options::REWRITE_PERMALINKS, 1 );
-		if ( $require_permalink_update ) {
-			flush_rewrite_rules();
-			Options::require_permalink_update( 0 );
-			tutor_log( 'updated time ' . time() );
-		}
 	}
 
 	/**

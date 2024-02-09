@@ -88,11 +88,6 @@ do_action( 'tutor_dashboard/before/wrap' );
 						?>
 						<div class="tutor-fs-4 tutor-fw-medium tutor-color-black tutor-dashboard-header-username">
 							<?php echo esc_html( $user->display_name ); ?>
-							<!-- badges -->
-							<div class="user-achivements">
-								<?php $content = '[mycred_my_badges width="30px" display="horizontal" show="all"]';
-								echo do_shortcode($content);?>
-							</div>
 						</div>
 						<div class="tutor-dashboard-header-stats">
 							<div class="tutor-dashboard-header-ratings">

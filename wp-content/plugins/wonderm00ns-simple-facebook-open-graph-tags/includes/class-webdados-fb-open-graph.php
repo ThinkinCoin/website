@@ -30,7 +30,18 @@ class Webdados_FB {
 		$this->call_global_hooks();
 		if ( is_admin() ) $this->call_admin_hooks();
 		if ( !is_admin() ) $this->call_public_hooks();
+
+		add_action( 'before_woocommerce_init', array( $this, 'hpos_incompatibility' ) );
 	}
+
+	/**
+     * WooCommerce hpos Compatibility
+     */
+    public function hpos_incompatibility() {
+        if ( class_exists( '\\Automattic\\WooCommerce\\Utilities\\FeaturesUtil' ) ) {
+            \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', WEBDADOS_FB_PLUGIN_FILE,true );
+        }
+    }
 
 	/* Default options */
 	private function default_options() {

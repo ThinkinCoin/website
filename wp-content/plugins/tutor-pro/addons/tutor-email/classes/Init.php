@@ -10,6 +10,9 @@
 
 namespace TUTOR_EMAIL;
 
+use TUTOR\Input;
+use TUTOR\User;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -76,29 +79,34 @@ class Init {
 		$this->basename = plugin_basename( TUTOR_EMAIL_FILE );
 
 		$this->load_tutor_email();
+
 		add_action( 'admin_init', array( $this, 'tutor_image_size_register' ) );
-		add_filter( 'tutor_email_bg', array( $this, 'add_email_bg' ) );
+		add_action( 'template_redirect', array( $this, 'load_email_preview' ) );
 	}
 
 	/**
-	 * Add email background image.
+	 * Preview email template on an URL
 	 *
-	 * @since 2.2.4
+	 * @since 2.5.0
 	 *
-	 * @param string $default_image default image url.
-	 *
-	 * @return string
+	 * @return void
 	 */
-	public function add_email_bg( $default_image ) {
-		if ( tutor_utils()->get_option( 'email_disable_banner' ) ) {
-			return '';
-		}
+	public function load_email_preview() {
+		if ( is_user_logged_in() && User::is_admin() && 'tutor-email-preview' === Input::get( 'page' ) ) {
+			$template = Input::get( 'template' );
+			$file     = tutor_get_template( 'email.' . $template, true );
+			if ( file_exists( $file ) ) {
+				ob_start();
+				include $file;
+				$footer_text = '<div class="tutor-email-footer-content" data-source="email_footer_text">' . json_decode( tutor_utils()->get_option( 'email_footer_text' ) ) . '</div>';
+				$content     = ob_get_clean();
+				$content     = $content . $footer_text;
 
-		$image_id = (int) tutor_utils()->get_option( 'email_template_bg' );
-		if ( $image_id ) {
-			return wp_get_attachment_image_url( $image_id, 'full' );
+				// already sanitized inside template file.
+				echo $content; //phpcs:ignore.
+				exit;
+			}
 		}
-		return $default_image;
 	}
 
 	/**
@@ -123,6 +131,27 @@ class Init {
 		 */
 		spl_autoload_register( array( $this, 'loader' ) );
 		$this->email_notification = new EmailNotification();
+
+		/**
+		 * Handle email settings
+		 *
+		 * @since 2.5.0
+		 */
+		new EmailSettings();
+
+		/**
+		 * Handle manual email.
+		 *
+		 * @since 2.5.0
+		 */
+		new ManualEmail();
+
+		/**
+		 * Handle email queue with cron
+		 *
+		 * @since 1.8.7
+		 */
+		new EmailCron();
 
 		add_filter( 'tutor/options/attr', array( $this, 'add_options' ), 10 ); // Priority index is important. 'Content Drip' add-on uses 11.
 	}
@@ -241,89 +270,70 @@ class Init {
 	 */
 	public function add_options( $attr ) {
 
-		$template_path = isset( $_GET['edit'] ) ? TUTOR_EMAIL()->path . '/views/pages/email-edit.php' : null;
+		$template_path = null;
+		$template_data = null;
 
-		//phpcs:disable
-		$template_data = ! isset( $_GET['edit'] ) ? null : array(
-			'to'          => sanitize_text_field( $_GET['to'] ),
-			'key'         => sanitize_text_field( $_GET['edit'] ),
-			'to_readable' => ucwords( str_replace( '_', ' ', $_GET['to'] ) ),
-			'mail'        => $this->get_recipient_array()[ sanitize_text_field( $_GET['edit'] ) ],
-		);
-		//phpcs:enable
+		if ( 'settings' === Input::get( 'edit' ) ) {
+			$template_path = TUTOR_EMAIL()->path . '/views/pages/settings.php';
+		}
+
+		if ( 'mailer' === Input::get( 'edit' ) ) {
+			$template_path = TUTOR_EMAIL()->path . '/views/pages/mailer.php';
+		}
+
+		if ( Input::has( 'edit' ) && ! in_array( Input::get( 'edit' ), array( 'settings', 'mailer' ), true ) ) {
+			$template_path = TUTOR_EMAIL()->path . '/views/pages/email-edit.php';
+			$to            = Input::get( 'to' );
+			$edit          = Input::get( 'edit' );
+
+			if ( 'email_to_students' === $to ) {
+				$to_readable = __( 'Email to Student', 'tutor-pro' );
+			} elseif ( 'email_to_teachers' === $to ) {
+				$to_readable = __( 'Email to Instructor', 'tutor-pro' );
+			} elseif ( 'email_to_admin' === $to ) {
+				$to_readable = __( 'Email to Admin', 'tutor-pro' );
+			} else {
+				$to_readable = ucwords( str_replace( '_', ' ', $to ) );
+			}
+
+			$template_data = array(
+				'to'          => $to,
+				'key'         => $edit,
+				'edit'        => $edit,
+				'to_readable' => $to_readable,
+				'mail'        => $this->get_recipient_array()[ $edit ],
+				'back_url'    => add_query_arg(
+					array(
+						'page'     => 'tutor_settings',
+						'tab_page' => 'email_notification',
+					),
+					admin_url( 'admin.php' )
+				),
+			);
+
+			$placeholders = array();
+			if ( isset( $template_data['mail']['placeholders'] ) && is_array( $template_data['mail']['placeholders'] ) ) {
+				$placeholders = array_values( $template_data['mail']['placeholders'] );
+			}
+
+			wp_localize_script( 'tutor-pro-email-template', '_tutorEmailPlaceholders', $placeholders );
+		}
 
 		$attr['email_notification'] = array(
 			'label'           => __( 'Email', 'tutor-pro' ),
 			'slug'            => 'email_notification',
-			'desc'            => __( 'Email Settings', 'tutor-pro' ),
+			'desc'            => '',
 			'template'        => 'basic',
 			'icon'            => 'tutor-icon-envelope',
 			'template_path'   => $template_path,
 			'edit_email_data' => $template_data,
 			'blocks'          => array(
 				array(
-					'label'      => __( 'Email Meta', 'tutor-pro' ),
-					'slug'       => 'email_meta',
-					'block_type' => 'uniform',
-					'fields'     => array(
-						array(
-							'key'   => 'tutor_email_template_logo_id',
-							'type'  => 'upload_full',
-							'label' => __( 'Email Template Logo', 'tutor-pro' ),
-							'desc'  => array(
-								'file_size'    => __( '100x36 pixels, Max height: 50px;', 'tutor-pro' ),
-								'file_support' => __( 'jpg, .jpeg or .png.', 'tutor-pro' ),
-							),
-						),
-						array(
-							'key'     => 'email_logo_height',
-							'type'    => 'number',
-							'label'   => __( 'Email Logo Height', 'tutor-pro' ),
-							'default' => 30,
-							'desc'    => __( 'Set the height of your email logo in pixels', 'tutor-pro' ),
-						),
-						array(
-							'key'     => 'email_disable_banner',
-							'type'    => 'toggle_switch',
-							'label'   => __( 'Disable Email Banner', 'tutor-pro' ),
-							'default' => 'off',
-							'desc'    => __( 'Enable to hide email banner', 'tutor-pro' ),
-						),
-						array(
-							'key'   => 'email_template_bg',
-							'type'  => 'upload_full',
-							'label' => __( 'Email Template Background', 'tutor-pro' ),
-							'desc'  => array(
-								'file_size'    => __( '602x124 pixels', 'tutor-pro' ),
-								'file_support' => __( 'jpg, png.', 'tutor-pro' ),
-							),
-						),
-						array(
-							'key'         => 'email_from_name',
-							'type'        => 'text',
-							'label'       => __( 'Name', 'tutor-pro' ),
-							'placeholder' => __( 'Sender\'s Name', 'tutor-pro' ),
-							'default'     => get_option( 'blogname' ),
-							'desc'        => __( 'The name under which all the emails will be sent', 'tutor-pro' ),
-						),
-						array(
-							'key'         => 'email_from_address',
-							'type'        => 'email',
-							'label'       => __( 'E-Mail Address', 'tutor-pro' ),
-							'placeholder' => __( 'Reply to E-Mail', 'tutor-pro' ),
-							'default'     => wp_get_current_user()->user_email,
-							'desc'        => __( 'The E-Mail address from which all emails will be sent', 'tutor-pro' ),
-						),
-						array(
-							'key'         => 'email_footer_text',
-							'type'        => 'editor_full',
-							'label'       => __( 'E-Mail Footer Text', 'tutor-pro' ),
-							'placeholder' => __( 'Footer text for E-mail', 'tutor-pro' ),
-							'default'     => '<p style="text-align:center;color:#757C8E;">{site_name} © ' . __( '2022 All Rights Reserved', 'tutor-pro' ) . '.</p>
-							<p style="text-align:center;color:#41454F;padding-bottom:30px;"><a style="text-decoration: none;color: inherit;" href="#">' . __( 'Privacy & Policy', 'tutor-pro' ) . '</a> <span>⋅</span> <a style="text-decoration: none;color: inherit;" href="#">' . __( 'Terms & Conditions', 'tutor-pro' ) . '</a></p>',
-							'desc'        => __( 'The text to appear in E-Mail template footer', 'tutor-pro' ),
-						),
-					),
+					'label'         => null,
+					'slug'          => 'email-settings-options',
+					'block_type'    => 'custom',
+					'placement'     => 'before',
+					'template_path' => TUTOR_EMAIL()->path . 'views/email-settings-options.php',
 				),
 				array(
 					'label'      => __( 'Email to Students', 'tutor-pro' ),
@@ -332,7 +342,7 @@ class Init {
 					'fields'     => $this->get_recipient_array( 'email_to_students' ),
 				),
 				array(
-					'label'      => __( 'Email to Teachers', 'tutor-pro' ),
+					'label'      => __( 'Email to Instructors', 'tutor-pro' ),
 					'slug'       => 'email_to_teachers',
 					'block_type' => 'uniform',
 					'fields'     => $this->get_recipient_array( 'email_to_teachers' ),
@@ -344,7 +354,7 @@ class Init {
 					'fields'     => $this->get_recipient_array( 'email_to_admin' ),
 				),
 				array(
-					'label'      => __( 'Email Sending', 'tutor-pro' ),
+					'label'      => __( 'Email Cron Settings', 'tutor-pro' ),
 					'slug'       => 'email_sending',
 					'block_type' => 'uniform',
 					'fields'     => array(
@@ -359,7 +369,8 @@ class Init {
 							'key'     => 'tutor_email_cron_frequency',
 							'label'   => __( 'WP Email Cron Frequency', 'tutor-pro' ),
 							'type'    => 'number',
-							'default' => '300',
+							'min'     => 10,
+							'default' => 300,
 							'desc'    => __( 'Add the frequency mode in <strong>Second(s)</strong> which the Cron Setup will run', 'tutor-pro' ),
 						),
 						array(
@@ -367,7 +378,8 @@ class Init {
 							'label'       => __( 'Email Per Cron Execution', 'tutor-pro' ),
 							'type'        => 'number',
 							'number_type' => 'integer',
-							'default'     => '10',
+							'min'         => 1,
+							'default'     => 10,
 							'desc'        => __( 'Number of emails you\'d like to send per cron execution', 'tutor-pro' ),
 						),
 					),

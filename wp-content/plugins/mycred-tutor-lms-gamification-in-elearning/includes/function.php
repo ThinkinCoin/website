@@ -27,7 +27,9 @@ endif;
 if ( ! function_exists( 'mycred_specific_course_for_quiz' ) ) :
 function mycred_specific_course_for_quiz(){
 
-    $course_id = intval( $_POST['quiz'] );
+    $tutorlms_course_id = isset($_POST['quiz']) ? absint($_POST['quiz']) : 0;
+
+    $course_id = intval( $tutorlms_course_id );
 
     if($_POST['quiz'] == 0 ){
 
@@ -55,7 +57,7 @@ function mycred_specific_course_for_quiz(){
 
         $quizzes = json_encode( $quizzes );
 
-        echo $quizzes;
+        echo json_encode($quizzes);
         wp_die();
     }
 
@@ -78,7 +80,7 @@ function mycred_specific_course_for_quiz(){
 
        $quizzes = json_encode( $quizzes );
 
-    echo $quizzes;
+    echo json_encode($quizzes);
 
     wp_die();
 }
@@ -88,7 +90,9 @@ endif;
 if ( ! function_exists( 'mycred_specific_course_for_lesson' ) ) :
 function mycred_specific_course_for_lesson(){
 
-    $course_id = intval( $_POST['lesson'] );
+    $tutorlms_course_id = isset($_POST['lesson']) ? absint($_POST['lesson']) : 0;
+
+    $course_id = intval( $tutorlms_course_id  );
 
     if( $_POST['lesson'] == 0 ){
 
@@ -116,7 +120,7 @@ function mycred_specific_course_for_lesson(){
 
         $lessons = json_encode( $lessons );
 
-        echo $lessons;
+        echo json_encode($lessons);
 
         wp_die();
     }
@@ -140,7 +144,7 @@ function mycred_specific_course_for_lesson(){
 
        $lessons = json_encode( $lessons );
 
-    echo $lessons;
+    echo json_encode($lessons);
 
     wp_die();
 }

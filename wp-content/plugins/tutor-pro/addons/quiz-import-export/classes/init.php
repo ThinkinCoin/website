@@ -10,6 +10,8 @@ class init{
 	public $url;
 	public $basename;
 
+	private $quiz_import_export;
+
 	function __construct() {
 		if ( ! function_exists('tutor')){
 			return;

@@ -11,6 +11,7 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
 
 use Udb\Base\Base_Output;
 use Udb\Helpers\Array_Helper;
+use WP_Post;
 
 /**
  * Class to setup admin page output.
@@ -101,6 +102,7 @@ class Admin_Page_Output extends Base_Output {
 	 * Get admin page posts by menu type.
 	 *
 	 * @param string $menu_type The menu type (parent/ submenu).
+	 *
 	 * @return array Array of admin page post objects.
 	 */
 	public function get_posts( $menu_type ) {
@@ -123,8 +125,6 @@ class Admin_Page_Output extends Base_Output {
 				),
 			)
 		);
-
-		$posts = $posts ? $posts : array();
 
 		if ( ! empty( $posts ) && 'parent' === $menu_type && apply_filters( 'udb_font_awesome', true ) ) {
 			// Font Awesome.
@@ -160,7 +160,7 @@ class Admin_Page_Output extends Base_Output {
 	 * Register admin page's menu & submenu pages.
 	 *
 	 * @param array $posts Array of admin page post object (parent or submenu).
-	 * @param bool  $from_multisite Whether or not the function is called by multisite function.
+	 * @param bool  $from_multisite Whether the function is called by multisite function.
 	 */
 	public function prepare_menu( $posts, $from_multisite = false ) {
 
@@ -181,7 +181,7 @@ class Admin_Page_Output extends Base_Output {
 	 * Register menu / submenu page based on its post.
 	 *
 	 * @param WP_Post $post The admin page post object.
-	 * @param bool    $from_multisite Whether or not the function is called by multisite function.
+	 * @param bool    $from_multisite Whether the function is called by multisite function.
 	 */
 	public function add_menu( $post, $from_multisite = false ) {
 
@@ -272,7 +272,7 @@ class Admin_Page_Output extends Base_Output {
 	 * Render admin page.
 	 *
 	 * @param WP_Post $post The admin page post object.
-	 * @param bool    $from_multisite Whether or not the function is called by multisite function.
+	 * @param bool    $from_multisite Whether the function is called by multisite function.
 	 */
 	public function render_admin_page( $post, $from_multisite = false ) {
 
@@ -289,21 +289,19 @@ class Admin_Page_Output extends Base_Output {
 	public function add_menu_icon( $menu_slug, $icon_class ) {
 		$unicodes = file_get_contents( ULTIMATE_DASHBOARD_PLUGIN_DIR . '/assets/json/fontawesome5-unicodes.json' );
 		$unicodes = json_decode( $unicodes, true );
-		$unicodes = $unicodes ? $unicodes : array();
+		$unicodes = is_null( $unicodes ) ? array() : $unicodes;
 
 		// Compatibility.
 		$unicodes_fa4 = file_get_contents( ULTIMATE_DASHBOARD_PLUGIN_DIR . '/assets/json/fontawesome4-unicodes.json' );
 		$unicodes_fa4 = json_decode( $unicodes_fa4, true );
-		$unicodes_fa4 = $unicodes_fa4 ? $unicodes_fa4 : array();
+		$unicodes_fa4 = is_null( $unicodes_fa4 ) ? array() : $unicodes_fa4;
 
 		$icon_unicode = '\f013';
 
 		if ( isset( $unicodes[ $icon_class ] ) ) {
 			$icon_unicode = $unicodes[ $icon_class ];
-		} else {
-			if ( isset( $unicodes[ $icon_class ] ) ) {
-				$icon_unicode = $unicodes_fa4[ $icon_class ];
-			}
+		} elseif ( isset( $unicodes_fa4[ $icon_class ] ) ) {
+			$icon_unicode = $unicodes_fa4[ $icon_class ];
 		}
 		?>
 

@@ -11,10 +11,11 @@ return function () {
 
 	// Labels.
 	$labels = array(
-		'name'               => _x( 'Admin Pages', 'ultimate-dashboard' ),
-		'singular_name'      => _x( 'Admin Page', 'ultimate-dashboard' ),
-		'menu_name'          => _x( 'Admin Pages', 'ultimate-dashboard' ),
-		'name_admin_bar'     => _x( 'Admin Page', 'ultimate-dashboard' ),
+		'name'               => __( 'Admin Pages', 'ultimate-dashboard' ),
+		'singular_name'      => __( 'Admin Page', 'ultimate-dashboard' ),
+		'menu_name'          => __( 'Admin Pages', 'ultimate-dashboard' ),
+		'name_admin_bar'     => __( 'Admin Page', 'ultimate-dashboard' ),
+		'add_new'            => __( 'Add New', 'ultimate-dashboard' ),
 		'add_new_item'       => __( 'Add Admin Page', 'ultimate-dashboard' ),
 		'new_item'           => __( 'New Admin Page', 'ultimate-dashboard' ),
 		'edit_item'          => __( 'Edit Admin Page', 'ultimate-dashboard' ),
@@ -54,6 +55,8 @@ return function () {
 		'hierarchical'        => false,
 		'supports'            => array( 'title', 'editor' ),
 	);
+
+	$args = apply_filters( 'udb_admin_page_post_type_args', $args );
 
 	register_post_type( 'udb_admin_page', $args );
 

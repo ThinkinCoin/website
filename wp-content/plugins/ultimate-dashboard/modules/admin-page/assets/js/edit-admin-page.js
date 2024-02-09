@@ -9,9 +9,7 @@
 		setupChainingFields();
 		setupIconPicker();
 		setupWidgetRoles();
-		setupCSSEditor();
-		setupJSEditor();
-		setupHTMLEditor();
+		setupCodeMirror();
 		setupContentType();
 	}
 
@@ -54,16 +52,16 @@
 
 		checkChainingState(child, parentField);
 
-		parentField.addEventListener('change', function (e) {
+		parentField.addEventListener('change', function (_e) {
 			checkChainingState(child, parentField);
 		});
 	}
 
 	/**
 	 * Check the children state: shown or hidden.
-	 * 
+	 *
 	 * @param {HTMLElement} child The children element.
-	 * @param {HTMLElement} parent The parent/ dependency element.
+	 * @param {HTMLInputElement|HTMLSelectElement} parent The parent/ dependency element.
 	 */
 	function checkChainingState(child, parent) {
 		var wantedValue = child.dataset.showIfValue;
@@ -115,7 +113,7 @@
 	/**
 	 * Setup widget role.
 	 *
-	 * @param HTMLElement field The widget role's select box.
+	 * @param {HTMLElement} field - The widget role's select box.
 	 */
 	function setupWidgetRole(field) {
 		var $field = $(field);
@@ -145,75 +143,54 @@
 	}
 
 	/**
-	 * Setup CSS fields.
+	 * Setup CodeMirror fields.
 	 */
-	function setupCSSEditor() {
-		var fields = document.querySelectorAll('.udb-custom-css');
+	function setupCodeMirror() {
+		/**
+		 * Compatibility if the free version is updated first.
+		 * Because UDB Pro version <=3.8.0 doesn't have the `udb-codemirror` class.
+		 */
+		var jsFields = document.querySelectorAll('.udb-custom-js');
+
+		[].slice.call(jsFields).forEach(function (field) {
+			field.classList.add('udb-codemirror');
+			field.setAttribute('data-content-mode', 'js');
+		});
+
+		var fields = document.querySelectorAll('.udb-codemirror');
 		if (!fields.length) return;
 
-		var editorSettings = wp.codeEditor.defaultSettings ? _.clone(wp.codeEditor.defaultSettings) : {};
-
-		editorSettings.codemirror = _.extend(
-			{},
-			editorSettings.codemirror,
-			{
-				indentUnit: 4,
-				tabSize: 4,
-				mode: 'css',
-			}
-		);
-
 		[].slice.call(fields).forEach(function (field) {
+			var contentMode = 'html';
+
+			if (field.getAttribute('data-content-mode')) {
+				contentMode = field.getAttribute('data-content-mode');
+			}
+
+			var editorSettings = wp && wp.codeEditor && wp.codeEditor.defaultSettings ? _.clone(wp.codeEditor.defaultSettings) : {};
+
+			editorSettings.codemirror = _.extend(
+				{},
+				editorSettings.codemirror,
+				{
+					indentUnit: 4,
+					tabSize: 4,
+					mode: contentMode,
+				}
+			);
+
 			wp.codeEditor.initialize(field, editorSettings);
 		});
-	}
 
-	/**
-	 * Setup JS fields.
-	 */
-	function setupJSEditor() {
-		var fields = document.querySelectorAll('.udb-custom-js');
-		if (!fields.length) return;
-
-		var editorSettings = wp.codeEditor.defaultSettings ? _.clone(wp.codeEditor.defaultSettings) : {};
-
-		editorSettings.codemirror = _.extend(
-			{},
-			editorSettings.codemirror,
-			{
-				indentUnit: 4,
-				tabSize: 4,
-				mode: 'js',
-			}
-		);
-
-		[].slice.call(fields).forEach(function (field) {
-			wp.codeEditor.initialize(field, editorSettings);
-		});
-	}
-
-	/**
-	 * Setup HTML fields.
-	 */
-	function setupHTMLEditor() {
-		var fields = document.querySelectorAll('.udb-html-editor');
-		if (!fields.length) return;
-
-		var editorSettings = wp.codeEditor.defaultSettings ? _.clone(wp.codeEditor.defaultSettings) : {};
-
-		editorSettings.codemirror = _.extend(
-			{},
-			editorSettings.codemirror,
-			{
-				indentUnit: 4,
-				tabSize: 4,
-				mode: 'html',
-			}
-		);
-
-		[].slice.call(fields).forEach(function (field) {
-			wp.codeEditor.initialize(field, editorSettings);
-		});
+		if (wp && wp.data && wp.data.subscribe) {
+			// @see https://github.com/WordPress/gutenberg/issues/13645
+			wp.data.subscribe(function () {
+				[].slice.call(fields).forEach(function (field) {
+					var cm = jQuery(field).next('.CodeMirror').get(0).CodeMirror;
+					cm.save();
+				});
+			});
+		}
 	}
 
 	/**
@@ -224,6 +201,15 @@
 		if (!select) return;
 
 		contentTypeSwitch(select.options[select.selectedIndex].value);
+
+		var timeouts = [500, 1000, 1500, 2000, 2500, 3000];
+
+		timeouts.forEach(function (timeout) {
+			setTimeout(function () {
+				contentTypeSwitch(select.options[select.selectedIndex].value);
+			}, timeout);
+		});
+
 
 		select.addEventListener('change', function () {
 			contentTypeSwitch(this.options[this.selectedIndex].value);
@@ -243,45 +229,53 @@
 		var beaverTabs = document.querySelector('#post-body-content > .fl-builder-admin');
 		var diviButtons = document.querySelector('#post-body-content > .et_pb_toggle_builder_wrapper');
 		var diviEditor = document.querySelector('#et_pb_layout');
+		var oxygenEditor = document.querySelector('#ct_views_cpt');
 		var normalEditor = document.querySelector('#postdivrich');
 
-		switch (value) {
-			case 'html':
-				htmlEditor.style.display = 'block';
+		if (value === 'html') {
+			document.body.classList.add('udb-use-html-editor');
+			document.body.classList.remove('udb-use-default-editor');
 
-				if (elementorSwitch) elementorSwitch.style.display = 'none';
-				if (!document.body.classList.contains('elementor-editor-inactive')) {
-					if (elementorEditor) elementorEditor.style.display = 'none';
-				}
-				if (brizyButtons) brizyButtons.style.display = 'none';
-				if (beaverTabs) beaverTabs.style.display = 'none';
-				if (diviButtons) diviButtons.style.display = 'none';
-				if (diviEditor) diviEditor.style.display = 'none';
-				if (
-					!document.body.classList.contains('fl-builder-enabled') &&
-					!document.querySelector('#postdivrich').parentNode.classList.contains('et_pb_post_body_hidden')
-				) {
-					normalEditor.style.display = 'none';
-				}
-				break;
+			htmlEditor.style.display = 'block';
 
-			default:
-				htmlEditor.style.display = 'none';
+			if (elementorSwitch) elementorSwitch.style.display = 'none';
+			if (!document.body.classList.contains('elementor-editor-inactive')) {
+				if (elementorEditor) elementorEditor.style.display = 'none';
+			}
+			if (brizyButtons) brizyButtons.style.display = 'none';
+			if (beaverTabs) beaverTabs.style.display = 'none';
+			if (diviButtons) diviButtons.style.display = 'none';
+			if (diviEditor) diviEditor.style.display = 'none';
+			if (oxygenEditor) oxygenEditor.style.display = 'none';
 
-				if (elementorSwitch) elementorSwitch.style.display = 'block';
-				if (!document.body.classList.contains('elementor-editor-inactive')) {
-					if (elementorEditor) elementorEditor.style.display = 'block';
+			if (!document.body.classList.contains('fl-builder-enabled')) {
+				if (normalEditor && !normalEditor.parentNode.classList.contains('et_pb_post_body_hidden')) {
+					if (normalEditor) normalEditor.style.display = 'none';
 				}
-				if (brizyButtons) brizyButtons.style.display = 'block';
-				if (beaverTabs) beaverTabs.style.display = 'block';
-				if (diviButtons) diviButtons.style.display = 'block';
-				if (diviEditor) diviEditor.style.display = 'block';
-				if (
-					!document.body.classList.contains('fl-builder-enabled') &&
-					!document.querySelector('#postdivrich').parentNode.classList.contains('et_pb_post_body_hidden')
-				) {
-					normalEditor.style.display = 'block';
+			}
+		} else {
+			document.body.classList.remove('udb-use-html-editor');
+			document.body.classList.add('udb-use-default-editor');
+
+			htmlEditor.style.display = 'none';
+
+			if (elementorSwitch) elementorSwitch.style.display = 'block';
+
+			if (!document.body.classList.contains('elementor-editor-inactive')) {
+				if (elementorEditor) elementorEditor.style.display = 'block';
+			}
+
+			if (brizyButtons) brizyButtons.style.display = 'block';
+			if (beaverTabs) beaverTabs.style.display = 'block';
+			if (diviButtons) diviButtons.style.display = 'block';
+			if (diviEditor) diviEditor.style.display = 'block';
+			if (oxygenEditor) oxygenEditor.style.display = 'block';
+
+			if (!document.body.classList.contains('fl-builder-enabled')) {
+				if (normalEditor && !normalEditor.parentNode.classList.contains('et_pb_post_body_hidden')) {
+					if (normalEditor) normalEditor.style.display = 'block';
 				}
+			}
 		}
 	}
 

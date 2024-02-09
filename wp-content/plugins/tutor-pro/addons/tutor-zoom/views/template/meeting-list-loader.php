@@ -8,24 +8,17 @@
  *
  * @since 1.9.4
  */
+
+use TUTOR\Input;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
 // Pagination
 $per_page = get_tutor_option( 'pagination_per_page', 10 );
-$paged    = 1;
-
-global $wp;
-$url      = home_url( $wp->request );
-$url_path = parse_url( $url, PHP_URL_PATH );
-$basename = pathinfo( $url_path, PATHINFO_BASENAME );
-
-if ( isset( $_GET['paged'] ) && is_numeric( $_GET['paged'] ) ) {
-	$paged = $_GET['paged'];
-} else {
-	is_numeric( $basename ) ? $paged = $basename : '';
-}
+$paged    = Input::get( 'paged', 1, Input::TYPE_INT );
+$paged    = max( 1, $paged );
 
 // Search Filter
 $_search = isset( $_GET['search'] ) ? $_GET['search'] : '';

@@ -3,7 +3,7 @@
  * Plugin Name: Open Graph and Twitter Card Tags
  * Plugin URI:
  * Description: Improve social media sharing by inserting Facebook Open Graph, Twitter Card and SEO Meta Tags on your WordPress website pages, posts, WooCommerce products, or any other custom post type.
- * Version: 3.3.1
+ * Version: 3.3.2
  * Author: WPExperts
  * Author URI: https://wpexperts.io/
  * Text Domain: wonderm00ns-simple-facebook-open-graph-tags
@@ -11,12 +11,13 @@
  * Requires at least: 5.0
  * Requires PHP: 7.0
  * WC requires at least: 3.0
- * WC tested up to: 6.6
+ * WC tested up to: 8.3.0
 **/
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-define( 'WEBDADOS_FB_VERSION', '3.3.1' );
+define( 'WEBDADOS_FB_VERSION', '3.3.2' );
+define( 'WEBDADOS_FB_PLUGIN_FILE', __FILE__ );
 define( 'WEBDADOS_FB_PLUGIN_NAME', 'Open Graph and Twitter Card Tags' );
 define( 'WEBDADOS_FB_W', 1200 );
 define( 'WEBDADOS_FB_H', 630 );

@@ -613,7 +613,7 @@ class Analytics extends ExportAnalytics {
 					{$author_query}
 					{$course_query}
 					{$period_query}
-					${group_query}",
+					{$group_query}",
 			'_tutor_course_product_id',
 			$course_post_type,
 			'publish',

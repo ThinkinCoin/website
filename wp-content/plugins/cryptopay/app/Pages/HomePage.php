@@ -1,130 +1,131 @@
-<?php 
+<?php
+
+declare(strict_types=1);
 
 namespace BeycanPress\CryptoPay\Pages;
 
-use \BeycanPress\CryptoPay\PluginHero\Page;
+use BeycanPress\CryptoPay\Helpers;
+use BeycanPress\CryptoPay\PluginHero\Page;
+use BeycanPress\CryptoPay\PluginHero\Http\Client;
 
 /**
  * Home page
  */
 class HomePage extends Page
-{   
+{
+    /**
+     * @var Client
+     */
+    private Client $client;
+
     /**
      * @var int
      */
-    private $notificationCount;
+    private int $count = 0;
 
     /**
      * @var string
      */
-    private $apiUrl = 'https://beycanpress.com/wp-json/bp-api/';
-    
+    private string $apiUrl = 'https://beycanpress.com/wp-json/bp-api/';
+
     /**
      * Class construct
      * @return void
      */
     public function __construct()
     {
-        $notification = '';
-        $this->controlNotification();
-        if ($count = get_option('cryptopay_new_product_notification')) {
-            $notification =  sprintf(' <span class="awaiting-mod">%d</span>', $count);
-            add_action('admin_bar_menu', function() use ($count) {
-                if (current_user_can('manage_options')) {
-                    global $wp_admin_bar;
-                    $wp_admin_bar->add_menu( array(
-                        'id'    => 'cryptopay-new-product-notification', 
-                        'title' => '<img src="'.$this->getImageUrl('menu.png').'" alt="'.esc_html__('CryptoPay', 'cryptopay').'" width="18"> '.esc_html__('CryptoPay new products', 'cryptopay').': <span class="cp-bubble-notifi">'.$count.'</span>',
-                        'href'  => $this->getUrl(),
-                    ));
-                }
-            }, 500);
+        try {
+            $notification = '';
+            $this->client = new Client();
+            $this->client->setBaseUrl($this->apiUrl);
+            $this->controlNotification();
+            $this->count = absint(get_option('cryptopay_new_product_notification_new_count', 0));
+            if ($this->count > 0 && !(isset($_GET['page']) && $_GET['page'] == 'cryptopay_home')) {
+                $notification =  sprintf(' <span class="awaiting-mod">%d</span>', $this->count);
+                add_action('admin_bar_menu', function (): void {
+                    if (current_user_can('manage_options')) {
+                        global $wp_admin_bar;
+                        $wp_admin_bar->add_menu(array(
+                            'id'    => 'cryptopay-new-product-notification',
+                            'title' => Helpers::view('components/notification', [
+                                'count' => $this->count
+                            ]),
+                            'href'  => $this->getUrl(),
+                        ));
+                    }
+                }, 500);
+            }
+        } catch (\Throwable $th) {
+            Helpers::debug($th->getMessage(), 'ERROR', $th);
         }
 
         parent::__construct([
+            'priority' => 1,
+            'subMenu' => true,
+            'slug' => 'cryptopay_home',
+            'icon' => Helpers::getImageUrl('menu.png'),
             'pageName' => esc_html__('CryptoPay', 'cryptopay') . $notification,
             'subMenuPageName' => esc_html__('Home', 'cryptopay') . $notification,
-            'slug' => 'cryptopay_home',
-            'icon' => $this->getImageUrl('menu.png'),
-            'subMenu' => true,
-            'priority' => 1,
         ]);
 
-        add_action('admin_head', function() {
-            echo '<style>
-                #wp-admin-bar-cryptopay-new-product-notification .ab-item {
-                    display: flex!important;
-                    align-items: center;
-                }
-                #wp-admin-bar-cryptopay-new-product-notification .ab-item img {
-                    margin-right: 5px;
-                }
-                .toplevel_page_cryptopay_home .wp-menu-image img, #wp-admin-bar-cryptopay-new-product-notification img {
-                    width: 18px;
-                }
-                .cp-bubble-notifi {
-                    display: inline-block;
-                    vertical-align: top;
-                    box-sizing: border-box;
-                    margin: 1px 0 -1px 2px;
-                    padding: 0 5px;
-                    min-width: 18px;
-                    height: 18px;
-                    border-radius: 9px;
-                    background-color: #d63638;
-                    color: #fff;
-                    font-size: 11px;
-                    line-height: 1.6;
-                    text-align: center;
-                }                
-                </style>';
+        add_action('admin_head', function (): void {
+            Helpers::viewEcho('css/admin-bar-css');
         });
     }
 
     /**
      * @return void
      */
-    public function controlNotification() : void
+    public function controlNotification(): void
     {
-        $this->notificationCount = get_option('cryptopay_new_product_notification');
+        $oldCount = get_option('cryptopay_new_product_notification_count') ?? 0;
         if (date('Y-m-d') != get_option('cryptopay_new_product_notification_date')) {
+            $res = $this->client->get('notification');
+            $newCount = isset($res->success) && $res->success ? $res->data->count : 0;
             update_option('cryptopay_new_product_notification_date', date('Y-m-d'));
-            $res = json_decode(file_get_contents($this->apiUrl . 'notification'));
-            update_option('cryptopay_new_product_notification', (isset($res->success) && $res->success ? $res->data->count : 0));
-        } else if ($this->notificationCount && isset($_GET['page']) && $_GET['page'] == 'cryptopay_home') {
-            update_option('cryptopay_new_product_notification', 0);
+            update_option('cryptopay_new_product_notification_count', $newCount);
+            if (($newCount - $oldCount)) {
+                update_option('cryptopay_new_product_notification_new_count', ($newCount - $oldCount));
+            }
         }
     }
 
     /**
      * @return void
      */
-    public function page() : void
+    public function page(): void
     {
-        $oldProducts = json_decode(get_option('cryptopay_products_json'));
-        if ($this->notificationCount || !$oldProducts) {
-            $res = json_decode(str_replace(['<p>', '</p>'], '', file_get_contents($this->apiUrl . 'products')));
-            $products = isset($res->success) && $res->success ? $res->data->products : [];
-            update_option('cryptopay_products_json', json_encode($products));
-            if ($oldProducts) {
-                foreach ($products as $category => &$productList) {
-                    $productList = array_map(function($product) use ($oldProducts, $category) {
-                        if (isset($oldProducts->$category)) {
-                            if (array_search($product->id, array_column($oldProducts->$category, 'id')) === false) {
+        try {
+            update_option('cryptopay_new_product_notification_new_count', 0);
+            $oldProducts = json_decode(get_option('cryptopay_products_json', '{}'));
+            if ($this->count || !$oldProducts) {
+                $res = $this->client->get('products');
+                $products = isset($res->success) && $res->success ? $res->data->products : [];
+                if (!empty($products)) {
+                    update_option('cryptopay_products_json', json_encode($products));
+                }
+                if ($oldProducts) {
+                    foreach ($products as $category => &$productList) {
+                        $productList = array_map(function ($product) use ($oldProducts, $category) {
+                            if (isset($oldProducts->$category)) {
+                                if (array_search($product->id, array_column($oldProducts->$category, 'id')) === false) {
+                                    $product->new = true;
+                                }
+                            } else {
                                 $product->new = true;
                             }
-                        } else {
-                            $product->new = true;
-                        }
-                        return $product;
-                    }, $productList);
+                            return $product;
+                        }, $productList);
+                    }
                 }
+            } else {
+                $products = $oldProducts;
             }
-        } else {
-            $products = $oldProducts;
+        } catch (\Throwable $th) {
+            Helpers::debug($th->getMessage(), 'ERROR', $th);
         }
 
-        $this->addStyle('admin.min.css');
-        $this->viewEcho('pages/home-page/index', compact('products'));
+        Helpers::addStyle('admin.min.css');
+        Helpers::viewEcho('pages/home-page/index', compact('products'));
     }
 }

@@ -34,6 +34,8 @@ class ContentDrip {
 
 	private $quiz_manual_review_required = false;
 
+	private $singular_post_type;
+
 	public function __construct() {
 
 		/**

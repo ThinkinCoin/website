@@ -1,6 +1,9 @@
 <?php
 
 // Check if api key connected, and set first sub page
+
+use TUTOR\Input;
+
 $check_api      = tutor_zoom_check_api_connection();
 $currentSubPage = $check_api ? 'meetings' : 'set_api';
 $dashboard_url  = tutor_utils()->tutor_dashboard_url();
@@ -47,16 +50,8 @@ if(!$check_api) {
 
 // Prepare query information
 global $wp_query, $wp;
-$paged    = 1;
-$url      = home_url( $wp->request );
-$url_path = parse_url($url, PHP_URL_PATH);
-$basename = pathinfo($url_path, PATHINFO_BASENAME);
-
-if ( isset($_GET['paged']) && is_numeric($_GET['paged']) ) {
-    $paged = $_GET['paged'];
-} else {
-    is_numeric( $basename ) ? $paged = $basename : '';
-}
+$paged = Input::get( 'paged', 1, Input::TYPE_INT );
+$paged = max( 1, $paged );
 
 $error_msg = '';
 if (!empty($_GET['sub_page'])) {

@@ -11,13 +11,12 @@
 $meeting       = $data['meeting'];
 $event_details = $data['event_details'];
 ?>
-<div class="zoom-meeting-countdown-wrap" style="max-width: 640px;">
+<div class="tutor-google-meet-countdown-wrap">
 	<p class="tutor-mb-24">
 		<?php esc_html_e( 'Meeting Starts in', 'tutor-pro' ); ?>
 	</p>
 	<div class="tutor-time-countdown tutor-countdown-lg" data-datetime="<?php echo esc_attr( $event_details->start_datetime ); ?>" data-timezone="<?php echo esc_attr( $event_details->timezone ); ?>"></div>
 	<div class="tutor-zoom-join-button-wrap">
-
 		<a href="<?php echo esc_url( $event_details->meet_link ); ?>" target="_blank" class="tutor-btn tutor-btn-primary tutor-mb-40">
 			<?php echo esc_html_e( 'Join Meeting', 'tutor-pro' ); ?>
 		</a>

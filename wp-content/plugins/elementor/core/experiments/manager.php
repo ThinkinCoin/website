@@ -93,7 +93,7 @@ class Manager extends Base_Object {
 		$new_site = $experimental_data['new_site'];
 
 		if ( $new_site['default_active'] || $new_site['always_active'] ) {
-			$is_new_installation = Upgrade_Manager::install_compare( $new_site['minimum_installation_version'], '>=' );
+			$is_new_installation = $this->install_compare( $new_site['minimum_installation_version'] );
 
 			if ( $is_new_installation ) {
 				if ( $new_site['always_active'] ) {
@@ -153,6 +153,18 @@ class Manager extends Base_Object {
 		do_action( 'elementor/experiments/feature-registered', $this, $experimental_data );
 
 		return $experimental_data;
+	}
+
+	private function install_compare( $version ) {
+		$installs_history = Upgrade_Manager::get_installs_history();
+
+		$cleaned_version = preg_replace( '/-(beta|cloud|dev)\d*$/', '', key( $installs_history ) );
+
+		return version_compare(
+			$cleaned_version,
+			$version,
+			'>='
+		);
 	}
 
 	/**
@@ -316,18 +328,6 @@ class Manager extends Base_Object {
 
 	private function add_default_features() {
 		$this->add_feature( [
-			'name' => 'e_dom_optimization',
-			'title' => esc_html__( 'Optimized DOM Output', 'elementor' ),
-			'tag' => esc_html__( 'Performance', 'elementor' ),
-			'description' => esc_html__( 'Developers, Please Note! This experiment includes some markup changes. If you\'ve used custom code in Elementor, you might have experienced a snippet of code not running. Turning this experiment off allows you to keep prior Elementor markup output settings, and have that lovely code running again.', 'elementor' )
-				. ' <a href="https://go.elementor.com/wp-dash-legacy-optimized-dom/" target="_blank">'
-				. esc_html__( 'Learn More', 'elementor' ) . '</a>',
-			'release_status' => self::RELEASE_STATUS_STABLE,
-			'default' => self::STATE_ACTIVE,
-			'generator_tag' => true,
-		] );
-
-		$this->add_feature( [
 			'name' => 'e_optimized_assets_loading',
 			'title' => esc_html__( 'Improved Asset Loading', 'elementor' ),
 			'tag' => esc_html__( 'Performance', 'elementor' ),
@@ -349,7 +349,7 @@ class Manager extends Base_Object {
 			'release_status' => self::RELEASE_STATUS_STABLE,
 			'new_site' => [
 				'default_active' => true,
-				'minimum_installation_version' => '3.3.0-beta',
+				'minimum_installation_version' => '3.3.0',
 			],
 			'generator_tag' => true,
 		] );
@@ -362,6 +362,10 @@ class Manager extends Base_Object {
 				. ' <a href="https://go.elementor.com/wp-dash-inline-font-awesome/" target="_blank">'
 				. esc_html__( 'Learn More', 'elementor' ) . '</a>',
 			'release_status' => self::RELEASE_STATUS_BETA,
+			'new_site' => [
+				'default_active' => true,
+				'minimum_installation_version' => '3.17.0',
+			],
 			'generator_tag' => true,
 		] );
 
@@ -398,9 +402,11 @@ class Manager extends Base_Object {
 				'minimum_installation_version' => '3.16.0',
 			],
 			'messages' => [
-				'on_deactivate' => esc_html__(
-					'If you deactivate Flexbox Container, you will permanently delete all content created with containers and lose access to container-based features like Tabs and Menu widgets',
-					'elementor'
+				'on_deactivate' => sprintf(
+					/* translators: %1$s Link open tag, %2$s: Link close tag. */
+					esc_html__( 'Container-based content will be hidden from your site and may not be recoverable in all cases. %1$sLearn more%2$s', 'elementor' ),
+					'<a target="_blank" href="https://go.elementor.com/wp-dash-deactivate-container/">',
+					'</a>'
 				),
 			],
 		] );

@@ -17,7 +17,7 @@
                 <div class="tutor-row tutor-gx-0">
                     <div class="tutor-col-4">
                         <div class="tutor-ratio tutor-ratio-16x9">
-                            <img class="tutor-card-image-left" src="<?php echo esc_url( $content->thumbnailUrl ); ?>" alt="<?php echo $content->post_title; ?>" loading="lazy">
+                            <img class="tutor-card-image-left" src="<?php echo esc_url( $content->thumbnailUrl ?? '' ); ?>" alt="<?php echo $content->post_title; ?>" loading="lazy">
                         </div>
                     </div>
 

@@ -134,13 +134,34 @@ if ( ! defined( 'mycred_tutor_lms_SLUG' ) ) exit;
 	public function preferences() {
 
 		$prefs = $this->prefs;
+		$select_parm = array(
+			'div' => array(
+				'class' => array(),
+			),
+			'input' => array(
+				'class' => array(),
+				'type' => array(),
+				'name' => array(),
+				'id' => array(),
+				'size' => array(),
+				'value' => array()
+			),
+			'select' => array(
+				'name'	=> array(),
+				'class' => array(),
+				'id' => array(),
+			),
+			'option' => array(
+				'value' => array()
+			),
+		);
 			?>
 			<!-- for failing quiz -->
 			<div class="hook-instance">
 				<div class="row">
 					<div class="col-lg-12">
 	                    <div class="hook-title">
-							<h3><?php _e( 'General', 'mycred_tutor_lms' ); ?></h3>
+							<h3><?php esc_html_e( 'General', 'mycred_tutor_lms' ); ?></h3>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
@@ -151,9 +172,9 @@ if ( ! defined( 'mycred_tutor_lms_SLUG' ) ) exit;
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 						<div class="form-group">
-							<label for="<?php echo esc_attr( $this->field_id( 'log' ) ); ?>"><?php _e( 'Log Template', 'mycred_tutor_lms' ); ?></label>
-							<input type="text" name="<?php echo esc_attr( $this->field_name( 'log' ) ); ?>" id="<?php echo esc_attr( $this->field_id( 'log' ) ); ?>" placeholder="<?php _e( 'required', 'mycred_tutor_lms' ); ?>" value="<?php echo esc_attr( $prefs['log'] ); ?>" class="form-control" />
-							<span class="description"><?php echo $this->available_template_tags( array( 'general' ) ); ?></span>
+							<label for="<?php echo esc_attr( $this->field_id( 'log' ) ); ?>"><?php esc_html_e( 'Log Template', 'mycred_tutor_lms' ); ?></label>
+							<input type="text" name="<?php echo esc_attr( $this->field_name( 'log' ) ); ?>" id="<?php echo esc_attr( $this->field_id( 'log' ) ); ?>" placeholder="<?php esc_html_e( 'required', 'mycred_tutor_lms' ); ?>" value="<?php echo esc_attr( $prefs['log'] ); ?>" class="form-control" />
+							<span class="description"><?php echo esc_html($this->available_template_tags( array( 'general' ) )); ?></span>
 						</div>
 					</div>
 				</div>
@@ -183,8 +204,8 @@ if ( ! defined( 'mycred_tutor_lms_SLUG' ) ) exit;
 				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 					<div class="form-group">
 						<?php add_filter('mycred_tutor_lms_hook_limits', array($this, 'custom_limit')); ?>
-						<label for="<?php echo esc_attr( $this->field_id( 'limit' ) ); ?>"><?php _e( 'Limit', 'mycred_tutor_lms' ); ?></label>
-						<?php echo $this->hook_limit_setting( $this->field_name( 'limit' ), $this->field_id( 'limit' ), $prefs['limit'] ); ?>
+						<label for="<?php echo esc_attr( $this->field_id( 'limit' ) ); ?>"><?php esc_html_e( 'Limit', 'mycred_tutor_lms' ); ?></label>
+						<?php echo wp_kses($this->hook_limit_setting( $this->field_name( 'limit' ), $this->field_id( 'limit' ), $prefs['limit'] ),$select_parm); ?>
 					</div>
 				</div>
 			</div><?php
@@ -277,7 +298,7 @@ if ( ! defined( 'mycred_tutor_lms_SLUG' ) ) exit;
 			 	<div class="row">
 	                <div class="col-lg-12">
 	                    <div class="hook-title">
-							<h3><?php _e( 'Specific', 'mycred_tutor_lms' ); ?></h3>
+							<h3><?php esc_html_e( 'Specific', 'mycred_tutor_lms' ); ?></h3>
 	    				</div>
 				    	<div>
 							<label class="mycred_fail_quiz_check" style=" display: block; margin: 14px 0px;">
@@ -294,8 +315,8 @@ if ( ! defined( 'mycred_tutor_lms_SLUG' ) ) exit;
 						<div class="row">
 							<div class="col-lg-4 col-md-8 col-sm-12 col-xs-12">
 								<div class="form-group">
-									<label><?php _e( 'Select' , 'mycred' ); ?></label>
-									<select class="mycred_tutor_lms_dropdown_fail" name="<?php echo esc_attr( $this->mycred_tutor_lms_quiz_fail_name( $obj->mycred_type,'select_course_fail') ); ?>">
+									<label><?php esc_html_e( 'Select' , 'mycred' ); ?></label>
+									<select class="mycred_tutor_lms_dropdown_fail form-control" name="<?php echo esc_attr( $this->mycred_tutor_lms_quiz_fail_name( $obj->mycred_type,'select_course_fail') ); ?>">
 										<option value="0" disabled <?php echo selected($prefs['select_course_fail'], 0) ?>>-----Select Your Course-----</option>
 											
 											<?php	
@@ -323,7 +344,7 @@ if ( ! defined( 'mycred_tutor_lms_SLUG' ) ) exit;
 										$contents = mycred_tutor_lms_get_course_content( $post_type, $course_id );
 
 									?>
-									<select class="quiz_fail" name="<?php echo esc_attr( $this->mycred_tutor_lms_quiz_fail_name($obj->mycred_type,'select_quiz_fail' ) ); ?>">
+									<select class="quiz_fail form-control" name="<?php echo esc_attr( $this->mycred_tutor_lms_quiz_fail_name($obj->mycred_type,'select_quiz_fail' ) ); ?>">
 		           							<option value="0" <?php echo ( $prefs['select_quiz_fail'] != 0 && in_array( 0,  $this->prefs['tutor_lms_quiz_fail']['select_quiz_fail'] ) ) ?  'disabled' : '' ?><?php echo selected($prefs[ 'select_quiz_fail' ], 0) ?>>All Quiz</option>
 									    <?php    
 								        foreach ($contents as $content => $value){
@@ -353,9 +374,9 @@ if ( ! defined( 'mycred_tutor_lms_SLUG' ) ) exit;
 							</div>
 							<div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
 								<div class="form-group">
-									<label for="<?php echo esc_attr( $obj->field_id( 'log' ) ); ?>"><?php _e( 'Log Template', 'mycred' ); ?></label>
-									<input type="text" name="<?php echo esc_attr( $this->mycred_tutor_lms_quiz_fail_name($obj->mycred_type, 'log' ) ); ?>" id="<?php echo esc_attr( $obj->field_id( 'log' ) ); ?>" placeholder="<?php _e( 'required', 'mycred' ); ?>" value="<?php echo esc_attr( $prefs['log'] ); ?>" class="form-control mycred-tutor_lms-log" />
-									<span class="description"><?php echo $obj->available_template_tags( array( 'general' ) ); ?></span>
+									<label for="<?php echo esc_attr( $obj->field_id( 'log' ) ); ?>"><?php esc_html_e( 'Log Template', 'mycred' ); ?></label>
+									<input type="text" name="<?php echo esc_attr( $this->mycred_tutor_lms_quiz_fail_name($obj->mycred_type, 'log' ) ); ?>" id="<?php echo esc_attr( $obj->field_id( 'log' ) ); ?>" placeholder="<?php esc_html_e( 'required', 'mycred' ); ?>" value="<?php echo esc_attr( $prefs['log'] ); ?>" class="form-control mycred-tutor_lms-log" />
+									<span class="description"><?php echo esc_html($obj->available_template_tags( array( 'general' ) )); ?></span>
 								</div>
 							</div>
 							<div class="row">

@@ -8,7 +8,6 @@
  * @since 2.0.0
  */
 
-$bg_image_url = apply_filters( 'tutor_email_bg', TUTOR_EMAIL()->default_bg );
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,15 +23,12 @@ $bg_image_url = apply_filters( 'tutor_email_bg', TUTOR_EMAIL()->default_bg );
 
 
 			<?php require TUTOR_PRO()->path . 'templates/email/email_header.php'; ?>
-			<div class="tutor-email-content"
-				<?php if ( ! empty( $bg_image_url ) ) : ?>
-				style="background: url(<?php echo esc_url( $bg_image_url ); ?>) top right no-repeat;"
-				<?php endif; ?>>
+			<div class="tutor-email-content">
 				<?php require TUTOR_PRO()->path . 'templates/email/email_heading_content.php'; ?>
 
 				<table class="tutor-email-datatable">
 					<tr>
-						<td>Course Name:</td>
+						<td><?php esc_html_e( 'Course Name:', 'tutor-pro' ); ?></td>
 						<td><strong>{course_title}</strong></td>
 					</tr>
 				</table>

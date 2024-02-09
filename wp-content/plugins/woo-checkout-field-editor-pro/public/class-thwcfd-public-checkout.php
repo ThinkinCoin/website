@@ -534,12 +534,15 @@ class THWCFD_Public_Checkout {
 		$custom_fields = array();
 		$fields = THWCFD_Utils::get_checkout_fields();
 
+		$order_id = THWCFD_Utils::get_order_id($order);
+		$order = wc_get_order( $order_id );
+		if(!$order){
+			return $ofields;
+		}
+
 		// Loop through all custom fields to see if it should be added
 		foreach( $fields as $key => $field ) {
 			if(isset($field['show_in_email']) && $field['show_in_email'] && !THWCFD_Utils::is_wc_handle_custom_field($field)){
-				$order_id = THWCFD_Utils::get_order_id($order);
-
-				$order = wc_get_order( $order_id );
 				
 				// $value = get_post_meta( $order_id, $key, true );
 				$value = $order->get_meta( $key, true );

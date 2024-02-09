@@ -1227,7 +1227,9 @@ class Options
         if ( 'default' !== $current_screen ) {
             return $options;
         }
-        $newurl = esc_url_raw( trim( $input['api_url'] ) );
+        if ( isset( $input['api_url'] ) ) {
+            $options['api_url'] = esc_url_raw( trim( $input['api_url'] ) );
+        }
         $use_managed_service = false;
         $woocommerce_login_form_show = false;
         $woocommerce_register_form_show = false;
@@ -1238,14 +1240,22 @@ class Options
         $register_button_label = '';
         $link_message = '';
         $redirect_url = '';
-        $wallet_connect_project_id = sanitize_text_field( trim( $input['wallet_connect_project_id'] ) );
-        $theme_mode = sanitize_text_field( trim( $input['theme_mode'] ) );
+        
+        if ( isset( $input['wallet_connect_project_id'] ) ) {
+            $wallet_connect_project_id = sanitize_text_field( trim( $input['wallet_connect_project_id'] ) );
+            $options['wallet_connect_project_id'] = $wallet_connect_project_id;
+        }
+        
+        
+        if ( isset( $input['theme_mode'] ) ) {
+            $theme_mode = sanitize_text_field( trim( $input['theme_mode'] ) );
+            $options['theme_mode'] = $theme_mode;
+        }
+        
         if ( empty($input['recursive']) && is_multisite() ) {
             // Mark next call as recursed.
             $options['recursive'] = true;
         }
-        $options['api_url'] = $newurl;
-        $options['redirect_url'] = $redirect_url;
         $options['use_managed_service'] = intval( $use_managed_service );
         $options['woocommerce_login_form_show'] = intval( $woocommerce_login_form_show );
         $options['woocommerce_register_form_show'] = intval( $woocommerce_register_form_show );
@@ -1255,11 +1265,7 @@ class Options
         $options['link_button_label'] = $link_button_label;
         $options['register_button_label'] = $register_button_label;
         $options['link_message'] = $link_message;
-        $options['wallet_connect_project_id'] = $wallet_connect_project_id;
-        $options['theme_mode'] = $theme_mode;
-        if ( isset( $input['have_db_users'] ) ) {
-            $options['have_db_users'] = $input['have_db_users'];
-        }
+        $options['redirect_url'] = $redirect_url;
         return $options;
     }
     

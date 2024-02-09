@@ -20,14 +20,27 @@ namespace Google\Service\Classroom;
 class ListStudentSubmissionsResponse extends \Google\Collection
 {
   protected $collection_key = 'studentSubmissions';
+  /**
+   * @var string
+   */
   public $nextPageToken;
+  /**
+   * @var StudentSubmission[]
+   */
+  public $studentSubmissions;
   protected $studentSubmissionsType = StudentSubmission::class;
   protected $studentSubmissionsDataType = 'array';
 
+  /**
+   * @param string
+   */
   public function setNextPageToken($nextPageToken)
   {
     $this->nextPageToken = $nextPageToken;
   }
+  /**
+   * @return string
+   */
   public function getNextPageToken()
   {
     return $this->nextPageToken;

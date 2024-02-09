@@ -3,11 +3,11 @@
  * Plugin Name: myCred Tutor LMS
  * Plugin URI: https://mycred.me
  * Description: Integeration with Tutor LMS.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Tags: point, credit, loyalty program, engagement, reward, woocommerce rewards
  * Author: myCred
  * Author URI: https://mycred.me/
- * Tested up to: WP 6.2
+ * Tested up to: WP 6.3.2
  * Text Domain: mycred_tutor_lms
  */
 
@@ -16,7 +16,7 @@ if ( ! class_exists( 'myCred_Tutor_lMS_Core' ) ) :
 	final class myCred_Tutor_lMS_Core {
 
 		// Plugin Version
-		public $version             = '1.0.1';
+		public $version             = '1.0.2';
 
 		// Instnace
 		protected static $_instance = NULL;
@@ -224,7 +224,7 @@ if ( ! class_exists( 'myCred_Tutor_lMS_Core' ) ) :
 			$msg = __( 'need to be active and installed to use myCred Tutor LMS plugin.', 'mycred_tutor_lms' );
 			
 			if ( !is_plugin_active('mycred/mycred.php') ) {
-				printf( '<div class="notice notice-error"><p><a href="https://wordpress.org/plugins/mycred/">%1$s</a> %2$s</p></div>', __( 'myCred', 'mycred_tutor_lms' ), esc_html( $msg ) );
+				printf( '<div class="notice notice-error"><p><a href="https://wordpress.org/plugins/mycred/">%1$s</a> %2$s</p></div>', esc_html_e( 'myCred', 'mycred_tutor_lms' ), esc_html( $msg ) );
 			}
 
 		}

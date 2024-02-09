@@ -20,8 +20,15 @@ namespace Google\Service\Classroom;
 class CourseMaterialSet extends \Google\Collection
 {
   protected $collection_key = 'materials';
+  /**
+   * @var CourseMaterial[]
+   */
+  public $materials;
   protected $materialsType = CourseMaterial::class;
   protected $materialsDataType = 'array';
+  /**
+   * @var string
+   */
   public $title;
 
   /**
@@ -38,10 +45,16 @@ class CourseMaterialSet extends \Google\Collection
   {
     return $this->materials;
   }
+  /**
+   * @param string
+   */
   public function setTitle($title)
   {
     $this->title = $title;
   }
+  /**
+   * @return string
+   */
   public function getTitle()
   {
     return $this->title;

@@ -1,70 +1,85 @@
 <?php
+/**
+ * Content Drip Addon Init
+ *
+ * @package TutorPro\Addons
+ * @subpackage ContentDrip
+ * @author Themeum <support@themeum.com>
+ * @link https://themeum.com
+ * @since 2.0.0
+ */
+
 namespace TUTOR_CONTENT_DRIP;
 
-if ( ! defined( 'ABSPATH' ) )
+if ( ! defined( 'ABSPATH' ) ) {
 	exit;
+}
 
-class init{
+//phpcs:ignore
+class init {
+	//phpcs:disable
 	public $version = TUTOR_CONTENT_DRIP_VERSION;
 	public $path;
 	public $url;
 	public $basename;
 
-	//Module
+	// Module.
 	private $content_drip;
+	//phpcs:enable
 
-	function __construct() {
-		if ( ! function_exists('tutor')){
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
+		if ( ! function_exists( 'tutor' ) ) {
 			return;
 		}
 
-		$addonConfig = tutor_utils()->get_addon_config(TUTOR_CONTENT_DRIP()->basename);
-		$isEnable = (bool) tutor_utils()->array_get('is_enable', $addonConfig);
-		if ( ! $isEnable){
+		$addon_config = tutor_utils()->get_addon_config( TUTOR_CONTENT_DRIP()->basename );
+		$is_enable    = (bool) tutor_utils()->array_get( 'is_enable', $addon_config );
+		if ( ! $is_enable ) {
 			return;
 		}
 
-		$this->path = plugin_dir_path(TUTOR_CONTENT_DRIP_FILE);
-		$this->url = plugin_dir_url(TUTOR_CONTENT_DRIP_FILE);
-		$this->basename = plugin_basename(TUTOR_CONTENT_DRIP_FILE);
+		$this->path     = plugin_dir_path( TUTOR_CONTENT_DRIP_FILE );
+		$this->url      = plugin_dir_url( TUTOR_CONTENT_DRIP_FILE );
+		$this->basename = plugin_basename( TUTOR_CONTENT_DRIP_FILE );
 
-		$this->load_TUTOR_CONTENT_DRIP();
+		$this->load_content_drip();
 	}
 
-	public function load_TUTOR_CONTENT_DRIP(){
-		/**
-		 * Loading Autoloader
-		 */
-
-		spl_autoload_register(array($this, 'loader'));
+	/**
+	 * Auto loader.
+	 *
+	 * @return void
+	 */
+	public function load_content_drip() {
+		spl_autoload_register( array( $this, 'loader' ) );
 		$this->content_drip = new ContentDrip();
 	}
 
 	/**
-	 * @param $className
-	 *
 	 * Auto Load class and the files
+	 *
+	 * @param string $class_name class name.
+	 *
+	 * @return void
 	 */
-	private function loader($className) {
-		if ( ! class_exists($className)){
-			$className = preg_replace(
-				array('/([a-z])([A-Z])/', '/\\\/'),
-				array('$1$2', DIRECTORY_SEPARATOR),
-				$className
+	private function loader( $class_name ) {
+		if ( ! class_exists( $class_name ) ) {
+			$class_name = preg_replace(
+				array( '/([a-z])([A-Z])/', '/\\\/' ),
+				array( '$1$2', DIRECTORY_SEPARATOR ),
+				$class_name
 			);
 
-			$className = str_replace('TUTOR_CONTENT_DRIP'.DIRECTORY_SEPARATOR, 'classes'.DIRECTORY_SEPARATOR, $className);
-			$file_name = $this->path.$className.'.php';
+			$class_name = str_replace( 'TUTOR_CONTENT_DRIP' . DIRECTORY_SEPARATOR, 'classes' . DIRECTORY_SEPARATOR, $class_name );
+			$file_name  = $this->path . $class_name . '.php';
 
-			if (file_exists($file_name)  ) {
+			if ( file_exists( $file_name ) ) {
 				require_once $file_name;
 			}
 		}
-	}
-
-	//Run the TUTOR right now
-	public function run(){
-		//
 	}
 
 }

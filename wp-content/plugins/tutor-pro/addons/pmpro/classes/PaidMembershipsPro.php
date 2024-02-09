@@ -3,7 +3,7 @@
  * PaidMembershipsPro class
  *
  * @author: themeum
- * @author_uri: https://themeum.com
+ * @link: https://themeum.com
  * @package Tutor
  * @since v.1.3.5
  */
@@ -20,6 +20,13 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Handle PMPRO logics
  */
 class PaidMembershipsPro {
+	/**
+	 * Membership types constants.
+	 *
+	 * @since 2.5.0
+	 */
+	const FULL_WEBSITE_MEMBERSHIP  = 'full_website_membership';
+	const CATEGORY_WISE_MEMBERSHIP = 'category_wise_membership';
 
 	/**
 	 * Register hooks
@@ -37,10 +44,10 @@ class PaidMembershipsPro {
 		add_filter( 'tutor/options/attr', array( $this, 'add_options' ) );
 
 		if ( tutor_utils()->has_pmpro( true ) ) {
-			// Remove price column if PM pro used
+			// Remove price column if PM pro used.
 			add_filter( 'manage_' . tutor()->course_post_type . '_posts_columns', array( $this, 'remove_price_column' ), 11, 1 );
 
-			// Add categories column to pm pro level table
+			// Add categories column to pm pro level table.
 			add_action( 'pmpro_membership_levels_table_extra_cols_header', array( $this, 'level_category_list' ) );
 			add_action( 'pmpro_membership_levels_table_extra_cols_body', array( $this, 'level_category_list_body' ) );
 			add_filter( 'pmpro_membership_levels_table', array( $this, 'outstanding_cat_notice' ) );
@@ -48,9 +55,61 @@ class PaidMembershipsPro {
 			add_action( 'admin_enqueue_scripts', array( $this, 'admin_script' ) );
 
 			add_filter( 'tutor_course_expire_validity', array( $this, 'filter_expire_time' ), 99, 2 );
+			add_action( 'pmpro_subscription_expired', array( $this, 'remove_course_access' ) );
 		}
 	}
 
+	/**
+	 * On PM Pro subscription expired, remove course access
+	 *
+	 * @see https://www.paidmembershipspro.com/hook/pmpro_subscription_expired
+	 *
+	 * @since 2.5.0
+	 *
+	 * @param \MemberOrder $old_order old order data.
+	 *
+	 * @return void
+	 */
+	public function remove_course_access( \MemberOrder $old_order ) {
+		$user_id = $old_order->user_id;
+		$level   = pmpro_getMembershipLevelForUser( $user_id );
+		$model   = get_pmpro_membership_level_meta( $level->id, 'tutor_pmpro_membership_model', true );
+
+		$all_models = array( self::FULL_WEBSITE_MEMBERSHIP, self::CATEGORY_WISE_MEMBERSHIP );
+		if ( ! in_array( $model, $all_models, true ) ) {
+			return;
+		}
+
+		$enrolled_courses = array();
+
+		if ( self::FULL_WEBSITE_MEMBERSHIP === $model ) {
+			$enrolled_courses = tutor_utils()->get_enrolled_courses_by_user( $user_id );
+		}
+
+		if ( self::CATEGORY_WISE_MEMBERSHIP === $model ) {
+			$lbl_obj    = new \PMPro_Membership_Level();
+			$categories = (array) $lbl_obj->get_membership_level_categories( $level->id );
+			if ( count( $categories ) ) {
+				$enrolled_courses = tutor_utils()->get_enrolled_courses_by_user( $user_id, 'publish', 0, -1, array( 'category__in' => $categories ) );
+			}
+		}
+
+		// Now cancel the course enrollment.
+		if ( isset( $enrolled_courses->posts ) && is_array( $enrolled_courses->posts ) && count( $enrolled_courses->posts ) ) {
+			foreach ( $enrolled_courses->posts as $course ) {
+				tutor_utils()->cancel_course_enrol( $course->ID, $user_id );
+			}
+		}
+
+	}
+
+	/**
+	 * Remove price column
+	 *
+	 * @param array $columns columns.
+	 *
+	 * @return array
+	 */
 	public function remove_price_column( $columns = array() ) {
 
 		if ( isset( $columns['price'] ) ) {
@@ -60,11 +119,16 @@ class PaidMembershipsPro {
 		return $columns;
 	}
 
+	/**
+	 * Display courses categories
+	 *
+	 * @return void
+	 */
 	public function display_courses_categories() {
 		global $wpdb;
 
 		if ( Input::has( 'edit' ) ) {
-			$edit = intval( $_REQUEST['edit'] );
+			$edit = intval( $_REQUEST['edit'] ); //phpcs:ignore
 		} else {
 			$edit = false;
 		}
@@ -110,8 +174,8 @@ class PaidMembershipsPro {
 			$edit                     = -1;
 		}
 
-		// defaults for new levels
-		if ( empty( $copy ) && $edit == -1 ) {
+		// defaults for new levels.
+		if ( empty( $copy ) && -1 == $edit ) {
 			$level->cycle_number = 1;
 			$level->cycle_period = 'Month';
 		}
@@ -140,38 +204,49 @@ class PaidMembershipsPro {
 	}
 
 	/**
-	 * pmpro tutor settings saving
+	 * PM Pro save tutor settings
+	 *
+	 * @param int $level_id level id.
+	 *
+	 * @return void
 	 */
 	public function pmpro_settings( $level_id ) {
 
-		if ( ! isset( $_POST['tutor_action'] ) || $_POST['tutor_action'] != 'pmpro_settings' ) {
+		if ( 'pmpro_settings' !== Input::post( 'tutor_action' ) ) {
 			return;
 		}
 
-		$tutor_pmpro_membership_model = sanitize_text_field( tutor_utils()->array_get( 'tutor_pmpro_membership_model', $_POST ) );
-		$highlight_level              = sanitize_text_field( tutor_utils()->array_get( 'tutor_pmpro_level_highlight', $_POST ) );
+		$tutor_pmpro_membership_model = Input::post( 'tutor_pmpro_membership_model' );
+		$highlight_level              = Input::post( 'tutor_pmpro_level_highlight' );
 
 		if ( $tutor_pmpro_membership_model ) {
 			update_pmpro_membership_level_meta( $level_id, 'tutor_pmpro_membership_model', $tutor_pmpro_membership_model );
 		}
 
-		if ( $highlight_level && $highlight_level == 1 ) {
+		if ( $highlight_level && 1 == $highlight_level ) {
 			update_pmpro_membership_level_meta( $level_id, 'tutor_pmpro_level_highlight', 1 );
 		} else {
 			delete_pmpro_membership_level_meta( $level_id, 'tutor_pmpro_level_highlight' );
 		}
 	}
 
+	/**
+	 * Add options.
+	 *
+	 * @param array $attr attr.
+	 *
+	 * @return array
+	 */
 	public function add_options( $attr ) {
 		$attr['tutor_pmpro'] = array(
-			'label'    => __( 'PM Pro', 'tutor' ),
+			'label'    => __( 'PM Pro', 'tutor-pro' ),
 			'slug'     => 'pm-pro',
 			'desc'     => __( 'Paid Membership', 'tutor-pro' ),
 			'template' => 'basic',
 			'icon'     => 'tutor-icon-brand-paid-membersip-pro',
 			'blocks'   => array(
 				array(
-					'label'      => __( '', 'tutor' ),
+					'label'      => '',
 					'slug'       => 'pm_pro',
 					'block_type' => 'uniform',
 					'fields'     => array(
@@ -197,6 +272,14 @@ class PaidMembershipsPro {
 		return $attr;
 	}
 
+	/**
+	 * Required levels
+	 *
+	 * @param mixed   $term_ids term ids.
+	 * @param boolean $check_full check full.
+	 *
+	 * @return mixed
+	 */
 	private function required_levels( $term_ids, $check_full = false ) {
 
 		global $wpdb;
@@ -205,6 +288,7 @@ class PaidMembershipsPro {
 		$query_last = ( $check_full ? " meta.meta_value='full_website_membership' " : '' ) . $cat_clause;
 		$query_last = ( ! $query_last || ctype_space( $query_last ) ) ? '' : ' AND (' . $query_last . ')';
 
+		//phpcs:disable
 		return $wpdb->get_results(
 			"SELECT DISTINCT level_table.*
             FROM {$wpdb->pmpro_membership_levels} level_table 
@@ -213,8 +297,14 @@ class PaidMembershipsPro {
             WHERE 
                 meta.meta_key='tutor_pmpro_membership_model' " . $query_last
 		);
+		//phpcs:enable
 	}
 
+	/**
+	 * Check has any full site level.
+	 *
+	 * @return boolean
+	 */
 	private function has_any_full_site_level() {
 		global $wpdb;
 
@@ -231,11 +321,12 @@ class PaidMembershipsPro {
 	}
 
 	/**
-	 * @return bool
-	 *
 	 * Just check if has membership access
 	 *
-	 * @since v.1.7.5
+	 * @param int $course_id course id.
+	 * @param int $user_id user id.
+	 *
+	 * @return boolean
 	 */
 	private function has_course_access( $course_id, $user_id = null ) {
 		global $wpdb;
@@ -246,7 +337,7 @@ class PaidMembershipsPro {
 		}
 
 		// Prepare data.
-		$user_id           = $user_id === null ? get_current_user_id() : $user_id;
+		$user_id           = null === $user_id ? get_current_user_id() : $user_id;
 		$has_course_access = false;
 
 		// Get all membership levels of this user.
@@ -285,11 +376,11 @@ class PaidMembershipsPro {
 
 			$model = get_pmpro_membership_level_meta( $level->id, 'tutor_pmpro_membership_model', true );
 
-			if ( $model == 'full_website_membership' ) {
+			if ( self::FULL_WEBSITE_MEMBERSHIP === $model ) {
 				// If any model of the user is full site then the user has membership access.
 				$has_course_access = true;
 
-			} elseif ( $model == 'category_wise_membership' ) {
+			} elseif ( self::CATEGORY_WISE_MEMBERSHIP === $model ) {
 				// Check this course if attached to any category that is linked with this membership.
 				$member_cats = pmpro_getMembershipCategories( $level->id );
 				$member_cats = array_map(
@@ -313,32 +404,28 @@ class PaidMembershipsPro {
 	}
 
 	/**
-	 * @param $html
+	 * Add membership required.
 	 *
-	 * @return mixed|void
+	 * @param mixed $price price.
 	 *
-	 * Enrollment main logic for Membership
-	 *
-	 * @since v.1.7.5
+	 * @return mixed
 	 */
 	public function add_membership_required( $price ) {
 		return ! ( $this->has_course_access( get_the_ID() ) === true ) ? '' : __( 'Free', 'tutor-pro' );
 	}
 
 	/**
-	 * @param $html
+	 * Tutor course add to cart
 	 *
-	 * @return mixed|void
+	 * @param mixed $html html.
 	 *
-	 * Enrollment main logic for Membership
-	 *
-	 * @since v.1.3.6
+	 * @return mixed
 	 */
 	public function tutor_course_add_to_cart( $html ) {
 
 		$access_require = $this->has_course_access( get_the_ID() );
-		if ( $access_require === true ) {
-			// If has membership access, then no need membership require message
+		if ( true === $access_require ) {
+			// If has membership access, then no need membership require message.
 			return $html;
 		}
 
@@ -399,7 +486,7 @@ class PaidMembershipsPro {
 
 		$required_levels = $this->has_course_access( $course_id );
 
-		if ( $required_levels === true || ! count( $required_levels ) ) {
+		if ( true === $required_levels || ! count( $required_levels ) ) {
 			// If has membership access, then no need membership pricing.
 			return $html;
 		}
@@ -407,6 +494,7 @@ class PaidMembershipsPro {
 		$level_page_id  = apply_filters( 'tutor_pmpro_level_page_id', pmpro_getOption( 'levels_page_id' ) );
 		$level_page_url = get_the_permalink( $level_page_id );
 
+		//phpcs:ignore
 		extract( $this->get_pmpro_currency() ); // $currency_symbol, $currency_position.
 
 		ob_start();
@@ -415,27 +503,40 @@ class PaidMembershipsPro {
 	}
 
 	/**
-	 * @param $html
-	 *
-	 * @return string
-	 *
 	 * Remove the price if Membership Plan activated
 	 *
-	 * @since v.1.3.6
+	 * @param string $html html.
+	 *
+	 * @return mixed
 	 */
 	public function tutor_course_price( $html ) {
 		return get_tutor_option( 'monetize_by' ) == 'pmpro' ? '' : $html;
 	}
 
+	/**
+	 * Level category list
+	 *
+	 * @param mixed $reordered_levels reordered levels.
+	 *
+	 * @return void
+	 */
 	public function level_category_list( $reordered_levels ) {
-		echo '<th>' . __( 'Recommended' ) . '</th>';
-		echo '<th>' . __( 'Type' ) . '</th>';
+		echo '<th>' . esc_html__( 'Recommended', 'tutor-pro' ) . '</th>';
+		echo '<th>' . esc_html__( 'Type', 'tutor-pro' ) . '</th>';
 	}
 
+	/**
+	 * Level category list body
+	 *
+	 * @param object $level level object.
+	 *
+	 * @return void
+	 */
 	public function level_category_list_body( $level ) {
 		$model     = get_pmpro_membership_level_meta( $level->id, 'tutor_pmpro_membership_model', true );
 		$highlight = get_pmpro_membership_level_meta( $level->id, 'tutor_pmpro_level_highlight', true );
 
+		//phpcs:disable
 		echo '<td>' . ( $highlight ? '<img src="' . TUTOR_PMPRO()->url . 'assets/images/star.svg"/>' : '' ) . '</td>';
 
 		echo '<td>';
@@ -460,15 +561,21 @@ class PaidMembershipsPro {
 				echo implode( ', ', $term_links );
 			}
 		}
+		//phpcs:enable
 
 		echo '</td>';
 	}
 
+	/**
+	 * Get PM pro currency
+	 *
+	 * @return mixed
+	 */
 	private function get_pmpro_currency() {
 
 		global $pmpro_currencies, $pmpro_currency;
 		$current_currency = $pmpro_currency ? $pmpro_currency : '';
-		$currency         = $current_currency == 'USD' ?
+		$currency         = 'USD' == $current_currency ?
 								array( 'symbol' => '$' ) :
 								( isset( $pmpro_currencies[ $current_currency ] ) ? $pmpro_currencies[ $current_currency ] : null );
 
@@ -478,10 +585,17 @@ class PaidMembershipsPro {
 		return compact( 'currency_symbol', 'currency_position' );
 	}
 
+	/**
+	 * Outstanding cat notice.
+	 *
+	 * @param string $html html.
+	 *
+	 * @return string
+	 */
 	public function outstanding_cat_notice( $html ) {
 		global $wpdb;
 
-		// Get all categories from all levels
+		// Get all categories from all levels.
 		$level_cats                             = $wpdb->get_col(
 			"SELECT cat.category_id 
             FROM {$wpdb->pmpro_memberships_categories} cat 
@@ -498,22 +612,33 @@ class PaidMembershipsPro {
 
 		ob_start();
 
+		//phpcs:ignore
 		extract( $this->get_pmpro_currency() ); // $currency_symbol, $currency_position
 		include dirname( __DIR__ ) . '/views/outstanding-catagory-notice.php';
 
 		return $html . ob_get_clean();
 	}
 
+	/**
+	 * Style enqueue
+	 *
+	 * @return void
+	 */
 	public function pricing_style() {
 		if ( is_single_course() ) {
-			wp_enqueue_style( 'tutor-pmpro-pricing', TUTOR_PMPRO()->url . 'assets/css/pricing.css' );
+			wp_enqueue_style( 'tutor-pmpro-pricing', TUTOR_PMPRO()->url . 'assets/css/pricing.css', array(), TUTOR_VERSION );
 		}
 	}
 
+	/**
+	 * Admin style enqueue
+	 *
+	 * @return void
+	 */
 	public function admin_script() {
 		$screen = get_current_screen();
 		if ( 'memberships_page_pmpro-membershiplevels' === $screen->id ) {
-			wp_enqueue_style( 'tutor-pmpro', TUTOR_PMPRO()->url . 'assets/css/pm-pro.css' );
+			wp_enqueue_style( 'tutor-pmpro', TUTOR_PMPRO()->url . 'assets/css/pm-pro.css', array(), TUTOR_VERSION );
 		}
 	}
 

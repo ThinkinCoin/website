@@ -85,7 +85,6 @@ class Mo_API_Authentication_Third_Party_Provider_Config {
 						<div class="mo_rest_tpp_auth_text">
 							<p class="mo_rest_tpp_auth_text_p">Token via Custom API</p></div>
 					</div>
-					
 					<div class="mo_api_flex_child mo_api_no_cursor mo_rest_third_party_provider">
 						<div class="mo_rest_tpp_auth_box">	
 							<img src="<?php echo esc_url( plugin_dir_url( dirname( dirname( dirname( __FILE__ ) ) ) ) . '/images/wordpress-logo.png' ); ?>" height="40px" width="40px">
@@ -116,7 +115,6 @@ class Mo_API_Authentication_Third_Party_Provider_Config {
 						<div class="mo_rest_tpp_auth_text">
 							<p class="mo_rest_tpp_auth_text_p">Azure AD</p></div>
 					</div>
-					
 					<div class="mo_api_flex_child mo_api_no_cursor mo_rest_third_party_provider">
 						<div class="mo_rest_tpp_auth_box">	
 							<img src="<?php echo esc_url( plugin_dir_url( dirname( dirname( dirname( __FILE__ ) ) ) ) . '/images/azure.png' ); ?>" height="40px" width="40px">

@@ -5,8 +5,8 @@
 
 .mycred-users-badges .the-badge.horizontal {
     display: inline-flex;
-    margin-right: 2px;
-    margin-bottom: 2px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .mycred-users-badges .the-badge .mycred-badge-content {

@@ -36,9 +36,17 @@ class Init {
 	private $upgrader;
 	private $google_meet;
 
+	private $course_duplicator;
+	private $instructor_percentage;
+	private $enrollment_expiry;
+	private $dashboard;
+	private $shortcode;
+	private $updater;
+
 	private $email_verification;
 	private $device_management;
 	private $instructor;
+	private $rest_api;
 	//phpcs:enable Squiz.Commenting.VariableComment.Missing
 
 	/**
@@ -105,6 +113,7 @@ class Init {
 		$this->instructor            = new Instructor();
 		$this->device_management     = new DeviceManagement();
 		$this->email_verification    = new EmailVerification();
+		$this->rest_api              = new RestAPI();
 
 		new Filters();
 		new ContentSecurity();
@@ -149,7 +158,7 @@ class Init {
 			);
 
 			$class_name = str_replace( 'TUTOR_PRO' . DIRECTORY_SEPARATOR, 'classes' . DIRECTORY_SEPARATOR, $class_name );
-			$file_name = $this->path . $class_name . '.php';
+			$file_name  = $this->path . $class_name . '.php';
 
 			if ( file_exists( $file_name ) && is_readable( $file_name ) ) {
 				require_once $file_name;

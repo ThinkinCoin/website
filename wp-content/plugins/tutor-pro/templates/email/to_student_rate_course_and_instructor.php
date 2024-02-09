@@ -3,7 +3,7 @@
  * @package TUTOR_LMS_PRO/EmailTemplates
  * @since 2.0
  */
-
+// this template not used yet, but future it can be
 ?>
 
 <div style="
@@ -30,7 +30,7 @@
 					line-height: 140%;
 					color: #212327;
 				">
-				Q&amp;A message answered as
+				<?php esc_html_e( 'Q&amp;A message answered as', 'tutor-pro' ); ?>
 			</h6>
 		</div>
 		<div style="color: #212327; font-weight: 400; font-size: 16px; line-height: 162%">
@@ -51,7 +51,7 @@
 
 		<div style="font-weight: 400; font-size: 16px; line-height: 162%">
 			<p style="color: #41454f; margin-bottom: 30px">
-				Here is the answer-
+			<?php esc_html_e( 'Here is the answer', 'tutor-pro' ); ?>-
 			</p>
 			<div style="
 					display: flex !important;
@@ -73,18 +73,16 @@
 								font-weight: 500;
 								font-size: 16px;
 								line-height: 162%;
-							">James Andy</span>
+							"><?php esc_html_e( 'James Andy', 'tutor-pro' ); ?></span>
 						<span  style="
 								color: #5b616f;
 								font-weight: 400;
 								font-size: 15px;
 								line-height: 160%;
-							">1 days ago</span>
+							"><?php esc_html_e( '1 days ago', 'tutor-pro' ); ?></span>
 					</div>
 					<p  style="color: #41454f">
-						1 days ago I help ambitious graphic designers and hand letterers level-up
-						their skills and creativity. Grab freebies + tutorials here! &gt;&gt;
-						https://every-tuesday.com
+						<?php esc_html_e( '1 days ago I help ambitious graphic designers and hand letterers level-up their skills and creativity. Grab freebies + tutorials here! &gt;&gt; https://every-tuesday.com', 'tutor-pro' ); ?>
 					</p>
 				</div>
 			</div>
@@ -98,7 +96,7 @@
 				margin-top: 30px;
 				text-align: center;
 			">
-			<p>Please click on this link to reply to the question</p>
+			<p><?php esc_html_e( 'Please click on this link to reply to the question', 'tutor-pro' ); ?></p>
 			<a href="#" data-source="email-btn-url" style="
 					background-color: #1973aa;
 					border-color: #1973aa;
@@ -119,7 +117,7 @@
 					display: inline-flex;
 					justify-content: center;
 					align-items: center;
-				">Reply Q&amp;A</a>
+				"><?php esc_html_e( 'Reply Q&amp;A', 'tutor-pro' ); ?></a>
 		</div>
 	</div>
 	<!-- /.template-body -->

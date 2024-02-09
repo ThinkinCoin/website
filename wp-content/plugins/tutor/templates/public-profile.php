@@ -173,7 +173,7 @@ do_action( 'tutor_profile/' . $user_type . '/before/wrap' );
 
 		<div class="tutor-container" style="overflow:auto">
 			<div class="tutor-user-profile-sidebar">
-				
+
 			</div>
 			<div class="tutor-user-profile-content tutor-d-block tutor-mt-72">
 				<h3><?php esc_html_e( 'Biography', 'tutor' ); ?></h3>
@@ -197,7 +197,6 @@ do_action( 'tutor_profile/' . $user_type . '/before/wrap' );
 				}
 				?>
 			</div>
-			
 		</div>
 	</div>
 <?php

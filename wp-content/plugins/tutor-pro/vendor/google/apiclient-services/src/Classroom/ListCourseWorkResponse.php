@@ -20,8 +20,15 @@ namespace Google\Service\Classroom;
 class ListCourseWorkResponse extends \Google\Collection
 {
   protected $collection_key = 'courseWork';
+  /**
+   * @var CourseWork[]
+   */
+  public $courseWork;
   protected $courseWorkType = CourseWork::class;
   protected $courseWorkDataType = 'array';
+  /**
+   * @var string
+   */
   public $nextPageToken;
 
   /**
@@ -38,10 +45,16 @@ class ListCourseWorkResponse extends \Google\Collection
   {
     return $this->courseWork;
   }
+  /**
+   * @param string
+   */
   public function setNextPageToken($nextPageToken)
   {
     $this->nextPageToken = $nextPageToken;
   }
+  /**
+   * @return string
+   */
   public function getNextPageToken()
   {
     return $this->nextPageToken;

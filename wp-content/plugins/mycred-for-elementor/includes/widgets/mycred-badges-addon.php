@@ -91,6 +91,14 @@ class Widget_Mycred_My_Badges extends \Elementor\Widget_Base {
                 ]
         );
 
+        $this->add_control(
+                'title', [
+            'label' => __('Badge title', 'mycred_elem'),
+            'type' => \Elementor\Controls_Manager::SWITCHER,
+            'default' => 'no',
+            'description' => __('Option to show Badge Title', 'mycred_elem')
+                ]
+        );
 
         $this->add_control(
                 'width', [
@@ -115,7 +123,7 @@ class Widget_Mycred_My_Badges extends \Elementor\Widget_Base {
                 'user_id', [
             'label' => __('User ID', 'mycred_elem'),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => '',
+            'default' => 'no',
             'description' => __('Option to show a specific users badges.', 'mycred_elem')
                 ]
         );
@@ -139,6 +147,12 @@ class Widget_Mycred_My_Badges extends \Elementor\Widget_Base {
         if (!empty($settings['show'])) {
             $this->add_render_attribute('shortcode', 'show', $settings['show']);
         }
+
+        $title = $settings['title'] == 'yes' ? 1 : 0;
+        if (!empty($settings['title'])) {
+            $this->add_render_attribute('shortcode', 'title', $title);
+        }
+
         if (!empty($settings['width'])) {
             $this->add_render_attribute('shortcode', 'width', $settings['width']);
         }
@@ -153,7 +167,7 @@ class Widget_Mycred_My_Badges extends \Elementor\Widget_Base {
 
         $shortcode = do_shortcode('[mycred_my_badges ' . $this->get_render_attribute_string('shortcode') . ']');
         ?>
-        <div class="elementor-shortcode"><?php echo $shortcode; ?></div>
+        <div class="elementor-shortcode"><?php echo $shortcode;  ?></div>
 
         <?php
     }

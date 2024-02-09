@@ -13,8 +13,6 @@ use TutorPro\GoogleMeet\GoogleMeet;
 use TutorPro\GoogleMeet\Models\EventsModel;
 use TutorPro\GoogleMeet\Utilities\Utilities;
 
-get_tutor_header();
-
 global $post;
 
 $enable_spotlight_mode = tutor_utils()->get_option( 'enable_spotlight_mode' );

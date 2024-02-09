@@ -10,11 +10,13 @@
 
 namespace TUTOR_ZOOM;
 
+use TUTOR\Tutor_Base;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class Zoom {
+class Zoom extends Tutor_Base {
 
 	private $api_key;
 	private $settings_key;
@@ -23,6 +25,8 @@ class Zoom {
 	private $zoom_meeting_post_meta;
 
 	function __construct( $register_hooks = true ) {
+		parent::__construct();
+
 		$this->api_key                = 'tutor_zoom_api';
 		$this->settings_key           = 'tutor_zoom_settings';
 		$this->zoom_meeting_post_type = 'tutor_zoom_meeting';
@@ -101,6 +105,35 @@ class Zoom {
 		 */
 		add_action( 'admin_notices', array( $this, 'show_admin_notice' ) );
 		add_action( 'wp_footer', array( $this, 'show_notice_frontend' ) );
+
+		add_filter( 'post_type_link', array( $this, 'change_zoom_single_url' ), 1, 2 );
+	}
+
+	/**
+	 * Change zoom meeting single URL
+	 *
+	 * @since 2.6.0
+	 *
+	 * @param string  $post_link post link.
+	 * @param integer $id id.
+	 *
+	 * @return string
+	 */
+	public function change_zoom_single_url( $post_link, $id = 0 ) {
+		$post = get_post( $id );
+
+		if ( is_object( $post ) && 'tutor_zoom_meeting' === $post->post_type ) {
+			$course_id = tutor_utils()->get_course_id_by( 'zoom_lesson', $post->ID );
+			$course    = get_post( $course_id );
+
+			if ( is_object( $course ) ) {
+				return home_url( "/{$this->course_base_permalink}/{$course->post_name}/zoom-lessons/" . $post->post_name . '/' );
+			} else {
+				return home_url( "/{$this->course_base_permalink}/sample-course/zoom-lessons/" . $post->post_name . '/' );
+			}
+		}
+
+		return $post_link;
 	}
 
 	public function course_builder_row( $meeting, $topic, $course_id, $index = null ) {

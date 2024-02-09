@@ -8,7 +8,6 @@
  * @since 2.0.0
  */
 
-$bg_image_url = apply_filters( 'tutor_email_bg', TUTOR_EMAIL()->default_bg );
 ?>
 
 <!DOCTYPE html>
@@ -25,16 +24,13 @@ $bg_image_url = apply_filters( 'tutor_email_bg', TUTOR_EMAIL()->default_bg );
 
 
 			<?php require TUTOR_PRO()->path . 'templates/email/email_header.php'; ?>
-			<div class="tutor-email-content"
-				<?php if ( ! empty( $bg_image_url ) ) : ?>
-				style="background: url(<?php echo esc_url( $bg_image_url ); ?>) top right no-repeat;"
-				<?php endif; ?>>
+			<div class="tutor-email-content">
 				<?php require TUTOR_PRO()->path . 'templates/email/email_heading_content.php'; ?>
 
 				<table class="tutor-email-datatable" width="100%">
 					<tr>
 						<td><?php esc_html_e( 'Your score:', 'tutor-pro' ); ?></td>
-						<td><strong>{assignment_score}  <?php esc_html_e( 'out of', 'tutor-pro' ); ?> {assignment_max_mark}  <?php esc_html_e( 'Pass', 'tutor-pro' ); ?></strong></td>
+						<td><strong>{assignment_score}  <?php esc_html_e( 'out of', 'tutor-pro' ); ?> {assignment_max_mark} </strong></td>
 					</tr>
 				</table>
 
@@ -44,7 +40,7 @@ $bg_image_url = apply_filters( 'tutor_email_bg', TUTOR_EMAIL()->default_bg );
 				</div>
 
 				<div class="tutor-email-buttons">
-					<a target="_blank" class="tutor-email-button" href="{course_url}"><?php esc_html_e( 'Go to Assignment Review', 'tutor-pro' ); ?></a>
+					<a target="_blank" class="tutor-email-button" href="{assignment_url}"><?php esc_html_e( 'Go to Assignment Review', 'tutor-pro' ); ?></a>
 				</div>
 
 			</div>

@@ -60,7 +60,7 @@ class General {
 			?>
 			<div class="tutor-topbar-complete-btn tutor-mr-20">
 				<form method="post">
-					<?php wp_nonce_field( tutor()->nonce_action, tutor()->nonce ); ?>
+					<?php wp_nonce_field( tutor()->nonce_action, tutor()->nonce, false ); ?>
 					<input type="hidden" name="course_id" value="<?php echo esc_attr( $course_id ); ?>"/>
 					<input type="hidden" name="tutor_action" value="tutor_complete_course"/>
 					<button type="submit" 
@@ -284,7 +284,7 @@ class General {
 			)
 		);
 
-		$attr['advanced']['blocks'][1]['fields'][] = array(
+		$attr['advanced']['blocks'][0]['fields'][] = array(
 			'key'         => 'hide_admin_bar_for_users',
 			'type'        => 'toggle_switch',
 			'label'       => __( 'Hide Admin Bar and Restrict Access to WP Admin for Instructors', 'tutor' ),
@@ -455,11 +455,17 @@ class General {
 	 * @return string
 	 */
 	public function tutor_email_logo_src( $url = null, $size = null ) {
+		$hotlink_protection = (bool) get_tutor_option( ContentSecurity::HOTLINKING_OPTION );
+		$media_id_or_url    = get_tutor_option( 'tutor_email_template_logo_id' );
 
-		$media_id = (int) get_tutor_option( 'tutor_email_template_logo_id' );
-		if ( $media_id ) {
-			return wp_get_attachment_image_url( $media_id, 'tutor-email-logo-size' );
+		if ( $hotlink_protection ) {
+			return esc_url( $media_id_or_url );
 		}
+
+		if ( (int) $media_id_or_url ) {
+			return wp_get_attachment_image_url( $media_id_or_url, 'full' );
+		}
+
 		return $url;
 	}
 

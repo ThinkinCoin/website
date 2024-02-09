@@ -9,6 +9,7 @@ return array(
     'phpseclib\\' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
     'Zoom\\' => array($baseDir . '/addons/tutor-zoom/zoom-app'),
     'TutorPro\\SocialLogin\\' => array($baseDir . '/addons/social-login/includes'),
+    'TutorPro\\RestAPI\\' => array($baseDir . '/rest-api'),
     'TutorPro\\GoogleMeet\\' => array($baseDir . '/addons/google-meet/includes'),
     'TutorPro\\CourseBundle\\' => array($baseDir . '/addons/course-bundle/src'),
     'TutorPro\\ChatGPT\\' => array($baseDir . '/addons/tutor-chatgpt/classes'),

@@ -91,7 +91,6 @@ class EvmBasedChains {
             "hexId" => "0xa869",
             "name" => "Avalanche FUJI C-Chain Testnet",
             "rpcUrl" => "https://api.avax-test.network/ext/bc/C/rpc",
-            "wsUrl" => "wss://ws-nd-455-905-634.p2pify.com/6391d49e37bb671756732c155bedbd71/ext/bc/C/ws",
             "explorerUrl" => "https://cchain.explorer.avax-test.network",
             "nativeCurrency" => [
                 "symbol" => "AVAX",

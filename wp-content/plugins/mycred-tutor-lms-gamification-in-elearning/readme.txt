@@ -2,8 +2,8 @@
 Contributors: wpexpertsio, mycred
 Tags: Gamification, lms, elearning, quiz, mycred
 Requires at least: 4.8
-Tested up to: 6.2
-Stable tag: 1.0.1
+Tested up to: 6.3.2
+Stable tag: 1.0.2
 License: GNU AGPLv3
 License URI: http://www.gnu.org/licenses/agpl-3.0.html
 
@@ -79,8 +79,11 @@ The admin can also choose to deduct points on certain events like failing any ge
 
 == Changelog ==
 
+= 1.0.2 =
+TWEAK - Added compatibility for the myCred v2.6.
+
 = 1.0.1 =
-New – Compatible with WordPress 6.2
+New – Compatible with WordPress 6.1.1
 
 = 1.0 =
 * Initial release.

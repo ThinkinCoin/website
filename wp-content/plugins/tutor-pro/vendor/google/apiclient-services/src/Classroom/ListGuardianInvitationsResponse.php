@@ -20,8 +20,15 @@ namespace Google\Service\Classroom;
 class ListGuardianInvitationsResponse extends \Google\Collection
 {
   protected $collection_key = 'guardianInvitations';
+  /**
+   * @var GuardianInvitation[]
+   */
+  public $guardianInvitations;
   protected $guardianInvitationsType = GuardianInvitation::class;
   protected $guardianInvitationsDataType = 'array';
+  /**
+   * @var string
+   */
   public $nextPageToken;
 
   /**
@@ -38,10 +45,16 @@ class ListGuardianInvitationsResponse extends \Google\Collection
   {
     return $this->guardianInvitations;
   }
+  /**
+   * @param string
+   */
   public function setNextPageToken($nextPageToken)
   {
     $this->nextPageToken = $nextPageToken;
   }
+  /**
+   * @return string
+   */
   public function getNextPageToken()
   {
     return $this->nextPageToken;

@@ -1,16 +1,14 @@
 <?php
-/*
-Plugin Name: Tutor Email Notification
-Plugin URI: https://www.themeum.com/product/tutor-buddypress
-Description: Allow Membership to your LMS website
-Author: Themeum
-Version: 1.0.0
-Author URI: http://themeum.com
-Requires at least: 4.5
-Tested up to: 4.9
-Text Domain: tutor-buddypress
-Domain Path: /languages/
-*/
+/**
+ * Buddypress Integration
+ *
+ * @package TutorPro\Addons
+ * @subpackage Buddypress
+ * @author Themeum <support@themeum.com>
+ * @link https://themeum.com
+ * @since 2.0.0
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -21,30 +19,43 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'TUTOR_BP_VERSION', '1.0.0' );
 define( 'TUTOR_BP_FILE', __FILE__ );
 
+add_filter( 'tutor_addons_lists_config', 'tutor_bp_config' );
 /**
  * Showing config for addons central lists
+ *
+ * @param array $config config.
+ *
+ * @return array
  */
-add_filter( 'tutor_addons_lists_config', 'tutor_bp_config' );
 function tutor_bp_config( $config ) {
 	$buddy_press     = ABSPATH . 'wp-content/plugins/buddypress/bp-loader.php';
 	$buddy_boss      = ABSPATH . 'wp-content/plugins/buddyboss-platform/bp-loader.php';
 	$required_plugin = 'buddypress/bp-loader.php';
+
 	if ( ! file_exists( $buddy_press ) && file_exists( $buddy_boss ) ) {
 		$required_plugin = 'buddyboss-platform/bp-loader.php';
 	}
-	$newConfig   = array(
+
+	$new_config = array(
 		'name'           => __( 'BuddyPress', 'tutor-pro' ),
 		'description'    => __( 'Discuss about course and share your knowledge with your friends through BuddyPress', 'tutor-pro' ),
 		'depend_plugins' => array( $required_plugin => 'BuddyPress' ),
 	);
-	$basicConfig = (array) TUTOR_BP();
-	$newConfig   = array_merge( $newConfig, $basicConfig );
 
-	$config[ plugin_basename( TUTOR_BP_FILE ) ] = $newConfig;
+	$basic_config = (array) TUTOR_BP();
+	$new_config   = array_merge( $new_config, $basic_config );
+
+	$config[ plugin_basename( TUTOR_BP_FILE ) ] = $new_config;
 	return $config;
 }
 
 if ( ! function_exists( 'TUTOR_BP' ) ) {
+	/**
+	 * Buddypress addon helper
+	 *
+	 * @return object
+	 */
+	//phpcs:ignore
 	function TUTOR_BP() {
 		$info = array(
 			'path'         => plugin_dir_path( TUTOR_BP_FILE ),
@@ -60,5 +71,4 @@ if ( ! function_exists( 'TUTOR_BP' ) ) {
 }
 
 require 'classes/init.php';
-$tutor = new \TUTOR_BP\init();
-$tutor->run(); // Boom
+new \TUTOR_BP\init();

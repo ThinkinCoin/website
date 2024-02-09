@@ -271,8 +271,7 @@ class Mo_API_Authentication_Jwt_Auth_Config {
 				var token_endpoint_obj = document.getElementById('rest_validate_endpoint');
 				token_endpoint_obj.style.width = ((token_endpoint_obj.value.length + 1) * 7) + 'px';
 				var token_endpoint_obj = document.getElementById('rest_endpoint_jwt_auth');
-				token_endpoint_obj.style.width = ((token_endpoint_obj.value.length + 1) * 7) + 'px';
-				
+				token_endpoint_obj.style.width = ((token_endpoint_obj.value.length + 1) * 7) + 'px';			
 				function MO_RAO_append_params_jwt( endpoint, params ) {
 					regex             = /.+\?.+=.+/i;
 					regex1            = /.+\?/;

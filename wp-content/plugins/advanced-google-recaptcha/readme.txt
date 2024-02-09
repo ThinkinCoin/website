@@ -1,22 +1,20 @@
 === Advanced Google reCAPTCHA ===
 
 Contributors: WebFactory
-Tags: captcha, recaptcha, google recaptcha, comment recaptcha, login recaptcha, brute force, spam, block, bots, protect, registration, google captcha, woocommerce recaptcha, comments captcha, ClassicPress
+Tags: captcha, recaptcha, google recaptcha, comment recaptcha, login recaptcha, brute force, spam, bots, protect, registration, google captcha, woocommerce recaptcha, comments captcha
 Requires at least: 4.9
 Requires PHP: 5.6
-Tested up to: 6.3
-Stable tag: 1.0.15
+Tested up to: 6.4
+Stable tag: 1.19
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Captcha protection against spam comments & brute-force attacks using Google reCAPTCHA.
+Captcha protection against spam comments & brute force login attacks using Google reCAPTCHA.
 
 == Description ==
-Advanced Google reCAPTCHA will safeguard your WordPress site from spam comments & brute force attacks. With this captcha plugin, you can easily add Google reCAPTCHA to WordPress comment form, login form, and other forms.
+<a href="https://getwpcaptcha.com/">Advanced Google reCAPTCHA</a> protects your WordPress site from spam comments & brute force login attacks using captcha. This captcha plugin, quickly adds Google reCAPTCHA and other captcha tests to WordPress comment form, login form, and other forms.
 
-Using Advanced Google reCAPTCHA (best captcha on the market), you'll be safe from spam comments and protect user accounts, WooCommerce, Easy Digital Downloads, BuddyPress and other forms from brute-force attacks.
-
-[Homepage](https://getwpcaptcha.com)
+Using Advanced Google reCAPTCHA (most popular captcha on the market), you'll be safe from spam comments and protect user accounts, WooCommerce, Easy Digital Downloads, BuddyPress and other forms from brute-force login attacks.
 
 Works for:
 
@@ -29,9 +27,18 @@ Works for:
 * Easy Digital Downloads (EDD) Login Form
 * Easy Digital Downloads (EDD) Registration Form
 
-[youtube https://www.youtube.com/watch?v=Mprw-MYaRxs]
+
+Plugin uses these 3rd party libs:
+
+* Chart.js, 2017 Nick Downie, MIT
+* DataTables, 2008-2017 SpryMedia Ltd, MIT
+* moment.js, Tim Wood, Iskren Chernev, MIT
+* SweetAlert 2, github.com/Sweetalert2/Sweetalert2, MIT
+* tooltipster, www.heteroclito.fr/modules/tooltipster/, MIT
+
 
 == Installation ==
+
 1. Upload Advanced Google reCAPTCHA files to the "/wp-content/plugins/advanced-google-recaptcha" directory, or install Advanced Google reCAPTCHA through the WordPress Plugins page directly.
 2. Activate Advanced Google reCAPTCHA through the WordPress Plugins page.
 3. Use the menu Advanced Google reCAPTCHA to configure it.
@@ -42,9 +49,18 @@ Works for:
 
 Just use standard Plugin overview page in WordPress admin section and deactivate it or rename plugin folder /wp-content/plugins/advanced-google-recaptcha over FTP access.
 
-= Does this plugin work for comment form? =
+= Does Captcha work for comment form? =
 
 Yes, it works for WordPress comment form.
+
+= Will it slow my site down? =
+
+No, it won't. It's only loaded on the pages it protects.
+
+= How can I report security bugs? =
+
+You can report security bugs through the Patchstack Vulnerability Disclosure Program. The Patchstack team help validate, triage and handle any security vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/advanced-google-recaptcha)
+
 
 == Screenshots ==
 
@@ -59,6 +75,38 @@ Yes, it works for WordPress comment form.
 9. Plugin settings
 
 == Changelog ==
+
+= 1.19 - 04/02/2024
+* fixed reCAPTCHA bug sometimes preventing checkout form re-submission after form errors are corrected in Woo
+
+= 1.18 - 24/01/2024
+* minor bug fix for Buddypress 
+
+= 1.17 - 09/12/2023 =
+* security/fatal error fix
+
+= 1.16 - 05/12/2023 =
+* Woo registration fix
+
+= 1.15 - 30/11/2023 =
+* Woo compatibility fixes
+
+= 1.14 - 19/11/2023 =
+* Theme My Login and Woo compatibility fixes
+
+= 1.13 - 16/11/2023 =
+* compatibility fixes
+
+= 1.12 - 02/11/2023 =
+* small bug fixes for Woo
+
+= 1.11 - 01/11/2023 =
+* small bug fixes
+
+= 1.1 - 31/10/2023 =
+* new GUI
+* new features
+* introduced the PRO version
 
 = 1.0.15 - 29 May 2023 =
 * Update packages

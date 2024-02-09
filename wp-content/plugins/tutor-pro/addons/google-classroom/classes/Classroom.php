@@ -276,8 +276,8 @@ class Classroom{
         $remote_students = $this->get_course_students($remote_id);
         $new_contents = array();
 
-        foreach($contents as $content){
-            if(!property_exists($content, 'individualStudentsOptions')){
+        foreach( $contents as $content ) {
+            if ( ! isset( $content->individualStudentsOptions ) ) {
                 $new_contents[]=$content;
                 continue;
             }

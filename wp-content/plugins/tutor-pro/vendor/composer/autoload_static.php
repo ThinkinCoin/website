@@ -4,12 +4,12 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitaa1665e1b8c09da1450f216e32afa58a
+class ComposerStaticInit4a97c7f64e67ae5ac040bea877ccc069
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
-        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'decc78cc4436b1292c6c0d151b19445c' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/bootstrap.php',
         '1f87db08236948d07391152dccb70f04' => __DIR__ . '/..' . '/google/apiclient-services/autoload.php',
@@ -28,6 +28,7 @@ class ComposerStaticInitaa1665e1b8c09da1450f216e32afa58a
         'T' => 
         array (
             'TutorPro\\SocialLogin\\' => 21,
+            'TutorPro\\RestAPI\\' => 17,
             'TutorPro\\GoogleMeet\\' => 20,
             'TutorPro\\CourseBundle\\' => 22,
             'TutorPro\\ChatGPT\\' => 17,
@@ -86,6 +87,10 @@ class ComposerStaticInitaa1665e1b8c09da1450f216e32afa58a
         'TutorPro\\SocialLogin\\' => 
         array (
             0 => __DIR__ . '/../..' . '/addons/social-login/includes',
+        ),
+        'TutorPro\\RestAPI\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/rest-api',
         ),
         'TutorPro\\GoogleMeet\\' => 
         array (
@@ -228,10 +233,10 @@ class ComposerStaticInitaa1665e1b8c09da1450f216e32afa58a
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitaa1665e1b8c09da1450f216e32afa58a::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitaa1665e1b8c09da1450f216e32afa58a::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitaa1665e1b8c09da1450f216e32afa58a::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitaa1665e1b8c09da1450f216e32afa58a::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit4a97c7f64e67ae5ac040bea877ccc069::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit4a97c7f64e67ae5ac040bea877ccc069::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit4a97c7f64e67ae5ac040bea877ccc069::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit4a97c7f64e67ae5ac040bea877ccc069::$classMap;
 
         }, null, ClassLoader::class);
     }

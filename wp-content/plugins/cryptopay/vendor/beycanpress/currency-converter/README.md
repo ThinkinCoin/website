@@ -11,11 +11,11 @@ It takes on the task of converting between fiat and cryptocurrencies.
 ## Usage
 
 ```php
-use Beycan\CurrencyConverter;
+use BeycanPress\CurrencyConverter;
 
 
 $converter = new CurrencyConverter('CryptoCompare | CoinMarketCap | CoinGecko', 'api key for coinmarketcap');
-$paymentAmount = $converter->convert('USD', 'BTC', 15 /* USD Price */);
+$paymentPrice = $converter->convert('USD', 'BTC', 15 /* USD Price */);
 
-$paymentAmount // BTC Price
+$paymentPrice // BTC Price
 ```

@@ -11,8 +11,6 @@
  * @version 1.7.1
  */
 
-get_tutor_header();
-
 global $post;
 $currentPost  = $post;
 $zoom_meeting = tutor_zoom_meeting_data( $post->ID );

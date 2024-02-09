@@ -8,7 +8,6 @@
  * @since 2.0.0
  */
 
-$bg_image_url = apply_filters( 'tutor_email_bg', TUTOR_EMAIL()->default_bg );
 ?>
 
 <div style="
@@ -26,10 +25,7 @@ $bg_image_url = apply_filters( 'tutor_email_bg', TUTOR_EMAIL()->default_bg );
 	<div style="border-bottom: 1px solid #e0e2ea; padding: 20px 50px">
 		<img src="{logo}" alt="" style="width: 107.39px;" data-source="email-title-logo">
 	</div>
-	<div class="tutor-email-content"
-				<?php if ( ! empty( $bg_image_url ) ) : ?>
-				style="background: url(<?php echo esc_url( $bg_image_url ); ?>) top right no-repeat;"
-				<?php endif; ?>>
+	<div class="tutor-email-content">
 		<div style="margin-bottom: 50px">
 			<h6 data-source="email-heading" style="
 					overflow-wrap: break-word;

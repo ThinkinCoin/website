@@ -5,7 +5,7 @@
  * Plugin URI: https://wordpress.org/plugins/ethpress/
  * Description: Ethereum Web3 login. Enable crypto wallet logins to WordPress.
  * Author: Lynn (lynn.mvp at tutanota dot com), ethereumicoio
- * Version: 2.2.0
+ * Version: 2.2.3
  * Author URI: https://ethereumico.io
  * Text Domain: ethpress
  * Domain Path: /languages

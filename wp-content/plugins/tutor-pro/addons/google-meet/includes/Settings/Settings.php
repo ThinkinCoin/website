@@ -12,6 +12,7 @@
 namespace TutorPro\GoogleMeet\Settings;
 
 use TUTOR\Input;
+use TUTOR\Tutor_Base;
 use TutorPro\GoogleMeet\Validator\Validator;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -21,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Manage settings for each users
  */
-class Settings {
+class Settings extends Tutor_Base {
 
 	/**
 	 * User meta key that holds settings
@@ -36,8 +37,38 @@ class Settings {
 	 * Do necessary things on init this class
 	 */
 	public function __construct() {
+		parent::__construct();
+
 		add_action( 'init', __CLASS__ . '::initial_setup' );
 		add_action( 'wp_ajax_tutor_update_google_meet_settings', __CLASS__ . '::handle_update' );
+		add_filter( 'post_type_link', array( $this, 'change_meet_single_url' ), 1, 2 );
+	}
+
+	/**
+	 * Change meet meeting single URL
+	 *
+	 * @since 2.6.0
+	 *
+	 * @param string  $post_link post link.
+	 * @param integer $id id.
+	 *
+	 * @return string
+	 */
+	public function change_meet_single_url( $post_link, $id = 0 ) {
+		$post = get_post( $id );
+
+		if ( is_object( $post ) && 'tutor-google-meet' === $post->post_type ) {
+			$course_id = tutor_utils()->get_course_id_by( 'lesson', $post->ID );
+			$course    = get_post( $course_id );
+
+			if ( is_object( $course ) ) {
+				return home_url( "/{$this->course_base_permalink}/{$course->post_name}/meet-lessons/" . $post->post_name . '/' );
+			} else {
+				return home_url( "/{$this->course_base_permalink}/sample-course/meet-lessons/" . $post->post_name . '/' );
+			}
+		}
+
+		return $post_link;
 	}
 
 	/**

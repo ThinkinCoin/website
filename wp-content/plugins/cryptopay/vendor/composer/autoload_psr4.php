@@ -21,8 +21,6 @@ return array(
     'GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),
     'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
     'Elliptic\\' => array($vendorDir . '/simplito/elliptic-php/lib'),
-    'BeycanPress\\WPTable\\' => array($vendorDir . '/beycanpress/wp-table/src'),
-    'BeycanPress\\WPModel\\' => array($vendorDir . '/beycanpress/wp-model/src'),
     'BeycanPress\\Http\\' => array($vendorDir . '/beycanpress/http/src'),
     'BeycanPress\\CryptoPay\\' => array($baseDir . '/app'),
     'BeycanPress\\' => array($vendorDir . '/beycanpress/currency-converter/src'),

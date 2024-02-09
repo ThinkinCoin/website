@@ -1,3 +1,6 @@
+<?php
+    use BeycanPress\CryptoPay\Helpers;
+?>
 <div class="wrap">
     <h1 class="wp-heading-inline">
         <?php echo esc_html__('Feedback', 'cryptopay'); ?>
@@ -6,7 +9,7 @@
     <br>
     <?php 
         if (isset($_POST['message'])) {
-            if ($this->_sendFeedbackMessage(sanitize_text_field($_POST['message']))) {
+            if (Helpers::sendFeedbackMessage(sanitize_text_field($_POST['message']))) {
                 echo '<div class="notice notice-success is-dismissible"><p>' . esc_html__('Your feedback has been sent successfully.', 'cryptopay') . '</p></div>';
             } else {
                 echo '<div class="notice notice-error is-dismissible"><p>' . esc_html__('An error occurred while sending your feedback.', 'cryptopay') . '</p></div>';

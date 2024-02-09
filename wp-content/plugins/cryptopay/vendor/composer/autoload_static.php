@@ -56,8 +56,6 @@ class ComposerStaticInitdfa11ab025f6f7522525a45d0355986b
         ),
         'B' => 
         array (
-            'BeycanPress\\WPTable\\' => 20,
-            'BeycanPress\\WPModel\\' => 20,
             'BeycanPress\\Http\\' => 17,
             'BeycanPress\\CryptoPay\\' => 22,
             'BeycanPress\\' => 12,
@@ -128,14 +126,6 @@ class ComposerStaticInitdfa11ab025f6f7522525a45d0355986b
         'Elliptic\\' => 
         array (
             0 => __DIR__ . '/..' . '/simplito/elliptic-php/lib',
-        ),
-        'BeycanPress\\WPTable\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/beycanpress/wp-table/src',
-        ),
-        'BeycanPress\\WPModel\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/beycanpress/wp-model/src',
         ),
         'BeycanPress\\Http\\' => 
         array (

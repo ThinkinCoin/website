@@ -19,11 +19,25 @@ namespace Google\Service\Calendar;
 
 class Colors extends \Google\Model
 {
+  /**
+   * @var ColorDefinition[]
+   */
+  public $calendar;
   protected $calendarType = ColorDefinition::class;
   protected $calendarDataType = 'map';
+  /**
+   * @var ColorDefinition[]
+   */
+  public $event;
   protected $eventType = ColorDefinition::class;
   protected $eventDataType = 'map';
+  /**
+   * @var string
+   */
   public $kind;
+  /**
+   * @var string
+   */
   public $updated;
 
   /**
@@ -54,18 +68,30 @@ class Colors extends \Google\Model
   {
     return $this->event;
   }
+  /**
+   * @param string
+   */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
+  /**
+   * @return string
+   */
   public function getKind()
   {
     return $this->kind;
   }
+  /**
+   * @param string
+   */
   public function setUpdated($updated)
   {
     $this->updated = $updated;
   }
+  /**
+   * @return string
+   */
   public function getUpdated()
   {
     return $this->updated;

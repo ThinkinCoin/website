@@ -168,7 +168,7 @@ $navbar_data = array(
 
 									<td>
 										<div class="tutor-d-flex tutor-align-center tutor-gap-2 tutor-fs-7">
-											<span><?php echo wp_kses_post( tutor_generate_grade_html( $quiz_grade, 'outline' ) ); ?></span>
+											<span><?php echo $quiz_grade ? wp_kses_post( tutor_generate_grade_html( $quiz_grade, 'outline' ) ) : ''; ?></span>
 											<?php if ( $quiz_grade ) : ?>
 												<span>(<?php echo esc_html( number_format( $quiz_grade->earned_grade_point, 2 ) . '/' . number_format( $quiz_grade->grade_point, 2 ) ); ?>)</span>
 											<?php endif; ?>
@@ -178,7 +178,7 @@ $navbar_data = array(
 									<td>
 										<div class="tutor-d-flex tutor-align-center tutor-gap-2 tutor-fs-7">
 											<span>
-												<?php echo wp_kses_post( tutor_generate_grade_html( $assignment_grade, 'outline' ) ); ?>
+												<?php echo $assignment_grade ? wp_kses_post( tutor_generate_grade_html( $assignment_grade, 'outline' ) ) : ''; ?>
 											</span>
 											<?php if ( $assignment_grade ) : ?>
 												<span>(<?php echo esc_html( number_format( $assignment_grade->earned_grade_point, 2 ) . '/' . number_format( $assignment_grade->grade_point, 2 ) ); ?>)</span>

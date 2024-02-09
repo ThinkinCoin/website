@@ -19,9 +19,20 @@ namespace Google\Service\Calendar;
 
 class CreateConferenceRequest extends \Google\Model
 {
+  /**
+   * @var ConferenceSolutionKey
+   */
+  public $conferenceSolutionKey;
   protected $conferenceSolutionKeyType = ConferenceSolutionKey::class;
   protected $conferenceSolutionKeyDataType = '';
+  /**
+   * @var string
+   */
   public $requestId;
+  /**
+   * @var ConferenceRequestStatus
+   */
+  public $status;
   protected $statusType = ConferenceRequestStatus::class;
   protected $statusDataType = '';
 
@@ -39,10 +50,16 @@ class CreateConferenceRequest extends \Google\Model
   {
     return $this->conferenceSolutionKey;
   }
+  /**
+   * @param string
+   */
   public function setRequestId($requestId)
   {
     $this->requestId = $requestId;
   }
+  /**
+   * @return string
+   */
   public function getRequestId()
   {
     return $this->requestId;

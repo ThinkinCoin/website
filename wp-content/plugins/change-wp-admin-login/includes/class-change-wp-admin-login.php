@@ -401,12 +401,16 @@ if ( defined( 'ABSPATH' ) && ! class_exists( 'Change_WP_Admin_Login' ) ) {
 				return $url;
 			}
 
+			if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
+				return $url;
+			}
+
 			if( ! function_exists( 'is_user_logged_in' ) ) {
 				return $url;
 			}
 
 			if ( ! is_user_logged_in() ) {
-				$redirect_url = get_option( 'rwl_redirect_field', '/' );
+				$redirect_url = get_option( 'rwl_redirect_field' );
 				if ( is_null( $redirect_url ) ) {
 					$redirect_url = '';
 				}

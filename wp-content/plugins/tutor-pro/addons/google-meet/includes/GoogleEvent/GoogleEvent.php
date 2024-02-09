@@ -280,7 +280,7 @@ class GoogleEvent {
 	 */
 	public function assign_token_to_client() {
 		try {
-			if ( file_exists( $this->token_path ) ) {
+			if ( isset( $this->token_path ) && file_exists( $this->token_path ) ) {
 				$access_token = json_decode( file_get_contents( $this->token_path ), true );
 				$this->client->setAccessToken( $access_token );
 			}

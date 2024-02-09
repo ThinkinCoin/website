@@ -65,7 +65,7 @@ $account_id = $this->get_api( 'account_id' );
 
 		$wrapper_class = "tutor-card tutor-card tutor-p-12 {$card_margin}";
 
-		echo wp_kses_post( $this->alert_msg( $wrapper_class, $link_btn_class, true ) );
+		$this->alert_msg( $wrapper_class, $link_btn_class, true );
 	}
 	?>
 

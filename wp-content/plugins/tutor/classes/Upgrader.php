@@ -10,6 +10,8 @@
 
 namespace TUTOR;
 
+use Tutor\Helpers\QueryHelper;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -22,13 +24,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Upgrader {
 
 	/**
+	 * Installed version number
+	 *
+	 * @since 2.6.0
+	 *
+	 * @var string
+	 */
+	public $installed_version;
+
+	/**
 	 * Register hooks
 	 *
 	 * @since 1.0.0
 	 */
 	public function __construct() {
+		$this->installed_version = get_option( 'tutor_version' );
+
 		add_action( 'admin_init', array( $this, 'init_upgrader' ) );
-		$base_name = tutor()->basename;
+
 		/**
 		 * Installing Gradebook Addon from TutorPro
 		 */
@@ -67,6 +80,7 @@ class Upgrader {
 		$upgrades = array();
 		if ( $version ) {
 			$upgrades[] = 'upgrade_to_1_3_1';
+			$upgrades[] = 'upgrade_to_2_6_0';
 		}
 
 		return $upgrades;
@@ -87,8 +101,24 @@ class Upgrader {
 				$wpdb->update( $wpdb->posts, array( 'post_type' => tutor()->course_post_type ), array( 'post_type' => 'course' ) );
 				update_option( 'is_course_post_type_updated', true );
 				update_option( 'tutor_version', '1.3.1' );
-				flush_rewrite_rules();
+				Permalink::set_permalink_flag();
 			}
+		}
+	}
+
+	/**
+	 * Migration logic when user upgrade to 2.6.0.
+	 *
+	 * @return void
+	 */
+	public function upgrade_to_2_6_0() {
+		if ( version_compare( $this->installed_version, '2.6.0', '<' ) ) {
+			if ( false === Permalink::update_required() ) {
+				Permalink::set_permalink_flag();
+			}
+
+			do_action( 'before_tutor_version_upgrade_to_2_6_0', $this->installed_version );
+			update_option( 'tutor_version', TUTOR_VERSION );
 		}
 	}
 
@@ -171,18 +201,18 @@ class Upgrader {
 	public function install_tutor_email_queue() {
 
 		global $wpdb;
-		$exists_email_queue_table = $wpdb->query( "SHOW TABLES LIKE '{$wpdb->tutor_email_queue}';" );
-		$charset_collate          = $wpdb->get_charset_collate();
+		$charset_collate = $wpdb->get_charset_collate();
 
 		require_once ABSPATH . 'wp-admin/includes/upgrade.php';
 
-		if ( ! $exists_email_queue_table ) {
+		if ( ! QueryHelper::table_exists( $wpdb->tutor_email_queue ) ) {
 			$table = "CREATE TABLE IF NOT EXISTS {$wpdb->tutor_email_queue} (
 				id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
 				mail_to varchar(255) NOT NULL,
 				subject text NOT NULL,
 				message text NOT NULL,
 				headers text NOT NULL,
+				batch varchar(50) NULL,
 				PRIMARY KEY (id)
 			) {$charset_collate};";
 

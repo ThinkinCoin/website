@@ -10,6 +10,7 @@ namespace Udb\AdminPage;
 defined( 'ABSPATH' ) || die( "Can't access directly" );
 
 use Udb\Base\Base_Module;
+use WP_Post;
 
 /**
  * Class to setup admin page module.
@@ -62,12 +63,13 @@ class Admin_Page_Module extends Base_Module {
 		add_filter( 'manage_udb_admin_page_posts_columns', array( $this, 'set_columns' ) );
 		add_action( 'manage_udb_admin_page_posts_custom_column', array( $this, 'column_content' ), 10, 2 );
 		add_action( 'do_meta_boxes', array( $this, 'remove_metaboxes' ) );
+
 		add_filter( 'template_include', array( $this, 'include_template' ), 1 );
 
 		add_action( 'admin_menu', array( $this, 'submenu_page' ) );
 		add_filter( 'submenu_file', array( $this, 'highlight_submenu' ), 10, 2 );
 
- 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_styles' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'admin_styles' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
 
 		add_action( 'add_meta_boxes', array( $this, 'register_meta_boxes' ) );
@@ -112,7 +114,7 @@ class Admin_Page_Module extends Base_Module {
 			7  => __( 'Admin Page saved.', 'ultimate-dashboard' ),
 			8  => __( 'Admin Page submitted.', 'ultimate-dashboard' ),
 			9  => sprintf(
-				// translators: Publish box date format, see http://php.net/date for more info.
+			// translators: Publish box date format, see http://php.net/date for more info.
 				__( 'Admin Page scheduled for: <strong>%1$s</strong>.', 'ultimate-dashboard' ),
 				date_i18n( __( 'M j, Y @ G:i', 'ultimate-dashboard' ), strtotime( $post->post_date ) )
 			),
@@ -130,7 +132,7 @@ class Admin_Page_Module extends Base_Module {
 	 */
 	public function set_columns( $columns ) {
 
-		$columns = array(
+		return array(
 			'cb'          => '<input type="checkbox" />',
 			'title'       => __( 'Page Name', 'ultimate-dashboard' ),
 			'icon'        => __( 'Menu Icon', 'ultimate-dashboard' ),
@@ -139,8 +141,6 @@ class Admin_Page_Module extends Base_Module {
 			'roles'       => __( 'User Roles', 'ultimate-dashboard' ),
 			'is_active'   => __( 'Active', 'ultimate-dashboard' ),
 		);
-
-		return $columns;
 
 	}
 
@@ -178,6 +178,7 @@ class Admin_Page_Module extends Base_Module {
 	 * Though, moving it is not worth the effort and this might come in handy at some point.
 	 *
 	 * @param string $template_path The template path.
+	 *
 	 * @return string The template path.
 	 */
 	public function include_template( $template_path ) {
@@ -212,7 +213,16 @@ class Admin_Page_Module extends Base_Module {
 		global $current_screen;
 		global $parent_file;
 
-		if ( in_array( $current_screen->base, array( 'post', 'edit' ) ) && 'udb_admin_page' === $current_screen->post_type ) {
+		if (
+			in_array(
+				$current_screen->base,
+				array(
+					'post',
+					'edit',
+				),
+				true
+			) && 'udb_admin_page' === $current_screen->post_type
+		) {
 
 			$parent_file  = 'edit.php?post_type=udb_widgets';
 			$submenu_file = 'edit.php?post_type=udb_admin_page';
@@ -256,7 +266,6 @@ class Admin_Page_Module extends Base_Module {
 		}
 
 		add_meta_box( 'udb-menu-metabox', __( 'Menu Attributes', 'ultimate-dashboard' ), array( $this, 'menu_metabox' ), 'udb_admin_page', 'side' );
-
 		add_meta_box( 'udb-html-metabox', __( 'HTML', 'ultimate-dashboard' ), array( $this, 'html_metabox' ), 'udb_admin_page', 'normal', 'high' );
 		add_meta_box( 'udb-display-metabox', __( 'Display Options', 'ultimate-dashboard' ), array( $this, 'display_metabox' ), 'udb_admin_page', 'normal' );
 		add_meta_box( 'udb-advanced-metabox', __( 'Advanced', 'ultimate-dashboard' ), array( $this, 'advanced_metabox' ), 'udb_admin_page', 'normal' );

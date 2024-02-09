@@ -40,7 +40,7 @@ use TUTOR_REPORT\Analytics;
 			<a href="<?php echo esc_url( get_edit_post_link( $current_id ) ); ?>" class="tutor-btn tutor-btn-outline-primary tutor-btn-md tutor-mr-16" target="_blank">
 				<?php esc_html_e( 'Edit with Builder', 'tutor-pro' ); ?>
 			</a>
-			<a href="<?php echo esc_url( the_permalink( $current_id ) ); ?>" class="tutor-btn tutor-btn-primary tutor-btn-md" target="_blank">
+			<a href="<?php echo esc_url( get_the_permalink( $current_id ) ); ?>" class="tutor-btn tutor-btn-primary tutor-btn-md" target="_blank">
 				<?php esc_html_e( 'View Course', 'tutor-pro' ); ?>
 			</a>
 		</div>

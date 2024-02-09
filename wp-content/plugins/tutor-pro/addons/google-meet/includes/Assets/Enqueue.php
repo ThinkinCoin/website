@@ -71,7 +71,7 @@ class Enqueue {
 
 		$post_type = get_post_type();
 		// load styles & scripts only required page.
-		if ( 'create-course' === $page || 'google-meet' === $page || tutor()->course_post_type === $post_type ) {
+		if ( 'create-course' === $page || 'google-meet' === $page || tutor()->course_post_type === $post_type || EventsModel::POST_TYPE === $post_type ) {
 			wp_enqueue_script(
 				'tutor-pro-google-meet-ui-timepicker',
 				$plugin_data['assets'] . 'js/lib/jquery-ui-timepicker.js',

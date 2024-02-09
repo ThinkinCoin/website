@@ -1,15 +1,12 @@
 <?php
-
 /**
- * Plugin Name: myCRED for Elementor
+ * Plugin Name: myCred for Elementor
  * Description: Adds all myCRED shortcodes to Elementor.
- * Version: 1.2.3
+ * Version: 1.2.4
  * Requires at least: 4.8
  * Tested up to: 6.3.2
  * Author: myCRED
  * Author URI: https://www.mycred.me/
- * License: Copyrighted
- * 
  */
 
 if (!defined('ABSPATH')) {
@@ -17,7 +14,7 @@ if (!defined('ABSPATH')) {
 }
 
 define('mycred_elementor_SLUG',    'mycred-elementor');
-define('mycred_elementor_VERSION', '1.2.3');
+define('mycred_elementor_VERSION', '1.2.4');
 define( 'mycred_elementor', __FILE__ );
 /**
  * Main Elementor Test Extension Class
@@ -35,7 +32,7 @@ final class MyCred_Elementor {
      *
      * @var string The plugin version.
      */
-    const VERSION = '1.2.3';
+    const VERSION = '1.2.4';
 
     /**
      * Minimum Elementor Version

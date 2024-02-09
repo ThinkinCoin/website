@@ -30,7 +30,7 @@ add_filter( 'tutor_addons_lists_config', 'tutor_email_config' );
  */
 function tutor_email_config( $config ) {
 	$new_config   = array(
-		'name'        => __( 'E-Mail', 'tutor-pro' ),
+		'name'        => __( 'Email', 'tutor-pro' ),
 		'description' => __( 'Send email on various tutor events', 'tutor-pro' ),
 	);
 	$basic_config = (array) TUTOR_EMAIL();

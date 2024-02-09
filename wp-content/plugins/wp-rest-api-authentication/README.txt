@@ -2,8 +2,8 @@
 Contributors: miniOrange
 Tags: api, rest-api, REST, jwt auth, jwt, basic auth, secure api, token, endpoints, json web token, oauth, api key auth
 Requires at least: 3.0.1
-Tested up to: 6.3
-Stable tag: 2.9.0
+Tested up to: 6.4
+Stable tag: 3.1.0
 Requires PHP: 5.6
 License: MIT/Expat
 License URI: https://docs.miniorange.com/mit-license
@@ -110,7 +110,7 @@ PREMIUM PLANS
 
 [Sync products to WooCommerce | Import WooCommerce products using API](https://plugins.miniorange.com/woocommerce-api-product-sync-with-woocommerce-rest-apis)
 
-* This plugin allows you connect to your Supplier, Inventory, ERP, CRM APIs to sync the products to your [WooCommerce](https://wordpress.org/plugins/woocommerce/) store with all the relevant product data automatically.
+* This plugin allows you to connect to your Supplier, Inventory, ERP, and CRM APIs to sync the products to your [WooCommerce](https://wordpress.org/plugins/woocommerce/) store with all the relevant product data automatically.
 
 [Sync Custom Posts using External API](https://plugins.miniorange.com/wordpress-sync-posts-from-api) 
 
@@ -211,6 +211,15 @@ This plugin does not store any user data.
 7. Postman Sample Settings
 
 == Changelog ==
+
+= 3.1.0 =
+* Minor UI Improvements
+
+= 3.0.0 =
+* Compatibility with WordPress 6.4
+
+= 2.9.1 =
+* Quick fix related to permalinks settings
 
 = 2.9.0 =
 * Usability improvements

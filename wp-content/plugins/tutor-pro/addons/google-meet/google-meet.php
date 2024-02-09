@@ -13,6 +13,7 @@
 
 namespace TutorPro\GoogleMeet;
 
+use TUTOR\Permalink;
 use TutorPro\GoogleMeet\Admin\Admin;
 use TutorPro\GoogleMeet\Assets\Enqueue;
 use TutorPro\GoogleMeet\CustomPosts\InitPostTypes;
@@ -20,7 +21,6 @@ use TutorPro\GoogleMeet\Frontend\Frontend;
 use TutorPro\GoogleMeet\GoogleEvent\Events;
 use TutorPro\GoogleMeet\GoogleEvent\GoogleEvent;
 use TutorPro\GoogleMeet\MetaBox\MetaBox;
-use TutorPro\GoogleMeet\Options\Options;
 use TutorPro\GoogleMeet\Settings\Settings;
 use TutorPro\GoogleMeet\TopicsEvent\TopicsEvent;
 use TutorPro\GoogleMeet\Validator\Validator;
@@ -37,7 +37,7 @@ if ( ! class_exists( 'GoogleMeet' ) ) {
 		 *
 		 * @since v1.0.0
 		 *
-		 * @var $plugin_data
+		 * @var array addon meta data.
 		 */
 		private static $meta_data = array();
 
@@ -59,11 +59,21 @@ if ( ! class_exists( 'GoogleMeet' ) ) {
 		 */
 		public function __construct() {
 			require_once tutor_pro()->path . '/vendor/autoload.php';
-			// register_activation_hook( __FILE__, array( __CLASS__, 'register_activation' ) );
-			// register_deactivation_hook( __FILE__, array( __CLASS__, 'register_deactivation' ) );
-			// add_action( 'init', array( __CLASS__, 'load_textdomain' ) );
+
+			add_action( 'tutor_addon_before_enable_tutor-pro/addons/google-meet/google-meet.php', array( $this, 'update_permalink' ) );
 
 			$this->load_packages();
+		}
+
+		/**
+		 * Update permalink during addon enable.
+		 *
+		 * @since 2.6.0
+		 *
+		 * @return void
+		 */
+		public function update_permalink() {
+			Permalink::set_permalink_flag();
 		}
 
 		/**
@@ -119,11 +129,11 @@ if ( ! class_exists( 'GoogleMeet' ) ) {
 				new Enqueue();
 				new Events();
 				new TopicsEvent();
-				new Options();
 				new Frontend();
 			}
 		}
 	}
+
 	// trigger.
 	GoogleMeet::instance();
 }

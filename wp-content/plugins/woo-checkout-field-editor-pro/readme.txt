@@ -3,9 +3,9 @@ Contributors: ThemeHigh
 Donate link: https://themehigh.com/
 Tags: checkout field editor, woocommerce checkout field editor, checkout manager, woocommerce checkout manager, checkout field customizer, checkout form editor, checkout form customizer, checkout, WooCommerce checkout, checkout form designer, woocommerce checkout fields, woocommerce checkout addons
 Requires at least: 4.9
-Tested up to: 6.3
+Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 1.9.1
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -285,6 +285,12 @@ Yes. There is a button 'reset to default fields' to go back to the WooCommerce d
 9. Locale override settings
 
 == Changelog ==
+= 2.0.0 =
+* Fixed the issue of advanced settings not saving on initial installation.
+* Added compatibility with Kadence WooCommerce Email Designer plugin
+* Added WooCommerce 8.3 compatibility.
+* Added WordPress 6.4 compatibility.
+
 = 1.9.1 =
 * Added WooCommerce 8.0 compatibility. 
 * Added WordPress 6.3 compatibility.

@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+
+<head><style>img.lazy{min-height:1px}</style><link rel="preload" href="https://thinkincoin.com/website/wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js" as="script">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://thinkincoin.com/website/xmlrpc.php">
+	<title>Innovative Business Models &#8211; Think in Coin</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//stats.wp.com' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Think in Coin &raquo; Feed" href="https://thinkincoin.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Think in Coin &raquo; Comments Feed" href="https://thinkincoin.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Think in Coin &raquo; Innovative Business Models Comments Feed" href="https://thinkincoin.com/courses/the-power-of-ideas-in-the-crypto-asset-market/lesson/innovative-business-models/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/thinkincoin.com\/website\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.4.3"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<link rel='stylesheet' id='mycred-woo-frontend-css-css' href='https://thinkincoin.com/website/wp-content/plugins/mycred/addons/gateway/carts/block-compatibility/build/mycred-woo-block-style.css?ver=1.4' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://thinkincoin.com/website/wp-includes/css/dist/block-library/style.min.css?ver=6.4.3' type='text/css' media="print" onload="this.media='all'" />
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--medium-blue: #175CFF;--wp--preset--color--deep-navyblue: #0A083B;--wp--preset--color--off-white: #F7F9FA;--wp--preset--color--bluish-dark-grey: #57586E;--wp--preset--color--light-grey: #EAF1F8;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--normal-plus: 18px;--wp--preset--font-size--medium-plus: 26px;--wp--preset--font-size--big: 32px;--wp--preset--font-size--huge: 48px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='tutor-prism-css-css' href='https://thinkincoin.com/website/wp-content/plugins/tutor-pro/assets/lib/codesample/prism.css?ver=2.6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='tutor-pro-front-css' href='https://thinkincoin.com/website/wp-content/plugins/tutor-pro/assets/css/front.css?ver=2.6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='tutor-icon-css' href='https://thinkincoin.com/website/wp-content/plugins/tutor/assets/css/tutor-icon.min.css?ver=2.6.0' type='text/css' media="print" onload="this.media='all'" />
+<link rel='stylesheet' id='tutor-css' href='https://thinkincoin.com/website/wp-content/plugins/tutor/assets/css/tutor.min.css?ver=2.6.0' type='text/css' media='all' />
+<style id='tutor-inline-css' type='text/css'>
+
+		.tutor-google-meet-meeting.tutor-active .tutor-icon-angle-right {
+			display: inline-block;
+			transform: rotate(90deg);
+		}
+		.tutor-google-meet-meeting .tutor-icon-angle-right {
+			color: #3e64de;
+			font-size: 16px;
+		}
+</style>
+<link rel='stylesheet' id='buttons-css' href='https://thinkincoin.com/website/wp-includes/css/buttons.min.css?ver=6.4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://thinkincoin.com/website/wp-includes/css/dashicons.min.css?ver=6.4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='editor-buttons-css' href='https://thinkincoin.com/website/wp-includes/css/editor.min.css?ver=6.4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='tutor-plyr-css' href='https://thinkincoin.com/website/wp-content/plugins/tutor/assets/packages/plyr/plyr.css?ver=2.6.0' type='text/css' media="print" onload="this.media='all'" />
+<link rel='stylesheet' id='tutor-frontend-css' href='https://thinkincoin.com/website/wp-content/plugins/tutor/assets/css/tutor-front.min.css?ver=2.6.0' type='text/css' media='all' />
+<style id='tutor-frontend-inline-css' type='text/css'>
+.mce-notification.mce-notification-error{display: none !important;}
+:root{--tutor-color-primary:#239371;--tutor-color-primary-rgb:35, 147, 113;--tutor-color-primary-hover:#117d5d;--tutor-color-primary-hover-rgb:17, 125, 93;--tutor-body-color:#62666f;--tutor-body-color-rgb:98, 102, 111;--tutor-border-color:#606062;--tutor-border-color-rgb:96, 96, 98;--tutor-color-gray:#e3e5eb;--tutor-color-gray-rgb:227, 229, 235;}
+</style>
+<link rel='stylesheet' id='tutor-course-bundle-frontend-css' href='https://thinkincoin.com/website/wp-content/plugins/tutor-pro/addons/course-bundle/assets/css/frontend.css?ver=2.6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='tutor-course-bundle-common-css' href='https://thinkincoin.com/website/wp-content/plugins/tutor-pro/addons/course-bundle/assets/css/common.css?ver=2.6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='tutor-gc-frontend-style-css' href='https://thinkincoin.com/website/wp-content/plugins/tutor-pro/addons/google-classroom/assets/css/classroom-frontend.css?ver=2.6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='tutor-pn-registrar-css-css' href='https://thinkincoin.com/website/wp-content/plugins/tutor-pro/addons/tutor-notifications/assets/css/permission.css?ver=2.6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-layout-css' href='https://thinkincoin.com/website/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=8.5.2' type='text/css' media="print" onload="this.media='all'" />
+<link rel='stylesheet' id='woocommerce-smallscreen-css' href='https://thinkincoin.com/website/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=8.5.2' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css' href='https://thinkincoin.com/website/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=8.5.2' type='text/css' media="print" onload="this.media='all'" />
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='gfonts-css' href='https://fonts.googleapis.com/css2?family=Inter%3Awght%40100%3B300%3B400%3B500%3B700%3B900&#038;display=swap&#038;ver=1.0.0' type='text/css' media="print" onload="this.media='all'" />
+<link rel='stylesheet' id='gfonts-heading-css' href='https://fonts.googleapis.com/css2?family=Sora%3Awght%40100%3B300%3B400%3B500%3B700%3B900&#038;display=swap&#038;ver=1.0.0' type='text/css' media="print" onload="this.media='all'" />
+<link rel='stylesheet' id='main-css' href='https://thinkincoin.com/website/wp-content/themes/tutor-child/assets/dist/css/style.min.css?ver=1.0.0' type='text/css' media='all' />
+<style id='main-inline-css' type='text/css'>
+
+			:root {
+				--default-color: #ffffff;
+				--body-font: Inter;
+				--heading-font: Sora;
+				--link-color: #67ad05;
+				--body-bg-color: #ededed;
+				--cart-color: #1a6d0d;
+				--cart-color-trans: #ffffff;
+				--cta-text-color: #ffffff;
+				--cta-text-color-trans: #ffffff;
+				--body-text-color: #57586E;
+				--cta-font-weight: 400;
+				--cta-font-transform: none;
+				--cta-font-lineheight: 1.2em;
+				--cta-font-lineheight-tablet: 1.2em;
+				--cta-font-lineheight-mobile: 1.2em;
+				--menu-link-color: #57586E;
+				--menu-link-color-trans: #ffffff;
+				--body-font-weight: 400;
+				--h1-font-weight: 700;
+				--h2-font-weight: 700;
+				--h3-font-weight: 700;
+				--h4-font-weight: 700;
+				--h5-font-weight: 700;
+				--h6-font-weight: 700;
+				--h1-text-transform: none;
+				--h2-text-transform: none;
+				--h3-text-transform: none;
+				--h4-text-transform: none;
+				--h5-text-transform: none;
+				--h6-text-transform: none;
+				--primary-menu-bg-color: #fefefe;
+				--sticky-menu-bg-color: rgba(4, 42, 132, 0.7);
+				--cta-background-color: #49aa66;
+				--cta-background-color-trans: rgba(25, 80, 209, 1);
+				--cta-border-color: #2baa0f;
+				--cta-border-color-trans: #1950D1;
+				--cta-border-width: 1px;
+				--cta-border-radius: 50px;
+				--cta-font-size: 16px;
+				--header-font-weight: 400;
+				--header-font-transform: none;
+				--header-font-lineheight: 1.2em;
+				--header-font-lineheight-tablet: 1.2em;
+				--header-font-lineheight-mobile: 1.2em;
+				--body-text-transform: none;
+				--body-font-size: 16px;
+				--h1-font-size: 68px;
+				--h1-font-size-tablet: 48px;
+				--h1-font-size-mobile: 48px;
+				--h2-font-size: 48px;
+				--h2-font-size-tablet: 32px;
+				--h2-font-size-mobile: 32px;
+				--h3-font-size: 36px;
+				--h3-font-size-tablet: 28px;
+				--h3-font-size-mobile: 28px;
+				--h4-font-size: 26px;
+				--h4-font-size-tablet: 24px;
+				--h4-font-size-mobile: 24px;
+				--h5-font-size: 20px;
+				--h5-font-size-tablet: 18px;
+				--h5-font-size-mobile: 18px;
+				--h6-font-size: 18px;
+				--h6-font-size-tablet: 17px;
+				--h6-font-size-mobile: 17px;
+				--active-menu-color: #309b0c;
+				--active-menu-color-trans: #ffffff;
+				--cta-font-size-tablet: 13px;
+				--cta-font-size-mobile: 13px;
+				--header-font-size: 16px;
+				--body-font-size-mobile: 13px;
+				--body-font-size-tablet: 13px;
+				--footer-bottom-bg-color: #091600;
+				--footer-widget-bg-color: #011900;
+				--header-font-size-tablet: 13px;
+				--header-font-size-mobile: 13px;
+				--footer-bottom-text-color: #b2b2b2;
+				--widget-title-font-weight: 700;
+				--widget-title-text-transform: none;
+				--footer-widget-text-color: #ffffff;
+				--body-font-lineheight: 1.7em;
+				--h1-font-lineheight: 2.5em;
+				--h1-font-lineheight-tablet: 2.5em;
+				--h1-font-lineheight-mobile: 2.5em;
+				--h2-font-lineheight: 2em;
+				--h2-font-lineheight-tablet: 2em;
+				--h2-font-lineheight-mobile: 2em;
+				--h3-font-lineheight: 1.8em;
+				--h3-font-lineheight-tablet: 1.8em;
+				--h3-font-lineheight-mobile: 1.8em;
+				--h4-font-lineheight: 1.7em;
+				--h4-font-lineheight-tablet: 1.7em;
+				--h4-font-lineheight-mobile: 1.7em;
+				--h5-font-lineheight: 1.6em;
+				--h5-font-lineheight-tablet: 1.6em;
+				--h5-font-lineheight-mobile: 1.6em;
+				--h6-font-lineheight: 1.5em;
+				--h6-font-lineheight-tablet: 1.5em;
+				--h6-font-lineheight-mobile: 1.5em;
+				--body-font-lineheight-tablet: 1.5em;
+				--body-font-lineheight-mobile: 1.5em;
+				--widget-title-font-size: 18px;
+				--widget-title-font-size-tablet: 16px;
+				--widget-title-font-size-mobile: 16px;
+				--widget-title-line-height: 1.78em;
+				--widget-title-line-height-tablet: 1.78em;
+				--widget-title-line-height-mobile: 1.78em;
+				--widget-text-font-weight: 400;
+				--widget-text-transform: none;
+				--widget-text-font-size: 16px;
+				--widget-text-font-size-tablet: 16px;
+				--widget-text-font-size-mobile: 16px;
+				--widget-text-line-height: 1.78em;
+				--widget-text-line-height-tablet: 1.78em;
+				--widget-text-line-height-mobile: 1.78em;
+			}
+        
+</style>
+<link rel='stylesheet' id='elementor-lazyload-css' href='https://thinkincoin.com/website/wp-content/plugins/elementor/assets/css/modules/lazyload/frontend.min.css?ver=3.19.2' type='text/css' media='all' />
+<link rel='stylesheet' id='mycred-front-css' href='https://thinkincoin.com/website/wp-content/plugins/mycred/assets/css/mycred-front.css?ver=2.6.3' type='text/css' media='all' />
+<link rel='stylesheet' id='mycred-social-share-icons-css' href='https://thinkincoin.com/website/wp-content/plugins/mycred/assets/css/mycred-social-icons.css?ver=2.6.3' type='text/css' media='all' />
+<link rel='stylesheet' id='mycred-social-share-style-css' href='https://thinkincoin.com/website/wp-content/plugins/mycred/assets/css/mycred-social-share.css?ver=2.6.3' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-4-shim-css' href='https://thinkincoin.com/website/wp-content/plugins/tutor-lms-elementor-addons/assets/css/font-awesome.min.css?ver=2.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-css-css' href='https://thinkincoin.com/website/wp-content/plugins/tutor-lms-elementor-addons/assets/css/slick.min.css?ver=2.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-theme-css-css' href='https://thinkincoin.com/website/wp-content/plugins/tutor-lms-elementor-addons/assets/css/slick-theme.css?ver=2.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='tutor-elementor-css-css' href='https://thinkincoin.com/website/wp-content/plugins/tutor-lms-elementor-addons/assets/css/tutor-elementor.min.css?ver=2.1.4' type='text/css' media='all' />
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" id="wp-polyfill-inert-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0" id="regenerator-runtime-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/hooks.min.js?ver=c6aec9a8d4e5a5d543a1" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://stats.wp.com/w.js?ver=202406" id="woo-tracks-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="utils-js-extra">
+/* <![CDATA[ */
+var userSettings = {"url":"\/website\/","uid":"0","time":"1707464523","secure":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/utils.min.js?ver=6.4.3" id="utils-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.8.5.2" id="jquery-blockui-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="wc-add-to-cart-js-extra">
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/website\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/thinkincoin.com\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=8.5.2" id="wc-add-to-cart-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.8.5.2" id="js-cookie-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="woocommerce-js-extra">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/website\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=8.5.2" id="woocommerce-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/mycred/addons/badges/assets/js/front.js?ver=1.3" id="mycred-badge-front-js"></script>
+
+<!-- Google Analytics snippet added by Site Kit -->
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=GT-NCLQW8Z" id="google_gtagjs-js" async></script>
+<script type="text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('set', 'linker', {"domains":["thinkincoin.com"]} );
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-NCLQW8Z");
+/* ]]> */
+</script>
+
+<!-- End Google Analytics snippet added by Site Kit -->
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/tutor-lms-elementor-addons/assets/js/slick.min.js?ver=2.1.4" id="etlms-slick-library-js"></script>
+<script type="text/javascript" id="tutor-elementor-js-js-extra">
+/* <![CDATA[ */
+var tutorElementorData = {"is_sidebar_sticky":""};
+/* ]]> */
+</script>
+<script type="text/javascript" id="tutor-elementor-js-js-before">
+/* <![CDATA[ */
+const etlmsUtility = {"is_editor_mode":false}
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/tutor-lms-elementor-addons/assets/js/tutor-elementor.js?ver=2.1.4" id="tutor-elementor-js-js"></script>
+<link rel="https://api.w.org/" href="https://thinkincoin.com/wp-json/" /><link rel="alternate" type="application/json" href="https://thinkincoin.com/wp-json/wp/v2/lesson/8285" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://thinkincoin.com/website/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.4.3" />
+<meta name="generator" content="TutorLMS 2.6.0" />
+<meta name="generator" content="WooCommerce 8.5.2" />
+<link rel="canonical" href="https://thinkincoin.com/courses/the-power-of-ideas-in-the-crypto-asset-market/lesson/innovative-business-models/" />
+<link rel='shortlink' href='https://thinkincoin.com/?p=8285' />
+<link rel="alternate" type="application/json+oembed" href="https://thinkincoin.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fthinkincoin.com%2Fcourses%2Fthe-power-of-ideas-in-the-crypto-asset-market%2Flesson%2Finnovative-business-models%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://thinkincoin.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fthinkincoin.com%2Fcourses%2Fthe-power-of-ideas-in-the-crypto-asset-market%2Flesson%2Finnovative-business-models%2F&#038;format=xml" />
+<meta name="generator" content="Site Kit by Google 1.119.0" />	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<meta name="generator" content="Elementor 3.19.2; features: e_optimized_assets_loading, e_optimized_css_loading, additional_custom_breakpoints, block_editor_assets_optimize, e_image_loading_optimization; settings: css_print_method-external, google_font-enabled, font_display-swap">
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://thinkincoin.com/website/wp-content/uploads/2023/07/apple-icon-precomposed-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://thinkincoin.com/website/wp-content/uploads/2023/07/apple-icon-precomposed.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://thinkincoin.com/website/wp-content/uploads/2023/07/apple-icon-precomposed.png" />
+<meta name="msapplication-TileImage" content="https://thinkincoin.com/website/wp-content/uploads/2023/07/apple-icon-precomposed.png" />
+		<style type="text/css" id="wp-custom-css">
+			[class^=“elementor-“] p {
+    color: unset;
+    font-size: unset;
+    font-weight: unset;
+    text-transform: unset;
+    line-height: unset;
+}
+.mycred-badge-image{
+	display: inline-block;
+	width: 32px;
+}
+.button.wc-backward,.checkout-button,.place_order,.woocommerce-Button.button {
+    background: #239371!important;
+    border-radius: 33px!important;
+    font-family: var(--body-font);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #fff!important;
+    margin: 4% 20%;
+}
+.notice-wrap {
+	position: fixed;
+	top: 190px;
+	right: 50px;
+	z-index: 9999;
+	opacity: 0.8;
+}
+.notice-item p {
+	display: contents;
+	margin: 0;
+	padding: 0;
+}
+.notice-item-close{
+	display: block;
+	float: right;
+	width: 30px;
+	height: 30px;
+	line-height: 22px;
+	font-size: 29px;
+	text-align: center;
+	cursor: pointer;
+}
+.notice-item {
+	position: relative;
+	display: block;
+	min-width: 350px;
+	height: auto;
+	margin: 0 0 24px 0;
+	padding: 12px;
+	line-height: 22px;
+	font-size: 20px;
+	font-weight: 500;
+	border-radius: 15px;
+	border-left-style: solid;
+	border-left-color: #1eb537;
+	background-color: #fff;
+	color: #333;
+}
+.token-icon{
+
+}
+.token-icon > span{
+	max-width:30px;
+	float: left;
+	margin: 5% 2%;
+}
+.user_revenue{}
+.income-display{}
+.income-display > span.revenue-title{}
+.income-display > span.ballance{
+	font-weight: 700;
+	display: inline-block;
+}
+a.btn-claim {
+  max-width: 80%;  
+	margin: auto;
+	padding: 2px 28px;
+  font-style: normal;
+  font-family: inherit;
+  text-align: center;
+  border-radius: var(--cta-border-radius);
+  text-transform: var(--cta-font-transform);
+  font-weight: var(--cta-font-weight);
+  font-size: var(--cta-font-size);
+  line-height: var(--cta-font-lineheight);
+  color: var(--headerBtnColor);
+  background: var(--headerBtnBgColor);
+  border: var(--cta-border-width) solid var(--cta-border-color)
+}
+.notice-dev{
+	  padding: 0.5% 2%;
+    background: #bb5f00;
+    font-weight: 500;
+    color: #fff;
+	
+}
+.user-achivements{
+	  display: flex;
+    margin-left: 10px;
+    
+}
+.tutor-dashboard-header-username{
+	display: flex;
+}
+.mycred-users-badges{
+	    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: row-reverse;
+}		</style>
+		
+<!-- START - Open Graph and Twitter Card Tags 3.3.2 -->
+ <!-- Facebook Open Graph -->
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="Think in Coin"/>
+  <meta property="og:title" content="Innovative Business Models"/>
+  <meta property="og:url" content="https://thinkincoin.com/courses/the-power-of-ideas-in-the-crypto-asset-market/lesson/innovative-business-models/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="The crypto asset market has seen an influx of new and innovative business models over the past few years. In particular, Initial Coin Offerings (ICOs), Security Token Offerings (STOs), and Initial DEX Offerings (IDOs) have become increasingly popular methods of fundraising for projects and startups."/>
+  <meta property="og:image" content="https://thinkincoin.com/website/wp-content/uploads/2023/07/The_power_of_ideas_in_the_crypto_asset_market.png"/>
+  <meta property="og:image:url" content="https://thinkincoin.com/website/wp-content/uploads/2023/07/The_power_of_ideas_in_the_crypto_asset_market.png"/>
+  <meta property="og:image:secure_url" content="https://thinkincoin.com/website/wp-content/uploads/2023/07/The_power_of_ideas_in_the_crypto_asset_market.png"/>
+ <!-- Google+ / Schema.org -->
+ <!-- Twitter Cards -->
+  <meta name="twitter:title" content="Innovative Business Models"/>
+  <meta name="twitter:url" content="https://thinkincoin.com/courses/the-power-of-ideas-in-the-crypto-asset-market/lesson/innovative-business-models/"/>
+  <meta name="twitter:description" content="The crypto asset market has seen an influx of new and innovative business models over the past few years. In particular, Initial Coin Offerings (ICOs), Security Token Offerings (STOs), and Initial DEX Offerings (IDOs) have become increasingly popular methods of fundraising for projects and startups."/>
+  <meta name="twitter:image" content="https://thinkincoin.com/website/wp-content/uploads/2023/07/The_power_of_ideas_in_the_crypto_asset_market.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@thinkincoin"/>
+ <!-- SEO -->
+ <!-- Misc. tags -->
+ <!-- is_singular -->
+<!-- END - Open Graph and Twitter Card Tags 3.3.2 -->
+	
+</head>
+
+<body class="lesson-template-default single single-lesson postid-8285 wp-custom-logo theme-tutor-child tutor-lms tutor-frontend woocommerce-no-js e-lazyload elementor-default elementor-kit-5">
+
+	<!-- Temporary section -->
+<div class="notice-dev">This platform its under development. All data will be cleaned before a production deployment. 
+</div>
+
+	
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">
+		Skip to content	</a>
+
+
+<header class="header-default">
+    <!-- .navbar .navbar-center .navbar-right .has-search-field .full-width -->
+    <nav class="navbar navbar-right full-width ">
+        <div class="navbar-brand">
+                        <a href="https://thinkincoin.com/" rel="home">
+                <img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%2058'%3E%3C/svg%3E" data-src="https://thinkincoin.com/website/wp-content/uploads/2023/07/cropped-lOGOTIPO-tic_HORIZ.png"  alt="Think in Coin" />
+            </a>
+                </div>
+        <!-- .has-search-field must use with .navbar-right -->
+        <div class="search-field">
+            <form method="get" action="https://thinkincoin.com/">
+                <input type="search" name="s" value="" placeholder="Search..." />
+            </form>
+        </div>
+                    <button class="navbar-toggler">
+                <div class="toggle-icon"><span></span></div>
+            </button>
+                <div class="menu-main-container"><ul id="menu-main" class="navbar-nav"><li class="nav-close"><button class="btn-nav-close"><span class="close-btn">+</span></button></li><li id="menu-item-23" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23"><a href="/courses" onClick="return true">Courses</a></li>
+<li id="menu-item-7957" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7957"><a href="#" onClick="return true">InvestGate</a></li>
+<li id="menu-item-7958" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7958"><a href="#" onClick="return true">DAOs</a></li>
+<li id="menu-item-7959" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7959"><a href="#" onClick="return true">Request Token</a></li>
+</ul></div>        <div class="navbar-utils">
+                                        
+                
+                             
+           
+                                                                                    <div class="utils-btn"><a class="btn-getstarted" href="/user-login">Start to L-earn</a></div>
+                                    </div>
+    </nav>
+</header><div id="content" class="site-content">
+
+<div class="tutor-wrap tutor-page-wrap post-8285 lesson type-lesson status-publish has-post-thumbnail hentry">
+	<div class="tutor-template-segment tutor-login-wrap">
+
+		<div class="tutor-login-form-wrapper">
+			<div class="tutor-fs-5 tutor-color-black tutor-mb-32">
+				Hi, Welcome back!			</div>
+			<form id="tutor-login-form" method="post">
+		<input type="hidden" id="_tutor_nonce" name="_tutor_nonce" value="8cd4d3627c" /><input type="hidden" name="_wp_http_referer" value="/courses/the-power-of-ideas-in-the-crypto-asset-market/lesson/innovative-business-models/" />	<input type="hidden" name="tutor_action" value="tutor_user_login" />
+	<input type="hidden" name="redirect_to" value="https://thinkincoin.com/courses/the-power-of-ideas-in-the-crypto-asset-market/lesson/innovative-business-models/" />
+
+	<div class="tutor-mb-20">
+		<input type="text" class="tutor-form-control" placeholder="Username or Email Address" name="log" value="" size="20" required/>
+	</div>
+
+	<div class="tutor-mb-32">
+		<input type="password" class="tutor-form-control" placeholder="Password" name="pwd" value="" size="20" required/>
+	</div>
+
+	<div class="tutor-login-error"></div>
+	<input type="hidden" name="g-recaptcha-response" class="agr-recaptcha-response" value="" /><script>
+        function wpcaptcha_captcha(){
+            grecaptcha.execute("6Lc4disoAAAAAIVpb1f8x7RMSGEZEv545mg34wVp", {action: "submit"}).then(function(token) {
+                var captchas = document.querySelectorAll(".agr-recaptcha-response");
+                captchas.forEach(function(captcha) {
+                    captcha.value = token;
+                });
+            });
+        }
+
+        jQuery("form.woocommerce-checkout").on("submit", function(){
+            setTimeout(function(){
+                wpcaptcha_captcha();
+            },100);
+        });
+        </script>	<div class="tutor-d-flex tutor-justify-between tutor-align-center tutor-mb-40">
+		<div class="tutor-form-check">
+			<input id="tutor-login-agmnt-1" type="checkbox" class="tutor-form-check-input tutor-bg-black-40" name="rememberme" value="forever" />
+			<label for="tutor-login-agmnt-1" class="tutor-fs-7 tutor-color-muted">
+				Keep me signed in			</label>
+		</div>
+		<a href="https://thinkincoin.com/dashboard/retrieve-password" class="tutor-btn tutor-btn-ghost">
+			Forgot?		</a>
+	</div>
+
+		<button type="submit" class="tutor-btn tutor-btn-primary tutor-btn-block">
+		Sign In	</button>
+	
+					<div class="tutor-text-center tutor-fs-6 tutor-color-secondary tutor-mt-20">
+			Don&#039;t have an account?&nbsp;
+			<a href="https://thinkincoin.com/academy/student-registration/?redirect_to=https://thinkincoin.com/courses/the-power-of-ideas-in-the-crypto-asset-market/lesson/innovative-business-models/" class="tutor-btn tutor-btn-link">
+				Register Now			</a>
+		</div>
+		</form>
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		var { __ } = wp.i18n;
+		var loginModal = document.querySelector('.tutor-modal.tutor-login-modal');
+		var errors = [];
+		if (loginModal && errors.length) {
+			loginModal.classList.add('tutor-is-active');
+		}
+	});
+</script>
+		</div>
+				<style>
+			#tutor-pro-twitter-login {
+				width: 400px; background-color: #00acee; border-color: #00acee; font-weight: bold;
+			}
+		</style>
+		<div id="tutor-pro-social-authentication" class="tutor-pt-24 tutor-d-flex tutor-flex-column tutor-align-center tutor-border-top-light" style="gap: 10px;">
+								<div class="tutor-d-flex tutor-justify-center" id="tutor-pro-google-authentication">
+						
+											</div>
+							</div>
+			</div>
+</div>
+
+</div><!-- #content -->
+
+<section class="footer-widgets">
+	<div class="container">
+		<div class="row justify-between align-top">
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+												<img height="24" width="92" class="logo-footer lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2092%2024'%3E%3C/svg%3E" data-src="https://thinkincoin.com/website/wp-content/uploads/2023/10/tic_box_white-e1697051611318.png"  alt="Think in Coin">
+						<section id="text-2" class="widget widget_text p-2">			<div class="textwidget"><p style="font-size: 16px; line-height: 1.5;">Learning often happens in classrooms<br />
+but it doesn&#8217;t have to.</p>
+</div>
+		</section><section id="text-3" class="widget widget_text p-2">			<div class="textwidget"><div class="footer-widget-contact-info">
++1 (24551) 21456871<br />
+mobile@number.com
+</div>
+</div>
+		</section>			</div><!-- left widget container -->
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 ml-0 pl-0">
+				<div class="row align-top">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<section id="nav_menu-1" class="widget widget_nav_menu p-2"><h2 class="widget-title">Quick Links</h2><div class="menu-footer-quick-links-container"><ul id="menu-footer-quick-links" class="menu"><li id="menu-item-8091" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8091"><a href="https://thinkincoin.com/about-us/" onClick="return true">About Us</a></li>
+<li id="menu-item-6679" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6679"><a href="#" onClick="return true">Career</a></li>
+<li id="menu-item-6681" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6681"><a href="#" onClick="return true">Blog</a></li>
+<li id="menu-item-8093" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8093"><a href="https://thinkincoin.com/tutor-certificate/" onClick="return true">Tutor Certificate</a></li>
+</ul></div></section>					</div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<section id="nav_menu-2" class="widget widget_nav_menu p-2"><h2 class="widget-title">Resources</h2><div class="menu-footer-resources-container"><ul id="menu-footer-resources" class="menu"><li id="menu-item-8087" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8087"><a href="https://thinkincoin.com/courses-overview/" onClick="return true">Courses</a></li>
+<li id="menu-item-8086" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8086"><a href="https://thinkincoin.com/course-completed/" onClick="return true">Course Completed</a></li>
+<li id="menu-item-8088" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8088"><a href="https://thinkincoin.com/academy/instructor-registration/" onClick="return true">Instructor Registration</a></li>
+<li id="menu-item-8089" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8089"><a href="https://thinkincoin.com/academy/student-registration/" onClick="return true">Student Registration</a></li>
+<li id="menu-item-8090" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8090"><a href="https://thinkincoin.com/refund_returns/" onClick="return true">Refund and Returns Policy</a></li>
+<li id="menu-item-6685" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6685"><a href="#" onClick="return true">Faqs</a></li>
+</ul></div></section>					</div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<section id="nav_menu-3" class="widget widget_nav_menu p-2"><h2 class="widget-title">Support</h2><div class="menu-footer-support-container"><ul id="menu-footer-support" class="menu"><li id="menu-item-8079" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8079"><a href="https://thinkincoin.com/category/announcements/" onClick="return true">Announcements</a></li>
+<li id="menu-item-8080" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8080"><a href="https://thinkincoin.com/category/develop/" onClick="return true">Develop</a></li>
+<li id="menu-item-8081" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8081"><a href="https://thinkincoin.com/category/finance/" onClick="return true">Finance</a></li>
+<li id="menu-item-8082" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8082"><a href="https://thinkincoin.com/category/general/" onClick="return true">General</a></li>
+<li id="menu-item-8083" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8083"><a href="https://thinkincoin.com/category/marketing/" onClick="return true">Marketing</a></li>
+<li id="menu-item-8084" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8084"><a href="https://thinkincoin.com/category/technology/" onClick="return true">Technology</a></li>
+<li id="menu-item-8085" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8085"><a href="https://thinkincoin.com/category/trading-ideas/" onClick="return true">Trading Ideas</a></li>
+</ul></div></section>					</div>
+				</div>
+			</div><!-- right widget container-->
+		</div><!-- .row -->
+	</div><!-- .container -->
+</section><!-- .footer-widgets --><footer id="colophon" class="site-footer container-fluid pt-2 pb-2" role="contentinfo">
+	<div class="container">
+		<div class="row align-middle justify-between footer-bottom-container">
+			<div class="site-info">
+									<span id="footer-socialmedia">
+						<section id="block-9" class="widget widget_block p-2">
+<ul class="wp-block-social-links is-layout-flex wp-block-social-links-is-layout-flex"><li class="wp-social-link wp-social-link-github  wp-block-social-link"><a href="https://github.com/thinkincoin" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12,2C6.477,2,2,6.477,2,12c0,4.419,2.865,8.166,6.839,9.489c0.5,0.09,0.682-0.218,0.682-0.484 c0-0.236-0.009-0.866-0.014-1.699c-2.782,0.602-3.369-1.34-3.369-1.34c-0.455-1.157-1.11-1.465-1.11-1.465 c-0.909-0.62,0.069-0.608,0.069-0.608c1.004,0.071,1.532,1.03,1.532,1.03c0.891,1.529,2.341,1.089,2.91,0.833 c0.091-0.647,0.349-1.086,0.635-1.337c-2.22-0.251-4.555-1.111-4.555-4.943c0-1.091,0.39-1.984,1.03-2.682 C6.546,8.54,6.202,7.524,6.746,6.148c0,0,0.84-0.269,2.75,1.025C10.295,6.95,11.15,6.84,12,6.836 c0.85,0.004,1.705,0.114,2.504,0.336c1.909-1.294,2.748-1.025,2.748-1.025c0.546,1.376,0.202,2.394,0.1,2.646 c0.64,0.699,1.026,1.591,1.026,2.682c0,3.841-2.337,4.687-4.565,4.935c0.359,0.307,0.679,0.917,0.679,1.852 c0,1.335-0.012,2.415-0.012,2.741c0,0.269,0.18,0.579,0.688,0.481C19.138,20.161,22,16.416,22,12C22,6.477,17.523,2,12,2z"></path></svg><span class="wp-block-social-link-label screen-reader-text">GitHub</span></a></li>
+
+<li class="wp-social-link wp-social-link-reddit  wp-block-social-link"><a href="https://www.reddit.com/r/thinkincoin" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22 12.068a2.184 2.184 0 0 0-2.186-2.186c-.592 0-1.13.233-1.524.609-1.505-1.075-3.566-1.774-5.86-1.864l1.004-4.695 3.261.699A1.56 1.56 0 1 0 18.255 3c-.61-.001-1.147.357-1.398.877l-3.638-.77a.382.382 0 0 0-.287.053.348.348 0 0 0-.161.251l-1.112 5.233c-2.33.072-4.426.77-5.95 1.864a2.201 2.201 0 0 0-1.523-.61 2.184 2.184 0 0 0-.896 4.176c-.036.215-.053.43-.053.663 0 3.37 3.924 6.111 8.763 6.111s8.763-2.724 8.763-6.11c0-.216-.017-.449-.053-.664A2.207 2.207 0 0 0 22 12.068Zm-15.018 1.56a1.56 1.56 0 0 1 3.118 0c0 .86-.699 1.558-1.559 1.558-.86.018-1.559-.699-1.559-1.559Zm8.728 4.139c-1.076 1.075-3.119 1.147-3.71 1.147-.61 0-2.652-.09-3.71-1.147a.4.4 0 0 1 0-.573.4.4 0 0 1 .574 0c.68.68 2.114.914 3.136.914 1.022 0 2.473-.233 3.136-.914a.4.4 0 0 1 .574 0 .436.436 0 0 1 0 .573Zm-.287-2.563a1.56 1.56 0 0 1 0-3.118c.86 0 1.56.699 1.56 1.56 0 .841-.7 1.558-1.56 1.558Z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Reddit</span></a></li>
+
+<li class="wp-social-link wp-social-link-twitter  wp-block-social-link"><a href="https://twitter.com/ThinkinCoin" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Twitter</span></a></li>
+
+<li class="wp-social-link wp-social-link-youtube  wp-block-social-link"><a href="https://www.youtube.com/@thinkincoin" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M21.8,8.001c0,0-0.195-1.378-0.795-1.985c-0.76-0.797-1.613-0.801-2.004-0.847c-2.799-0.202-6.997-0.202-6.997-0.202 h-0.009c0,0-4.198,0-6.997,0.202C4.608,5.216,3.756,5.22,2.995,6.016C2.395,6.623,2.2,8.001,2.2,8.001S2,9.62,2,11.238v1.517 c0,1.618,0.2,3.237,0.2,3.237s0.195,1.378,0.795,1.985c0.761,0.797,1.76,0.771,2.205,0.855c1.6,0.153,6.8,0.201,6.8,0.201 s4.203-0.006,7.001-0.209c0.391-0.047,1.243-0.051,2.004-0.847c0.6-0.607,0.795-1.985,0.795-1.985s0.2-1.618,0.2-3.237v-1.517 C22,9.62,21.8,8.001,21.8,8.001z M9.935,14.594l-0.001-5.62l5.404,2.82L9.935,14.594z"></path></svg><span class="wp-block-social-link-label screen-reader-text">YouTube</span></a></li>
+
+<li class="wp-social-link wp-social-link-telegram  wp-block-social-link"><a href="https://t.me/thinkincoin" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M28.9700376,63.3244248 C47.6273373,55.1957357 60.0684594,49.8368063 66.2934036,47.2476366 C84.0668845,39.855031 87.7600616,38.5708563 90.1672227,38.528 C90.6966555,38.5191258 91.8804274,38.6503351 92.6472251,39.2725385 C93.294694,39.7979149 93.4728387,40.5076237 93.5580865,41.0057381 C93.6433345,41.5038525 93.7494885,42.63857 93.6651041,43.5252052 C92.7019529,53.6451182 88.5344133,78.2034783 86.4142057,89.5379542 C85.5170662,94.3339958 83.750571,95.9420841 82.0403991,96.0994568 C78.3237996,96.4414641 75.5015827,93.6432685 71.9018743,91.2836143 C66.2690414,87.5912212 63.0868492,85.2926952 57.6192095,81.6896017 C51.3004058,77.5256038 55.3966232,75.2369981 58.9976911,71.4967761 C59.9401076,70.5179421 76.3155302,55.6232293 76.6324771,54.2720454 C76.6721165,54.1030573 76.7089039,53.4731496 76.3346867,53.1405352 C75.9604695,52.8079208 75.4081573,52.921662 75.0095933,53.0121213 C74.444641,53.1403447 65.4461175,59.0880351 48.0140228,70.8551922 C45.4598218,72.6091037 43.1463059,73.4636682 41.0734751,73.4188859 C38.7883453,73.3695169 34.3926725,72.1268388 31.1249416,71.0646282 C27.1169366,69.7617838 23.931454,69.0729605 24.208838,66.8603276 C24.3533167,65.7078514 25.9403832,64.5292172 28.9700376,63.3244248 Z" /></svg><span class="wp-block-social-link-label screen-reader-text">Telegram</span></a></li>
+
+<li class="wp-social-link wp-social-link-instagram  wp-block-social-link"><a href="https://www.instagram.com/thinkincoin" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12,4.622c2.403,0,2.688,0.009,3.637,0.052c0.877,0.04,1.354,0.187,1.671,0.31c0.42,0.163,0.72,0.358,1.035,0.673 c0.315,0.315,0.51,0.615,0.673,1.035c0.123,0.317,0.27,0.794,0.31,1.671c0.043,0.949,0.052,1.234,0.052,3.637 s-0.009,2.688-0.052,3.637c-0.04,0.877-0.187,1.354-0.31,1.671c-0.163,0.42-0.358,0.72-0.673,1.035 c-0.315,0.315-0.615,0.51-1.035,0.673c-0.317,0.123-0.794,0.27-1.671,0.31c-0.949,0.043-1.233,0.052-3.637,0.052 s-2.688-0.009-3.637-0.052c-0.877-0.04-1.354-0.187-1.671-0.31c-0.42-0.163-0.72-0.358-1.035-0.673 c-0.315-0.315-0.51-0.615-0.673-1.035c-0.123-0.317-0.27-0.794-0.31-1.671C4.631,14.688,4.622,14.403,4.622,12 s0.009-2.688,0.052-3.637c0.04-0.877,0.187-1.354,0.31-1.671c0.163-0.42,0.358-0.72,0.673-1.035 c0.315-0.315,0.615-0.51,1.035-0.673c0.317-0.123,0.794-0.27,1.671-0.31C9.312,4.631,9.597,4.622,12,4.622 M12,3 C9.556,3,9.249,3.01,8.289,3.054C7.331,3.098,6.677,3.25,6.105,3.472C5.513,3.702,5.011,4.01,4.511,4.511 c-0.5,0.5-0.808,1.002-1.038,1.594C3.25,6.677,3.098,7.331,3.054,8.289C3.01,9.249,3,9.556,3,12c0,2.444,0.01,2.751,0.054,3.711 c0.044,0.958,0.196,1.612,0.418,2.185c0.23,0.592,0.538,1.094,1.038,1.594c0.5,0.5,1.002,0.808,1.594,1.038 c0.572,0.222,1.227,0.375,2.185,0.418C9.249,20.99,9.556,21,12,21s2.751-0.01,3.711-0.054c0.958-0.044,1.612-0.196,2.185-0.418 c0.592-0.23,1.094-0.538,1.594-1.038c0.5-0.5,0.808-1.002,1.038-1.594c0.222-0.572,0.375-1.227,0.418-2.185 C20.99,14.751,21,14.444,21,12s-0.01-2.751-0.054-3.711c-0.044-0.958-0.196-1.612-0.418-2.185c-0.23-0.592-0.538-1.094-1.038-1.594 c-0.5-0.5-1.002-0.808-1.594-1.038c-0.572-0.222-1.227-0.375-2.185-0.418C14.751,3.01,14.444,3,12,3L12,3z M12,7.378 c-2.552,0-4.622,2.069-4.622,4.622S9.448,16.622,12,16.622s4.622-2.069,4.622-4.622S14.552,7.378,12,7.378z M12,15 c-1.657,0-3-1.343-3-3s1.343-3,3-3s3,1.343,3,3S13.657,15,12,15z M16.804,6.116c-0.596,0-1.08,0.484-1.08,1.08 s0.484,1.08,1.08,1.08c0.596,0,1.08-0.484,1.08-1.08S17.401,6.116,16.804,6.116z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Instagram</span></a></li></ul>
+</section>					</span>
+							</div><!-- .site-info -->
+						<div class="footer-menu">
+				<div class="menu-full-links-container"><ul id="secondary-menu" class="row menu-footer-menu"><li id="menu-item-8094" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-8094"><a href="https://thinkincoin.com/" onClick="return true">Academy</a></li>
+<li id="menu-item-8095" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-8095"><a rel="privacy-policy" href="https://thinkincoin.com/privacy-policy-2/" onClick="return true">Privacy Policy</a></li>
+<li id="menu-item-8096" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8096"><a href="https://thinkincoin.com/about-us/" onClick="return true">About Us</a></li>
+<li id="menu-item-8097" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8097"><a href="https://thinkincoin.com/academy/" onClick="return true">Academy</a></li>
+<li id="menu-item-8098" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8098"><a href="https://thinkincoin.com/academy/instructor-registration/" onClick="return true">Instructor Registration</a></li>
+<li id="menu-item-8099" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8099"><a href="https://thinkincoin.com/academy/student-registration/" onClick="return true">Student Registration</a></li>
+<li id="menu-item-8100" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8100"><a href="https://thinkincoin.com/blog/" onClick="return true">Blog</a></li>
+<li id="menu-item-8104" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8104"><a href="https://thinkincoin.com/cart/" onClick="return true">Cart</a></li>
+<li id="menu-item-8106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8106"><a href="https://thinkincoin.com/checkout2/" onClick="return true">Checkout2</a></li>
+<li id="menu-item-8107" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8107"><a href="https://thinkincoin.com/checkout/" onClick="return true">Checkout</a></li>
+<li id="menu-item-8109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8109"><a href="https://thinkincoin.com/contact-2/" onClick="return true">Contact</a></li>
+<li id="menu-item-8110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8110"><a href="https://thinkincoin.com/course/" onClick="return true">Course</a></li>
+<li id="menu-item-8111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8111"><a href="https://thinkincoin.com/course-completed/" onClick="return true">Course Completed</a></li>
+<li id="menu-item-8112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8112"><a href="https://thinkincoin.com/?page_id=664" onClick="return true">Course list</a></li>
+<li id="menu-item-8113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8113"><a href="https://thinkincoin.com/courses-overview/" onClick="return true">Courses</a></li>
+<li id="menu-item-8116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8116"><a href="https://thinkincoin.com/dashboard/" onClick="return true">Dashboard</a></li>
+<li id="menu-item-8117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8117"><a href="https://thinkincoin.com/featured-course/" onClick="return true">Featured Course</a></li>
+<li id="menu-item-8121" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8121"><a href="https://thinkincoin.com/instructors/" onClick="return true">Instructors</a></li>
+<li id="menu-item-8123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8123"><a href="https://thinkincoin.com/my-account/" onClick="return true">My account</a></li>
+<li id="menu-item-8125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8125"><a href="https://thinkincoin.com/my-courses/" onClick="return true">My Courses</a></li>
+<li id="menu-item-8126" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8126"><a href="https://thinkincoin.com/panel/" onClick="return true">Panel</a></li>
+<li id="menu-item-8128" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8128"><a href="https://thinkincoin.com/refund_returns/" onClick="return true">Refund and Returns Policy</a></li>
+<li id="menu-item-8130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8130"><a href="https://thinkincoin.com/shop/" onClick="return true">Shop</a></li>
+<li id="menu-item-8135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8135"><a href="https://thinkincoin.com/subscription/" onClick="return true">Subscription</a></li>
+<li id="menu-item-8136" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8136"><a href="https://thinkincoin.com/terms-and-conditions/" onClick="return true">Terms of Service</a></li>
+<li id="menu-item-8137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8137"><a href="https://thinkincoin.com/tutor-certificate/" onClick="return true">Tutor Certificate</a></li>
+<li id="menu-item-8138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8138"><a href="https://thinkincoin.com/user-login/" onClick="return true">Tutor Login</a></li>
+</ul></div>			</div><!-- .footer-menu-->
+						<div class="copyright-container">
+				<span class="copyright">© 2023 Think in Coin | $NEURONS.  All rights reserved. Unauthorized use and/or duplication of this material without express and written permission is strictly prohibited. Use of this site constitutes acceptance of our Terms of Use and Privacy Policy.</span>
+			</div><!-- .footer-menu-->
+		</div><!-- .row -->
+	</div><!-- .container -->
+</footer><!-- #colophon -->
+</div><!-- #page -->
+
+			<script type='text/javascript'>
+				const lazyloadRunObserver = () => {
+					const dataAttribute = 'data-e-bg-lazyload';
+					const lazyloadBackgrounds = document.querySelectorAll( `[${ dataAttribute }]:not(.lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+					entries.forEach( ( entry ) => {
+						if ( entry.isIntersecting ) {
+							let lazyloadBackground = entry.target;
+							const lazyloadSelector = lazyloadBackground.getAttribute( dataAttribute );
+							if ( lazyloadSelector ) {
+								lazyloadBackground = entry.target.querySelector( lazyloadSelector );
+							}
+							if( lazyloadBackground ) {
+								lazyloadBackground.classList.add( 'lazyloaded' );
+							}
+							lazyloadBackgroundObserver.unobserve( entry.target );
+						}
+					});
+					}, { rootMargin: '100px 0px 100px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+					<script>
+			function copy_to_clipBoard(btn) {
+				var copyText = btn.previousSibling;
+				copyText.select();
+				document.execCommand("copy");
+			}
+		</script>
+			<script type='text/javascript'>
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<link rel='stylesheet' id='wc-blocks-style-css' href='https://thinkincoin.com/website/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=11.8.0-dev' type='text/css' media='all' />
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/tutor-pro/assets/lib/prism/prism.min.js?ver=2.6.0" id="tutor-prism-js-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/tutor-pro/assets/lib/prism/script.js?ver=2.6.0" id="tutor-prism-script-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/i18n.min.js?ver=7701b0c3857f914212ef" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/tutor-pro/assets/js/front.js?ver=2.6.0" id="tutor-pro-front-js"></script>
+<script type="text/javascript" id="tutor-script-js-extra">
+/* <![CDATA[ */
+var _tutorobject = {"ajaxurl":"https:\/\/thinkincoin.com\/website\/wp-admin\/admin-ajax.php","home_url":"https:\/\/thinkincoin.com","site_title":"Think in Coin","base_path":"\/","tutor_url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/","tutor_pro_url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor-pro\/","nonce_key":"_tutor_nonce","_tutor_nonce":"8cd4d3627c","loading_icon_url":"https:\/\/thinkincoin.com\/website\/wp-admin\/images\/wpspin_light.gif","placeholder_img_src":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/images\/placeholder.svg","enable_lesson_classic_editor":"1","tutor_frontend_dashboard_url":"https:\/\/thinkincoin.com\/dashboard\/","wp_date_format":"MMMM d, yyyy","is_admin":"","is_admin_bar_showing":"","addons_data":[{"name":"Course Bundle","description":"Group multiple courses to sell together.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/course-bundle\/thumbnail.svg"},{"name":"Social Login","description":"Let users register & login through social network like Facebook, Google, etc.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/social-login\/thumbnail.svg"},{"name":"Content Drip","description":"Unlock lessons by schedule or when the student meets specific condition.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/content-drip\/thumbnail.png"},{"name":"Tutor Multi Instructors","description":"Start a course with multiple instructors by Tutor Multi Instructors","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-multi-instructors\/thumbnail.png"},{"name":"Tutor Assignments","description":"Tutor assignments is a great way to assign tasks to students.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-assignments\/thumbnail.png"},{"name":"Tutor Course Preview","description":"Unlock some lessons for students before enrollment.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-course-preview\/thumbnail.png"},{"name":"Tutor Course Attachments","description":"Add unlimited attachments\/ private files to any Tutor course","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-course-attachments\/thumbnail.png"},{"name":"Tutor Google Meet Integration","description":"Connect Tutor LMS with Google Meet to host live online classes. Students can attend live classes right from the lesson page.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/google-meet\/thumbnail.png"},{"name":"Tutor Report","description":"Check your course performance through Tutor Report stats.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-report\/thumbnail.png"},{"name":"Email","description":"Send email on various tutor events","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-email\/thumbnail.png"},{"name":"Calendar","description":"Allow students to see everything in a calendar view in the front dashboard.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/calendar\/thumbnail.png"},{"name":"Notifications","description":"Get On Site and Push Notifications on specified tutor events.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-notifications\/thumbnail.png"},{"name":"Google Classroom Integration","description":"Helps connect Google Classrooms with Tutor LMS courses, allowing you to use features like Classroom streams and files directly from the Tutor LMS course.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/google-classroom\/thumbnail.png"},{"name":"Tutor Zoom Integration","description":"Connect Tutor LMS with Zoom to host live online classes. Students can attend live classes right from the lesson page.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-zoom\/thumbnail.png"},{"name":"Quiz Export\/Import","description":"Save time by exporting\/importing quiz data with easy options.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/quiz-import-export\/thumbnail.png"},{"name":"Enrollment","description":"Take advanced control on enrollment. Enroll the student manually.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/enrollments\/thumbnail.png"},{"name":"Tutor Certificate","description":"Students will be able to download a certificate after course completion.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-certificate\/thumbnail.png"},{"name":"Gradebook","description":"Shows student progress from assignment and quiz","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/gradebook\/thumbnail.png"},{"name":"Tutor Prerequisites","description":"Specific course you must complete before you can enroll new course by Tutor Prerequisites","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-prerequisites\/thumbnail.png"},{"name":"BuddyPress","description":"Discuss about course and share your knowledge with your friends through BuddyPress","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/buddypress\/thumbnail.png"},{"name":"WooCommerce Subscriptions","description":"Capture Residual Revenue with Recurring Payments.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/wc-subscriptions\/thumbnail.png"},{"name":"Paid Memberships Pro","description":"Maximize revenue by selling membership access to all of your courses.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/pmpro\/thumbnail.png"},{"name":"Restrict Content Pro","description":"Unlock Course depending on Restrict Content Pro Plugin Permission.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/restrict-content-pro\/thumbnail.png"},{"name":"Weglot","description":"Translate & manage multilingual courses for global reach with full edit control.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-weglot\/thumbnail.png"},{"name":"WPML Multilingual CMS","description":"Create multilingual courses, lessons, dashboard and more for a global audience.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-wpml\/thumbnail.png"}],"current_user":{"data":{},"ID":0,"caps":[],"cap_key":null,"roles":[],"allcaps":[],"filter":null},"content_change_event":"tutor_content_changed_event","is_tutor_course_edit":"","assignment_max_file_allowed":"0","current_page":"","quiz_answer_display_time":"2000","is_ssl":"1","course_list_page_url":"https:\/\/thinkincoin.com\/website\/wp-admin\/admin.php?page=tutor","course_post_type":"courses","tutor_pn_vapid_key":"BExxZzr-_FnSTyqRDrWF1ZT6TQvUHxlg7MddIQir0Jm6T176BEsry9FmwEznNn0NC3-1VlEi7JDKxEodw-uNg3I","tutor_pn_client_id":"0","tutor_pn_subscription_saved":"no"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/tutor/assets/js/tutor.min.js?ver=2.6.0" id="tutor-script-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-admin/js/editor.min.js?ver=6.4.3" id="editor-js"></script>
+<script type="text/javascript" id="editor-js-after">
+/* <![CDATA[ */
+window.wp.oldEditor = window.wp.editor;
+/* ]]> */
+</script>
+<script type="text/javascript" id="quicktags-js-extra">
+/* <![CDATA[ */
+var quicktagsL10n = {"closeAllOpenTags":"Close all open tags","closeTags":"close tags","enterURL":"Enter the URL","enterImageURL":"Enter the URL of the image","enterImageDescription":"Enter a description of the image","textdirection":"text direction","toggleTextdirection":"Toggle Editor Text Direction","dfw":"Distraction-free writing mode","strong":"Bold","strongClose":"Close bold tag","em":"Italic","emClose":"Close italic tag","link":"Insert link","blockquote":"Blockquote","blockquoteClose":"Close blockquote tag","del":"Deleted text (strikethrough)","delClose":"Close deleted text tag","ins":"Inserted text","insClose":"Close inserted text tag","image":"Insert image","ul":"Bulleted list","ulClose":"Close bulleted list tag","ol":"Numbered list","olClose":"Close numbered list tag","li":"List item","liClose":"Close list item tag","code":"Code","codeClose":"Close code tag","more":"Insert Read More tag"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/quicktags.min.js?ver=6.4.3" id="quicktags-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/dom-ready.min.js?ver=392bdd43726760d1f3ca" id="wp-dom-ready-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/a11y.min.js?ver=7032343a947cfccf5608" id="wp-a11y-js"></script>
+<script type="text/javascript" id="wplink-js-extra">
+/* <![CDATA[ */
+var wpLinkL10n = {"title":"Insert\/edit link","update":"Update","save":"Add Link","noTitle":"(no title)","noMatchesFound":"No results found.","linkSelected":"Link selected.","linkInserted":"Link inserted.","minInputLength":"3"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/wplink.min.js?ver=6.4.3" id="wplink-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/jquery/ui/menu.min.js?ver=1.13.2" id="jquery-ui-menu-js"></script>
+<script type="text/javascript" id="jquery-ui-autocomplete-js-extra">
+/* <![CDATA[ */
+var uiAutocompleteL10n = {"noResults":"No results found.","oneResult":"1 result found. Use up and down arrow keys to navigate.","manyResults":"%d results found. Use up and down arrow keys to navigate.","itemSelected":"Item selected."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.13.2" id="jquery-ui-autocomplete-js"></script>
+<script type="text/javascript" id="thickbox-js-extra">
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"https:\/\/thinkincoin.com\/website\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/thickbox/thickbox.js?ver=3.1-20121105" id="thickbox-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/underscore.min.js?ver=1.13.4" id="underscore-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/shortcode.min.js?ver=6.4.3" id="shortcode-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-admin/js/media-upload.min.js?ver=6.4.3" id="media-upload-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.2" id="jquery-ui-mouse-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/jquery/ui/sortable.min.js?ver=1.13.2" id="jquery-ui-sortable-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/jquery/jquery.ui.touch-punch.js?ver=0.2.2" id="jquery-touch-punch-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/tutor/assets/packages/plyr/plyr.polyfilled.min.js?ver=2.6.0" id="tutor-plyr-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/tutor/assets/packages/SocialShare/SocialShare.min.js?ver=2.6.0" id="tutor-social-share-js"></script>
+<script type="text/javascript" id="tutor-frontend-js-extra">
+/* <![CDATA[ */
+var _tutorobject = {"ajaxurl":"https:\/\/thinkincoin.com\/website\/wp-admin\/admin-ajax.php","home_url":"https:\/\/thinkincoin.com","site_title":"Think in Coin","base_path":"\/","tutor_url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/","tutor_pro_url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor-pro\/","nonce_key":"_tutor_nonce","_tutor_nonce":"8cd4d3627c","loading_icon_url":"https:\/\/thinkincoin.com\/website\/wp-admin\/images\/wpspin_light.gif","placeholder_img_src":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/images\/placeholder.svg","enable_lesson_classic_editor":"1","tutor_frontend_dashboard_url":"https:\/\/thinkincoin.com\/dashboard\/","wp_date_format":"MMMM d, yyyy","is_admin":"","is_admin_bar_showing":"","addons_data":[{"name":"Course Bundle","description":"Group multiple courses to sell together.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/course-bundle\/thumbnail.svg"},{"name":"Social Login","description":"Let users register & login through social network like Facebook, Google, etc.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/social-login\/thumbnail.svg"},{"name":"Content Drip","description":"Unlock lessons by schedule or when the student meets specific condition.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/content-drip\/thumbnail.png"},{"name":"Tutor Multi Instructors","description":"Start a course with multiple instructors by Tutor Multi Instructors","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-multi-instructors\/thumbnail.png"},{"name":"Tutor Assignments","description":"Tutor assignments is a great way to assign tasks to students.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-assignments\/thumbnail.png"},{"name":"Tutor Course Preview","description":"Unlock some lessons for students before enrollment.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-course-preview\/thumbnail.png"},{"name":"Tutor Course Attachments","description":"Add unlimited attachments\/ private files to any Tutor course","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-course-attachments\/thumbnail.png"},{"name":"Tutor Google Meet Integration","description":"Connect Tutor LMS with Google Meet to host live online classes. Students can attend live classes right from the lesson page.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/google-meet\/thumbnail.png"},{"name":"Tutor Report","description":"Check your course performance through Tutor Report stats.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-report\/thumbnail.png"},{"name":"Email","description":"Send email on various tutor events","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-email\/thumbnail.png"},{"name":"Calendar","description":"Allow students to see everything in a calendar view in the front dashboard.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/calendar\/thumbnail.png"},{"name":"Notifications","description":"Get On Site and Push Notifications on specified tutor events.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-notifications\/thumbnail.png"},{"name":"Google Classroom Integration","description":"Helps connect Google Classrooms with Tutor LMS courses, allowing you to use features like Classroom streams and files directly from the Tutor LMS course.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/google-classroom\/thumbnail.png"},{"name":"Tutor Zoom Integration","description":"Connect Tutor LMS with Zoom to host live online classes. Students can attend live classes right from the lesson page.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-zoom\/thumbnail.png"},{"name":"Quiz Export\/Import","description":"Save time by exporting\/importing quiz data with easy options.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/quiz-import-export\/thumbnail.png"},{"name":"Enrollment","description":"Take advanced control on enrollment. Enroll the student manually.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/enrollments\/thumbnail.png"},{"name":"Tutor Certificate","description":"Students will be able to download a certificate after course completion.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-certificate\/thumbnail.png"},{"name":"Gradebook","description":"Shows student progress from assignment and quiz","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/gradebook\/thumbnail.png"},{"name":"Tutor Prerequisites","description":"Specific course you must complete before you can enroll new course by Tutor Prerequisites","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-prerequisites\/thumbnail.png"},{"name":"BuddyPress","description":"Discuss about course and share your knowledge with your friends through BuddyPress","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/buddypress\/thumbnail.png"},{"name":"WooCommerce Subscriptions","description":"Capture Residual Revenue with Recurring Payments.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/wc-subscriptions\/thumbnail.png"},{"name":"Paid Memberships Pro","description":"Maximize revenue by selling membership access to all of your courses.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/pmpro\/thumbnail.png"},{"name":"Restrict Content Pro","description":"Unlock Course depending on Restrict Content Pro Plugin Permission.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/restrict-content-pro\/thumbnail.png"},{"name":"Weglot","description":"Translate & manage multilingual courses for global reach with full edit control.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-weglot\/thumbnail.png"},{"name":"WPML Multilingual CMS","description":"Create multilingual courses, lessons, dashboard and more for a global audience.","url":"https:\/\/thinkincoin.com\/website\/wp-content\/plugins\/tutor\/assets\/addons\/tutor-wpml\/thumbnail.png"}],"current_user":{"data":{},"ID":0,"caps":[],"cap_key":null,"roles":[],"allcaps":[],"filter":null},"content_change_event":"tutor_content_changed_event","is_tutor_course_edit":"","assignment_max_file_allowed":"0","current_page":"","quiz_answer_display_time":"2000","is_ssl":"1","course_list_page_url":"https:\/\/thinkincoin.com\/website\/wp-admin\/admin.php?page=tutor","course_post_type":"courses","tutor_pn_vapid_key":"BExxZzr-_FnSTyqRDrWF1ZT6TQvUHxlg7MddIQir0Jm6T176BEsry9FmwEznNn0NC3-1VlEi7JDKxEodw-uNg3I","tutor_pn_client_id":"0","tutor_pn_subscription_saved":"no"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/tutor/assets/js/tutor-front.min.js?ver=2.6.0" id="tutor-frontend-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.2" id="jquery-ui-datepicker-js"></script>
+<script type="text/javascript" id="jquery-ui-datepicker-js-after">
+/* <![CDATA[ */
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+/* ]]> */
+</script>
+<script type="text/javascript" id="tutor-course-bundle-common-js-before">
+/* <![CDATA[ */
+var tutorProCourseBundle = {"is_course_bundle_editor":false,"course_bundle_list_page_url":"https:\/\/thinkincoin.com\/website\/wp-admin\/admin.php?page=course-bundle","course_bundle_post_type":"course-bundle"}
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/tutor-pro/addons/course-bundle/assets/js/common.js?ver=2.6.0" id="tutor-course-bundle-common-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/tutor-pro/addons/google-classroom/assets/js/classroom-frontend.js?ver=2.6.0" id="tutor-gc-frontend-js-js"></script>
+<script type="text/javascript" id="tutor-pro-social-authentication-js-before">
+/* <![CDATA[ */
+var tutorProSocialLogin = {"is_enabled_google_login":true,"google_client_id":"816058718152-lsn73lv9tagd8m90emuj033qbr1idg56.apps.googleusercontent.com","is_enabled_facebook_login":false,"facebook_app_id":"","page_name":""}
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/tutor-pro/addons/social-login/assets/js/scripts.js?ver=1705435000" id="tutor-pro-social-authentication-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/tutor-pro/addons/social-login/assets/lib/google-client.js?ver=1705435000" id="tutor-pro-google-auth-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/tutor-pro/addons/tutor-notifications/assets/js/registrar.js?ver=2.6.0" id="tutor-pn-registrar-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=8.5.2" id="sourcebuster-js-js"></script>
+<script type="text/javascript" id="wc-order-attribution-js-extra">
+/* <![CDATA[ */
+var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"ajaxurl":"https:\/\/thinkincoin.com\/website\/wp-admin\/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":"yes"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=8.5.2" id="wc-order-attribution-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/vendor/react.min.js?ver=18.2.0" id="react-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/deprecated.min.js?ver=73ad3591e7bc95f4777a" id="wp-deprecated-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/dom.min.js?ver=49ff2869626fbeaacc23" id="wp-dom-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/vendor/react-dom.min.js?ver=18.2.0" id="react-dom-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/escape-html.min.js?ver=03e27a7b6ae14f7afaa6" id="wp-escape-html-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/element.min.js?ver=ed1c7604880e8b574b40" id="wp-element-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/is-shallow-equal.min.js?ver=20c2b06ecf04afb14fee" id="wp-is-shallow-equal-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/keycodes.min.js?ver=3460bd0fac9859d6886c" id="wp-keycodes-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/priority-queue.min.js?ver=422e19e9d48b269c5219" id="wp-priority-queue-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/compose.min.js?ver=3189b344ff39fef940b7" id="wp-compose-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/private-apis.min.js?ver=11cb2ebaa70a9f1f0ab5" id="wp-private-apis-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/redux-routine.min.js?ver=0be1b2a6a79703e28531" id="wp-redux-routine-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/data.min.js?ver=dc5f255634f3da29c8d5" id="wp-data-js"></script>
+<script type="text/javascript" id="wp-data-js-after">
+/* <![CDATA[ */
+( function() {
+	var userId = 0;
+	var storageKey = "WP_DATA_USER_" + userId;
+	wp.data
+		.use( wp.data.plugins.persistence, { storageKey: storageKey } );
+} )();
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/vendor/lodash.min.js?ver=4.17.19" id="lodash-js"></script>
+<script type="text/javascript" id="lodash-js-after">
+/* <![CDATA[ */
+window.lodash = _.noConflict();
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks-registry.js?ver=1c879273bd5c193cad0a" id="wc-blocks-registry-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/url.min.js?ver=b4979979018b684be209" id="wp-url-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/api-fetch.min.js?ver=0fa4dabf8bf2c7adf21a" id="wp-api-fetch-js"></script>
+<script type="text/javascript" id="wp-api-fetch-js-after">
+/* <![CDATA[ */
+wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://thinkincoin.com/wp-json/" ) );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "0584a08b1a" );
+wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
+wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
+wp.apiFetch.nonceEndpoint = "https://thinkincoin.com/website/wp-admin/admin-ajax.php?action=rest-nonce";
+/* ]]> */
+</script>
+<script type="text/javascript" id="wc-settings-js-before">
+/* <![CDATA[ */
+var wcSettings = wcSettings || JSON.parse( decodeURIComponent( '%7B%22shippingCostRequiresAddress%22%3Afalse%2C%22adminUrl%22%3A%22https%3A%5C%2F%5C%2Fthinkincoin.com%5C%2Fwebsite%5C%2Fwp-admin%5C%2F%22%2C%22countries%22%3A%7B%22AF%22%3A%22Afghanistan%22%2C%22AX%22%3A%22%5Cu00c5land%20Islands%22%2C%22AL%22%3A%22Albania%22%2C%22DZ%22%3A%22Algeria%22%2C%22AS%22%3A%22American%20Samoa%22%2C%22AD%22%3A%22Andorra%22%2C%22AO%22%3A%22Angola%22%2C%22AI%22%3A%22Anguilla%22%2C%22AQ%22%3A%22Antarctica%22%2C%22AG%22%3A%22Antigua%20and%20Barbuda%22%2C%22AR%22%3A%22Argentina%22%2C%22AM%22%3A%22Armenia%22%2C%22AW%22%3A%22Aruba%22%2C%22AU%22%3A%22Australia%22%2C%22AT%22%3A%22Austria%22%2C%22AZ%22%3A%22Azerbaijan%22%2C%22BS%22%3A%22Bahamas%22%2C%22BH%22%3A%22Bahrain%22%2C%22BD%22%3A%22Bangladesh%22%2C%22BB%22%3A%22Barbados%22%2C%22BY%22%3A%22Belarus%22%2C%22PW%22%3A%22Belau%22%2C%22BE%22%3A%22Belgium%22%2C%22BZ%22%3A%22Belize%22%2C%22BJ%22%3A%22Benin%22%2C%22BM%22%3A%22Bermuda%22%2C%22BT%22%3A%22Bhutan%22%2C%22BO%22%3A%22Bolivia%22%2C%22BQ%22%3A%22Bonaire%2C%20Saint%20Eustatius%20and%20Saba%22%2C%22BA%22%3A%22Bosnia%20and%20Herzegovina%22%2C%22BW%22%3A%22Botswana%22%2C%22BV%22%3A%22Bouvet%20Island%22%2C%22BR%22%3A%22Brazil%22%2C%22IO%22%3A%22British%20Indian%20Ocean%20Territory%22%2C%22BN%22%3A%22Brunei%22%2C%22BG%22%3A%22Bulgaria%22%2C%22BF%22%3A%22Burkina%20Faso%22%2C%22BI%22%3A%22Burundi%22%2C%22KH%22%3A%22Cambodia%22%2C%22CM%22%3A%22Cameroon%22%2C%22CA%22%3A%22Canada%22%2C%22CV%22%3A%22Cape%20Verde%22%2C%22KY%22%3A%22Cayman%20Islands%22%2C%22CF%22%3A%22Central%20African%20Republic%22%2C%22TD%22%3A%22Chad%22%2C%22CL%22%3A%22Chile%22%2C%22CN%22%3A%22China%22%2C%22CX%22%3A%22Christmas%20Island%22%2C%22CC%22%3A%22Cocos%20%28Keeling%29%20Islands%22%2C%22CO%22%3A%22Colombia%22%2C%22KM%22%3A%22Comoros%22%2C%22CG%22%3A%22Congo%20%28Brazzaville%29%22%2C%22CD%22%3A%22Congo%20%28Kinshasa%29%22%2C%22CK%22%3A%22Cook%20Islands%22%2C%22CR%22%3A%22Costa%20Rica%22%2C%22HR%22%3A%22Croatia%22%2C%22CU%22%3A%22Cuba%22%2C%22CW%22%3A%22Cura%26ccedil%3Bao%22%2C%22CY%22%3A%22Cyprus%22%2C%22CZ%22%3A%22Czech%20Republic%22%2C%22DK%22%3A%22Denmark%22%2C%22DJ%22%3A%22Djibouti%22%2C%22DM%22%3A%22Dominica%22%2C%22DO%22%3A%22Dominican%20Republic%22%2C%22EC%22%3A%22Ecuador%22%2C%22EG%22%3A%22Egypt%22%2C%22SV%22%3A%22El%20Salvador%22%2C%22GQ%22%3A%22Equatorial%20Guinea%22%2C%22ER%22%3A%22Eritrea%22%2C%22EE%22%3A%22Estonia%22%2C%22SZ%22%3A%22Eswatini%22%2C%22ET%22%3A%22Ethiopia%22%2C%22FK%22%3A%22Falkland%20Islands%22%2C%22FO%22%3A%22Faroe%20Islands%22%2C%22FJ%22%3A%22Fiji%22%2C%22FI%22%3A%22Finland%22%2C%22FR%22%3A%22France%22%2C%22GF%22%3A%22French%20Guiana%22%2C%22PF%22%3A%22French%20Polynesia%22%2C%22TF%22%3A%22French%20Southern%20Territories%22%2C%22GA%22%3A%22Gabon%22%2C%22GM%22%3A%22Gambia%22%2C%22GE%22%3A%22Georgia%22%2C%22DE%22%3A%22Germany%22%2C%22GH%22%3A%22Ghana%22%2C%22GI%22%3A%22Gibraltar%22%2C%22GR%22%3A%22Greece%22%2C%22GL%22%3A%22Greenland%22%2C%22GD%22%3A%22Grenada%22%2C%22GP%22%3A%22Guadeloupe%22%2C%22GU%22%3A%22Guam%22%2C%22GT%22%3A%22Guatemala%22%2C%22GG%22%3A%22Guernsey%22%2C%22GN%22%3A%22Guinea%22%2C%22GW%22%3A%22Guinea-Bissau%22%2C%22GY%22%3A%22Guyana%22%2C%22HT%22%3A%22Haiti%22%2C%22HM%22%3A%22Heard%20Island%20and%20McDonald%20Islands%22%2C%22HN%22%3A%22Honduras%22%2C%22HK%22%3A%22Hong%20Kong%22%2C%22HU%22%3A%22Hungary%22%2C%22IS%22%3A%22Iceland%22%2C%22IN%22%3A%22India%22%2C%22ID%22%3A%22Indonesia%22%2C%22IR%22%3A%22Iran%22%2C%22IQ%22%3A%22Iraq%22%2C%22IE%22%3A%22Ireland%22%2C%22IM%22%3A%22Isle%20of%20Man%22%2C%22IL%22%3A%22Israel%22%2C%22IT%22%3A%22Italy%22%2C%22CI%22%3A%22Ivory%20Coast%22%2C%22JM%22%3A%22Jamaica%22%2C%22JP%22%3A%22Japan%22%2C%22JE%22%3A%22Jersey%22%2C%22JO%22%3A%22Jordan%22%2C%22KZ%22%3A%22Kazakhstan%22%2C%22KE%22%3A%22Kenya%22%2C%22KI%22%3A%22Kiribati%22%2C%22KW%22%3A%22Kuwait%22%2C%22KG%22%3A%22Kyrgyzstan%22%2C%22LA%22%3A%22Laos%22%2C%22LV%22%3A%22Latvia%22%2C%22LB%22%3A%22Lebanon%22%2C%22LS%22%3A%22Lesotho%22%2C%22LR%22%3A%22Liberia%22%2C%22LY%22%3A%22Libya%22%2C%22LI%22%3A%22Liechtenstein%22%2C%22LT%22%3A%22Lithuania%22%2C%22LU%22%3A%22Luxembourg%22%2C%22MO%22%3A%22Macao%22%2C%22MG%22%3A%22Madagascar%22%2C%22MW%22%3A%22Malawi%22%2C%22MY%22%3A%22Malaysia%22%2C%22MV%22%3A%22Maldives%22%2C%22ML%22%3A%22Mali%22%2C%22MT%22%3A%22Malta%22%2C%22MH%22%3A%22Marshall%20Islands%22%2C%22MQ%22%3A%22Martinique%22%2C%22MR%22%3A%22Mauritania%22%2C%22MU%22%3A%22Mauritius%22%2C%22YT%22%3A%22Mayotte%22%2C%22MX%22%3A%22Mexico%22%2C%22FM%22%3A%22Micronesia%22%2C%22MD%22%3A%22Moldova%22%2C%22MC%22%3A%22Monaco%22%2C%22MN%22%3A%22Mongolia%22%2C%22ME%22%3A%22Montenegro%22%2C%22MS%22%3A%22Montserrat%22%2C%22MA%22%3A%22Morocco%22%2C%22MZ%22%3A%22Mozambique%22%2C%22MM%22%3A%22Myanmar%22%2C%22NA%22%3A%22Namibia%22%2C%22NR%22%3A%22Nauru%22%2C%22NP%22%3A%22Nepal%22%2C%22NL%22%3A%22Netherlands%22%2C%22NC%22%3A%22New%20Caledonia%22%2C%22NZ%22%3A%22New%20Zealand%22%2C%22NI%22%3A%22Nicaragua%22%2C%22NE%22%3A%22Niger%22%2C%22NG%22%3A%22Nigeria%22%2C%22NU%22%3A%22Niue%22%2C%22NF%22%3A%22Norfolk%20Island%22%2C%22KP%22%3A%22North%20Korea%22%2C%22MK%22%3A%22North%20Macedonia%22%2C%22MP%22%3A%22Northern%20Mariana%20Islands%22%2C%22NO%22%3A%22Norway%22%2C%22OM%22%3A%22Oman%22%2C%22PK%22%3A%22Pakistan%22%2C%22PS%22%3A%22Palestinian%20Territory%22%2C%22PA%22%3A%22Panama%22%2C%22PG%22%3A%22Papua%20New%20Guinea%22%2C%22PY%22%3A%22Paraguay%22%2C%22PE%22%3A%22Peru%22%2C%22PH%22%3A%22Philippines%22%2C%22PN%22%3A%22Pitcairn%22%2C%22PL%22%3A%22Poland%22%2C%22PT%22%3A%22Portugal%22%2C%22PR%22%3A%22Puerto%20Rico%22%2C%22QA%22%3A%22Qatar%22%2C%22RE%22%3A%22Reunion%22%2C%22RO%22%3A%22Romania%22%2C%22RU%22%3A%22Russia%22%2C%22RW%22%3A%22Rwanda%22%2C%22ST%22%3A%22S%26atilde%3Bo%20Tom%26eacute%3B%20and%20Pr%26iacute%3Bncipe%22%2C%22BL%22%3A%22Saint%20Barth%26eacute%3Blemy%22%2C%22SH%22%3A%22Saint%20Helena%22%2C%22KN%22%3A%22Saint%20Kitts%20and%20Nevis%22%2C%22LC%22%3A%22Saint%20Lucia%22%2C%22SX%22%3A%22Saint%20Martin%20%28Dutch%20part%29%22%2C%22MF%22%3A%22Saint%20Martin%20%28French%20part%29%22%2C%22PM%22%3A%22Saint%20Pierre%20and%20Miquelon%22%2C%22VC%22%3A%22Saint%20Vincent%20and%20the%20Grenadines%22%2C%22WS%22%3A%22Samoa%22%2C%22SM%22%3A%22San%20Marino%22%2C%22SA%22%3A%22Saudi%20Arabia%22%2C%22SN%22%3A%22Senegal%22%2C%22RS%22%3A%22Serbia%22%2C%22SC%22%3A%22Seychelles%22%2C%22SL%22%3A%22Sierra%20Leone%22%2C%22SG%22%3A%22Singapore%22%2C%22SK%22%3A%22Slovakia%22%2C%22SI%22%3A%22Slovenia%22%2C%22SB%22%3A%22Solomon%20Islands%22%2C%22SO%22%3A%22Somalia%22%2C%22ZA%22%3A%22South%20Africa%22%2C%22GS%22%3A%22South%20Georgia%5C%2FSandwich%20Islands%22%2C%22KR%22%3A%22South%20Korea%22%2C%22SS%22%3A%22South%20Sudan%22%2C%22ES%22%3A%22Spain%22%2C%22LK%22%3A%22Sri%20Lanka%22%2C%22SD%22%3A%22Sudan%22%2C%22SR%22%3A%22Suriname%22%2C%22SJ%22%3A%22Svalbard%20and%20Jan%20Mayen%22%2C%22SE%22%3A%22Sweden%22%2C%22CH%22%3A%22Switzerland%22%2C%22SY%22%3A%22Syria%22%2C%22TW%22%3A%22Taiwan%22%2C%22TJ%22%3A%22Tajikistan%22%2C%22TZ%22%3A%22Tanzania%22%2C%22TH%22%3A%22Thailand%22%2C%22TL%22%3A%22Timor-Leste%22%2C%22TG%22%3A%22Togo%22%2C%22TK%22%3A%22Tokelau%22%2C%22TO%22%3A%22Tonga%22%2C%22TT%22%3A%22Trinidad%20and%20Tobago%22%2C%22TN%22%3A%22Tunisia%22%2C%22TR%22%3A%22Turkey%22%2C%22TM%22%3A%22Turkmenistan%22%2C%22TC%22%3A%22Turks%20and%20Caicos%20Islands%22%2C%22TV%22%3A%22Tuvalu%22%2C%22UG%22%3A%22Uganda%22%2C%22UA%22%3A%22Ukraine%22%2C%22AE%22%3A%22United%20Arab%20Emirates%22%2C%22GB%22%3A%22United%20Kingdom%20%28UK%29%22%2C%22US%22%3A%22United%20States%20%28US%29%22%2C%22UM%22%3A%22United%20States%20%28US%29%20Minor%20Outlying%20Islands%22%2C%22UY%22%3A%22Uruguay%22%2C%22UZ%22%3A%22Uzbekistan%22%2C%22VU%22%3A%22Vanuatu%22%2C%22VA%22%3A%22Vatican%22%2C%22VE%22%3A%22Venezuela%22%2C%22VN%22%3A%22Vietnam%22%2C%22VG%22%3A%22Virgin%20Islands%20%28British%29%22%2C%22VI%22%3A%22Virgin%20Islands%20%28US%29%22%2C%22WF%22%3A%22Wallis%20and%20Futuna%22%2C%22EH%22%3A%22Western%20Sahara%22%2C%22YE%22%3A%22Yemen%22%2C%22ZM%22%3A%22Zambia%22%2C%22ZW%22%3A%22Zimbabwe%22%7D%2C%22currency%22%3A%7B%22code%22%3A%22USD%22%2C%22precision%22%3A2%2C%22symbol%22%3A%22%24%22%2C%22symbolPosition%22%3A%22left_space%22%2C%22decimalSeparator%22%3A%22.%22%2C%22thousandSeparator%22%3A%22%2C%22%2C%22priceFormat%22%3A%22%251%24s%5Cu00a0%252%24s%22%7D%2C%22currentUserId%22%3A0%2C%22currentUserIsAdmin%22%3Afalse%2C%22dateFormat%22%3A%22F%20j%2C%20Y%22%2C%22homeUrl%22%3A%22https%3A%5C%2F%5C%2Fthinkincoin.com%5C%2F%22%2C%22locale%22%3A%7B%22siteLocale%22%3A%22en_US%22%2C%22userLocale%22%3A%22en_US%22%2C%22weekdaysShort%22%3A%5B%22Sun%22%2C%22Mon%22%2C%22Tue%22%2C%22Wed%22%2C%22Thu%22%2C%22Fri%22%2C%22Sat%22%5D%7D%2C%22dashboardUrl%22%3A%22https%3A%5C%2F%5C%2Fthinkincoin.com%5C%2Fmy-account%5C%2F%22%2C%22orderStatuses%22%3A%7B%22pending%22%3A%22Pending%20payment%22%2C%22processing%22%3A%22Processing%22%2C%22on-hold%22%3A%22On%20hold%22%2C%22completed%22%3A%22Completed%22%2C%22cancelled%22%3A%22Cancelled%22%2C%22refunded%22%3A%22Refunded%22%2C%22failed%22%3A%22Failed%22%2C%22checkout-draft%22%3A%22Draft%22%7D%2C%22placeholderImgSrc%22%3A%22https%3A%5C%2F%5C%2Fthinkincoin.com%5C%2Fwebsite%5C%2Fwp-content%5C%2Fuploads%5C%2Fwoocommerce-placeholder-300x300.png%22%2C%22productsSettings%22%3A%7B%22cartRedirectAfterAdd%22%3Afalse%7D%2C%22siteTitle%22%3A%22Think%20in%20Coin%22%2C%22storePages%22%3A%7B%22myaccount%22%3A%7B%22id%22%3A10%2C%22title%22%3A%22My%20account%22%2C%22permalink%22%3A%22https%3A%5C%2F%5C%2Fthinkincoin.com%5C%2Fmy-account%5C%2F%22%7D%2C%22shop%22%3A%7B%22id%22%3A7%2C%22title%22%3A%22Shop%22%2C%22permalink%22%3A%22https%3A%5C%2F%5C%2Fthinkincoin.com%5C%2Fshop%5C%2F%22%7D%2C%22cart%22%3A%7B%22id%22%3A8%2C%22title%22%3A%22Cart%22%2C%22permalink%22%3A%22https%3A%5C%2F%5C%2Fthinkincoin.com%5C%2Fcart%5C%2F%22%7D%2C%22checkout%22%3A%7B%22id%22%3A9%2C%22title%22%3A%22Checkout%22%2C%22permalink%22%3A%22https%3A%5C%2F%5C%2Fthinkincoin.com%5C%2Fcheckout%5C%2F%22%7D%2C%22privacy%22%3A%7B%22id%22%3A7162%2C%22title%22%3A%22Privacy%20Policy%22%2C%22permalink%22%3A%22https%3A%5C%2F%5C%2Fthinkincoin.com%5C%2Fprivacy-policy-2%5C%2F%22%7D%2C%22terms%22%3A%7B%22id%22%3A7165%2C%22title%22%3A%22Terms%20of%20Service%22%2C%22permalink%22%3A%22https%3A%5C%2F%5C%2Fthinkincoin.com%5C%2Fterms-and-conditions%5C%2F%22%7D%7D%2C%22wcAssetUrl%22%3A%22https%3A%5C%2F%5C%2Fthinkincoin.com%5C%2Fwebsite%5C%2Fwp-content%5C%2Fplugins%5C%2Fwoocommerce%5C%2Fassets%5C%2F%22%2C%22wcVersion%22%3A%228.5.2%22%2C%22wpLoginUrl%22%3A%22https%3A%5C%2F%5C%2Fthinkincoin.com%5C%2Flogin%5C%2F%22%2C%22wpVersion%22%3A%226.4.3%22%2C%22collectableMethodIds%22%3A%5B%5D%2C%22admin%22%3A%7B%22wccomHelper%22%3A%7B%22isConnected%22%3Atrue%2C%22connectURL%22%3A%22https%3A%5C%2F%5C%2Fthinkincoin.com%5C%2Fwebsite%5C%2Fwp-admin%5C%2Fadmin.php%3Fpage%3Dwc-addons%26section%3Dhelper%26wc-helper-disconnect%3D1%26wc-helper-nonce%3D846e006f24%22%2C%22userEmail%22%3A%22contact%40thinkincoin.com%22%2C%22userAvatar%22%3A%22https%3A%5C%2F%5C%2Fsecure.gravatar.com%5C%2Favatar%5C%2F2eb24c8b6ed7309ff3bd10091efe1dd5%3Fs%3D48%26d%3Dmm%26r%3Dg%22%2C%22storeCountry%22%3A%22BR%22%2C%22inAppPurchaseURLParams%22%3A%7B%22wccom-site%22%3A%22https%3A%5C%2F%5C%2Fthinkincoin.com%5C%2Fwebsite%22%2C%22wccom-back%22%3A%22%252Fcourses%252Fthe-power-of-ideas-in-the-crypto-asset-market%252Flesson%252Finnovative-business-models%252F%22%2C%22wccom-woo-version%22%3A%228.5.2%22%2C%22wccom-connect-nonce%22%3A%224be134a901%22%7D%7D%2C%22_feature_nonce%22%3A%22b2d1a27c3c%22%2C%22alertCount%22%3A%220%22%2C%22visibleTaskListIds%22%3A%5B%5D%7D%7D' ) );
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/woocommerce/assets/client/blocks/wc-settings.js?ver=07c2f0675ddd247d2325" id="wc-settings-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/data-controls.min.js?ver=fe4ccc8a1782ea8e2cb1" id="wp-data-controls-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/html-entities.min.js?ver=36a4a255da7dd2e1bf8e" id="wp-html-entities-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/notices.min.js?ver=38e88f4b627cf873edd0" id="wp-notices-js"></script>
+<script type="text/javascript" id="wc-blocks-middleware-js-before">
+/* <![CDATA[ */
+			var wcBlocksMiddlewareConfig = {
+				storeApiNonce: '040f2b1674',
+				wcStoreApiNonceTimestamp: '1707464523'
+			};
+			
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks-middleware.js?ver=ca04183222edaf8a26be" id="wc-blocks-middleware-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks-data.js?ver=c96aba0171b12e03b8a6" id="wc-blocks-data-store-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/primitives.min.js?ver=6984e6eb5d6157c4fe44" id="wp-primitives-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/dist/warning.min.js?ver=122829a085511691f14d" id="wp-warning-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/woocommerce/assets/client/blocks/blocks-components.js?ver=b165bb2bd213326d7f31" id="wc-blocks-components-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/woocommerce/assets/client/blocks/blocks-checkout.js?ver=9f469ef17beaf7c51576" id="wc-blocks-checkout-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution-blocks.min.js?ver=8.5.2" id="wc-order-attribution-blocks-js"></script>
+<script type="text/javascript" id="main-js-extra">
+/* <![CDATA[ */
+var tutorstarter_vars = {"site_url":"https:\/\/thinkincoin.com","ajaxurl":"https:\/\/thinkincoin.com\/website\/wp-admin\/admin-ajax.php","authRedirectUrl":"https:\/\/thinkincoin.com"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-content/themes/tutor-child/assets/dist/js/app.min.js?ver=1.0.0" id="main-js"></script>
+<script type="text/javascript" src="https://thinkincoin.com/website/wp-includes/js/comment-reply.min.js?ver=6.4.3" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+	<script>
+		/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+			<script type="text/javascript">
+		window.wp = window.wp || {};
+		window.wp.editor = window.wp.editor || {};
+		window.wp.editor.getDefaultSettings = function() {
+			return {
+				tinymce: {},
+				quicktags: {
+					buttons: 'strong,em,link,ul,ol,li,code'
+				}
+			};
+		};
+
+				</script>
+				<div id="wp-link-backdrop" style="display: none"></div>
+		<div id="wp-link-wrap" class="wp-core-ui" style="display: none" role="dialog" aria-labelledby="link-modal-title">
+		<form id="wp-link" tabindex="-1">
+		<input type="hidden" id="_ajax_linking_nonce" name="_ajax_linking_nonce" value="e662cf51dd" />		<h1 id="link-modal-title">Insert/edit link</h1>
+		<button type="button" id="wp-link-close"><span class="screen-reader-text">
+			Close		</span></button>
+		<div id="link-selector">
+			<div id="link-options">
+				<p class="howto" id="wplink-enter-url">Enter the destination URL</p>
+				<div>
+					<label><span>URL</span>
+					<input id="wp-link-url" type="text" aria-describedby="wplink-enter-url" /></label>
+				</div>
+				<div class="wp-link-text-field">
+					<label><span>Link Text</span>
+					<input id="wp-link-text" type="text" /></label>
+				</div>
+				<div class="link-target">
+					<label><span></span>
+					<input type="checkbox" id="wp-link-target" /> Open link in a new tab</label>
+				</div>
+			</div>
+			<p class="howto" id="wplink-link-existing-content">Or link to existing content</p>
+			<div id="search-panel">
+				<div class="link-search-wrapper">
+					<label>
+						<span class="search-label">Search</span>
+						<input type="search" id="wp-link-search" class="link-search-field" autocomplete="off" aria-describedby="wplink-link-existing-content" />
+						<span class="spinner"></span>
+					</label>
+				</div>
+				<div id="search-results" class="query-results" tabindex="0">
+					<ul></ul>
+					<div class="river-waiting">
+						<span class="spinner"></span>
+					</div>
+				</div>
+				<div id="most-recent-results" class="query-results" tabindex="0">
+					<div class="query-notice" id="query-notice-message">
+						<em class="query-notice-default">No search term specified. Showing recent items.</em>
+						<em class="query-notice-hint screen-reader-text">
+							Search or use up and down arrow keys to select an item.						</em>
+					</div>
+					<ul></ul>
+					<div class="river-waiting">
+						<span class="spinner"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="submitbox">
+			<div id="wp-link-cancel">
+				<button type="button" class="button">Cancel</button>
+			</div>
+			<div id="wp-link-update">
+				<input type="submit" value="Add Link" class="button button-primary" id="wp-link-submit" name="wp-link-submit">
+			</div>
+		</div>
+		</form>
+		</div>
+		
+<script>window.w3tc_lazyload=1,window.lazyLoadOptions={elements_selector:".lazy",callback_loaded:function(t){var e;try{e=new CustomEvent("w3tc_lazyload_loaded",{detail:{e:t}})}catch(a){(e=document.createEvent("CustomEvent")).initCustomEvent("w3tc_lazyload_loaded",!1,!1,{e:t})}window.dispatchEvent(e)}}</script><script async src="https://thinkincoin.com/website/wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js"></script></body>
+</html>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 1/722 objects using Disk
+Page Caching using Disk: Enhanced 
+Lazy Loading
+Database Caching using Disk (Request-wide modification query)
+
+Served from: thinkincoin.com @ 2024-02-09 07:42:04 by W3 Total Cache
+-->

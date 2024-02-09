@@ -12,6 +12,7 @@ namespace TutorPro\CourseBundle\Backend;
 
 use TUTOR\Backend_Page_Trait;
 use TUTOR\Input;
+use Tutor\Models\CourseModel;
 use TUTOR\User;
 use TutorPro\CourseBundle\CustomPosts\CourseBundle;
 use TutorPro\CourseBundle\Models\BundleModel;
@@ -43,6 +44,49 @@ class BundleList {
 		add_action( 'wp_ajax_tutor_change_bundle_status', array( $this, 'change_bundle_status' ) );
 		add_action( 'wp_ajax_tutor_bundle_delete', array( $this, 'delete_bundle' ) );
 		add_action( 'trashed_post', array( $this, 'redirect_to_bundle_list_page' ) );
+
+		add_action( 'save_post_' . CourseModel::POST_TYPE, array( $this, 'assign_category_to_bundle' ), 100 );
+		add_action( 'save_post_' . CourseBundle::POST_TYPE, array( $this, 'assign_bundle_category' ), 100 );
+	}
+
+	/**
+	 * Assign course category to bundle category
+	 *
+	 * @since 2.6.0
+	 *
+	 * @param int $post_id post id.
+	 *
+	 * @return void
+	 */
+	public function assign_category_to_bundle( $post_id ) {
+		if ( CourseModel::POST_TYPE !== get_post_type( $post_id ) ) {
+			return;
+		}
+
+		$bundle_id = BundleModel::get_bundle_id_by_course( $post_id );
+		if ( ! $bundle_id ) {
+			return;
+		}
+
+		$this->assign_bundle_category( $bundle_id );
+	}
+
+	/**
+	 * Assign bundle category.
+	 *
+	 * @param int $post_id post id.
+	 *
+	 * @return void
+	 */
+	public static function assign_bundle_category( $post_id ) {
+		if ( CourseBundle::POST_TYPE !== get_post_type( $post_id ) ) {
+			return;
+		}
+
+		$categories = BundleModel::get_bundle_course_categories( $post_id );
+		$cat_ids    = array_column( $categories, 'term_id' );
+
+		wp_set_post_terms( $post_id, $cat_ids, 'course-category' );
 	}
 
 	/**

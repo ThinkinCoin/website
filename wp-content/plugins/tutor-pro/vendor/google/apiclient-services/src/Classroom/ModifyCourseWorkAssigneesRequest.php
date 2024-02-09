@@ -19,14 +19,27 @@ namespace Google\Service\Classroom;
 
 class ModifyCourseWorkAssigneesRequest extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $assigneeMode;
+  /**
+   * @var ModifyIndividualStudentsOptions
+   */
+  public $modifyIndividualStudentsOptions;
   protected $modifyIndividualStudentsOptionsType = ModifyIndividualStudentsOptions::class;
   protected $modifyIndividualStudentsOptionsDataType = '';
 
+  /**
+   * @param string
+   */
   public function setAssigneeMode($assigneeMode)
   {
     $this->assigneeMode = $assigneeMode;
   }
+  /**
+   * @return string
+   */
   public function getAssigneeMode()
   {
     return $this->assigneeMode;

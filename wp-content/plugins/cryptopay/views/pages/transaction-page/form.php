@@ -1,3 +1,12 @@
+<?php
+    use BeycanPress\CryptoPay\Types\Enums\TransactionStatus as Status;
+    $verified = Status::VERIFIED;
+    $failed = Status::FAILED;
+    $pending = Status::PENDING;
+    $fullyRefunded = Status::FULLY_REFUNDED;
+    $partiallyRefunded = Status::PARTIALLY_REFUNDED;
+?>
+
 <form>
     <?php 
         if (!empty($_GET)) {
@@ -9,17 +18,20 @@
 
     <select name="status">
         <option value=""><?php echo esc_html__('Filter by status', 'cryptopay'); ?></option>
-        <option value="verified" <?php echo isset($_GET['status']) && $_GET['status'] == 'verified' ? 'selected' : null ?>>
+        <option value="<?php echo esc_attr($verified->getValue()); ?>" <?php echo isset($_GET['status']) && $_GET['status'] == $verified->getValue() ? 'selected' : null ?>>
             <?php echo esc_html__('Verified', 'cryptopay'); ?>
         </option>
-        <option value="failed" <?php echo isset($_GET['status']) && $_GET['status'] == 'failed' ? 'selected' : null ?>>
+        <option value="<?php echo esc_attr($failed->getValue()); ?>" <?php echo isset($_GET['status']) && $_GET['status'] == $failed->getValue() ? 'selected' : null ?>>
             <?php echo esc_html__('Failed', 'cryptopay'); ?>
         </option>
-        <option value="pending" <?php echo isset($_GET['status']) && $_GET['status'] == 'pending' ? 'selected' : null ?>>
+        <option value="<?php echo esc_attr($pending->getValue()); ?>" <?php echo isset($_GET['status']) && $_GET['status'] == $pending->getValue() ? 'selected' : null ?>>
             <?php echo esc_html__('Pending', 'cryptopay'); ?>
         </option>
-        <option value="refunded" <?php echo isset($_GET['status']) && $_GET['status'] == 'refunded' ? 'selected' : null ?>>
-            <?php echo esc_html__('Refunded', 'cryptopay'); ?>
+        <option value="<?php echo esc_attr($fullyRefunded->getValue()); ?>" <?php echo isset($_GET['status']) && $_GET['status'] == $fullyRefunded->getValue() ? 'selected' : null ?>>
+            <?php echo esc_html__('Fully refunded', 'cryptopay'); ?>
+        </option>
+        <option value="<?php echo esc_attr($partiallyRefunded->getValue()); ?>" <?php echo isset($_GET['status']) && $_GET['status'] == $partiallyRefunded->getValue() ? 'selected' : null ?>>
+            <?php echo esc_html__('Partially refunded', 'cryptopay'); ?>
         </option>
     </select>
 
@@ -33,6 +45,6 @@
     </select>
 
     <button class="button" type="submit"><?php echo esc_html__('Filter', 'cryptopay'); ?></button>
-    <a href="<?php echo esc_url($this->pageUrl) ?>" class="button"><?php echo esc_html__('Reset', 'cryptopay'); ?></a>
+    <a href="<?php echo esc_url($pageUrl) ?>" class="button"><?php echo esc_html__('Reset', 'cryptopay'); ?></a>
 
 </form>

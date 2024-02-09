@@ -204,7 +204,10 @@ function mo_api_auth_is_valid_request() {
 	$headers  = array_change_key_case( $headers, CASE_UPPER );
 
 	$url_and_params = ! empty( $_SERVER['REQUEST_URI'] ) ? explode( '?', sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ), 2 ) : array( '', '' );
-	if ( stripos( $url_and_params[0], '/wp/v2' ) === false && ( stripos( $url_and_params[1], 'rest_route=/wp/v2' ) === false && get_option( 'permalink_structure' ) === '' ) ) {
+	if ( get_option( 'permalink_structure' ) === '' && isset( $url_and_params[1] ) ) {
+		$url_and_params[0] = $url_and_params[1];
+	}
+	if ( stripos( $url_and_params[0], '/wp/v2' ) === false ) {
 		if ( get_option( 'mo_rest_api_protect_migrate' ) ) {
 			$response = array(
 				'status'            => 'error',

@@ -367,15 +367,15 @@
 				),
 				'email_to_teachers.withdrawal_request_received' => array(
 					__( 'New withdrawal request received (to teacher)', 'tutor-pro' ),
-					'{site_url}, {site_name}, {instructor_username}',
+					'{site_url}, {site_name}, {instructor_username}, {withdraw_method_name}, {request_time}',
 				),
-				'email_to_teachers.withdrawal_request_rejected' => array(
+				'email_to_teachers.withdrawal_request_rejected' => array(	
 					__( 'Withdrawal request rejected (to teacher)', 'tutor-pro' ),
-					'{site_url}, {site_name}, {instructor_username}',
+					'{site_url}, {site_name}, {instructor_username},{withdraw_method_name},{withdraw_reject_time}',
 				),
 				'email_to_teachers.withdrawal_request_approved' => array(
 					__( 'Withdrawal request approved (to teacher)', 'tutor-pro' ),
-					'{site_url}, {site_name}, {instructor_username}',
+					'{site_url}, {site_name}, {instructor_username}, {withdraw_method_name}, {request_time}',
 				),
 				'email_to_teachers.instructor_application_received' => array(
 					__( 'Instructor application received (to teacher)', 'tutor-pro' ),

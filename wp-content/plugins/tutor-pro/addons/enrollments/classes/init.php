@@ -1,82 +1,103 @@
 <?php
+/**
+ * Enrollment Addon Init
+ *
+ * @package TutorPro\Addons
+ * @subpackage Enrollment
+ * @author Themeum <support@themeum.com>
+ * @link https://themeum.com
+ * @since 2.0.0
+ */
+
 namespace TUTOR_ENROLLMENTS;
 
-if ( ! defined( 'ABSPATH' ) )
-	exit;
+use TUTOR\Input;
 
-class init{
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+//phpcs:ignore
+class init {
+	//phpcs:disable
 	public $version = TUTOR_ENROLLMENTS_VERSION;
 	public $path;
 	public $url;
 	public $basename;
 
-	//Module
+	// Module.
 	private $enrollments;
-	public  $enrollment_list;
+	public $enrollment_list;
+	//phpcs:enable
 
-	function __construct() {
-		if ( ! function_exists('tutor')){
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
+		if ( ! function_exists( 'tutor' ) ) {
 			return;
 		}
 
-		$addonConfig = tutor_utils()->get_addon_config(TUTOR_ENROLLMENTS()->basename);
-		$isEnable = (bool) tutor_utils()->array_get('is_enable', $addonConfig);
-		if ( ! $isEnable){
+		$addon_config = tutor_utils()->get_addon_config( TUTOR_ENROLLMENTS()->basename );
+		$is_enable    = (bool) tutor_utils()->array_get( 'is_enable', $addon_config );
+		if ( ! $is_enable ) {
 			return;
 		}
 
-		$this->path = plugin_dir_path(TUTOR_ENROLLMENTS_FILE);
-		$this->url = plugin_dir_url(TUTOR_ENROLLMENTS_FILE);
-		$this->basename = plugin_basename(TUTOR_ENROLLMENTS_FILE);
+		$this->path     = plugin_dir_path( TUTOR_ENROLLMENTS_FILE );
+		$this->url      = plugin_dir_url( TUTOR_ENROLLMENTS_FILE );
+		$this->basename = plugin_basename( TUTOR_ENROLLMENTS_FILE );
 
-		add_action( 'admin_enqueue_scripts', array($this, 'register_scritps') );
+		add_action( 'admin_enqueue_scripts', array( $this, 'register_scritps' ) );
 
-		$this->load_TUTOR_ENROLLMENTS();
+		$this->load_enrollment();
 	}
 
-	// Register scripts 
+	/**
+	 * Register scripts
+	 *
+	 * @return void
+	 */
 	public function register_scritps() {
-		if(is_admin() && isset($_GET['page']) && $_GET['page']=='enrollments') {
-			wp_enqueue_script( 'enrollment-js-script', TUTOR_ENROLLMENTS()->url . 'assets/js/enroll.js', array('jquery', 'wp-i18n'), TUTOR_PRO_VERSION, true );
+		if ( is_admin() && 'enrollments' === Input::get( 'page' ) ) {
+			wp_enqueue_script( 'enrollment-js-script', TUTOR_ENROLLMENTS()->url . 'assets/js/enroll.js', array( 'jquery', 'wp-i18n' ), TUTOR_PRO_VERSION, true );
 			wp_enqueue_style( 'enrollment-css-script', TUTOR_ENROLLMENTS()->url . 'assets/css/enroll.css', array(), TUTOR_PRO_VERSION );
 		}
 	}
 
-	public function load_TUTOR_ENROLLMENTS(){
-		/**
-		 * Loading Autoloader
-		 */
-
-		spl_autoload_register(array($this, 'loader'));
-		$this->enrollments = new Enrollments();
+	/**
+	 * Auto loader.
+	 *
+	 * @return void
+	 */
+	public function load_enrollment() {
+		spl_autoload_register( array( $this, 'loader' ) );
+		$this->enrollments     = new Enrollments();
 		$this->enrollment_list = new Enrollments_List();
 	}
 
 	/**
-	 * @param $className
-	 *
 	 * Auto Load class and the files
+	 *
+	 * @param string $class_name class name.
+	 *
+	 * @return void
 	 */
-	private function loader($className) {
-		if ( ! class_exists($className)){
-			$className = preg_replace(
-				array('/([a-z])([A-Z])/', '/\\\/'),
-				array('$1$2', DIRECTORY_SEPARATOR),
-				$className
+	private function loader( $class_name ) {
+		if ( ! class_exists( $class_name ) ) {
+			$class_name = preg_replace(
+				array( '/([a-z])([A-Z])/', '/\\\/' ),
+				array( '$1$2', DIRECTORY_SEPARATOR ),
+				$class_name
 			);
 
-			$className = str_replace('TUTOR_ENROLLMENTS'.DIRECTORY_SEPARATOR, 'classes'.DIRECTORY_SEPARATOR, $className);
-			$file_name = $this->path.$className.'.php';
+			$class_name = str_replace( 'TUTOR_ENROLLMENTS' . DIRECTORY_SEPARATOR, 'classes' . DIRECTORY_SEPARATOR, $class_name );
+			$file_name  = $this->path . $class_name . '.php';
 
-			if (file_exists($file_name)  ) {
+			if ( file_exists( $file_name ) ) {
 				require_once $file_name;
 			}
 		}
-	}
-
-	//Run the TUTOR right now
-	public function run(){
-		//
 	}
 
 }

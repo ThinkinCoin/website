@@ -16,6 +16,9 @@ defined( 'ABSPATH' ) || exit;
 
 use Elementor\Plugin;
 
+/**
+ * Class AddonsManager
+ */
 class AddonsManager {
 	/**
 	 * Init manager
@@ -40,7 +43,7 @@ class AddonsManager {
 		/**
 		 * If single course and built with elementor then remove description addon for avoiding the_content overlap
 		 */
-		if ( $post->post_type && $post->post_type == tutor()->course_post_type ) {
+		if ( isset( $post->post_type ) && tutor()->course_post_type === $post->post_type ) {
 			$document = Plugin::$instance->documents->get( $post->ID );
 			if ( $document && $document->is_built_with_elementor() ) {
 				unset( $all_addons['CourseDescription'] );
@@ -55,6 +58,11 @@ class AddonsManager {
 	 * Register addons
 	 *
 	 * @since 1.0.0
+	 *
+	 * @param string $key key.
+	 * @param mixed  $props props.
+	 *
+	 * @return void
 	 */
 	protected static function register_addon( $key, $props ) {
 		$elementor  = \Elementor\Plugin::instance();
@@ -188,10 +196,15 @@ class AddonsManager {
 			),
 
 		);
-		if ( is_plugin_active( 'tutor-pro/tutor-pro.php' ) ) {
-			return array_merge( $default_addon, $pro_addon );
+		if ( ! function_exists( 'is_plugin_active' ) ) {
+			require_once ABSPATH . '/wp-admin/includes/plugin.php';
 		} else {
-			return $default_addon;
+
+			if ( is_plugin_active( 'tutor-pro/tutor-pro.php' ) ) {
+				return array_merge( $default_addon, $pro_addon );
+			} else {
+				return $default_addon;
+			}
 		}
 
 	}

@@ -10,10 +10,11 @@ namespace Udb\Setting;
 defined( 'ABSPATH' ) || die( "Can't access directly" );
 
 use Udb\Base\Base_Output;
+use Udb\Helpers\Content_Helper;
 use Udb\Widget\Widget_Output;
 
 /**
- * Class to setup setting output.
+ * Class to set up setting output.
  */
 class Setting_Output extends Base_Output {
 
@@ -37,11 +38,13 @@ class Setting_Output extends Base_Output {
 	 * @return object
 	 */
 	public static function get_instance() {
+
 		if ( null === self::$instance ) {
 			self::$instance = new self();
 		}
 
 		return self::$instance;
+
 	}
 
 	/**
@@ -87,11 +90,16 @@ class Setting_Output extends Base_Output {
 
 		$settings = get_option( 'udb_settings' );
 
-		if ( ! isset( $settings['custom_css'] ) || empty( $settings['custom_css'] ) ) {
+		if ( empty( $settings['custom_css'] ) ) {
 			return;
 		}
 
-		wp_add_inline_style( 'udb-dashboard', $settings['custom_css'] );
+		$content_helper = new Content_Helper();
+
+		$custom_css = $settings['custom_css'];
+		$custom_css = $content_helper->sanitize_css( $custom_css );
+
+		wp_add_inline_style( 'udb-dashboard', esc_html( $custom_css ) );
 
 	}
 
@@ -102,13 +110,18 @@ class Setting_Output extends Base_Output {
 
 		$settings = get_option( 'udb_settings' );
 
-		if ( ! isset( $settings['custom_admin_css'] ) || empty( $settings['custom_admin_css'] ) ) {
+		if ( empty( $settings['custom_admin_css'] ) ) {
 			return;
 		}
+
+		$content_helper = new Content_Helper();
+
+		$custom_css = $settings['custom_admin_css'];
+		$custom_css = $content_helper->sanitize_css( $custom_css );
 		?>
 
 		<style>
-			<?php echo $settings['custom_admin_css']; ?>
+			<?php echo $custom_css; ?>
 		</style>
 
 		<?php
@@ -126,7 +139,7 @@ class Setting_Output extends Base_Output {
 
 		$settings = get_option( 'udb_settings' );
 
-		if ( ! isset( $settings['dashboard_headline'] ) || empty( $settings['dashboard_headline'] ) ) {
+		if ( empty( $settings['dashboard_headline'] ) ) {
 			return;
 		}
 
@@ -143,7 +156,7 @@ class Setting_Output extends Base_Output {
 
 		$settings = get_option( 'udb_settings' );
 
-		if ( ! isset( $settings['howdy_text'] ) || empty( $settings['howdy_text'] ) ) {
+		if ( empty( $settings['howdy_text'] ) ) {
 			return;
 		}
 
@@ -185,7 +198,7 @@ class Setting_Output extends Base_Output {
 
 		$settings = get_option( 'udb_settings' );
 
-		return ( isset( $settings['remove_screen_options'] ) ? false : true );
+		return ! isset( $settings['remove_screen_options'] );
 
 	}
 
@@ -201,7 +214,7 @@ class Setting_Output extends Base_Output {
 			return;
 		}
 
-		if ( ! isset( $settings['welcome_panel_content'] ) || empty( $settings['welcome_panel_content'] ) ) {
+		if ( empty( $settings['welcome_panel_content'] ) ) {
 			return;
 		}
 
@@ -216,7 +229,7 @@ class Setting_Output extends Base_Output {
 	public function welcome_panel_content() {
 
 		$settings = get_option( 'udb_settings' );
-		$content  = ! isset( $settings['welcome_panel_content'] ) || empty( $settings['welcome_panel_content'] ) ? '' : $settings['welcome_panel_content'];
+		$content  = empty( $settings['welcome_panel_content'] ) ? '' : $settings['welcome_panel_content'];
 
 		if ( empty( $content ) ) {
 			do_action( 'udb_ms_switch_blog' );
@@ -242,22 +255,26 @@ class Setting_Output extends Base_Output {
 	 * Remove admin bar from frontend.
 	 */
 	public function remove_admin_bar() {
+
 		$settings = get_option( 'udb_settings' );
 
 		if ( isset( $settings['remove_admin_bar'] ) ) {
 			add_filter( 'show_admin_bar', '__return_false' );
 		}
+
 	}
 
 	/**
 	 * Remove Font Awesome.
 	 */
 	public function remove_font_awesome() {
+
 		$settings = get_option( 'udb_settings' );
 
 		if ( isset( $settings['remove_font_awesome'] ) ) {
 			add_filter( 'udb_font_awesome', '__return_false' );
 		}
+
 	}
 
 }

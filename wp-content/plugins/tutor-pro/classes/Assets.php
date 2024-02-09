@@ -25,6 +25,23 @@ class Assets {
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
 		add_action( 'wp_enqueue_scripts', __CLASS__ . '::frontend_scripts' );
 		add_action( 'login_enqueue_scripts', __CLASS__ . '::frontend_scripts' );
+
+		add_action( 'admin_enqueue_scripts', array( $this, 'load_js_translations' ), 100 );
+		add_action( 'wp_enqueue_scripts', array( $this, 'load_js_translations' ), 100 );
+	}
+
+	/**
+	 * Load JS translations
+	 *
+	 * @see https://make.wordpress.org/core/2018/11/09/new-javascript-i18n-support-in-wordpress/
+	 *
+	 * @since 2.6.0
+	 *
+	 * @return void
+	 */
+	public function load_js_translations() {
+		wp_set_script_translations( 'tutor-pro-admin', 'tutor-pro', tutor_pro()->languages );
+		wp_set_script_translations( 'tutor-pro-front', 'tutor-pro', tutor_pro()->languages );
 	}
 
 	/**
@@ -65,19 +82,6 @@ class Assets {
 			);
 		}
 
-		/**
-		 * Translation in js
-		 *
-		 * @since 2.0.9
-		 *
-		 * To prevent error WP_Scripts::localize was called incorrectly
-		 * need to pass third arguments as an array. Even adding an array directly
-		 * from another causing error.
-		 *
-		 * @since v2.1.0
-		 */
-		wp_localize_script( 'tutor-pro-front', '_tutor_pro_trans', self::translate_able_text() );
-
 		if ( is_single() && tutor()->course_post_type === get_post_type( get_the_ID() ) ) {
 			wp_enqueue_style( 'tutor-pro-course-details', tutor_pro()->url . 'assets/css/course-details.css', array(), TUTOR_VERSION );
 		}
@@ -110,18 +114,4 @@ class Assets {
 
 	}
 
-	/**
-	 * Get translate able text
-	 *
-	 * @since v2.1.0
-	 *
-	 * @return array  translate able to use in JS
-	 */
-	protected static function translate_able_text() {
-		return array(
-			'no_data_found_in_this_section' => __( 'No data found in this section', 'tutor-pro' ),
-			'search_'                       => __( 'Search...', 'tutor-pro' ),
-			'calendar'                      => __( 'Calendar', 'tutor-pro' ),
-		);
-	}
 }

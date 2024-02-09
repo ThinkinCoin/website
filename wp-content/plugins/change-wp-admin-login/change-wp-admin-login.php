@@ -3,7 +3,7 @@
  Plugin Name: Change wp-admin login
  Plugin URI: https://wordpress.org/plugins/change-wp-admin-login/
  Description: Change wp-admin login to whatever you want. example: http://www.example.com/my-login. Go under Settings and then click on "Permalinks" and change your URL under "Change wp-admin login".
- Version: 1.1.7
+ Version: 1.1.8
  Author: wpexpertsio
  Author URI: https://wpexperts.io/
  Text Domain: change-wp-admin-login
@@ -41,7 +41,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 /* Set plugin version constant. */
 
 if( ! defined( 'NS_Change_WP_Admin_Login_Version' ) ) {
-	define( 'NS_Change_WP_Admin_Login_Version', '1.1.7' );
+	define( 'NS_Change_WP_Admin_Login_Version', '1.1.8' );
 }
 
 /* Set plugin name. */

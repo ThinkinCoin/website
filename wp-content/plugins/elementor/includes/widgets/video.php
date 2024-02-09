@@ -85,7 +85,7 @@ class Widget_Video extends Widget_Base {
 	 * @return array Widget keywords.
 	 */
 	public function get_keywords() {
-		return [ 'video', 'player', 'embed', 'youtube', 'vimeo', 'dailymotion' ];
+		return [ 'video', 'player', 'embed', 'youtube', 'vimeo', 'dailymotion', 'videopress' ];
 	}
 
 	/**
@@ -114,6 +114,7 @@ class Widget_Video extends Widget_Base {
 					'youtube' => esc_html__( 'YouTube', 'elementor' ),
 					'vimeo' => esc_html__( 'Vimeo', 'elementor' ),
 					'dailymotion' => esc_html__( 'Dailymotion', 'elementor' ),
+					'videopress' => esc_html__( 'VideoPress', 'elementor' ),
 					'hosted' => esc_html__( 'Self Hosted', 'elementor' ),
 				],
 				'frontend_available' => true,
@@ -199,7 +200,7 @@ class Widget_Video extends Widget_Base {
 				'label' => esc_html__( 'External URL', 'elementor' ),
 				'type' => Controls_Manager::SWITCHER,
 				'condition' => [
-					'video_type' => 'hosted',
+					'video_type' => [ 'hosted', 'videopress' ],
 				],
 			]
 		);
@@ -219,7 +220,7 @@ class Widget_Video extends Widget_Base {
 					'video',
 				],
 				'condition' => [
-					'video_type' => 'hosted',
+					'video_type' => [ 'hosted', 'videopress' ],
 					'insert_url' => '',
 				],
 			]
@@ -246,6 +247,33 @@ class Widget_Video extends Widget_Base {
 					'video_type' => 'hosted',
 					'insert_url' => 'yes',
 				],
+			]
+		);
+
+		$this->add_control(
+			'videopress_url',
+			[
+				'label' => esc_html__( 'URL', 'elementor' ),
+				'type' => Controls_Manager::TEXT,
+				'label_block' => true,
+				'show_label' => false,
+				'default' => 'https://videopress.com/v/ZCAOzTNk',
+				'dynamic' => [
+					'active' => true,
+					'categories' => [
+						TagsModule::POST_META_CATEGORY,
+						TagsModule::URL_CATEGORY,
+					],
+				],
+				'placeholder' => esc_html__( 'VideoPress URL', 'elementor' ),
+				'ai' => [
+					'active' => false,
+				],
+				'condition' => [
+					'video_type' => 'videopress',
+					'insert_url' => 'yes',
+				],
+
 			]
 		);
 
@@ -561,15 +589,6 @@ class Widget_Video extends Widget_Base {
 			]
 		);
 
-		$this->add_control(
-			'view',
-			[
-				'label' => esc_html__( 'View', 'elementor' ),
-				'type' => Controls_Manager::HIDDEN,
-				'default' => 'youtube',
-			]
-		);
-
 		$this->end_controls_section();
 
 		$this->start_controls_section(
@@ -806,7 +825,7 @@ class Widget_Video extends Widget_Base {
 				'selector' => '{{WRAPPER}} .elementor-custom-embed-play i',
 				'fields_options' => [
 					'text_shadow_type' => [
-						'label' => esc_html_x( 'Shadow', 'Text Shadow Control', 'elementor' ),
+						'label' => esc_html__( 'Shadow', 'elementor' ),
 					],
 				],
 				'condition' => [
@@ -962,6 +981,10 @@ class Widget_Video extends Widget_Base {
 		if ( 'hosted' === $settings['video_type'] ) {
 			$video_url = $this->get_hosted_video_url();
 		} else {
+			if ( 'videopress' === $settings['video_type'] ) {
+				$video_url = $this->get_videopress_video_url();
+			}
+
 			$embed_params = $this->get_embed_params();
 			$embed_options = $this->get_embed_options();
 		}
@@ -1177,6 +1200,10 @@ class Widget_Video extends Widget_Base {
 			$params['start'] = $settings['start'];
 
 			$params['endscreen-enable'] = '0';
+		} elseif ( 'videopress' === $settings['video_type'] ) {
+			$params_dictionary = $this->get_params_dictionary_for_videopress();
+
+			$params['at'] = $settings['start'];
 		}
 
 		foreach ( $params_dictionary as $key => $param_name ) {
@@ -1304,6 +1331,36 @@ class Widget_Video extends Widget_Base {
 	}
 
 	/**
+	 * Get the VideoPress video URL from the current selected settings.
+	 *
+	 * @return string
+	 */
+	private function get_videopress_video_url() {
+		$settings = $this->get_settings_for_display();
+
+		if ( ! empty( $settings['insert_url'] ) ) {
+			return $settings['videopress_url'];
+		}
+
+		return $settings['hosted_url']['url'];
+	}
+
+	/**
+	 * Get the params dictionary for VideoPress videos.
+	 *
+	 * @return array
+	 */
+	private function get_params_dictionary_for_videopress() {
+		return [
+			'controls',
+			'autoplay' => 'autoPlay',
+			'mute' => 'muted',
+			'loop',
+			'play_on_mobile' => 'playsinline',
+		];
+	}
+
+	/**
 	 *
 	 * @since 2.1.0
 	 * @access private
@@ -1319,5 +1376,13 @@ class Widget_Video extends Widget_Base {
 		?>
 		<video class="elementor-video" src="<?php echo esc_attr( $video_url ); ?>" <?php Utils::print_html_attributes( $video_params ); ?>></video>
 		<?php
+	}
+
+	protected function get_upsale_data() {
+		return [
+			'title' => __( 'Grab your visitors\' attention', 'elementor' ),
+			'description' => esc_html__( 'Get the Video Playlist widget and grow your toolbox with Elementor Pro.', 'elementor' ),
+			'upgrade_url' => esc_url( 'https://go.elementor.com/go-pro-video-widget/', 'elementor' ),
+		];
 	}
 }

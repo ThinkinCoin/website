@@ -385,7 +385,7 @@ class Tutor_Calendar {
 			$upcoming = 0;
 			foreach ( $results as $r ) {
 				( isset( $r->meta_info['is_expired'] ) && $r->meta_info['is_expired'] ) ? $overdue++ : $upcoming++;
-				if ( $r->month == $month || $r->meta_info['expire_month'] == $month ) {
+				if ( $r->month == $month || ( isset( $r->meta_info['expire_month'] ) && $r->meta_info['expire_month'] == $month ) ) {
 					array_push( $response, $r );
 				}
 			}

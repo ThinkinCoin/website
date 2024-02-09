@@ -28,12 +28,12 @@ class Login
     {
         check_ajax_referer( 'ethpress_log_in' );
         $message = '';
-        $success = true;
+        
         if ( !isset( $_POST['coinbase'], $_POST['signature'] ) ) {
-            wp_send_json_error( [
-                'message' => esc_html__( 'Invalid input', 'ethpress' ),
-            ] );
+            wp_send_json_error( esc_html__( 'Invalid input', 'ethpress' ) );
+            return;
         }
+        
         // Sanitize.
         // These two show up as linter errors, but that is a bug in the linter itself.
         $coinbase = Address::sanitize( wp_unslash( $_POST['coinbase'] ) );
@@ -48,54 +48,51 @@ class Login
         }
         
         // Verify.
-        $message = self::get_login_message( $coinbase );
-        $verified = Signature::verify( $message, $signature, $coinbase );
+        $login_message = self::get_login_message( $coinbase );
+        list( $verified, $verify_error ) = Signature::verify2( $login_message, $signature, $coinbase );
         /**
          * @var \WP_User|\WP_Error|null $user WP_User object
          */
         $user = null;
-        
-        if ( $verified ) {
-            // Log in.
-            try {
-                $address = new Address( $coinbase );
-                /**
-                 * For additional checks in addons
-                 *
-                 * @since 1.6.0
-                 *
-                 * @param \losnappas\Ethpress\Address $address.
-                 * @return \losnappas\Ethpress\Address|\WP_Error Return \WP_Error if address doesn't fulfill some condition.
-                 */
-                $address = apply_filters( 'ethpress_login_address', $address );
+        if ( !$verified ) {
+            $user = new \WP_Error( 'ethpress', $verify_error );
+        }
+        // Log in.
+        try {
+            $address = new Address( $coinbase );
+            /**
+             * For additional checks in addons
+             *
+             * @since 1.6.0
+             *
+             * @param \losnappas\Ethpress\Address $address.
+             * @return \losnappas\Ethpress\Address|\WP_Error Return \WP_Error if address doesn't fulfill some condition.
+             */
+            $address = apply_filters( 'ethpress_login_address', $address );
+            
+            if ( !is_wp_error( $address ) ) {
                 
-                if ( !is_wp_error( $address ) ) {
-                    
-                    if ( get_option( 'users_can_register' ) ) {
-                        $user = $address->register_and_log_in();
-                    } else {
-                        $user = $address->log_in();
-                    }
-                    
-                    $message = esc_html__( 'Logged in', 'ethpress' );
+                if ( get_option( 'users_can_register' ) ) {
+                    $user = $address->register_and_log_in();
                 } else {
-                    $user = $address;
+                    $user = $address->log_in();
                 }
                 
-                // phpcs:ignore -- This is using wp original hook.
-                $redirect_to = apply_filters(
-                    'login_redirect',
-                    $redirect_to,
-                    $requested_redirect_to,
-                    $user
-                );
-            } catch ( \WP_Error $e ) {
-                $user = $e;
+                $message = esc_html__( 'Logged in', 'ethpress' );
+            } else {
+                $user = $address;
             }
-        } else {
-            $user = new \WP_Error( 'ethpress', __( 'Signature err, try again.', 'ethpress' ) );
+            
+            // phpcs:ignore -- This is using wp original hook.
+            $redirect_to = apply_filters(
+                'login_redirect',
+                $redirect_to,
+                $requested_redirect_to,
+                $user
+            );
+        } catch ( \WP_Error $e ) {
+            $user = $e;
         }
-        
         
         if ( isset( $_POST['provider'] ) ) {
             $provider = \sanitize_key( \wp_unslash( (string) $_POST['provider'] ) );
@@ -130,8 +127,15 @@ class Login
         
         if ( is_wp_error( $user ) ) {
             $message = $user->get_error_message();
-            $success = false;
-        } elseif ( empty($redirect_to) || 'wp-admin/' === $redirect_to || admin_url() === $redirect_to ) {
+            wp_send_json_error( [
+                'redirect' => $redirect_to,
+                'message'  => $message,
+            ] );
+            return;
+        }
+        
+        
+        if ( empty($redirect_to) || 'wp-admin/' === $redirect_to || admin_url() === $redirect_to ) {
             /**
              * @var \WP_User
              */
@@ -150,12 +154,9 @@ class Login
         
         }
         
-        wp_send_json( [
-            'data'    => [
+        wp_send_json_success( [
             'redirect' => $redirect_to,
             'message'  => $message,
-        ],
-            'success' => $success,
         ] );
     }
     
