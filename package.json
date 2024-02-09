@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "@tanstack/react-query": "^5.18.1",
+    "@walletconnect/modal": "^2.6.2",
+    "@walletconnect/universal-provider": "^2.11.1",
     "@web3modal/wagmi": "^4.0.1",
     "viem": "^2.7.8",
     "wagmi": "^2.5.6"

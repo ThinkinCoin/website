@@ -70,7 +70,7 @@ export default function Home() {
 				</div>
 			</header>
 			<main className={styles.main}>
-				<div className={styles.wrapper}>
+				{/* <div className={styles.wrapper}>
 					<div className={styles.container}>
 						<h1>Next.js Starter Template</h1>
 						<div className={styles.content}>
@@ -138,7 +138,7 @@ export default function Home() {
 							Check out the full documentation here
 						</a>
 					</div>
-				</div>
+				</div> */}
 			</main>
 		</>
 	);
