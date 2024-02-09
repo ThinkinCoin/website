@@ -1,0 +1,2 @@
+ø
+Æe<?php exit; ?>a:1:{s:7:"content";a:6:{s:10:"_edit_lock";a:1:{i:0;s:12:"1696952428:1";}s:23:"neve_meta_disable_title";a:1:{i:0;s:2:"on";}s:10:"_edit_last";a:1:{i:0;s:1:"1";}s:20:"_elementor_edit_mode";a:1:{i:0;s:7:"builder";}s:24:"_elementor_template_type";a:1:{i:0;s:7:"wp-page";}s:18:"_elementor_version";a:1:{i:0;s:6:"3.16.5";}}}
