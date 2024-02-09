@@ -1,3 +1,4 @@
 wp-config.php
 *.mp4
 .env
+wp-content/cache/
