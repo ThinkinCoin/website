@@ -1,1 +1,0 @@
-<a href="<?php echo esc_url_raw($url); ?>" target="_blank"><?php echo esc_html($text); ?></a>
