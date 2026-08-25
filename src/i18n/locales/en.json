@@ -1,0 +1,18 @@
+{
+  "nav": {
+    "overview": "Overview",
+    "investigations": "Investigations",
+    "research": "Research",
+    "evidence": "Evidence",
+    "networks": "Networks",
+    "entities": "Entities",
+    "timeline": "Timeline",
+    "data": "Data & API",
+    "addresses": "My Addresses",
+    "watchlist": "Watchlist",
+    "submissions": "Submissions",
+    "methodology": "Methodology",
+    "about": "About",
+    "corrections": "Corrections"
+  }
+}

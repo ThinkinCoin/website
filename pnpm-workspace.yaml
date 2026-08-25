@@ -1,0 +1,34 @@
+allowBuilds:
+  '@reown/appkit': false
+  bufferutil: false
+  keccak: false
+  msw: false
+  utf-8-validate: false
+packageExtensions:
+  '@reown/appkit@1.8.23':
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+  '@reown/appkit-controllers@1.8.23':
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+  '@reown/appkit-pay@1.8.23':
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+minimumReleaseAgeExclude:
+  - '@tanstack/query-core@5.102.3'
+  - '@tanstack/react-query@5.102.3'
+  - '@typescript-eslint/eslint-plugin@8.68.0'
+  - '@typescript-eslint/parser@8.68.0'
+  - '@typescript-eslint/project-service@8.68.0'
+  - '@typescript-eslint/scope-manager@8.68.0'
+  - '@typescript-eslint/tsconfig-utils@8.68.0'
+  - '@typescript-eslint/type-utils@8.68.0'
+  - '@typescript-eslint/types@8.68.0'
+  - '@typescript-eslint/typescript-estree@8.68.0'
+  - '@typescript-eslint/utils@8.68.0'
+  - '@typescript-eslint/visitor-keys@8.68.0'
+  - eslint@10.9.1
+  - typescript-eslint@8.68.0
