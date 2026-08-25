@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-08-25T12:00:00.000Z",
+  "source": "Think in Coin curated public network metadata",
+  "network": {
+    "namespace": "eip155",
+    "chainId": 1666600000,
+    "name": "Harmony One",
+    "nativeCurrency": {
+      "name": "ONE",
+      "symbol": "ONE",
+      "decimals": 18
+    },
+    "explorerUrls": ["https://explorer.harmony.one"]
+  },
+  "notes": [
+    "This snapshot contains public chain metadata only.",
+    "Investigation narratives in the mock database are synthetic and must not be interpreted as allegations."
+  ]
+}
