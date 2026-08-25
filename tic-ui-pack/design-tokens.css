@@ -1,0 +1,118 @@
+:root {
+  color-scheme: dark;
+
+  /* Surfaces */
+  --tic-bg-canvas-deep: #040b09;
+  --tic-bg-canvas: #06110e;
+  --tic-bg-surface: #091813;
+  --tic-bg-elevated: #0d211b;
+  --tic-bg-selected: #112b23;
+  --tic-bg-overlay: rgba(2, 7, 5, 0.78);
+
+  /* Brand */
+  --tic-brand: #1c413a;
+  --tic-brand-hover: #286354;
+  --tic-brand-active: #3a7f70;
+
+  /* Content */
+  --tic-text-primary: #f3f6f4;
+  --tic-text-secondary: #a6b1ac;
+  --tic-text-muted: #7e8b85;
+  --tic-text-inverse: #06110e;
+
+  /* Structure */
+  --tic-border-subtle: rgba(126, 170, 150, 0.12);
+  --tic-border: rgba(126, 170, 150, 0.24);
+  --tic-border-emphasis: rgba(126, 170, 150, 0.38);
+  --tic-focus: #4edbc6;
+
+  /* General feedback */
+  --tic-success: #22c55e;
+  --tic-warning: #f5c542;
+  --tic-danger: #ef4444;
+  --tic-info: #60a5fa;
+
+  /* Evidence assessment */
+  --tic-assessment-confirmed: #22c55e;
+  --tic-assessment-supported: #22b8cf;
+  --tic-assessment-probable: #f5c542;
+  --tic-assessment-possible: #f97316;
+  --tic-assessment-undetermined: #7e8b85;
+
+  /* Claim kind — deliberately independent from assessment */
+  --tic-claim-fact: #a855f7;
+  --tic-claim-inference: #6366f1;
+  --tic-claim-hypothesis: #f59e0b;
+  --tic-claim-opinion: #eab308;
+
+  /* Typography */
+  --tic-font-display: "Fashion Fetish", Georgia, "Times New Roman", serif;
+  --tic-font-ui: Inter, "Segoe UI", Arial, sans-serif;
+  --tic-font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  --tic-type-display-xl: 4.5rem/0.98 var(--tic-font-display);
+  --tic-type-display-lg: 3.25rem/1.02 var(--tic-font-display);
+  --tic-type-h1: 2.5rem/1.08 var(--tic-font-display);
+  --tic-type-h2: 2rem/1.12 var(--tic-font-display);
+  --tic-type-h3: 1.5rem/1.2 var(--tic-font-display);
+  --tic-type-h4: 1rem/1.35 var(--tic-font-ui);
+  --tic-type-body-lg: 1rem/1.7 var(--tic-font-ui);
+  --tic-type-body: 0.875rem/1.6 var(--tic-font-ui);
+  --tic-type-body-sm: 0.75rem/1.55 var(--tic-font-ui);
+  --tic-type-label: 0.6875rem/1.25 var(--tic-font-ui);
+  --tic-type-caption: 0.625rem/1.35 var(--tic-font-ui);
+  --tic-type-mono: 0.75rem/1.45 var(--tic-font-mono);
+  --tic-type-mono-sm: 0.625rem/1.4 var(--tic-font-mono);
+
+  /* Spacing */
+  --tic-space-2xs: 0.125rem;
+  --tic-space-xs: 0.25rem;
+  --tic-space-sm: 0.5rem;
+  --tic-space-md: 0.75rem;
+  --tic-space-lg: 1rem;
+  --tic-space-xl: 1.5rem;
+  --tic-space-2xl: 2rem;
+  --tic-space-3xl: 3rem;
+  --tic-space-4xl: 4rem;
+  --tic-space-5xl: 6rem;
+
+  /* Geometry */
+  --tic-radius-xs: 0.125rem;
+  --tic-radius-sm: 0.25rem;
+  --tic-radius-md: 0.375rem;
+  --tic-radius-lg: 0.5rem;
+  --tic-radius-xl: 0.75rem;
+  --tic-radius-round: 9999px;
+  --tic-shadow-panel: 0 14px 36px rgba(0, 0, 0, 0.18);
+  --tic-shadow-overlay: 0 24px 70px rgba(0, 0, 0, 0.42);
+
+  /* Motion */
+  --tic-motion-micro: 80ms;
+  --tic-motion-standard: 160ms;
+  --tic-motion-panel: 220ms;
+  --tic-motion-modal: 280ms;
+  --tic-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Layout */
+  --tic-sidebar-expanded: 232px;
+  --tic-sidebar-compact: 64px;
+  --tic-topbar-height: 64px;
+  --tic-content-readable: 760px;
+  --tic-content-max: 1440px;
+
+  /* Layering */
+  --tic-z-base: 0;
+  --tic-z-sticky: 20;
+  --tic-z-drawer: 40;
+  --tic-z-popover: 60;
+  --tic-z-dialog: 80;
+  --tic-z-toast: 100;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --tic-motion-micro: 1ms;
+    --tic-motion-standard: 1ms;
+    --tic-motion-panel: 1ms;
+    --tic-motion-modal: 1ms;
+  }
+}

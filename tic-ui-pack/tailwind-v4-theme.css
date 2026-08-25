@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@import "./design-tokens.css";
+
+@theme inline {
+  --color-tic-canvas-deep: var(--tic-bg-canvas-deep);
+  --color-tic-canvas: var(--tic-bg-canvas);
+  --color-tic-surface: var(--tic-bg-surface);
+  --color-tic-elevated: var(--tic-bg-elevated);
+  --color-tic-selected: var(--tic-bg-selected);
+  --color-tic-brand: var(--tic-brand);
+  --color-tic-brand-hover: var(--tic-brand-hover);
+  --color-tic-brand-active: var(--tic-brand-active);
+  --color-tic-text: var(--tic-text-primary);
+  --color-tic-text-secondary: var(--tic-text-secondary);
+  --color-tic-text-muted: var(--tic-text-muted);
+  --color-tic-focus: var(--tic-focus);
+  --color-tic-success: var(--tic-success);
+  --color-tic-warning: var(--tic-warning);
+  --color-tic-danger: var(--tic-danger);
+  --color-tic-info: var(--tic-info);
+  --font-tic-display: var(--tic-font-display);
+  --font-tic-ui: var(--tic-font-ui);
+  --font-tic-mono: var(--tic-font-mono);
+  --radius-tic-xs: var(--tic-radius-xs);
+  --radius-tic-sm: var(--tic-radius-sm);
+  --radius-tic-md: var(--tic-radius-md);
+  --radius-tic-lg: var(--tic-radius-lg);
+}
+
+/* Keep evidence and claim utilities explicit. Never alias one system to the other. */
