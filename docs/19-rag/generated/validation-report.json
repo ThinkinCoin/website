@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-08-25T23:09:33.299Z",
+  "source_commit": "working-tree",
+  "document_count": 127,
+  "approved_count": 94,
+  "proposed_count": 0,
+  "draft_count": 29,
+  "missing_required_metadata_count": 120,
+  "duplicate_document_ids": [],
+  "invalid_status_documents": [
+    "docs/adr/0001-web3-compatibility.md",
+    "docs/architecture-amendment-v1.1.md",
+    "docs/frontend-architecture.md",
+    "docs/ui-pack-deviations.md"
+  ],
+  "missing_supersession_targets": [],
+  "broken_internal_links": [],
+  "requirement_ids_observed": 126,
+  "decision_ids_observed": 11
+}

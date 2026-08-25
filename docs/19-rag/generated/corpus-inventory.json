@@ -1,0 +1,3245 @@
+[
+  {
+    "path": "docs/00-governance/adr-template.md",
+    "document_id": "ADR-TEMPLATE",
+    "title": "Architecture Decision Record Template",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/00-governance/agent-protocol-simulation-report.md",
+    "document_id": "D4-AGENT-SIMULATION",
+    "title": "D4 Agent Protocol Simulation Report",
+    "document_type": "REPORT",
+    "domain": "GOVERNANCE",
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": "CANONICAL_REFERENCE",
+    "canonicality": "CANONICAL_REFERENCE",
+    "requirements": [
+      "AGENT-CODER-002",
+      "RAG-BUNDLE-001",
+      "GOV-EXEC-003"
+    ],
+    "decisions": [
+      "DEC-001",
+      "DEC-008",
+      "DEC-009",
+      "DEC-004",
+      "DEC-005",
+      "DEC-006",
+      "DEC-010",
+      "DEC-002"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": "INTERNAL",
+    "missing_metadata": [],
+    "status_valid": true
+  },
+  {
+    "path": "docs/00-governance/d4-readiness-report.md",
+    "document_id": "D4-READINESS-REPORT",
+    "title": "Phase D4 Documentation Readiness Report",
+    "document_type": "REPORT",
+    "domain": "GOVERNANCE",
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": "CANONICAL_REFERENCE",
+    "canonicality": "CANONICAL_REFERENCE",
+    "requirements": [],
+    "decisions": [
+      "DEC-002",
+      "DEC-003",
+      "DEC-004",
+      "DEC-005",
+      "DEC-007",
+      "DEC-001",
+      "DEC-006",
+      "DEC-008",
+      "DEC-009",
+      "DEC-010",
+      "DEC-011"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": "INTERNAL",
+    "missing_metadata": [],
+    "status_valid": true
+  },
+  {
+    "path": "docs/00-governance/document-promotion-report.md",
+    "document_id": "D4-PROMOTION-REPORT",
+    "title": "D4 Document Promotion Report",
+    "document_type": "REPORT",
+    "domain": "GOVERNANCE",
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": "CANONICAL_REFERENCE",
+    "canonicality": "CANONICAL_REFERENCE",
+    "requirements": [
+      "RAG-AUTH-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": "INTERNAL",
+    "missing_metadata": [],
+    "status_valid": true
+  },
+  {
+    "path": "docs/00-governance/documentation-consistency-report.md",
+    "document_id": "D4-CONSISTENCY-REPORT",
+    "title": "D4 Documentation Consistency Report",
+    "document_type": "REPORT",
+    "domain": "GOVERNANCE",
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": "CANONICAL_REFERENCE",
+    "canonicality": "CANONICAL_REFERENCE",
+    "requirements": [],
+    "decisions": [
+      "DEC-001",
+      "DEC-011"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": "INTERNAL",
+    "missing_metadata": [],
+    "status_valid": true
+  },
+  {
+    "path": "docs/00-governance/documentation-gap-report.md",
+    "document_id": "GAP-REPORT",
+    "title": "Documentation Gap Report v5",
+    "document_type": null,
+    "domain": null,
+    "version": "1.5.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [
+      "DEC-010"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/00-governance/documentation-governance.md",
+    "document_id": "DOCUMENTATION-GOVERNANCE",
+    "title": "Documentation Governance",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/00-governance/documentation-validation-report.md",
+    "document_id": "D4-VALIDATION-REPORT",
+    "title": "D4 Documentation Validation Report",
+    "document_type": "REPORT",
+    "domain": "GOVERNANCE",
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": "CANONICAL_REFERENCE",
+    "canonicality": "CANONICAL_REFERENCE",
+    "requirements": [
+      "RAG-META-001",
+      "RAG-AUTH-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": "INTERNAL",
+    "missing_metadata": [],
+    "status_valid": true
+  },
+  {
+    "path": "docs/00-governance/implementation-unlock-protocol.md",
+    "document_id": "GOV-EXEC-007",
+    "title": "Implementation Unlock Protocol",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "GOV-EXEC-007",
+      "GOV-EXEC-008"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/00-governance/open-decision-protocol.md",
+    "document_id": "GOV-EXEC-003",
+    "title": "Open Decision Execution Protocol",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "GOV-EXEC-003",
+      "GOV-EXEC-004"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/00-governance/open-decisions.md",
+    "document_id": "OPEN-DECISIONS",
+    "title": "Open Decision Registry",
+    "document_type": null,
+    "domain": null,
+    "version": "1.2.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [
+      "DEC-001",
+      "DEC-002",
+      "DEC-003",
+      "DEC-004",
+      "DEC-005",
+      "DEC-006",
+      "DEC-007",
+      "DEC-008",
+      "DEC-009",
+      "DEC-010",
+      "DEC-011"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/00-governance/requirement-index.md",
+    "document_id": "REQ-INDEX",
+    "title": "Requirement Index v4 — Observed References",
+    "document_type": null,
+    "domain": null,
+    "version": "1.4.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "decisions": [
+      "DEC-010",
+      "DEC-011"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality",
+      "updated_at"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/00-governance/spec-deviation-protocol.md",
+    "document_id": "GOV-EXEC-005",
+    "title": "Spec Change / Deviation Protocol",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "GOV-EXEC-005",
+      "GOV-EXEC-006"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/00-governance/traceability-matrix.md",
+    "document_id": "TRACE-MATRIX",
+    "title": "Traceability Matrix v4",
+    "document_type": null,
+    "domain": null,
+    "version": "1.4.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "ACCESS-001",
+      "ARCH-BOUND-003",
+      "TEST-002",
+      "RAG-BUNDLE-001",
+      "AGENT-CODER-002",
+      "EVID-001",
+      "EVID-ARCH-002",
+      "AGENT-RES-002",
+      "NEUR-003"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/01-product/access-matrix.md",
+    "document_id": "ACCESS-MATRIX",
+    "title": "Canonical Access Matrix",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/01-product/access-model.md",
+    "document_id": "ACCESS-SPEC",
+    "title": "Access Model",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "ACCESS-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/01-product/institutional-principles.md",
+    "document_id": "INSTITUTIONAL-PRINCIPLES",
+    "title": "Institutional Principles",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/01-product/overview-dashboard-spec.md",
+    "document_id": "DASH-SPEC",
+    "title": "Overview Dashboard Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/01-product/product-principles.md",
+    "document_id": "PRIN-SPEC",
+    "title": "Product Principles",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "PRIN-INDEP-001",
+      "PRIN-PROP-001",
+      "PRIN-SEP-001",
+      "PRIN-ATTR-001",
+      "PRIN-ID-001",
+      "PRIN-CRED-001",
+      "PRIN-PAY-001",
+      "PRIN-PRIV-001",
+      "PRIN-RATE-001",
+      "PRIN-REV-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/01-product/product-spec.md",
+    "document_id": "PROD-SPEC",
+    "title": "Canonical Product Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "PROD-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/02-domain/domain-model-spec.md",
+    "document_id": "DOMAIN-MODEL-SPEC",
+    "title": "Domain Model Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/02-domain/domain-model.md",
+    "document_id": "DOM-TECH",
+    "title": "Domain Technical Model",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "DATA-DOM-001",
+      "DATA-ID-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/03-architecture/backend-architecture-spec.md",
+    "document_id": "BACKEND-ARCHITECTURE-SPEC",
+    "title": "Backend Architecture Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/03-architecture/backend-boundary.md",
+    "document_id": "BACKEND-BOUND",
+    "title": "Backend Boundary",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "ARCH-BOUND-003"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/03-architecture/capability-map.md",
+    "document_id": "CAP-MAP",
+    "title": "Capability Map",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "ARCH-CAP-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/03-architecture/domain-events.md",
+    "document_id": "DOM-EVENT",
+    "title": "Domain Event Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "ARCH-EVT-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/03-architecture/event-model.md",
+    "document_id": "EVENT-MODEL",
+    "title": "Event Model",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/03-architecture/search-architecture.md",
+    "document_id": "SEARCH-ARCH",
+    "title": "Search Architecture",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "SEARCH-001",
+      "SEARCH-SEC-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/03-architecture/system-architecture.md",
+    "document_id": "SYS-ARCH",
+    "title": "System Architecture",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "ARCH-001",
+      "ARCH-BOUND-001",
+      "ARCH-BOUND-002",
+      "ARCH-SEC-001",
+      "ARCH-DATA-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/04-web3/blockchain-adapter-spec.md",
+    "document_id": "WEB3-ADAPT",
+    "title": "Blockchain Adapter Architecture",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "WEB3-ADAPT-001",
+      "WEB3-ADAPT-002"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/04-web3/reown-appkit-boundary.md",
+    "document_id": "WEB3-REOWN",
+    "title": "Reown AppKit Boundary",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "WEB3-REOWN-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/05-neurons/eligibility-spec.md",
+    "document_id": "NEUR-ELIG-SPEC",
+    "title": "Eligibility Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "NEUR-ELIG-001"
+    ],
+    "decisions": [
+      "DEC-003"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/05-neurons/neurons-architecture.md",
+    "document_id": "WEB3-NEUR",
+    "title": " Technical Architecture",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "WEB3-001",
+      "WEB3-002"
+    ],
+    "decisions": [
+      "DEC-003"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/05-neurons/neurons-product-spec.md",
+    "document_id": "NEUR-SPEC",
+    "title": " Product Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/05-neurons/neurons-technical-contract.md",
+    "document_id": "NEUR-TECH-SPEC",
+    "title": " Technical Contract",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "NEUR-TECH-001"
+    ],
+    "decisions": [
+      "DEC-001",
+      "DEC-008",
+      "DEC-009",
+      "DEC-003"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/05-neurons/price-service-contract.md",
+    "document_id": "WEB3-PRICE",
+    "title": "Price Service Architecture",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "WEB3-PRICE-001"
+    ],
+    "decisions": [
+      "DEC-009"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/06-investigations/investigation-pricing-spec.md",
+    "document_id": "PRICE-SPEC",
+    "title": "Investigation Pricing Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [
+      "DEC-004"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/06-investigations/investigation-spec.md",
+    "document_id": "INV-SPEC",
+    "title": "Investigation Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "INV-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/06-investigations/private-investigation-architecture.md",
+    "document_id": "INV-PRIV-ARCH",
+    "title": "Private Investigation Architecture",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "INV-ARCH-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/06-investigations/private-investigation-request-schema.md",
+    "document_id": "PRIVATE-INVESTIGATION-REQUEST-SCHEMA",
+    "title": "Private Investigation Request Schema",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/06-investigations/private-investigation-request-spec.md",
+    "document_id": "INV-REQ-SPEC",
+    "title": "Private Investigation Request Schema",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "INV-REQ-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/06-investigations/private-investigation-service-spec.md",
+    "document_id": "INV-PRIV-SPEC",
+    "title": "Private Investigation Service Spec",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "INV-PRIV-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/07-evidence/claim-evidence-relationship-spec.md",
+    "document_id": "REL-SPEC",
+    "title": "Claim-Evidence Relationship Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/07-evidence/claim-spec.md",
+    "document_id": "CLAIM-SPEC",
+    "title": "Claim Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "CLAIM-001",
+      "CLAIM-002"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/07-evidence/evidence-architecture.md",
+    "document_id": "EVID-ARCH",
+    "title": "Evidence Architecture",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "EVID-ARCH-001",
+      "EVID-ARCH-002"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/07-evidence/evidence-lineage-spec.md",
+    "document_id": "EVID-LIN-SPEC",
+    "title": "Evidence Lineage Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "EVID-LIN-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/07-evidence/evidence-provenance-spec.md",
+    "document_id": "EVID-PROV-SPEC",
+    "title": "Evidence Provenance Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "EVID-PROV-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/07-evidence/evidence-spec.md",
+    "document_id": "EVID-SPEC",
+    "title": "Evidence Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "EVID-001",
+      "EVID-002",
+      "EVID-003"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/07-evidence/lineage-spec.md",
+    "document_id": "LINEAGE-SPEC",
+    "title": "Evidence Lineage Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/07-evidence/relationship-contract.md",
+    "document_id": "RELATIONSHIP-CONTRACT",
+    "title": "Evidence Relationship Contract",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/08-observatory/observatory-architecture.md",
+    "document_id": "OBS-ARCH",
+    "title": "Observatory Architecture",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "OBS-ARCH-001",
+      "OBS-ARCH-002"
+    ],
+    "decisions": [
+      "DEC-002"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/08-observatory/observatory-product-spec.md",
+    "document_id": "OBS-SPEC",
+    "title": "Observatory Product Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "OBS-001",
+      "OBS-002"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/08-observatory/observatory-taxonomy.md",
+    "document_id": "OBS-TAX-SPEC",
+    "title": "Observatory Taxonomy",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "OBS-TAX-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/08-observatory/rating-confidence-model.md",
+    "document_id": "RATING-CONFIDENCE-MODEL",
+    "title": "Rating Confidence Model",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/08-observatory/rating-confidence-spec.md",
+    "document_id": "OBS-CONF-SPEC",
+    "title": "Rating Confidence Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "OBS-CONF-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/08-observatory/rating-governance-spec.md",
+    "document_id": "OBS-GOV-SPEC",
+    "title": "Rating Governance Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "OBS-GOV-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/08-observatory/rating-governance.md",
+    "document_id": "RATING-GOVERNANCE",
+    "title": "Rating Governance",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/08-observatory/rating-methodology.md",
+    "document_id": "RATING-METHODOLOGY",
+    "title": "Rating Methodology Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/08-observatory/rating-model-spec.md",
+    "document_id": "OBS-RAT-SPEC",
+    "title": "Rating Model Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "OBS-RAT-001",
+      "OBS-RAT-002"
+    ],
+    "decisions": [
+      "DEC-002"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/08-observatory/rating-model.md",
+    "document_id": "RATING-MODEL",
+    "title": "Rating Model",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/08-observatory/rating-provenance.md",
+    "document_id": "RATING-PROVENANCE",
+    "title": "Rating Provenance",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/08-observatory/rating-versioning.md",
+    "document_id": "RATING-VERSIONING",
+    "title": "Rating Versioning",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/08-observatory/taxonomy.md",
+    "document_id": "TAXONOMY",
+    "title": "Observatory Taxonomy",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/09-payments/payment-architecture.md",
+    "document_id": "PAY-ARCH",
+    "title": "Payment Architecture",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [
+      "DEC-006"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/09-payments/pricing-spec.md",
+    "document_id": "PRICING-SPEC",
+    "title": "Investigation Pricing Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/09-payments/private-investigation-payment-spec.md",
+    "document_id": "PAY-SPEC",
+    "title": "Private Investigation Payment Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "PAY-001",
+      "PAY-002"
+    ],
+    "decisions": [
+      "DEC-006",
+      "DEC-005"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/10-api/api-architecture.md",
+    "document_id": "API-ARCH",
+    "title": "API Architecture",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "API-001",
+      "API-ERR-001",
+      "API-SEC-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/10-api/api-authorization-matrix.md",
+    "document_id": "API-AUTHORIZATION-MATRIX",
+    "title": "API Authorization Matrix",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/10-api/api-contracts.md",
+    "document_id": "API-CONTRACTS",
+    "title": "API Contract Documentation",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/10-api/api-error-taxonomy.md",
+    "document_id": "API-ERROR-TAXONOMY",
+    "title": "API Error Taxonomy",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/11-data/dashboard-metric-dictionary.md",
+    "document_id": "DASHBOARD-METRIC-DICTIONARY",
+    "title": "Dashboard Metric Dictionary",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/11-data/data-classification.md",
+    "document_id": "DATA-CLASSIFICATION",
+    "title": "Data Classification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/11-data/data-dictionary.md",
+    "document_id": "DATA-DICTIONARY",
+    "title": "Data Dictionary",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/11-data/database-spec.md",
+    "document_id": "DB-SPEC",
+    "title": "Database Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "DATA-DB-001",
+      "DATA-DB-002",
+      "DATA-DB-003"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/11-data/object-storage-spec.md",
+    "document_id": "OBJ-STORE",
+    "title": "Object Storage Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "DATA-OBJ-001",
+      "DATA-OBJ-002"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/11-data/storage-spec.md",
+    "document_id": "STORAGE-SPEC",
+    "title": "Storage Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/12-security/audit-spec.md",
+    "document_id": "SEC-AUDIT-SPEC",
+    "title": "Audit Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/12-security/auth-vs-wallet-spec.md",
+    "document_id": "AUTH-VS-WALLET-SPEC",
+    "title": "Authentication vs Wallet Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/12-security/authentication-spec.md",
+    "document_id": "AUTHN-SPEC",
+    "title": "Authentication Architecture",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "AUTHN-001",
+      "AUTHN-002"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/12-security/authorization-spec.md",
+    "document_id": "AUTHZ-SPEC",
+    "title": "Authorization Architecture",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "AUTHZ-001",
+      "AUTHZ-002"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/12-security/data-classification.md",
+    "document_id": "DATA-CLASS",
+    "title": "Data Classification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "SEC-CLASS-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/12-security/public-private-boundary.md",
+    "document_id": "PUBLIC-PRIVATE-BOUNDARY",
+    "title": "Public/Private Boundary",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/12-security/secrets-management.md",
+    "document_id": "SECRETS-MGT",
+    "title": "Secrets Management",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "SEC-SEC-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/12-security/security-baseline.md",
+    "document_id": "SEC-BASE",
+    "title": "Security Baseline",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "SEC-BASE-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/12-security/session-spec.md",
+    "document_id": "SESS-SPEC",
+    "title": "Session Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "AUTHN-SESS-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/12-security/threat-model.md",
+    "document_id": "THREAT-MOD",
+    "title": "Threat Model",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "SEC-THREAT-001"
+    ],
+    "decisions": [
+      "DEC-009"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/13-ui/chart-spec.md",
+    "document_id": "CHART-SPEC",
+    "title": "Chart Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/13-ui/semantic-amendment.md",
+    "document_id": "SEMANTIC-AMENDMENT",
+    "title": "UI Semantic Amendment",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/13-ui/ui-contract.md",
+    "document_id": "UI-CONT",
+    "title": "UI Technical Contract",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/15-operations/audit-spec.md",
+    "document_id": "AUDIT-SPEC",
+    "title": "Audit Architecture",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "AUDIT-001",
+      "AUDIT-002"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/15-operations/failure-mode-catalog.md",
+    "document_id": "FAIL-MODE",
+    "title": "Failure Mode Catalog",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/15-operations/observability-spec.md",
+    "document_id": "OBSERVE-SPEC",
+    "title": "Observability Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "OBS-001"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/16-testing/test-specification.md",
+    "document_id": "TEST-SPECIFICATION",
+    "title": "Test Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "DRAFT",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/16-testing/testing-strategy.md",
+    "document_id": "TEST-STRAT",
+    "title": "Testing Contract",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/17-deployment/deployment-architecture.md",
+    "document_id": "DEPLOY-ARCH",
+    "title": "Deployment Architecture",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "DEPLOY-001",
+      "DEPLOY-002"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/18-agents/coder-agent.md",
+    "document_id": "AGENT-CODER-002",
+    "title": "Coder Agent Instructions v2",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "AGENT-CODER-002",
+      "AGENT-001",
+      "AGENT-002"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/18-agents/coder-instruction.md",
+    "document_id": "CODER-INSTRUCTION",
+    "title": "Coder Agent Instructions",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/18-agents/coder-task-prompt-template.md",
+    "document_id": "TMPL-PROMPT-CODER",
+    "title": "Coder Task Prompt Template",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/18-agents/implementation-manifest-template.md",
+    "document_id": "TMPL-MANIFEST-02",
+    "title": "Implementation Manifest Template v2",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/18-agents/qa-agent.md",
+    "document_id": "AGENT-QA-002",
+    "title": "QA Agent Instructions v2",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "AGENT-QA-002",
+      "AGENT-005"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/18-agents/qa-instruction.md",
+    "document_id": "QA-INSTRUCTION",
+    "title": "QA Agent Instructions",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/18-agents/research-agent.md",
+    "document_id": "AGENT-RES-002",
+    "title": "Research Agent Instructions v2",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "AGENT-RES-002",
+      "AGENT-004"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/18-agents/research-instruction.md",
+    "document_id": "RESEARCH-INSTRUCTION",
+    "title": "Research Agent Instructions",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/18-agents/spec-compliance-report-template.md",
+    "document_id": "TMPL-COMPLY-01",
+    "title": "Spec Compliance Report Template",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/18-agents/work-agent.md",
+    "document_id": "AGENT-WORK-002",
+    "title": "WORK Agent Instructions v2",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "AGENT-WORK-002",
+      "AGENT-003"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/18-agents/work-instruction.md",
+    "document_id": "WORK-INSTRUCTION",
+    "title": "WORK Sites Agent Instructions",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/18-agents/work-task-prompt-template.md",
+    "document_id": "TMPL-PROMPT-WORK",
+    "title": "WORK Task Prompt Template",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/19-rag/chunking-spec.md",
+    "document_id": "RAG-CHUNK-001",
+    "title": "Chunking Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "RAG-CHUNK-001",
+      "RAG-CHUNK-002",
+      "RAG-CHUNK-003",
+      "NEUR-ELIG-001",
+      "RAG-CHUNK-004"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/19-rag/conflict-resolution-protocol.md",
+    "document_id": "GOV-EXEC-001",
+    "title": "Conflict Resolution Protocol",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "GOV-EXEC-001",
+      "GOV-EXEC-002"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/19-rag/context-budget-spec.md",
+    "document_id": "RAG-BUDGET-001",
+    "title": "Context Budget Rules",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "RAG-BUDGET-001",
+      "RAG-BUDGET-002"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/19-rag/rag-architecture.md",
+    "document_id": "RAG-ARCHITECTURE",
+    "title": "RAG Architecture & Metadata",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/19-rag/rag-build-manifest-spec.md",
+    "document_id": "RAG-BUILD-001",
+    "title": "RAG Build Manifest Spec",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "RAG-BUILD-001",
+      "RAG-BUILD-002"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/19-rag/rag-corpus-manifest.md",
+    "document_id": "RAG-MANIFEST-D4-REVIEW",
+    "title": "D4 Review Corpus Manifest",
+    "document_type": null,
+    "domain": null,
+    "version": "1.1.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/19-rag/rag-corpus-spec.md",
+    "document_id": "RAG-CORPUS-001",
+    "title": "Canonical RAG Corpus Specification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "RAG-CORPUS-001",
+      "RAG-CORP-001",
+      "RAG-CORP-002",
+      "RAG-CORP-003"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/19-rag/rag-evaluation-results.md",
+    "document_id": "D4-RAG-EVALUATION",
+    "title": "D4 Static RAG Evaluation Results",
+    "document_type": "REPORT",
+    "domain": "RAG",
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": "CANONICAL_REFERENCE",
+    "canonicality": "CANONICAL_REFERENCE",
+    "requirements": [
+      "RAG-EVAL-001",
+      "RAG-AUTH-001"
+    ],
+    "decisions": [
+      "DEC-010"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": "INTERNAL",
+    "missing_metadata": [],
+    "status_valid": true
+  },
+  {
+    "path": "docs/19-rag/rag-evaluation-suite.md",
+    "document_id": "RAG-EVAL-001",
+    "title": "RAG Evaluation Suite",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "RAG-EVAL-001",
+      "RAG-EVAL-002"
+    ],
+    "decisions": [
+      "DEC-010"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/19-rag/rag-metadata-spec.md",
+    "document_id": "RAG-META-001",
+    "title": "Document Metadata Contract",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "RAG-META-001",
+      "RAG-META-002"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/19-rag/rag-status-supersession.md",
+    "document_id": "RAG-AUTH-001",
+    "title": "Authority & Supersession Rules",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "RAG-AUTH-001",
+      "RAG-AUTH-002",
+      "RAG-AUTH-003",
+      "RAG-AUTH-004"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/19-rag/retrieval-bundle-validation.md",
+    "document_id": "D4-BUNDLE-VALIDATION",
+    "title": "D4 Retrieval Bundle Validation",
+    "document_type": "REPORT",
+    "domain": "RAG",
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": "CANONICAL_REFERENCE",
+    "canonicality": "CANONICAL_REFERENCE",
+    "requirements": [
+      "RAG-BUNDLE-001"
+    ],
+    "decisions": [
+      "DEC-002",
+      "DEC-007"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": "INTERNAL",
+    "missing_metadata": [],
+    "status_valid": true
+  },
+  {
+    "path": "docs/19-rag/retrieval-bundles.md",
+    "document_id": "RAG-BUNDLE-001",
+    "title": "Retrieval Bundles",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "RAG-BUNDLE-001",
+      "RAG-BUNDLE-002"
+    ],
+    "decisions": [
+      "DEC-001",
+      "DEC-003",
+      "DEC-008",
+      "DEC-009",
+      "DEC-002"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/19-rag/task-classification.md",
+    "document_id": "RAG-TASK-001",
+    "title": "Task Classification",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "RAG-TASK-001",
+      "RAG-TASK-002"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/adr/0001-web3-compatibility.md",
+    "document_id": null,
+    "title": null,
+    "document_type": null,
+    "domain": null,
+    "version": null,
+    "status": null,
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_id",
+      "title",
+      "document_type",
+      "domain",
+      "version",
+      "status",
+      "authority",
+      "canonicality",
+      "updated_at"
+    ],
+    "status_valid": false
+  },
+  {
+    "path": "docs/adr/ADR-001-backend-framework.md",
+    "document_id": "ADR-001",
+    "title": "Backend Framework Decision",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "API-001",
+      "ARCH-BOUND-003"
+    ],
+    "decisions": [
+      "DEC-010"
+    ],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality",
+      "updated_at"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/adr/ADR-002-database-engine.md",
+    "document_id": "ADR-002",
+    "title": "Database Engine",
+    "document_type": null,
+    "domain": null,
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "authority": null,
+    "canonicality": null,
+    "requirements": [
+      "DATA-DB-002"
+    ],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_type",
+      "domain",
+      "authority",
+      "canonicality",
+      "updated_at"
+    ],
+    "status_valid": true
+  },
+  {
+    "path": "docs/architecture-amendment-v1.1.md",
+    "document_id": null,
+    "title": null,
+    "document_type": null,
+    "domain": null,
+    "version": null,
+    "status": null,
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_id",
+      "title",
+      "document_type",
+      "domain",
+      "version",
+      "status",
+      "authority",
+      "canonicality",
+      "updated_at"
+    ],
+    "status_valid": false
+  },
+  {
+    "path": "docs/frontend-architecture.md",
+    "document_id": null,
+    "title": null,
+    "document_type": null,
+    "domain": null,
+    "version": null,
+    "status": null,
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_id",
+      "title",
+      "document_type",
+      "domain",
+      "version",
+      "status",
+      "authority",
+      "canonicality",
+      "updated_at"
+    ],
+    "status_valid": false
+  },
+  {
+    "path": "docs/ui-pack-deviations.md",
+    "document_id": null,
+    "title": null,
+    "document_type": null,
+    "domain": null,
+    "version": null,
+    "status": null,
+    "authority": null,
+    "canonicality": null,
+    "requirements": [],
+    "decisions": [],
+    "supersedes": null,
+    "superseded_by": null,
+    "security_classification": null,
+    "missing_metadata": [
+      "document_id",
+      "title",
+      "document_type",
+      "domain",
+      "version",
+      "status",
+      "authority",
+      "canonicality",
+      "updated_at"
+    ],
+    "status_valid": false
+  }
+]

@@ -1,12 +1,17 @@
 ---
 document_id: REQ-INDEX
-title: "Requirement Index v4"
-version: 1.3.0
+title: "Requirement Index v4 — Observed References"
+version: 1.4.0
 status: APPROVED
 owner: Architecture Team
 ---
 
-# Requirement Index
+# Requirement Index v4 — Observed References
+
+This file is an observed-reference list, not a validated requirement registry.
+D4 found no machine-readable requirement owner/source mapping. It MUST NOT be
+used to infer a requirement's authority until the metadata remediation work is
+approved and complete.
 
 ACCESS-001
 ADAPT-001
