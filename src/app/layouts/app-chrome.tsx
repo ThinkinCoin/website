@@ -65,7 +65,7 @@ function Navigation({ items, onNavigate }: { items: NavItem[]; onNavigate?: () =
     <nav aria-label="Primary navigation">
       {items.map(({ to, label, icon: Icon, end }) => (
         <NavLink key={to} to={to} end={end} className="tic-nav-link" onClick={onNavigate} title={label}>
-          <Icon aria-hidden="true" size={17} />
+          <Icon aria-hidden={true} size={17} />
           <span>{label}</span>
         </NavLink>
       ))}

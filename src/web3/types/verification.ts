@@ -33,6 +33,6 @@ export function createVerificationStatement({
     `Issued At: ${issuedAt}`,
     `Expiration Time: ${expiresAt}`,
     '',
-    'This signature verifies address control. It does not authorize a token transfer or establish real-world identity.',
+    'This signature verifies address control. It does not authorize a token transfer. It does not establish real-world identity.',
   ].join('\n');
 }

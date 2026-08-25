@@ -1,9 +1,10 @@
 import {
+  createColumnHelper,
+  createSortedRowModel,
   flexRender,
-  getCoreRowModel,
-  getSortedRowModel,
-  useReactTable,
-  type ColumnDef,
+  rowSortingFeature,
+  tableFeatures,
+  useTable,
   type SortingState,
 } from '@tanstack/react-table';
 import { useQuery } from '@tanstack/react-query';
@@ -22,6 +23,12 @@ import { EmptyState, ErrorState, LoadingState } from '@/components/ui/query-stat
 import type { Evidence } from '@/domain/models';
 import { formatDate } from '@/lib/utils';
 
+const evidenceTableFeatures = tableFeatures({
+  rowSortingFeature,
+  sortedRowModel: createSortedRowModel(),
+});
+const evidenceColumnHelper = createColumnHelper<typeof evidenceTableFeatures, Evidence>();
+
 function EvidenceMobileCard({ item }: { item: Evidence }) {
   return (
     <Card className="tic-record-card">
@@ -35,41 +42,42 @@ function EvidenceMobileCard({ item }: { item: Evidence }) {
 
 function EvidenceTable({ records }: { records: Evidence[] }) {
   const [sorting, setSorting] = useState<SortingState>([]);
-  const columns = useMemo<ColumnDef<Evidence>[]>(
-    () => [
-      {
-        accessorKey: 'id',
+  const columns = useMemo(
+    () => evidenceColumnHelper.columns([
+      evidenceColumnHelper.accessor('id', {
         header: 'ID',
         cell: ({ row }) => <TechnicalIdentifier value={row.original.id} />,
-      },
-      { accessorKey: 'type', header: 'Type', cell: ({ getValue }) => String(getValue()).replace('_', ' ') },
-      {
-        accessorKey: 'verificationStatus',
+      }),
+      evidenceColumnHelper.accessor('type', {
+        header: 'Type',
+        cell: ({ getValue }) => String(getValue()).replace('_', ' '),
+      }),
+      evidenceColumnHelper.accessor('verificationStatus', {
         header: 'Verification',
         cell: ({ row }) => <VerificationBadge status={row.original.verificationStatus} />,
-      },
-      {
-        accessorKey: 'integrityStatus',
+      }),
+      evidenceColumnHelper.accessor('integrityStatus', {
         header: 'Integrity',
         cell: ({ row }) => <IntegrityBadge status={row.original.integrityStatus} />,
-      },
-      { accessorKey: 'createdAt', header: 'Added', cell: ({ getValue }) => formatDate(String(getValue())) },
-      {
+      }),
+      evidenceColumnHelper.accessor('createdAt', {
+        header: 'Added',
+        cell: ({ getValue }) => formatDate(String(getValue())),
+      }),
+      evidenceColumnHelper.display({
         id: 'action',
         header: 'Action',
-        enableSorting: false,
         cell: ({ row }) => <Link className="tic-button tic-button--ghost tic-button--sm" to={`/evidence/${row.original.id}`}>Inspect</Link>,
-      },
-    ],
+      }),
+    ]),
     [],
   );
-  const table = useReactTable({
+  const table = useTable({
+    features: evidenceTableFeatures,
     data: records,
     columns,
     state: { sorting },
     onSortingChange: setSorting,
-    getCoreRowModel: getCoreRowModel(),
-    getSortedRowModel: getSortedRowModel(),
   });
 
   return (
@@ -77,7 +85,7 @@ function EvidenceTable({ records }: { records: Evidence[] }) {
       <div className="tic-table-wrap tic-desktop-table">
         <table className="tic-table">
           <thead>{table.getHeaderGroups().map((group) => <tr key={group.id}>{group.headers.map((header) => <th key={header.id}>{header.isPlaceholder ? null : <button className="tic-button tic-button--ghost tic-button--sm" type="button" onClick={header.column.getToggleSortingHandler()} disabled={!header.column.getCanSort()}>{flexRender(header.column.columnDef.header, header.getContext())}{header.column.getCanSort() ? <ArrowDownUp aria-hidden="true" size={12} /> : null}</button>}</th>)}</tr>)}</thead>
-          <tbody>{table.getRowModel().rows.map((row) => <tr key={row.id}>{row.getVisibleCells().map((cell) => <td key={cell.id}>{flexRender(cell.column.columnDef.cell, cell.getContext())}</td>)}</tr>)}</tbody>
+          <tbody>{table.getRowModel().rows.map((row) => <tr key={row.id}>{row.getAllCells().map((cell) => <td key={cell.id}>{flexRender(cell.column.columnDef.cell, cell.getContext())}</td>)}</tr>)}</tbody>
         </table>
       </div>
       <div className="tic-mobile-records">{records.map((item) => <EvidenceMobileCard key={item.id} item={item} />)}</div>
@@ -97,7 +105,7 @@ export function EvidenceExplorerPage() {
   return (
     <div className="tic-page">
       <PageHeader eyebrow="Evidence database" title="Evidence Explorer" description="Technical material with independent verification, integrity, and provenance dimensions." />
-      <form className="tic-search-input" onSubmit={(event) => { event.preventDefault(); const data = new FormData(event.currentTarget); setParams({ q: String(data.get('q') ?? '') }); }}>
+      <form className="tic-search-input" onSubmit={(event) => { event.preventDefault(); const data = new FormData(event.currentTarget); const value = data.get('q'); setParams({ q: typeof value === 'string' ? value : '' }); }}>
         <Search aria-hidden="true" size={16} /><input name="q" defaultValue={query} placeholder="Evidence ID, hash, address, block…" /><Button type="submit" size="sm">Search</Button>
       </form>
       <div style={{ height: 'var(--tic-space-xl)' }} />

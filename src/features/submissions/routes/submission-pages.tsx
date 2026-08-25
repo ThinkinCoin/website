@@ -1,8 +1,8 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { AlertTriangle, ArrowRight, CheckCircle2, Send } from 'lucide-react';
-import { useEffect } from 'react';
-import { useForm } from 'react-hook-form';
+import { useEffect, useState } from 'react';
+import { useForm, useWatch } from 'react-hook-form';
 import { Link, useNavigate, useParams } from 'react-router';
 import { queryKeys } from '@/app/config/query-keys';
 import { useRepositories } from '@/app/providers/repository-provider';
@@ -15,6 +15,17 @@ import { formatDate } from '@/lib/utils';
 
 const draftKey = 'tic-submission-draft-v1';
 
+function readSubmissionDraft(): Partial<SubmissionInput> | undefined {
+  const stored = sessionStorage.getItem(draftKey);
+  if (!stored) return undefined;
+  try {
+    const result = submissionSchema.partial().safeParse(JSON.parse(stored));
+    return result.success ? result.data : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
 export function SubmissionsPage() {
   const { submissions } = useRepositories();
   const result = useQuery({ queryKey: queryKeys.submissions, queryFn: () => submissions.list() });
@@ -25,18 +36,17 @@ export function NewSubmissionPage() {
   const { submissions } = useRepositories();
   const queryClient = useQueryClient();
   const navigate = useNavigate();
-  const stored = sessionStorage.getItem(draftKey);
-  const parsed = stored ? (JSON.parse(stored) as Partial<SubmissionInput>) : undefined;
+  const [draft] = useState(readSubmissionDraft);
   const form = useForm<SubmissionInput>({
     resolver: zodResolver(submissionSchema),
     defaultValues: {
-      type: parsed?.type ?? 'technical_observation',
-      title: parsed?.title ?? '',
-      description: parsed?.description ?? '',
-      relatedObjectId: parsed?.relatedObjectId ?? 'investigation-harmony-reference',
+      type: draft?.type ?? 'technical_observation',
+      title: draft?.title ?? '',
+      description: draft?.description ?? '',
+      relatedObjectId: draft?.relatedObjectId ?? 'investigation-harmony-reference',
     },
   });
-  const watched = form.watch();
+  const watched = useWatch({ control: form.control });
   useEffect(() => { sessionStorage.setItem(draftKey, JSON.stringify(watched)); }, [watched]);
   const create = useMutation({
     mutationFn: (input: SubmissionInput) => submissions.create(input),

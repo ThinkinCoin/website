@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { AlertTriangle, ArrowRight, Clock3, Eye, FileCheck2, Network } from 'lucide-react';
+import { AlertTriangle, ArrowRight, Eye, FileCheck2, Network } from 'lucide-react';
 import { Link, NavLink, Outlet, useOutletContext, useParams } from 'react-router';
 import { queryKeys } from '@/app/config/query-keys';
 import { useRepositories } from '@/app/providers/repository-provider';

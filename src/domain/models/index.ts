@@ -227,7 +227,7 @@ export interface NativeCurrency {
 export interface NetworkCatalogEntry {
   id: Id;
   slug: string;
-  namespace: 'eip155' | 'solana' | 'bip122' | string;
+  namespace: 'eip155' | 'solana' | 'bip122';
   chainId?: number;
   name: string;
   description: string;

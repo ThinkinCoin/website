@@ -1,9 +1,22 @@
 allowBuilds:
-  '@reown/appkit': set this to true or false
-  bufferutil: set this to true or false
-  keccak: set this to true or false
-  msw: set this to true or false
-  utf-8-validate: set this to true or false
+  '@reown/appkit': false
+  bufferutil: false
+  keccak: false
+  msw: false
+  utf-8-validate: false
+packageExtensions:
+  '@reown/appkit@1.8.23':
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+  '@reown/appkit-controllers@1.8.23':
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+  '@reown/appkit-pay@1.8.23':
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
 minimumReleaseAgeExclude:
   - '@tanstack/query-core@5.102.3'
   - '@tanstack/react-query@5.102.3'
