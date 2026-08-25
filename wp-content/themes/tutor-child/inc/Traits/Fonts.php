@@ -40,6 +40,7 @@ trait Fonts {
 			'Verdana, Geneva, sans-serif',
 			'Paratina Linotype',
 			'Trebuchet MS',
+			'Fashion Fetish',
 		);
 	}
 
