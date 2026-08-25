@@ -1,5 +1,5 @@
 ---
-document_id: AUDIT-SPEC
+document_id: SEC-AUDIT-SPEC
 title: "Audit Specification"
 version: 1.0.0
 status: DRAFT

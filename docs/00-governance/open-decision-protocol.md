@@ -2,7 +2,7 @@
 document_id: GOV-EXEC-003
 title: "Open Decision Execution Protocol"
 version: 1.0.0
-status: PROPOSED
+status: APPROVED
 owner: Architecture Team
 created_at: 2026-08-25
 updated_at: 2026-08-25

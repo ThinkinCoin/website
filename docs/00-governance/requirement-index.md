@@ -1,7 +1,7 @@
 ---
 document_id: REQ-INDEX
-title: "Requirement Index v3"
-version: 1.2.0
+title: "Requirement Index v4"
+version: 1.3.0
 status: APPROVED
 owner: Architecture Team
 ---

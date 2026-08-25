@@ -2,7 +2,7 @@
 document_id: NEUR-TECH-SPEC
 title: " Technical Contract"
 version: 1.0.0
-status: PROPOSED
+status: APPROVED
 owner: Architecture Team
 created_at: 2026-08-25
 updated_at: 2026-08-25

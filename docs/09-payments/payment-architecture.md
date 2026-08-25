@@ -2,7 +2,7 @@
 document_id: PAY-ARCH
 title: "Payment Architecture"
 version: 1.0.0
-status: PROPOSED
+status: APPROVED
 owner: Architecture Team
 created_at: 2026-08-25
 updated_at: 2026-08-25

@@ -2,7 +2,7 @@
 document_id: RAG-AUTH-001
 title: "Authority & Supersession Rules"
 version: 1.0.0
-status: PROPOSED
+status: APPROVED
 owner: Architecture Team
 created_at: 2026-08-25
 updated_at: 2026-08-25
