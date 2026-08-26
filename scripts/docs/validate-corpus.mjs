@@ -1,10 +1,12 @@
-import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 const root = process.cwd();
 const docsRoot = path.join(root, 'docs');
-const outputRoot = path.join(docsRoot, '19-rag', 'generated');
-const requiredMetadata = [
+const generatedRoot = path.join(docsRoot, '19-rag', 'generated');
+const today = new Date().toISOString();
+
+const requiredMetadataFields = [
   'document_id',
   'title',
   'document_type',
@@ -13,126 +15,283 @@ const requiredMetadata = [
   'status',
   'authority',
   'canonicality',
+  'effective_from',
+  'created_at',
   'updated_at',
+  'supersedes',
+  'superseded_by',
+  'related_documents',
+  'requirement_ids',
+  'decision_ids',
+  'tags',
+  'security_classification',
+  'rag_priority',
 ];
-const allowedStatuses = new Set([
-  'DRAFT',
-  'PROPOSED',
-  'APPROVED',
-  'SUPERSEDED',
-  'DEPRECATED',
-  'ARCHIVED',
-]);
-const requirementPattern = /\b(?:PRIN|PROD|ACCESS|NEUR|INV|CLAIM|EVID|OBS|PAY|ARCH|API|DATA|AUTHN|AUTHZ|WEB3|SEC|AUDIT|SEARCH|TEST|DEPLOY|RAG|AGENT|GOV-EXEC)-[A-Z0-9-]*\d{3}\b/g;
-const decisionPattern = /\bDEC-\d{3}\b/g;
-const markdownLinkPattern = /\[[^\]]*\]\(([^)#][^)]*)\)/g;
 
-async function markdownFiles(directory) {
-  const entries = await readdir(directory, { withFileTypes: true });
-  const nested = await Promise.all(entries.map(async (entry) => {
-    const item = path.join(directory, entry.name);
-    if (entry.isDirectory()) return markdownFiles(item);
-    return entry.isFile() && entry.name.endsWith('.md') ? [item] : [];
-  }));
-  return nested.flat();
-}
+const allowedStatuses = new Set(['DRAFT', 'PROPOSED', 'APPROVED', 'SUPERSEDED', 'DEPRECATED', 'ARCHIVED']);
+const allowedCanonicality = new Set(['CURRENT_CANONICAL', 'SUPERSEDED', 'DEPRECATED', 'ARCHIVED', 'NON_NORMATIVE_REFERENCE']);
+const allowedAuthorities = new Set(['CANONICAL_NORMATIVE', 'CANONICAL_REFERENCE', 'NON_NORMATIVE_REFERENCE']);
 
 function parseFrontmatter(content) {
-  if (!content.startsWith('---\n')) return {};
-  const end = content.indexOf('\n---', 4);
-  if (end === -1) return {};
-  return Object.fromEntries(content.slice(4, end).split('\n')
-    .filter((line) => line.includes(':'))
-    .map((line) => {
-      const [key, ...value] = line.split(':');
-      return [key.trim(), value.join(':').trim().replace(/^"|"$/g, '')];
-    }));
-}
-
-function matches(pattern, text) {
-  return [...text.matchAll(pattern)].map((match) => match[0]);
-}
-
-const files = await markdownFiles(docsRoot);
-const inventory = [];
-const idMap = new Map();
-const requirementUse = new Map();
-const decisionUse = new Map();
-const brokenLinks = [];
-
-for (const file of files) {
-  const content = await readFile(file, 'utf8');
-  const metadata = parseFrontmatter(content);
-  const relativePath = path.relative(root, file).replaceAll(path.sep, '/');
-  const missingMetadata = requiredMetadata.filter((key) => !metadata[key]);
-  const requirements = [...new Set(matches(requirementPattern, content))];
-  const decisions = [...new Set(matches(decisionPattern, content))];
-  for (const match of content.matchAll(markdownLinkPattern)) {
-    const target = match[1].replace(/<|>/g, '');
-    if (target.startsWith('http://') || target.startsWith('https://') || target.startsWith('mailto:')) continue;
-    const targetPath = path.resolve(path.dirname(file), target.split('#')[0]);
-    try {
-      await readFile(targetPath);
-    } catch {
-      brokenLinks.push({ path: relativePath, target });
+  if (!content.startsWith('---\n')) return { frontmatter: {}, body: content };
+  const end = content.indexOf('\n---\n', 4);
+  if (end === -1) return { frontmatter: {}, body: content };
+  const frontmatter = {};
+  for (const line of content.slice(4, end).split('\n')) {
+    const match = line.match(/^([A-Za-z0-9_]+):\s*(.*)$/);
+    if (!match) continue;
+    const key = match[1];
+    const value = match[2].trim();
+    if (!value) {
+      frontmatter[key] = '';
+      continue;
+    }
+    if (value.startsWith('[') && value.endsWith(']')) {
+      try {
+        frontmatter[key] = JSON.parse(value);
+        continue;
+      } catch {
+        frontmatter[key] = value;
+        continue;
+      }
+    }
+    if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+      frontmatter[key] = value.slice(1, -1);
+    } else {
+      frontmatter[key] = value;
     }
   }
-  const entry = {
-    path: relativePath,
-    document_id: metadata.document_id ?? null,
-    title: metadata.title ?? null,
-    document_type: metadata.document_type ?? null,
-    domain: metadata.domain ?? null,
-    version: metadata.version ?? null,
-    status: metadata.status ?? null,
-    authority: metadata.authority ?? null,
-    canonicality: metadata.canonicality ?? null,
-    requirements,
-    decisions,
-    supersedes: metadata.supersedes ?? null,
-    superseded_by: metadata.superseded_by ?? null,
-    security_classification: metadata.security_classification ?? null,
-    missing_metadata: missingMetadata,
-    status_valid: allowedStatuses.has(metadata.status),
+  return { frontmatter, body: content.slice(end + 5) };
+}
+
+function normalizeArray(value) {
+  if (Array.isArray(value)) return value;
+  if (value === undefined || value === null || value === '') return [];
+  return [value];
+}
+
+function requiredMissing(value) {
+  if (value === undefined || value === null) return true;
+  if (typeof value === 'string') return value.trim() === '';
+  return false;
+}
+
+function extractIds(pattern, text) {
+  return [...new Set([...text.matchAll(pattern)].map((match) => match[0]))];
+}
+
+async function walk(directory) {
+  const entries = await readdir(directory, { withFileTypes: true });
+  const collected = [];
+  for (const entry of entries) {
+    const item = path.join(directory, entry.name);
+    if (entry.isDirectory()) {
+      if (item.endsWith(path.join('docs', '19-rag', 'generated'))) continue;
+      collected.push(...await walk(item));
+      continue;
+    }
+    if (entry.isFile() && entry.name.endsWith('.md') && !item.includes(path.sep + 'generated' + path.sep)) {
+      collected.push(item);
+    }
+  }
+  return collected;
+}
+
+function inferTitle(body, relativePath) {
+  const heading = body.match(/^#\s+(.+)$/m);
+  if (heading) return heading[1].trim();
+  return path.basename(relativePath, '.md').replace(/[-_]/g, ' ');
+}
+
+function inferDocumentType(relativePath, title) {
+  if (relativePath.startsWith('docs/adr/')) return 'ADR';
+  if (/report|validation|readiness|inventory|manifest|evaluation|gap|promotion|consistency/i.test(title)) return 'REPORT';
+  if (/template/i.test(title)) return 'TEMPLATE';
+  if (/instruction|prompt/i.test(title)) return 'GUIDE';
+  if (/architecture/i.test(title)) return 'ARCHITECTURE';
+  if (/contract|boundary|spec|specification/i.test(title)) return 'SPEC';
+  if (/policy|protocol/i.test(title)) return 'POLICY';
+  if (/model/i.test(title)) return 'SPEC';
+  if (/matrix|index|registry|bundle|taxonomy|dictionary|schema/i.test(title)) return 'CONTRACT';
+  return 'SPEC';
+}
+
+function inferDomain(relativePath) {
+  const parts = relativePath.split('/');
+  if (parts[1] === 'adr') return 'adr';
+  return parts[1] || 'root';
+}
+
+async function main() {
+  const files = await walk(docsRoot);
+  const inventory = [];
+  const byId = new Map();
+  const duplicateDocumentIds = [];
+  const requirementRefs = new Map();
+  const decisionRefs = new Map();
+
+  for (const file of files) {
+    const relativePath = path.relative(root, file).replaceAll(path.sep, '/');
+    const content = await readFile(file, 'utf8');
+    const { frontmatter, body } = parseFrontmatter(content);
+    const title = frontmatter.title || inferTitle(body, relativePath);
+    const documentType = frontmatter.document_type || inferDocumentType(relativePath, title);
+    const domain = frontmatter.domain || inferDomain(relativePath);
+    const metadata = {
+      document_id: frontmatter.document_id || '',
+      title,
+      document_type: documentType,
+      domain,
+      version: frontmatter.version || '',
+      status: frontmatter.status || '',
+      authority: frontmatter.authority || '',
+      canonicality: frontmatter.canonicality || '',
+      effective_from: frontmatter.effective_from || '',
+      created_at: frontmatter.created_at || '',
+      updated_at: frontmatter.updated_at || '',
+      supersedes: normalizeArray(frontmatter.supersedes),
+      superseded_by: normalizeArray(frontmatter.superseded_by),
+      related_documents: normalizeArray(frontmatter.related_documents),
+      requirement_ids: normalizeArray(frontmatter.requirement_ids),
+      decision_ids: normalizeArray(frontmatter.decision_ids),
+      tags: normalizeArray(frontmatter.tags),
+      security_classification: frontmatter.security_classification || '',
+      rag_priority: frontmatter.rag_priority === undefined ? '' : frontmatter.rag_priority,
+    };
+
+    const missing = requiredMetadataFields.filter((field) => requiredMissing(metadata[field]));
+    const entry = {
+      path: relativePath,
+      ...metadata,
+      missing_required_metadata: missing,
+      body_heading: body.match(/^#{1,6}\s+(.+)$/m)?.[1]?.trim() || title,
+      active: metadata.canonicality === 'CURRENT_CANONICAL',
+    };
+
+    if (byId.has(entry.document_id)) duplicateDocumentIds.push(entry.document_id);
+    byId.set(entry.document_id, entry);
+    inventory.push(entry);
+
+    for (const requirementId of extractIds(/\b(?:PRIN|PROD|ACCESS|NEUR|INV|CLAIM|EVID|OBS|PAY|ARCH|API|DATA|AUTHN|AUTHZ|WEB3|SEC|AUDIT|SEARCH|TEST|DEPLOY|RAG|AGENT|GOV-EXEC)-[A-Z0-9-]*\d{3}\b/g, content)) {
+      if (!requirementRefs.has(requirementId)) requirementRefs.set(requirementId, []);
+      requirementRefs.get(requirementId).push(entry.document_id);
+    }
+    for (const decisionId of extractIds(/\bDEC-\d{3}\b/g, content)) {
+      if (!decisionRefs.has(decisionId)) decisionRefs.set(decisionId, []);
+      decisionRefs.get(decisionId).push(entry.document_id);
+    }
+  }
+
+  inventory.sort((a, b) => a.path.localeCompare(b.path));
+
+  const unresolvedSupersessionTargets = [];
+  for (const doc of inventory) {
+    for (const target of doc.supersedes) {
+      if (!byId.has(target)) {
+        unresolvedSupersessionTargets.push({ path: doc.path, target });
+      }
+    }
+  }
+
+  const invalidStatusDocuments = inventory.filter((doc) => !allowedStatuses.has(doc.status)).map((doc) => doc.path);
+  const invalidCanonicalityDocuments = inventory.filter((doc) => !allowedCanonicality.has(doc.canonicality)).map((doc) => doc.path);
+  const invalidAuthorityDocuments = inventory.filter((doc) => !allowedAuthorities.has(doc.authority)).map((doc) => doc.path);
+  const missingRequiredMetadata = inventory.filter((doc) => doc.missing_required_metadata.length > 0);
+
+  const requirementRegistryPath = path.join(docsRoot, '00-governance', 'requirement-registry.json');
+  const bundleRegistryPath = path.join(docsRoot, '19-rag', 'retrieval-bundles.json');
+  const openDecisionsPath = path.join(docsRoot, '00-governance', 'open-decisions.md');
+
+  const requirementRegistry = JSON.parse(await readFile(requirementRegistryPath, 'utf8'));
+  const bundleRegistry = JSON.parse(await readFile(bundleRegistryPath, 'utf8'));
+  const openDecisionDoc = await readFile(openDecisionsPath, 'utf8');
+  const openDecisionIds = extractIds(/\bDEC-\d{3}\b/g, openDecisionDoc);
+
+  const duplicateRequirementIds = [];
+  const requirementOwners = new Map();
+  const requirementProblems = [];
+  for (const entry of requirementRegistry) {
+    if (requirementOwners.has(entry.requirement_id)) duplicateRequirementIds.push(entry.requirement_id);
+    requirementOwners.set(entry.requirement_id, entry);
+    if (!byId.has(entry.owner_document)) {
+      requirementProblems.push({ requirement_id: entry.requirement_id, problem: 'missing_owner_document', owner_document: entry.owner_document });
+    }
+    if (entry.status !== 'ACTIVE' && entry.status !== 'LEGACY_REFERENCE') {
+      requirementProblems.push({ requirement_id: entry.requirement_id, problem: 'inactive_requirement', status: entry.status });
+    }
+  }
+
+  const duplicateBundleIds = [];
+  const bundleIds = new Set();
+  const bundleProblems = [];
+  for (const bundle of bundleRegistry) {
+    if (bundleIds.has(bundle.bundle_id)) duplicateBundleIds.push(bundle.bundle_id);
+    bundleIds.add(bundle.bundle_id);
+    for (const requiredDoc of bundle.documents?.required || []) {
+      if (!byId.has(requiredDoc.document_id)) {
+        bundleProblems.push({ bundle_id: bundle.bundle_id, problem: 'missing_document', document_id: requiredDoc.document_id });
+      }
+    }
+    for (const decisionId of bundle.decisions?.required || []) {
+      if (!openDecisionIds.includes(decisionId)) {
+        bundleProblems.push({ bundle_id: bundle.bundle_id, problem: 'missing_decision', decision_id: decisionId });
+      }
+    }
+    for (const requirementId of bundle.requirements || []) {
+      if (!requirementOwners.has(requirementId)) {
+        bundleProblems.push({ bundle_id: bundle.bundle_id, problem: 'missing_requirement', requirement_id: requirementId });
+      }
+    }
+  }
+
+  const observedDecisionIds = [...decisionRefs.keys()].sort();
+  const unknownDecisionIds = observedDecisionIds.filter((id) => !openDecisionIds.includes(id));
+
+  const report = {
+    generated_at: today,
+    source_commit: process.env.GIT_COMMIT || 'working-tree',
+    document_count: inventory.length,
+    approved_count: inventory.filter((entry) => entry.status === 'APPROVED').length,
+    proposed_count: inventory.filter((entry) => entry.status === 'PROPOSED').length,
+    draft_count: inventory.filter((entry) => entry.status === 'DRAFT').length,
+    superseded_count: inventory.filter((entry) => entry.status === 'SUPERSEDED').length,
+    missing_required_metadata_count: missingRequiredMetadata.length,
+    duplicate_document_ids: [...new Set(duplicateDocumentIds)],
+    invalid_status_documents: invalidStatusDocuments,
+    invalid_canonicality_documents: invalidCanonicalityDocuments,
+    invalid_authority_documents: invalidAuthorityDocuments,
+    missing_supersession_targets: unresolvedSupersessionTargets,
+    duplicate_requirement_ids: [...new Set(duplicateRequirementIds)],
+    requirement_registry_problems: requirementProblems,
+    duplicate_bundle_ids: [...new Set(duplicateBundleIds)],
+    bundle_problems: bundleProblems,
+    unknown_decision_ids: unknownDecisionIds,
+    open_decision_count: openDecisionIds.length,
+    requirement_registry_size: requirementRegistry.length,
+    bundle_registry_size: bundleRegistry.length,
+    production_corpus_count: inventory.filter((entry) => entry.status === 'APPROVED' && entry.canonicality === 'CURRENT_CANONICAL').length,
+    review_corpus_count: inventory.filter((entry) => entry.status === 'PROPOSED' || entry.status === 'DRAFT').length,
   };
-  inventory.push(entry);
-  if (entry.document_id) idMap.set(entry.document_id, [...(idMap.get(entry.document_id) ?? []), relativePath]);
-  for (const requirement of requirements) requirementUse.set(requirement, [...(requirementUse.get(requirement) ?? []), relativePath]);
-  for (const decision of decisions) decisionUse.set(decision, [...(decisionUse.get(decision) ?? []), relativePath]);
+
+  await mkdir(generatedRoot, { recursive: true });
+  await writeFile(path.join(generatedRoot, 'validation-report.json'), JSON.stringify(report, null, 2) + '\n');
+  await writeFile(path.join(generatedRoot, 'corpus-inventory.json'), JSON.stringify(inventory, null, 2) + '\n');
+
+  const blocking =
+    report.missing_required_metadata_count > 0 ||
+    report.duplicate_document_ids.length > 0 ||
+    report.invalid_status_documents.length > 0 ||
+    report.invalid_canonicality_documents.length > 0 ||
+    report.invalid_authority_documents.length > 0 ||
+    report.missing_supersession_targets.length > 0 ||
+    report.duplicate_requirement_ids.length > 0 ||
+    report.requirement_registry_problems.length > 0 ||
+    report.duplicate_bundle_ids.length > 0 ||
+    report.bundle_problems.length > 0 ||
+    report.unknown_decision_ids.length > 0;
+
+  console.log(JSON.stringify(report, null, 2));
+  if (blocking) process.exitCode = 1;
 }
 
-const duplicateDocumentIds = [...idMap.entries()]
-  .filter(([, paths]) => paths.length > 1)
-  .map(([id, paths]) => ({ id, paths }));
-const invalidStatus = inventory.filter((entry) => !entry.status_valid).map((entry) => entry.path);
-const missingMetadata = inventory.filter((entry) => entry.missing_metadata.length > 0)
-  .map((entry) => ({ path: entry.path, missing: entry.missing_metadata }));
-const missingSupersessionTargets = inventory
-  .filter((entry) => entry.supersedes && !idMap.has(entry.supersedes))
-  .map((entry) => ({ path: entry.path, supersedes: entry.supersedes }));
-
-const report = {
-  generated_at: new Date().toISOString(),
-  source_commit: process.env.GIT_COMMIT ?? 'working-tree',
-  document_count: inventory.length,
-  approved_count: inventory.filter((entry) => entry.status === 'APPROVED').length,
-  proposed_count: inventory.filter((entry) => entry.status === 'PROPOSED').length,
-  draft_count: inventory.filter((entry) => entry.status === 'DRAFT').length,
-  missing_required_metadata_count: missingMetadata.length,
-  duplicate_document_ids: duplicateDocumentIds,
-  invalid_status_documents: invalidStatus,
-  missing_supersession_targets: missingSupersessionTargets,
-  broken_internal_links: brokenLinks,
-  requirement_ids_observed: requirementUse.size,
-  decision_ids_observed: decisionUse.size,
-};
-
-await rm(outputRoot, { recursive: true, force: true });
-await mkdir(outputRoot, { recursive: true });
-await writeFile(path.join(outputRoot, 'corpus-inventory.json'), `${JSON.stringify(inventory, null, 2)}\n`);
-await writeFile(path.join(outputRoot, 'validation-report.json'), `${JSON.stringify(report, null, 2)}\n`);
-
-console.log(JSON.stringify(report, null, 2));
-if (missingMetadata.length || duplicateDocumentIds.length || invalidStatus.length || missingSupersessionTargets.length || brokenLinks.length) {
-  process.exitCode = 1;
-}
+await main();

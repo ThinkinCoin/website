@@ -1,17 +1,32 @@
 ---
 document_id: REQ-INDEX
-title: "Requirement Index v4 — Observed References"
+title: Requirement Index v4 — Observed References
+document_type: CONTRACT
+domain: 00-governance
 version: 1.4.0
 status: APPROVED
-owner: Architecture Team
+authority: CANONICAL_NORMATIVE
+canonicality: CURRENT_CANONICAL
+effective_from: 2026-08-26
+created_at: 2026-08-26
+updated_at: 2026-08-26
+supersedes: []
+superseded_by: []
+related_documents: []
+requirement_ids: []
+decision_ids: []
+tags: []
+security_classification: PUBLIC
+rag_priority: 1
 ---
 
 # Requirement Index v4 — Observed References
 
-This file is an observed-reference list, not a validated requirement registry.
-D4 found no machine-readable requirement owner/source mapping. It MUST NOT be
-used to infer a requirement's authority until the metadata remediation work is
-approved and complete.
+This file is an observed-reference list. The authoritative, machine-readable
+requirement registry now lives in `docs/00-governance/requirement-registry.json`
+and is the source of truth for owner mapping, bundle linkage, and test
+association. Use this file only as a readable index of observed requirement
+IDs.
 
 ACCESS-001
 ADAPT-001

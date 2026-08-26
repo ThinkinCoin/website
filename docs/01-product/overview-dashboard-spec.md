@@ -1,11 +1,23 @@
 ---
 document_id: DASH-SPEC
-title: "Overview Dashboard Specification"
+title: Overview Dashboard Specification
+document_type: SPEC
+domain: 01-product
 version: 1.0.0
 status: APPROVED
-owner: Architecture Team
+authority: CANONICAL_NORMATIVE
+canonicality: CURRENT_CANONICAL
+effective_from: 2026-08-26
 created_at: 2026-08-25
-updated_at: 2026-08-25
+updated_at: 2026-08-26
+supersedes: []
+superseded_by: []
+related_documents: []
+requirement_ids: []
+decision_ids: []
+tags: []
+security_classification: PUBLIC
+rag_priority: 1
 ---
 
 # Overview Dashboard Specification

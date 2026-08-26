@@ -1,12 +1,25 @@
 ---
 document_id: OPEN-DECISIONS
-title: "Open Decision Registry"
+title: Open Decision Registry
+document_type: CONTRACT
+domain: 00-governance
 version: 1.2.0
 status: APPROVED
-owner: Architecture Team
+authority: CANONICAL_NORMATIVE
+canonicality: CURRENT_CANONICAL
+effective_from: 2026-08-26
 created_at: 2026-08-25
-updated_at: 2026-08-25
+updated_at: 2026-08-26
+supersedes: []
+superseded_by: []
+related_documents: []
+requirement_ids: []
+decision_ids: []
+tags: []
+security_classification: PUBLIC
+rag_priority: 1
 ---
+
 # Open Decision Registry
 
 | decision_id | question | owner | impact | blocking | options | status | target_date |
