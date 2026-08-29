@@ -16,6 +16,8 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "fixtures:refresh:harmony": "node scripts/fixtures/refresh-harmony.mjs",
+    "docs:validate": "node scripts/docs/validate-corpus.mjs",
+    "docs:evaluate": "node scripts/docs/evaluate-rag-static.mjs",
     "preview": "vite preview",
     "check": "pnpm typecheck && pnpm lint && pnpm test && pnpm build"
   },

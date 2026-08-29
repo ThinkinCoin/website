@@ -1,0 +1,11 @@
+{
+  "corpus_version": "TIC-DOC-CORPUS-1.0.0",
+  "build_timestamp": "2026-08-26T09:57:57.452Z",
+  "source_commit": "working-tree",
+  "document_count": 128,
+  "approved_count": 98,
+  "proposed_count": 0,
+  "superseded_count": 21,
+  "excluded_count": 0,
+  "warnings": []
+}

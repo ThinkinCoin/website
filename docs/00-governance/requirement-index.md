@@ -1,0 +1,153 @@
+---
+document_id: REQ-INDEX
+title: Requirement Index v4 — Observed References
+document_type: CONTRACT
+domain: 00-governance
+version: 1.4.0
+status: APPROVED
+authority: CANONICAL_NORMATIVE
+canonicality: CURRENT_CANONICAL
+effective_from: 2026-08-26
+created_at: 2026-08-26
+updated_at: 2026-08-26
+supersedes: []
+superseded_by: []
+related_documents: []
+requirement_ids: []
+decision_ids: []
+tags: []
+security_classification: PUBLIC
+rag_priority: 1
+---
+
+# Requirement Index v4 — Observed References
+
+This file is an observed-reference list. The authoritative, machine-readable
+requirement registry now lives in `docs/00-governance/requirement-registry.json`
+and is the source of truth for owner mapping, bundle linkage, and test
+association. Use this file only as a readable index of observed requirement
+IDs.
+
+ACCESS-001
+ADAPT-001
+ADAPT-002
+ADR-001
+ADR-002
+ADR-004
+AGENT-001
+AGENT-002
+AGENT-003
+AGENT-004
+AGENT-005
+API-001
+ARCH-001
+ARCH-002
+ATTR-001
+AUDIT-001
+AUDIT-002
+AUTH-001
+AUTH-002
+AUTH-003
+AUTHN-001
+AUTHN-002
+AUTHZ-001
+AUTHZ-002
+BASE-001
+BOUND-001
+BOUND-002
+BOUND-003
+BUDGET-001
+BUDGET-002
+BUILD-001
+BUILD-002
+BUNDLE-001
+BUNDLE-002
+CAP-001
+CHUNK-001
+CHUNK-002
+CHUNK-003
+CHUNK-004
+CLAIM-001
+CLAIM-002
+CLASS-001
+CODER-002
+CONF-001
+CORP-001
+CORP-002
+CORP-003
+CORPUS-001
+CRED-001
+DASH-001
+DATA-001
+DB-001
+DB-002
+DB-003
+DEC-010
+DEC-011
+DEPLOY-001
+DEPLOY-002
+DOM-001
+ELIG-001
+ERR-001
+EVAL-001
+EVAL-002
+EVID-001
+EVID-002
+EVID-003
+EVT-001
+EXEC-001
+EXEC-002
+EXEC-003
+EXEC-004
+EXEC-005
+EXEC-006
+EXEC-007
+EXEC-008
+FAIL-001
+GOV-001
+ID-001
+INDEP-001
+INV-001
+LIN-001
+META-001
+META-002
+NEUR-001
+NEUR-002
+NEUR-003
+OBJ-001
+OBJ-002
+OBS-001
+OBS-002
+PAY-001
+PAY-002
+PAYTECH-001
+PAYTECH-002
+PAYTECH-003
+PRICE-001
+PRIV-001
+PROD-001
+PROP-001
+PROV-001
+QA-002
+RAT-001
+RAT-002
+RATE-001
+REL-001
+REL-002
+REOWN-001
+REQ-001
+RES-002
+REV-001
+SEARCH-001
+SEC-001
+SEP-001
+SESS-001
+TASK-001
+TASK-002
+TAX-001
+TECH-001
+TECH-002
+TEST-001
+TEST-002
+THREAT-001
+WORK-002

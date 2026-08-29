@@ -1,3 +1,25 @@
+---
+document_id: ADR-0001
+title: ADR 0001: Web3 Compatibility Set
+document_type: ADR
+domain: web3
+version: 1.0.0
+status: APPROVED
+authority: CANONICAL_REFERENCE
+canonicality: CURRENT_CANONICAL
+effective_from: 2026-08-26
+created_at: 2026-08-25
+updated_at: 2026-08-26
+supersedes: []
+superseded_by: []
+related_documents: ["WEB3-REOWN","WEB3-NEUR","NEUR-TECH-SPEC"]
+requirement_ids: ["WEB3-001"]
+decision_ids: ["DEC-001"]
+tags: ["web3","compatibility","reown","wagmi","viem"]
+security_classification: INTERNAL
+rag_priority: 2
+---
+
 # ADR 0001: Web3 Compatibility Set
 
 - Status: accepted for implementation

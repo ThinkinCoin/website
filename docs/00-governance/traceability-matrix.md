@@ -1,0 +1,35 @@
+---
+document_id: TRACE-MATRIX
+title: Traceability Matrix v4
+document_type: CONTRACT
+domain: 00-governance
+version: 1.4.0
+status: APPROVED
+authority: CANONICAL_NORMATIVE
+canonicality: CURRENT_CANONICAL
+effective_from: 2026-08-26
+created_at: 2026-08-25
+updated_at: 2026-08-26
+supersedes: []
+superseded_by: []
+related_documents: []
+requirement_ids: []
+decision_ids: []
+tags: []
+security_classification: PUBLIC
+rag_priority: 1
+---
+
+# Traceability Matrix v4
+
+| Requirement | Spec | Tech Contract | Test Req | RAG Bundle | Agent Instr | Impl Status | Doc Val Status | Unlock Status |
+|-------------|------|---------------|----------|------------|-------------|-------------|----------------|---------------|
+| ACCESS-001  | ACCESS-SPEC | ARCH-BOUND-003| TEST-002 | RAG-BUNDLE-001 | AGENT-CODER-002 | BLOCKED | PASS | LOCKED |
+| EVID-001    | EVID-SPEC | EVID-ARCH-002 | TEST-002 | EVIDENCE-BUNDLE| AGENT-RES-002 | COMPLIANT | PASS | LOCKED |
+| NEUR-003    | NEUR-SPEC | PAYTECH-001 | TEST-002 | PAYMENT-BUNDLE | AGENT-CODER-002 | BLOCKED | PASS | LOCKED |
+
+## D4 Validation Note
+
+The rows above are illustrative mappings. They are not a complete traceability
+registry because the corpus lacks validated metadata, concrete bundle records,
+and requirement ownership links. See `documentation-validation-report.md`.

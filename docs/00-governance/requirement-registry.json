@@ -1,0 +1,3594 @@
+[
+  {
+    "requirement_id": "ACCESS-001",
+    "title": "ACCESS-001",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-NEURONS-GATE",
+      "BUNDLE-GATED-CONTENT",
+      "BUNDLE-DASHBOARD",
+      "BUNDLE-ADMIN-AUTHORIZATION",
+      "BUNDLE-UI-SEMANTIC-COMPLIANCE",
+      "BUNDLE-RELEASE"
+    ]
+  },
+  {
+    "requirement_id": "AGENT-001",
+    "title": "AGENT-001",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "AGENT-002",
+    "title": "AGENT-002",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "AGENT-003",
+    "title": "AGENT-003",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "AGENT-004",
+    "title": "AGENT-004",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "AGENT-005",
+    "title": "AGENT-005",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "AGENT-CODER-002",
+    "title": "AGENT-CODER-002",
+    "owner_document": "TRACE-MATRIX",
+    "owner_section": "Traceability Matrix v4",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-RES-002",
+      "ARCH-BOUND-003",
+      "EVID-001",
+      "EVID-ARCH-002",
+      "NEUR-003",
+      "RAG-BUNDLE-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-UI-SEMANTIC-COMPLIANCE",
+      "BUNDLE-RELEASE"
+    ]
+  },
+  {
+    "requirement_id": "AGENT-QA-002",
+    "title": "AGENT-QA-002",
+    "owner_document": "AGENT-QA-002",
+    "owner_section": "QA Agent Instructions v2",
+    "status": "ACTIVE",
+    "domain": "18-agents",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "AGENT-005"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "AGENT-RES-002",
+    "title": "AGENT-RES-002",
+    "owner_document": "TRACE-MATRIX",
+    "owner_section": "Traceability Matrix v4",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-CODER-002",
+      "ARCH-BOUND-003",
+      "EVID-001",
+      "EVID-ARCH-002",
+      "NEUR-003",
+      "RAG-BUNDLE-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-UI-SEMANTIC-COMPLIANCE",
+      "BUNDLE-RELEASE"
+    ]
+  },
+  {
+    "requirement_id": "AGENT-WORK-002",
+    "title": "AGENT-WORK-002",
+    "owner_document": "AGENT-WORK-002",
+    "owner_section": "WORK Agent Instructions v2",
+    "status": "ACTIVE",
+    "domain": "18-agents",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "AGENT-003"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "API-001",
+    "title": "API-001",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-NEURONS-GATE",
+      "BUNDLE-GATED-CONTENT",
+      "BUNDLE-EVIDENCE",
+      "BUNDLE-INVESTIGATION",
+      "BUNDLE-PRIVATE-PAYMENT",
+      "BUNDLE-SEARCH",
+      "BUNDLE-BACKEND-FOUNDATION"
+    ]
+  },
+  {
+    "requirement_id": "API-ERR-001",
+    "title": "API-ERR-001",
+    "owner_document": "API-ARCH",
+    "owner_section": "API Architecture",
+    "status": "ACTIVE",
+    "domain": "10-api",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "API-001",
+      "API-SEC-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-NEURONS-GATE",
+      "BUNDLE-GATED-CONTENT",
+      "BUNDLE-EVIDENCE",
+      "BUNDLE-INVESTIGATION",
+      "BUNDLE-PRIVATE-PAYMENT",
+      "BUNDLE-SEARCH",
+      "BUNDLE-BACKEND-FOUNDATION"
+    ]
+  },
+  {
+    "requirement_id": "API-SEC-001",
+    "title": "API-SEC-001",
+    "owner_document": "API-ARCH",
+    "owner_section": "API Architecture",
+    "status": "ACTIVE",
+    "domain": "10-api",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "API-001",
+      "API-ERR-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-NEURONS-GATE",
+      "BUNDLE-GATED-CONTENT",
+      "BUNDLE-EVIDENCE",
+      "BUNDLE-INVESTIGATION",
+      "BUNDLE-PRIVATE-PAYMENT",
+      "BUNDLE-SEARCH",
+      "BUNDLE-BACKEND-FOUNDATION"
+    ]
+  },
+  {
+    "requirement_id": "ARCH-001",
+    "title": "ARCH-001",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-BACKEND-FOUNDATION"
+    ]
+  },
+  {
+    "requirement_id": "ARCH-002",
+    "title": "ARCH-002",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "ARCH-003",
+    "title": "ARCH-003",
+    "owner_document": "ARCH-AMENDMENT-V1-1",
+    "owner_section": "Architecture Amendment v1.1",
+    "status": "LEGACY_REFERENCE",
+    "domain": "architecture",
+    "authority": "NON_NORMATIVE_REFERENCE",
+    "related_requirements": [
+      "ARCH-001",
+      "ARCH-002"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "ARCH-BOUND-001",
+    "title": "ARCH-BOUND-001",
+    "owner_document": "SYS-ARCH",
+    "owner_section": "System Architecture",
+    "status": "ACTIVE",
+    "domain": "03-architecture",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ARCH-001",
+      "ARCH-BOUND-002",
+      "ARCH-DATA-001",
+      "ARCH-SEC-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-BACKEND-FOUNDATION"
+    ]
+  },
+  {
+    "requirement_id": "ARCH-BOUND-002",
+    "title": "ARCH-BOUND-002",
+    "owner_document": "SYS-ARCH",
+    "owner_section": "System Architecture",
+    "status": "ACTIVE",
+    "domain": "03-architecture",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ARCH-001",
+      "ARCH-BOUND-001",
+      "ARCH-DATA-001",
+      "ARCH-SEC-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-BACKEND-FOUNDATION"
+    ]
+  },
+  {
+    "requirement_id": "ARCH-BOUND-003",
+    "title": "ARCH-BOUND-003",
+    "owner_document": "TRACE-MATRIX",
+    "owner_section": "Traceability Matrix v4",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-CODER-002",
+      "AGENT-RES-002",
+      "EVID-001",
+      "EVID-ARCH-002",
+      "NEUR-003",
+      "RAG-BUNDLE-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-UI-SEMANTIC-COMPLIANCE",
+      "BUNDLE-BACKEND-FOUNDATION",
+      "BUNDLE-RELEASE"
+    ]
+  },
+  {
+    "requirement_id": "ARCH-CAP-001",
+    "title": "ARCH-CAP-001",
+    "owner_document": "CAP-MAP",
+    "owner_section": "Capability Map",
+    "status": "ACTIVE",
+    "domain": "03-architecture",
+    "authority": "NORMATIVE",
+    "related_requirements": [],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "ARCH-DATA-001",
+    "title": "ARCH-DATA-001",
+    "owner_document": "SYS-ARCH",
+    "owner_section": "System Architecture",
+    "status": "ACTIVE",
+    "domain": "03-architecture",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ARCH-001",
+      "ARCH-BOUND-001",
+      "ARCH-BOUND-002",
+      "ARCH-SEC-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-BACKEND-FOUNDATION"
+    ]
+  },
+  {
+    "requirement_id": "ARCH-EVT-001",
+    "title": "ARCH-EVT-001",
+    "owner_document": "DOM-EVENT",
+    "owner_section": "Domain Event Specification",
+    "status": "ACTIVE",
+    "domain": "03-architecture",
+    "authority": "NORMATIVE",
+    "related_requirements": [],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-BACKEND-FOUNDATION"
+    ]
+  },
+  {
+    "requirement_id": "ARCH-SEC-001",
+    "title": "ARCH-SEC-001",
+    "owner_document": "SYS-ARCH",
+    "owner_section": "System Architecture",
+    "status": "ACTIVE",
+    "domain": "03-architecture",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ARCH-001",
+      "ARCH-BOUND-001",
+      "ARCH-BOUND-002",
+      "ARCH-DATA-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-BACKEND-FOUNDATION"
+    ]
+  },
+  {
+    "requirement_id": "AUDIT-001",
+    "title": "AUDIT-001",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE",
+      "BUNDLE-INVESTIGATION",
+      "BUNDLE-PRIVATE-INVESTIGATION",
+      "BUNDLE-PRIVATE-PAYMENT",
+      "BUNDLE-OBSERVATORY",
+      "BUNDLE-RATING-PUBLICATION",
+      "BUNDLE-ADMIN-AUTHORIZATION",
+      "BUNDLE-BACKEND-FOUNDATION"
+    ]
+  },
+  {
+    "requirement_id": "AUDIT-002",
+    "title": "AUDIT-002",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE",
+      "BUNDLE-INVESTIGATION",
+      "BUNDLE-PRIVATE-INVESTIGATION",
+      "BUNDLE-PRIVATE-PAYMENT",
+      "BUNDLE-OBSERVATORY",
+      "BUNDLE-RATING-PUBLICATION",
+      "BUNDLE-ADMIN-AUTHORIZATION",
+      "BUNDLE-BACKEND-FOUNDATION"
+    ]
+  },
+  {
+    "requirement_id": "AUTHN-001",
+    "title": "AUTHN-001",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-NEURONS-GATE",
+      "BUNDLE-SESSION-AUTH",
+      "BUNDLE-GATED-CONTENT",
+      "BUNDLE-ADMIN-AUTHORIZATION"
+    ]
+  },
+  {
+    "requirement_id": "AUTHN-002",
+    "title": "AUTHN-002",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-NEURONS-GATE",
+      "BUNDLE-SESSION-AUTH",
+      "BUNDLE-GATED-CONTENT",
+      "BUNDLE-ADMIN-AUTHORIZATION"
+    ]
+  },
+  {
+    "requirement_id": "AUTHN-SESS-001",
+    "title": "AUTHN-SESS-001",
+    "owner_document": "SESS-SPEC",
+    "owner_section": "Session Specification",
+    "status": "ACTIVE",
+    "domain": "12-security",
+    "authority": "NORMATIVE",
+    "related_requirements": [],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-SESSION-AUTH"
+    ]
+  },
+  {
+    "requirement_id": "AUTHZ-001",
+    "title": "AUTHZ-001",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-NEURONS-GATE",
+      "BUNDLE-SESSION-AUTH",
+      "BUNDLE-GATED-CONTENT",
+      "BUNDLE-ADMIN-AUTHORIZATION"
+    ]
+  },
+  {
+    "requirement_id": "AUTHZ-002",
+    "title": "AUTHZ-002",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-NEURONS-GATE",
+      "BUNDLE-SESSION-AUTH",
+      "BUNDLE-GATED-CONTENT",
+      "BUNDLE-ADMIN-AUTHORIZATION"
+    ]
+  },
+  {
+    "requirement_id": "CLAIM-001",
+    "title": "CLAIM-001",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE",
+      "BUNDLE-OBSERVATORY",
+      "BUNDLE-RATING-PUBLICATION",
+      "BUNDLE-UI-SEMANTIC-COMPLIANCE"
+    ]
+  },
+  {
+    "requirement_id": "CLAIM-002",
+    "title": "CLAIM-002",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE",
+      "BUNDLE-OBSERVATORY",
+      "BUNDLE-RATING-PUBLICATION"
+    ]
+  },
+  {
+    "requirement_id": "DATA-001",
+    "title": "DATA-001",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "DATA-DB-001",
+    "title": "DATA-DB-001",
+    "owner_document": "DB-SPEC",
+    "owner_section": "Database Specification",
+    "status": "ACTIVE",
+    "domain": "11-data",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "DATA-DB-002",
+      "DATA-DB-003"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE",
+      "BUNDLE-SEARCH",
+      "BUNDLE-BACKEND-FOUNDATION"
+    ]
+  },
+  {
+    "requirement_id": "DATA-DB-002",
+    "title": "DATA-DB-002",
+    "owner_document": "DB-SPEC",
+    "owner_section": "Database Specification",
+    "status": "ACTIVE",
+    "domain": "11-data",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "DATA-DB-001",
+      "DATA-DB-003"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE",
+      "BUNDLE-SEARCH",
+      "BUNDLE-BACKEND-FOUNDATION"
+    ]
+  },
+  {
+    "requirement_id": "DATA-DB-003",
+    "title": "DATA-DB-003",
+    "owner_document": "DB-SPEC",
+    "owner_section": "Database Specification",
+    "status": "ACTIVE",
+    "domain": "11-data",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "DATA-DB-001",
+      "DATA-DB-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE",
+      "BUNDLE-SEARCH",
+      "BUNDLE-BACKEND-FOUNDATION"
+    ]
+  },
+  {
+    "requirement_id": "DATA-DOM-001",
+    "title": "DATA-DOM-001",
+    "owner_document": "DOM-TECH",
+    "owner_section": "Domain Technical Model",
+    "status": "ACTIVE",
+    "domain": "02-domain",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "DATA-ID-001"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "DATA-ID-001",
+    "title": "DATA-ID-001",
+    "owner_document": "DOM-TECH",
+    "owner_section": "Domain Technical Model",
+    "status": "ACTIVE",
+    "domain": "02-domain",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "DATA-DOM-001"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "DATA-OBJ-001",
+    "title": "DATA-OBJ-001",
+    "owner_document": "OBJ-STORE",
+    "owner_section": "Object Storage Specification",
+    "status": "ACTIVE",
+    "domain": "11-data",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "DATA-OBJ-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-BACKEND-FOUNDATION"
+    ]
+  },
+  {
+    "requirement_id": "DATA-OBJ-002",
+    "title": "DATA-OBJ-002",
+    "owner_document": "OBJ-STORE",
+    "owner_section": "Object Storage Specification",
+    "status": "ACTIVE",
+    "domain": "11-data",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "DATA-OBJ-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-BACKEND-FOUNDATION"
+    ]
+  },
+  {
+    "requirement_id": "DEPLOY-001",
+    "title": "DEPLOY-001",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-RELEASE"
+    ]
+  },
+  {
+    "requirement_id": "DEPLOY-002",
+    "title": "DEPLOY-002",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-RELEASE"
+    ]
+  },
+  {
+    "requirement_id": "EVID-001",
+    "title": "EVID-001",
+    "owner_document": "D4-R-REMEDIATION",
+    "owner_section": "D4-R Remediation Report",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE",
+      "BUNDLE-OBSERVATORY",
+      "BUNDLE-RATING-PUBLICATION",
+      "BUNDLE-UI-SEMANTIC-COMPLIANCE",
+      "BUNDLE-RELEASE"
+    ]
+  },
+  {
+    "requirement_id": "EVID-002",
+    "title": "EVID-002",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE",
+      "BUNDLE-OBSERVATORY",
+      "BUNDLE-RATING-PUBLICATION"
+    ]
+  },
+  {
+    "requirement_id": "EVID-003",
+    "title": "EVID-003",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE",
+      "BUNDLE-OBSERVATORY",
+      "BUNDLE-RATING-PUBLICATION"
+    ]
+  },
+  {
+    "requirement_id": "EVID-ARCH-001",
+    "title": "EVID-ARCH-001",
+    "owner_document": "EVID-ARCH",
+    "owner_section": "Evidence Architecture",
+    "status": "ACTIVE",
+    "domain": "07-evidence",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "EVID-ARCH-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE"
+    ]
+  },
+  {
+    "requirement_id": "EVID-ARCH-002",
+    "title": "EVID-ARCH-002",
+    "owner_document": "TRACE-MATRIX",
+    "owner_section": "Traceability Matrix v4",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-CODER-002",
+      "AGENT-RES-002",
+      "ARCH-BOUND-003",
+      "EVID-001",
+      "NEUR-003",
+      "RAG-BUNDLE-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE",
+      "BUNDLE-UI-SEMANTIC-COMPLIANCE",
+      "BUNDLE-RELEASE"
+    ]
+  },
+  {
+    "requirement_id": "EVID-LIN-001",
+    "title": "EVID-LIN-001",
+    "owner_document": "EVID-LIN-SPEC",
+    "owner_section": "Evidence Lineage Specification",
+    "status": "ACTIVE",
+    "domain": "07-evidence",
+    "authority": "NORMATIVE",
+    "related_requirements": [],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE"
+    ]
+  },
+  {
+    "requirement_id": "EVID-PROV-001",
+    "title": "EVID-PROV-001",
+    "owner_document": "EVID-PROV-SPEC",
+    "owner_section": "Evidence Provenance Specification",
+    "status": "ACTIVE",
+    "domain": "07-evidence",
+    "authority": "NORMATIVE",
+    "related_requirements": [],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE"
+    ]
+  },
+  {
+    "requirement_id": "GOV-EXEC-001",
+    "title": "GOV-EXEC-001",
+    "owner_document": "GOV-EXEC-001",
+    "owner_section": "Conflict Resolution Protocol",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "GOV-EXEC-002"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "GOV-EXEC-002",
+    "title": "GOV-EXEC-002",
+    "owner_document": "GOV-EXEC-001",
+    "owner_section": "Conflict Resolution Protocol",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "GOV-EXEC-001"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "GOV-EXEC-003",
+    "title": "GOV-EXEC-003",
+    "owner_document": "GOV-EXEC-003",
+    "owner_section": "Open Decision Execution Protocol",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "GOV-EXEC-004"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "GOV-EXEC-004",
+    "title": "GOV-EXEC-004",
+    "owner_document": "GOV-EXEC-003",
+    "owner_section": "Open Decision Execution Protocol",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "GOV-EXEC-003"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "GOV-EXEC-005",
+    "title": "GOV-EXEC-005",
+    "owner_document": "GOV-EXEC-005",
+    "owner_section": "Spec Change / Deviation Protocol",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "GOV-EXEC-006"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "GOV-EXEC-006",
+    "title": "GOV-EXEC-006",
+    "owner_document": "GOV-EXEC-005",
+    "owner_section": "Spec Change / Deviation Protocol",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "GOV-EXEC-005"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "GOV-EXEC-007",
+    "title": "GOV-EXEC-007",
+    "owner_document": "GOV-EXEC-007",
+    "owner_section": "Implementation Unlock Protocol",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "GOV-EXEC-008"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-RELEASE"
+    ]
+  },
+  {
+    "requirement_id": "GOV-EXEC-008",
+    "title": "GOV-EXEC-008",
+    "owner_document": "GOV-EXEC-007",
+    "owner_section": "Implementation Unlock Protocol",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "GOV-EXEC-007"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-RELEASE"
+    ]
+  },
+  {
+    "requirement_id": "INV-001",
+    "title": "INV-001",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-INVESTIGATION"
+    ]
+  },
+  {
+    "requirement_id": "INV-ARCH-001",
+    "title": "INV-ARCH-001",
+    "owner_document": "INV-PRIV-ARCH",
+    "owner_section": "Private Investigation Architecture",
+    "status": "ACTIVE",
+    "domain": "06-investigations",
+    "authority": "NORMATIVE",
+    "related_requirements": [],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "INV-PRIV-001",
+    "title": "INV-PRIV-001",
+    "owner_document": "INV-PRIV-SPEC",
+    "owner_section": "Private Investigation Service Spec",
+    "status": "ACTIVE",
+    "domain": "06-investigations",
+    "authority": "NORMATIVE",
+    "related_requirements": [],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-INVESTIGATION",
+      "BUNDLE-PRIVATE-INVESTIGATION"
+    ]
+  },
+  {
+    "requirement_id": "INV-REQ-001",
+    "title": "INV-REQ-001",
+    "owner_document": "INV-REQ-SPEC",
+    "owner_section": "Private Investigation Request Schema",
+    "status": "ACTIVE",
+    "domain": "06-investigations",
+    "authority": "NORMATIVE",
+    "related_requirements": [],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-INVESTIGATION",
+      "BUNDLE-PRIVATE-INVESTIGATION"
+    ]
+  },
+  {
+    "requirement_id": "NEUR-001",
+    "title": "NEUR-001",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-NEURONS-GATE"
+    ]
+  },
+  {
+    "requirement_id": "NEUR-002",
+    "title": "NEUR-002",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-NEURONS-GATE"
+    ]
+  },
+  {
+    "requirement_id": "NEUR-003",
+    "title": "NEUR-003",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-NEURONS-GATE",
+      "BUNDLE-UI-SEMANTIC-COMPLIANCE",
+      "BUNDLE-RELEASE"
+    ]
+  },
+  {
+    "requirement_id": "NEUR-ELIG-001",
+    "title": "NEUR-ELIG-001",
+    "owner_document": "NEUR-ELIG-SPEC",
+    "owner_section": "Eligibility Specification",
+    "status": "ACTIVE",
+    "domain": "05-neurons",
+    "authority": "NORMATIVE",
+    "related_requirements": [],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-NEURONS-GATE",
+      "BUNDLE-GATED-CONTENT"
+    ]
+  },
+  {
+    "requirement_id": "NEUR-TECH-001",
+    "title": "NEUR-TECH-001",
+    "owner_document": "NEUR-TECH-SPEC",
+    "owner_section": "Technical Contract",
+    "status": "ACTIVE",
+    "domain": "05-neurons",
+    "authority": "NORMATIVE",
+    "related_requirements": [],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-NEURONS-GATE"
+    ]
+  },
+  {
+    "requirement_id": "OBS-001",
+    "title": "OBS-001",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-OBSERVATORY",
+      "BUNDLE-RATING-PUBLICATION",
+      "BUNDLE-DASHBOARD"
+    ]
+  },
+  {
+    "requirement_id": "OBS-002",
+    "title": "OBS-002",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-OBSERVATORY",
+      "BUNDLE-RATING-PUBLICATION",
+      "BUNDLE-DASHBOARD"
+    ]
+  },
+  {
+    "requirement_id": "OBS-ARCH-001",
+    "title": "OBS-ARCH-001",
+    "owner_document": "OBS-ARCH",
+    "owner_section": "Observatory Architecture",
+    "status": "ACTIVE",
+    "domain": "08-observatory",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "OBS-ARCH-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-OBSERVATORY",
+      "BUNDLE-RATING-PUBLICATION"
+    ]
+  },
+  {
+    "requirement_id": "OBS-ARCH-002",
+    "title": "OBS-ARCH-002",
+    "owner_document": "OBS-ARCH",
+    "owner_section": "Observatory Architecture",
+    "status": "ACTIVE",
+    "domain": "08-observatory",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "OBS-ARCH-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-OBSERVATORY",
+      "BUNDLE-RATING-PUBLICATION"
+    ]
+  },
+  {
+    "requirement_id": "OBS-CONF-001",
+    "title": "OBS-CONF-001",
+    "owner_document": "OBS-CONF-SPEC",
+    "owner_section": "Rating Confidence Specification",
+    "status": "ACTIVE",
+    "domain": "08-observatory",
+    "authority": "NORMATIVE",
+    "related_requirements": [],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-OBSERVATORY",
+      "BUNDLE-RATING-PUBLICATION"
+    ]
+  },
+  {
+    "requirement_id": "OBS-GOV-001",
+    "title": "OBS-GOV-001",
+    "owner_document": "OBS-GOV-SPEC",
+    "owner_section": "Rating Governance Specification",
+    "status": "ACTIVE",
+    "domain": "08-observatory",
+    "authority": "NORMATIVE",
+    "related_requirements": [],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-OBSERVATORY",
+      "BUNDLE-RATING-PUBLICATION"
+    ]
+  },
+  {
+    "requirement_id": "OBS-RAT-001",
+    "title": "OBS-RAT-001",
+    "owner_document": "OBS-RAT-SPEC",
+    "owner_section": "Rating Model Specification",
+    "status": "ACTIVE",
+    "domain": "08-observatory",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "OBS-RAT-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-OBSERVATORY",
+      "BUNDLE-RATING-PUBLICATION"
+    ]
+  },
+  {
+    "requirement_id": "OBS-RAT-002",
+    "title": "OBS-RAT-002",
+    "owner_document": "OBS-RAT-SPEC",
+    "owner_section": "Rating Model Specification",
+    "status": "ACTIVE",
+    "domain": "08-observatory",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "OBS-RAT-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-OBSERVATORY",
+      "BUNDLE-RATING-PUBLICATION"
+    ]
+  },
+  {
+    "requirement_id": "OBS-TAX-001",
+    "title": "OBS-TAX-001",
+    "owner_document": "OBS-TAX-SPEC",
+    "owner_section": "Observatory Taxonomy",
+    "status": "ACTIVE",
+    "domain": "08-observatory",
+    "authority": "NORMATIVE",
+    "related_requirements": [],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-OBSERVATORY"
+    ]
+  },
+  {
+    "requirement_id": "PAY-001",
+    "title": "PAY-001",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-PRIVATE-INVESTIGATION",
+      "BUNDLE-PRIVATE-PAYMENT"
+    ]
+  },
+  {
+    "requirement_id": "PAY-002",
+    "title": "PAY-002",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-PRIVATE-INVESTIGATION",
+      "BUNDLE-PRIVATE-PAYMENT"
+    ]
+  },
+  {
+    "requirement_id": "PRIN-ATTR-001",
+    "title": "PRIN-ATTR-001",
+    "owner_document": "PRIN-SPEC",
+    "owner_section": "Product Principles",
+    "status": "ACTIVE",
+    "domain": "01-product",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "PRIN-CRED-001",
+      "PRIN-ID-001",
+      "PRIN-INDEP-001",
+      "PRIN-PAY-001",
+      "PRIN-PRIV-001",
+      "PRIN-PROP-001",
+      "PRIN-RATE-001",
+      "PRIN-REV-001",
+      "PRIN-SEP-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE"
+    ]
+  },
+  {
+    "requirement_id": "PRIN-CRED-001",
+    "title": "PRIN-CRED-001",
+    "owner_document": "PRIN-SPEC",
+    "owner_section": "Product Principles",
+    "status": "ACTIVE",
+    "domain": "01-product",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "PRIN-ATTR-001",
+      "PRIN-ID-001",
+      "PRIN-INDEP-001",
+      "PRIN-PAY-001",
+      "PRIN-PRIV-001",
+      "PRIN-PROP-001",
+      "PRIN-RATE-001",
+      "PRIN-REV-001",
+      "PRIN-SEP-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE"
+    ]
+  },
+  {
+    "requirement_id": "PRIN-ID-001",
+    "title": "PRIN-ID-001",
+    "owner_document": "PRIN-SPEC",
+    "owner_section": "Product Principles",
+    "status": "ACTIVE",
+    "domain": "01-product",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "PRIN-ATTR-001",
+      "PRIN-CRED-001",
+      "PRIN-INDEP-001",
+      "PRIN-PAY-001",
+      "PRIN-PRIV-001",
+      "PRIN-PROP-001",
+      "PRIN-RATE-001",
+      "PRIN-REV-001",
+      "PRIN-SEP-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE"
+    ]
+  },
+  {
+    "requirement_id": "PRIN-INDEP-001",
+    "title": "PRIN-INDEP-001",
+    "owner_document": "PRIN-SPEC",
+    "owner_section": "Product Principles",
+    "status": "ACTIVE",
+    "domain": "01-product",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "PRIN-ATTR-001",
+      "PRIN-CRED-001",
+      "PRIN-ID-001",
+      "PRIN-PAY-001",
+      "PRIN-PRIV-001",
+      "PRIN-PROP-001",
+      "PRIN-RATE-001",
+      "PRIN-REV-001",
+      "PRIN-SEP-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE"
+    ]
+  },
+  {
+    "requirement_id": "PRIN-PAY-001",
+    "title": "PRIN-PAY-001",
+    "owner_document": "PRIN-SPEC",
+    "owner_section": "Product Principles",
+    "status": "ACTIVE",
+    "domain": "01-product",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "PRIN-ATTR-001",
+      "PRIN-CRED-001",
+      "PRIN-ID-001",
+      "PRIN-INDEP-001",
+      "PRIN-PRIV-001",
+      "PRIN-PROP-001",
+      "PRIN-RATE-001",
+      "PRIN-REV-001",
+      "PRIN-SEP-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE"
+    ]
+  },
+  {
+    "requirement_id": "PRIN-PRIV-001",
+    "title": "PRIN-PRIV-001",
+    "owner_document": "PRIN-SPEC",
+    "owner_section": "Product Principles",
+    "status": "ACTIVE",
+    "domain": "01-product",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "PRIN-ATTR-001",
+      "PRIN-CRED-001",
+      "PRIN-ID-001",
+      "PRIN-INDEP-001",
+      "PRIN-PAY-001",
+      "PRIN-PROP-001",
+      "PRIN-RATE-001",
+      "PRIN-REV-001",
+      "PRIN-SEP-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE"
+    ]
+  },
+  {
+    "requirement_id": "PRIN-PROP-001",
+    "title": "PRIN-PROP-001",
+    "owner_document": "PRIN-SPEC",
+    "owner_section": "Product Principles",
+    "status": "ACTIVE",
+    "domain": "01-product",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "PRIN-ATTR-001",
+      "PRIN-CRED-001",
+      "PRIN-ID-001",
+      "PRIN-INDEP-001",
+      "PRIN-PAY-001",
+      "PRIN-PRIV-001",
+      "PRIN-RATE-001",
+      "PRIN-REV-001",
+      "PRIN-SEP-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE"
+    ]
+  },
+  {
+    "requirement_id": "PRIN-RATE-001",
+    "title": "PRIN-RATE-001",
+    "owner_document": "PRIN-SPEC",
+    "owner_section": "Product Principles",
+    "status": "ACTIVE",
+    "domain": "01-product",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "PRIN-ATTR-001",
+      "PRIN-CRED-001",
+      "PRIN-ID-001",
+      "PRIN-INDEP-001",
+      "PRIN-PAY-001",
+      "PRIN-PRIV-001",
+      "PRIN-PROP-001",
+      "PRIN-REV-001",
+      "PRIN-SEP-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE"
+    ]
+  },
+  {
+    "requirement_id": "PRIN-REV-001",
+    "title": "PRIN-REV-001",
+    "owner_document": "PRIN-SPEC",
+    "owner_section": "Product Principles",
+    "status": "ACTIVE",
+    "domain": "01-product",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "PRIN-ATTR-001",
+      "PRIN-CRED-001",
+      "PRIN-ID-001",
+      "PRIN-INDEP-001",
+      "PRIN-PAY-001",
+      "PRIN-PRIV-001",
+      "PRIN-PROP-001",
+      "PRIN-RATE-001",
+      "PRIN-SEP-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE"
+    ]
+  },
+  {
+    "requirement_id": "PRIN-SEP-001",
+    "title": "PRIN-SEP-001",
+    "owner_document": "PRIN-SPEC",
+    "owner_section": "Product Principles",
+    "status": "ACTIVE",
+    "domain": "01-product",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "PRIN-ATTR-001",
+      "PRIN-CRED-001",
+      "PRIN-ID-001",
+      "PRIN-INDEP-001",
+      "PRIN-PAY-001",
+      "PRIN-PRIV-001",
+      "PRIN-PROP-001",
+      "PRIN-RATE-001",
+      "PRIN-REV-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE"
+    ]
+  },
+  {
+    "requirement_id": "PROD-001",
+    "title": "PROD-001",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-NEURONS-GATE"
+    ]
+  },
+  {
+    "requirement_id": "RAG-AUTH-001",
+    "title": "RAG-AUTH-001",
+    "owner_document": "RAG-AUTH-001",
+    "owner_section": "Authority & Supersession Rules",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "RAG-AUTH-002",
+      "RAG-AUTH-003",
+      "RAG-AUTH-004"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-AUTH-002",
+    "title": "RAG-AUTH-002",
+    "owner_document": "RAG-AUTH-001",
+    "owner_section": "Authority & Supersession Rules",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "RAG-AUTH-001",
+      "RAG-AUTH-003",
+      "RAG-AUTH-004"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-AUTH-003",
+    "title": "RAG-AUTH-003",
+    "owner_document": "RAG-AUTH-001",
+    "owner_section": "Authority & Supersession Rules",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "RAG-AUTH-001",
+      "RAG-AUTH-002",
+      "RAG-AUTH-004"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-AUTH-004",
+    "title": "RAG-AUTH-004",
+    "owner_document": "RAG-AUTH-001",
+    "owner_section": "Authority & Supersession Rules",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "RAG-AUTH-001",
+      "RAG-AUTH-002",
+      "RAG-AUTH-003"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-BUDGET-001",
+    "title": "RAG-BUDGET-001",
+    "owner_document": "RAG-BUDGET-001",
+    "owner_section": "Context Budget Rules",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "RAG-BUDGET-002"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-BUDGET-002",
+    "title": "RAG-BUDGET-002",
+    "owner_document": "RAG-BUDGET-001",
+    "owner_section": "Context Budget Rules",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "RAG-BUDGET-001"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-BUILD-001",
+    "title": "RAG-BUILD-001",
+    "owner_document": "RAG-BUILD-001",
+    "owner_section": "RAG Build Manifest Spec",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "RAG-BUILD-002"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-BUILD-002",
+    "title": "RAG-BUILD-002",
+    "owner_document": "RAG-BUILD-001",
+    "owner_section": "RAG Build Manifest Spec",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "RAG-BUILD-001"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-BUNDLE-001",
+    "title": "RAG-BUNDLE-001",
+    "owner_document": "TRACE-MATRIX",
+    "owner_section": "Traceability Matrix v4",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-CODER-002",
+      "AGENT-RES-002",
+      "ARCH-BOUND-003",
+      "EVID-001",
+      "EVID-ARCH-002",
+      "NEUR-003",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-UI-SEMANTIC-COMPLIANCE",
+      "BUNDLE-RELEASE"
+    ]
+  },
+  {
+    "requirement_id": "RAG-BUNDLE-002",
+    "title": "RAG-BUNDLE-002",
+    "owner_document": "RAG-BUNDLE-001",
+    "owner_section": "Retrieval Bundles",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "RAG-BUNDLE-001"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-CHUNK-001",
+    "title": "RAG-CHUNK-001",
+    "owner_document": "RAG-CHUNK-001",
+    "owner_section": "Chunking Specification",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "NEUR-ELIG-001",
+      "RAG-CHUNK-002",
+      "RAG-CHUNK-003",
+      "RAG-CHUNK-004"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-CHUNK-002",
+    "title": "RAG-CHUNK-002",
+    "owner_document": "RAG-CHUNK-001",
+    "owner_section": "Chunking Specification",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "NEUR-ELIG-001",
+      "RAG-CHUNK-001",
+      "RAG-CHUNK-003",
+      "RAG-CHUNK-004"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-CHUNK-003",
+    "title": "RAG-CHUNK-003",
+    "owner_document": "RAG-CHUNK-001",
+    "owner_section": "Chunking Specification",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "NEUR-ELIG-001",
+      "RAG-CHUNK-001",
+      "RAG-CHUNK-002",
+      "RAG-CHUNK-004"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-CHUNK-004",
+    "title": "RAG-CHUNK-004",
+    "owner_document": "RAG-CHUNK-001",
+    "owner_section": "Chunking Specification",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "NEUR-ELIG-001",
+      "RAG-CHUNK-001",
+      "RAG-CHUNK-002",
+      "RAG-CHUNK-003"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-CORP-001",
+    "title": "RAG-CORP-001",
+    "owner_document": "RAG-CORPUS-001",
+    "owner_section": "Canonical RAG Corpus Specification",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "RAG-CORP-002",
+      "RAG-CORP-003",
+      "RAG-CORPUS-001"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-CORP-002",
+    "title": "RAG-CORP-002",
+    "owner_document": "RAG-CORPUS-001",
+    "owner_section": "Canonical RAG Corpus Specification",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "RAG-CORP-001",
+      "RAG-CORP-003",
+      "RAG-CORPUS-001"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-CORP-003",
+    "title": "RAG-CORP-003",
+    "owner_document": "RAG-CORPUS-001",
+    "owner_section": "Canonical RAG Corpus Specification",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "RAG-CORP-001",
+      "RAG-CORP-002",
+      "RAG-CORPUS-001"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-CORPUS-001",
+    "title": "RAG-CORPUS-001",
+    "owner_document": "RAG-CORPUS-001",
+    "owner_section": "Canonical RAG Corpus Specification",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "RAG-CORP-001",
+      "RAG-CORP-002",
+      "RAG-CORP-003"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-EVAL-001",
+    "title": "RAG-EVAL-001",
+    "owner_document": "RAG-EVAL-001",
+    "owner_section": "RAG Evaluation Suite",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "RAG-EVAL-002"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-EVAL-002",
+    "title": "RAG-EVAL-002",
+    "owner_document": "RAG-EVAL-001",
+    "owner_section": "RAG Evaluation Suite",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "RAG-EVAL-001"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-META-001",
+    "title": "RAG-META-001",
+    "owner_document": "RAG-META-001",
+    "owner_section": "Document Metadata Contract",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "RAG-META-002"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-META-002",
+    "title": "RAG-META-002",
+    "owner_document": "RAG-META-001",
+    "owner_section": "Document Metadata Contract",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "RAG-META-001"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-TASK-001",
+    "title": "RAG-TASK-001",
+    "owner_document": "RAG-TASK-001",
+    "owner_section": "Task Classification",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "RAG-TASK-002"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "RAG-TASK-002",
+    "title": "RAG-TASK-002",
+    "owner_document": "RAG-TASK-001",
+    "owner_section": "Task Classification",
+    "status": "ACTIVE",
+    "domain": "19-rag",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "RAG-TASK-001"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "SEARCH-001",
+    "title": "SEARCH-001",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEC-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-SEARCH"
+    ]
+  },
+  {
+    "requirement_id": "SEARCH-SEC-001",
+    "title": "SEARCH-SEC-001",
+    "owner_document": "SEARCH-ARCH",
+    "owner_section": "Search Architecture",
+    "status": "ACTIVE",
+    "domain": "03-architecture",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "SEARCH-001"
+    ],
+    "test_requirements": [
+      "TEST-001"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-SEARCH"
+    ]
+  },
+  {
+    "requirement_id": "SEC-001",
+    "title": "SEC-001",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "SEC-BASE-001",
+    "title": "SEC-BASE-001",
+    "owner_document": "SEC-BASE",
+    "owner_section": "Security Baseline",
+    "status": "ACTIVE",
+    "domain": "12-security",
+    "authority": "NORMATIVE",
+    "related_requirements": [],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-NEURONS-GATE",
+      "BUNDLE-SESSION-AUTH",
+      "BUNDLE-GATED-CONTENT",
+      "BUNDLE-INVESTIGATION",
+      "BUNDLE-PRIVATE-INVESTIGATION",
+      "BUNDLE-PRIVATE-PAYMENT",
+      "BUNDLE-SEARCH",
+      "BUNDLE-ADMIN-AUTHORIZATION",
+      "BUNDLE-BACKEND-FOUNDATION"
+    ]
+  },
+  {
+    "requirement_id": "SEC-CLASS-001",
+    "title": "SEC-CLASS-001",
+    "owner_document": "DATA-CLASS",
+    "owner_section": "Data Classification",
+    "status": "ACTIVE",
+    "domain": "12-security",
+    "authority": "NORMATIVE",
+    "related_requirements": [],
+    "test_requirements": [
+      "TEST-001"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-SEARCH"
+    ]
+  },
+  {
+    "requirement_id": "SEC-SEC-001",
+    "title": "SEC-SEC-001",
+    "owner_document": "SECRETS-MGT",
+    "owner_section": "Secrets Management",
+    "status": "ACTIVE",
+    "domain": "12-security",
+    "authority": "NORMATIVE",
+    "related_requirements": [],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "SEC-THREAT-001",
+    "title": "SEC-THREAT-001",
+    "owner_document": "THREAT-MOD",
+    "owner_section": "Threat Model",
+    "status": "ACTIVE",
+    "domain": "12-security",
+    "authority": "NORMATIVE",
+    "related_requirements": [],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-NEURONS-GATE",
+      "BUNDLE-SESSION-AUTH",
+      "BUNDLE-PRIVATE-PAYMENT"
+    ]
+  },
+  {
+    "requirement_id": "TEST-001",
+    "title": "TEST-001",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE",
+      "BUNDLE-OBSERVATORY"
+    ]
+  },
+  {
+    "requirement_id": "TEST-002",
+    "title": "TEST-002",
+    "owner_document": "REQ-INDEX",
+    "owner_section": "Requirement Index v4 — Observed References",
+    "status": "ACTIVE",
+    "domain": "00-governance",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "ACCESS-001",
+      "AGENT-001",
+      "AGENT-002",
+      "AGENT-003",
+      "AGENT-004",
+      "AGENT-005",
+      "API-001",
+      "ARCH-001",
+      "ARCH-002",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-001",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "INV-001",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "OBS-001",
+      "OBS-002",
+      "PAY-001",
+      "PAY-002",
+      "PROD-001",
+      "SEARCH-001",
+      "SEC-001",
+      "TEST-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-EVIDENCE",
+      "BUNDLE-OBSERVATORY",
+      "BUNDLE-UI-SEMANTIC-COMPLIANCE",
+      "BUNDLE-RELEASE"
+    ]
+  },
+  {
+    "requirement_id": "WEB3-001",
+    "title": "WEB3-001",
+    "owner_document": "WEB3-NEUR",
+    "owner_section": "Technical Architecture",
+    "status": "ACTIVE",
+    "domain": "05-neurons",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "WEB3-002"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "WEB3-002",
+    "title": "WEB3-002",
+    "owner_document": "WEB3-NEUR",
+    "owner_section": "Technical Architecture",
+    "status": "ACTIVE",
+    "domain": "05-neurons",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "WEB3-001"
+    ],
+    "test_requirements": [],
+    "retrieval_bundles": []
+  },
+  {
+    "requirement_id": "WEB3-ADAPT-001",
+    "title": "WEB3-ADAPT-001",
+    "owner_document": "WEB3-ADAPT",
+    "owner_section": "Blockchain Adapter Architecture",
+    "status": "ACTIVE",
+    "domain": "04-web3",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "WEB3-ADAPT-002"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-NEURONS-GATE"
+    ]
+  },
+  {
+    "requirement_id": "WEB3-ADAPT-002",
+    "title": "WEB3-ADAPT-002",
+    "owner_document": "WEB3-ADAPT",
+    "owner_section": "Blockchain Adapter Architecture",
+    "status": "ACTIVE",
+    "domain": "04-web3",
+    "authority": "NORMATIVE",
+    "related_requirements": [
+      "WEB3-ADAPT-001"
+    ],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-NEURONS-GATE"
+    ]
+  },
+  {
+    "requirement_id": "WEB3-PRICE-001",
+    "title": "WEB3-PRICE-001",
+    "owner_document": "WEB3-PRICE",
+    "owner_section": "Price Service Architecture",
+    "status": "ACTIVE",
+    "domain": "05-neurons",
+    "authority": "NORMATIVE",
+    "related_requirements": [],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-NEURONS-GATE"
+    ]
+  },
+  {
+    "requirement_id": "WEB3-REOWN-001",
+    "title": "WEB3-REOWN-001",
+    "owner_document": "WEB3-REOWN",
+    "owner_section": "Reown AppKit Boundary",
+    "status": "ACTIVE",
+    "domain": "04-web3",
+    "authority": "NORMATIVE",
+    "related_requirements": [],
+    "test_requirements": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "retrieval_bundles": [
+      "BUNDLE-NEURONS-GATE"
+    ]
+  }
+]

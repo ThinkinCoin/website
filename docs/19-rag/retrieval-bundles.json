@@ -1,0 +1,1104 @@
+[
+  {
+    "bundle_id": "BUNDLE-NEURONS-GATE",
+    "task_domains": [
+      "ACCESS_ELIGIBILITY",
+      "FRONTEND_WEB3"
+    ],
+    "requirements": [
+      "ACCESS-001",
+      "API-001",
+      "API-ERR-001",
+      "API-SEC-001",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "NEUR-001",
+      "NEUR-002",
+      "NEUR-003",
+      "NEUR-ELIG-001",
+      "NEUR-TECH-001",
+      "PROD-001",
+      "SEC-BASE-001",
+      "SEC-THREAT-001",
+      "WEB3-ADAPT-001",
+      "WEB3-ADAPT-002",
+      "WEB3-PRICE-001",
+      "WEB3-REOWN-001"
+    ],
+    "documents": {
+      "required": [
+        {
+          "document_id": "PROD-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "ACCESS-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "NEUR-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "NEUR-TECH-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "NEUR-ELIG-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "WEB3-REOWN",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "WEB3-ADAPT",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "WEB3-PRICE",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "API-ARCH",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "AUTHN-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "AUTHZ-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "SEC-BASE",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "THREAT-MOD",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "UI-CONT",
+          "minimum_status": "APPROVED"
+        }
+      ]
+    },
+    "decisions": {
+      "required": [
+        "DEC-001",
+        "DEC-003",
+        "DEC-008",
+        "DEC-009"
+      ]
+    },
+    "stop_conditions": [
+      {
+        "decision": "DEC-001",
+        "when_status": "OPEN",
+        "blocking": true
+      }
+    ],
+    "tests": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "security_requirements": [
+      "SEC-001",
+      "AUTHN-001",
+      "AUTHZ-001"
+    ]
+  },
+  {
+    "bundle_id": "BUNDLE-SESSION-AUTH",
+    "task_domains": [
+      "AUTHENTICATION",
+      "AUTHORIZATION"
+    ],
+    "requirements": [
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHN-SESS-001",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "SEC-BASE-001",
+      "SEC-THREAT-001"
+    ],
+    "documents": {
+      "required": [
+        {
+          "document_id": "AUTHN-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "AUTHZ-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "SESS-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "SEC-BASE",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "THREAT-MOD",
+          "minimum_status": "APPROVED"
+        }
+      ]
+    },
+    "decisions": {
+      "required": [
+        "DEC-010"
+      ]
+    },
+    "stop_conditions": [
+      {
+        "decision": "DEC-010",
+        "when_status": "OPEN",
+        "blocking": true
+      }
+    ],
+    "tests": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "security_requirements": [
+      "AUTHN-001",
+      "AUTHZ-001",
+      "SEC-001"
+    ]
+  },
+  {
+    "bundle_id": "BUNDLE-GATED-CONTENT",
+    "task_domains": [
+      "ACCESS_ELIGIBILITY",
+      "API"
+    ],
+    "requirements": [
+      "ACCESS-001",
+      "API-001",
+      "API-ERR-001",
+      "API-SEC-001",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "NEUR-ELIG-001",
+      "SEC-BASE-001"
+    ],
+    "documents": {
+      "required": [
+        {
+          "document_id": "ACCESS-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "API-ARCH",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "AUTHN-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "AUTHZ-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "NEUR-ELIG-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "SEC-BASE",
+          "minimum_status": "APPROVED"
+        }
+      ]
+    },
+    "decisions": {
+      "required": [
+        "DEC-001",
+        "DEC-003",
+        "DEC-008",
+        "DEC-009"
+      ]
+    },
+    "stop_conditions": [
+      {
+        "decision": "DEC-001",
+        "when_status": "OPEN",
+        "blocking": true
+      }
+    ],
+    "tests": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "security_requirements": [
+      "SEC-001",
+      "AUTHZ-001"
+    ]
+  },
+  {
+    "bundle_id": "BUNDLE-EVIDENCE",
+    "task_domains": [
+      "EVIDENCE"
+    ],
+    "requirements": [
+      "API-001",
+      "API-ERR-001",
+      "API-SEC-001",
+      "AUDIT-001",
+      "AUDIT-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "DATA-DB-001",
+      "DATA-DB-002",
+      "DATA-DB-003",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "EVID-ARCH-001",
+      "EVID-ARCH-002",
+      "EVID-LIN-001",
+      "EVID-PROV-001",
+      "PRIN-ATTR-001",
+      "PRIN-CRED-001",
+      "PRIN-ID-001",
+      "PRIN-INDEP-001",
+      "PRIN-PAY-001",
+      "PRIN-PRIV-001",
+      "PRIN-PROP-001",
+      "PRIN-RATE-001",
+      "PRIN-REV-001",
+      "PRIN-SEP-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "documents": {
+      "required": [
+        {
+          "document_id": "PRIN-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "CLAIM-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "EVID-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "EVID-PROV-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "EVID-LIN-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "REL-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "EVID-ARCH",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "DB-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "API-ARCH",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "UI-CONT",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "AUDIT-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "TEST-STRAT",
+          "minimum_status": "APPROVED"
+        }
+      ]
+    },
+    "decisions": {
+      "required": []
+    },
+    "stop_conditions": [],
+    "tests": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "security_requirements": [
+      "AUDIT-001",
+      "SEC-001"
+    ]
+  },
+  {
+    "bundle_id": "BUNDLE-INVESTIGATION",
+    "task_domains": [
+      "INVESTIGATIONS"
+    ],
+    "requirements": [
+      "API-001",
+      "API-ERR-001",
+      "API-SEC-001",
+      "AUDIT-001",
+      "AUDIT-002",
+      "INV-001",
+      "INV-PRIV-001",
+      "INV-REQ-001",
+      "SEC-BASE-001"
+    ],
+    "documents": {
+      "required": [
+        {
+          "document_id": "INV-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "INV-PRIV-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "INV-REQ-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "PRICE-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "API-ARCH",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "SEC-BASE",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "AUDIT-SPEC",
+          "minimum_status": "APPROVED"
+        }
+      ]
+    },
+    "decisions": {
+      "required": [
+        "DEC-004",
+        "DEC-005"
+      ]
+    },
+    "stop_conditions": [
+      {
+        "decision": "DEC-004",
+        "when_status": "OPEN",
+        "blocking": true
+      }
+    ],
+    "tests": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "security_requirements": [
+      "SEC-001",
+      "AUDIT-001"
+    ]
+  },
+  {
+    "bundle_id": "BUNDLE-PRIVATE-INVESTIGATION",
+    "task_domains": [
+      "PRIVATE_INVESTIGATIONS"
+    ],
+    "requirements": [
+      "AUDIT-001",
+      "AUDIT-002",
+      "INV-PRIV-001",
+      "INV-REQ-001",
+      "PAY-001",
+      "PAY-002",
+      "SEC-BASE-001"
+    ],
+    "documents": {
+      "required": [
+        {
+          "document_id": "INV-PRIV-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "INV-REQ-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "PRICE-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "PAY-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "AUDIT-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "SEC-BASE",
+          "minimum_status": "APPROVED"
+        }
+      ]
+    },
+    "decisions": {
+      "required": [
+        "DEC-004",
+        "DEC-005",
+        "DEC-006"
+      ]
+    },
+    "stop_conditions": [
+      {
+        "decision": "DEC-004",
+        "when_status": "OPEN",
+        "blocking": true
+      }
+    ],
+    "tests": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "security_requirements": [
+      "SEC-001",
+      "AUDIT-001"
+    ]
+  },
+  {
+    "bundle_id": "BUNDLE-PRIVATE-PAYMENT",
+    "task_domains": [
+      "PAYMENTS"
+    ],
+    "requirements": [
+      "API-001",
+      "API-ERR-001",
+      "API-SEC-001",
+      "AUDIT-001",
+      "AUDIT-002",
+      "PAY-001",
+      "PAY-002",
+      "SEC-BASE-001",
+      "SEC-THREAT-001"
+    ],
+    "documents": {
+      "required": [
+        {
+          "document_id": "PAY-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "PAY-ARCH",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "SEC-BASE",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "THREAT-MOD",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "AUDIT-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "API-ARCH",
+          "minimum_status": "APPROVED"
+        }
+      ]
+    },
+    "decisions": {
+      "required": [
+        "DEC-004",
+        "DEC-005",
+        "DEC-006"
+      ]
+    },
+    "stop_conditions": [
+      {
+        "decision": "DEC-006",
+        "when_status": "OPEN",
+        "blocking": true
+      }
+    ],
+    "tests": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "security_requirements": [
+      "SEC-001",
+      "AUTHZ-001"
+    ]
+  },
+  {
+    "bundle_id": "BUNDLE-OBSERVATORY",
+    "task_domains": [
+      "OBSERVATORY"
+    ],
+    "requirements": [
+      "AUDIT-001",
+      "AUDIT-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "OBS-001",
+      "OBS-002",
+      "OBS-ARCH-001",
+      "OBS-ARCH-002",
+      "OBS-CONF-001",
+      "OBS-GOV-001",
+      "OBS-RAT-001",
+      "OBS-RAT-002",
+      "OBS-TAX-001",
+      "TEST-001",
+      "TEST-002"
+    ],
+    "documents": {
+      "required": [
+        {
+          "document_id": "OBS-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "OBS-TAX-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "OBS-RAT-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "OBS-CONF-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "OBS-GOV-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "OBS-ARCH",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "EVID-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "CLAIM-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "AUDIT-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "TEST-STRAT",
+          "minimum_status": "APPROVED"
+        }
+      ]
+    },
+    "decisions": {
+      "required": [
+        "DEC-002",
+        "DEC-007"
+      ]
+    },
+    "stop_conditions": [
+      {
+        "decision": "DEC-002",
+        "when_status": "OPEN",
+        "blocking": true
+      }
+    ],
+    "tests": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "security_requirements": [
+      "AUDIT-001",
+      "SEC-001"
+    ]
+  },
+  {
+    "bundle_id": "BUNDLE-RATING-PUBLICATION",
+    "task_domains": [
+      "RATINGS"
+    ],
+    "requirements": [
+      "AUDIT-001",
+      "AUDIT-002",
+      "CLAIM-001",
+      "CLAIM-002",
+      "EVID-001",
+      "EVID-002",
+      "EVID-003",
+      "OBS-001",
+      "OBS-002",
+      "OBS-ARCH-001",
+      "OBS-ARCH-002",
+      "OBS-CONF-001",
+      "OBS-GOV-001",
+      "OBS-RAT-001",
+      "OBS-RAT-002"
+    ],
+    "documents": {
+      "required": [
+        {
+          "document_id": "OBS-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "OBS-RAT-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "OBS-CONF-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "OBS-GOV-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "OBS-ARCH",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "EVID-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "CLAIM-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "AUDIT-SPEC",
+          "minimum_status": "APPROVED"
+        }
+      ]
+    },
+    "decisions": {
+      "required": [
+        "DEC-002",
+        "DEC-007"
+      ]
+    },
+    "stop_conditions": [
+      {
+        "decision": "DEC-002",
+        "when_status": "OPEN",
+        "blocking": true
+      }
+    ],
+    "tests": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "security_requirements": [
+      "AUDIT-001"
+    ]
+  },
+  {
+    "bundle_id": "BUNDLE-DASHBOARD",
+    "task_domains": [
+      "FRONTEND_UI",
+      "OBSERVATORY"
+    ],
+    "requirements": [
+      "ACCESS-001",
+      "OBS-001",
+      "OBS-002"
+    ],
+    "documents": {
+      "required": [
+        {
+          "document_id": "DASH-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "DASHBOARD-METRIC-DICTIONARY",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "OBS-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "ACCESS-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "UI-CONT",
+          "minimum_status": "APPROVED"
+        }
+      ]
+    },
+    "decisions": {
+      "required": []
+    },
+    "stop_conditions": [],
+    "tests": [
+      "TEST-001"
+    ],
+    "security_requirements": [
+      "SEC-001"
+    ]
+  },
+  {
+    "bundle_id": "BUNDLE-SEARCH",
+    "task_domains": [
+      "SEARCH",
+      "DATA"
+    ],
+    "requirements": [
+      "API-001",
+      "API-ERR-001",
+      "API-SEC-001",
+      "DATA-DB-001",
+      "DATA-DB-002",
+      "DATA-DB-003",
+      "SEARCH-001",
+      "SEARCH-SEC-001",
+      "SEC-BASE-001",
+      "SEC-CLASS-001"
+    ],
+    "documents": {
+      "required": [
+        {
+          "document_id": "SEARCH-ARCH",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "DB-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "DATA-CLASS",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "SEC-BASE",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "API-ARCH",
+          "minimum_status": "APPROVED"
+        }
+      ]
+    },
+    "decisions": {
+      "required": [
+        "DEC-011"
+      ]
+    },
+    "stop_conditions": [
+      {
+        "decision": "DEC-011",
+        "when_status": "OPEN",
+        "blocking": false
+      }
+    ],
+    "tests": [
+      "TEST-001"
+    ],
+    "security_requirements": [
+      "SEC-001"
+    ]
+  },
+  {
+    "bundle_id": "BUNDLE-ADMIN-AUTHORIZATION",
+    "task_domains": [
+      "AUTHORIZATION",
+      "ADMIN"
+    ],
+    "requirements": [
+      "ACCESS-001",
+      "AUDIT-001",
+      "AUDIT-002",
+      "AUTHN-001",
+      "AUTHN-002",
+      "AUTHZ-001",
+      "AUTHZ-002",
+      "SEC-BASE-001"
+    ],
+    "documents": {
+      "required": [
+        {
+          "document_id": "AUTHZ-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "AUTHN-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "ACCESS-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "SEC-BASE",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "AUDIT-SPEC",
+          "minimum_status": "APPROVED"
+        }
+      ]
+    },
+    "decisions": {
+      "required": [
+        "DEC-010"
+      ]
+    },
+    "stop_conditions": [
+      {
+        "decision": "DEC-010",
+        "when_status": "OPEN",
+        "blocking": true
+      }
+    ],
+    "tests": [
+      "TEST-002"
+    ],
+    "security_requirements": [
+      "AUTHZ-001",
+      "AUDIT-001"
+    ]
+  },
+  {
+    "bundle_id": "BUNDLE-UI-SEMANTIC-COMPLIANCE",
+    "task_domains": [
+      "FRONTEND_UI"
+    ],
+    "requirements": [
+      "ACCESS-001",
+      "AGENT-CODER-002",
+      "AGENT-RES-002",
+      "ARCH-BOUND-003",
+      "CLAIM-001",
+      "EVID-001",
+      "EVID-ARCH-002",
+      "NEUR-003",
+      "RAG-BUNDLE-001",
+      "TEST-002"
+    ],
+    "documents": {
+      "required": [
+        {
+          "document_id": "UI-CONT",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "UI-PACK-DEVIATIONS",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "SEMANTIC-AMENDMENT",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "TRACE-MATRIX",
+          "minimum_status": "APPROVED"
+        }
+      ]
+    },
+    "decisions": {
+      "required": []
+    },
+    "stop_conditions": [],
+    "tests": [
+      "TEST-002"
+    ],
+    "security_requirements": [
+      "SEC-001"
+    ]
+  },
+  {
+    "bundle_id": "BUNDLE-BACKEND-FOUNDATION",
+    "task_domains": [
+      "BACKEND_API",
+      "DATA",
+      "OPERATIONS"
+    ],
+    "requirements": [
+      "API-001",
+      "API-ERR-001",
+      "API-SEC-001",
+      "ARCH-001",
+      "ARCH-BOUND-001",
+      "ARCH-BOUND-002",
+      "ARCH-BOUND-003",
+      "ARCH-DATA-001",
+      "ARCH-EVT-001",
+      "ARCH-SEC-001",
+      "AUDIT-001",
+      "AUDIT-002",
+      "DATA-DB-001",
+      "DATA-DB-002",
+      "DATA-DB-003",
+      "DATA-OBJ-001",
+      "DATA-OBJ-002",
+      "SEC-BASE-001"
+    ],
+    "documents": {
+      "required": [
+        {
+          "document_id": "SYS-ARCH",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "BACKEND-BOUND",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "API-ARCH",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "DB-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "OBJ-STORE",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "SEC-BASE",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "AUDIT-SPEC",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "DOM-EVENT",
+          "minimum_status": "APPROVED"
+        }
+      ]
+    },
+    "decisions": {
+      "required": [
+        "DEC-010",
+        "DEC-011"
+      ]
+    },
+    "stop_conditions": [
+      {
+        "decision": "DEC-010",
+        "when_status": "OPEN",
+        "blocking": true
+      }
+    ],
+    "tests": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "security_requirements": [
+      "SEC-001",
+      "AUDIT-001"
+    ]
+  },
+  {
+    "bundle_id": "BUNDLE-RELEASE",
+    "task_domains": [
+      "DEPLOYMENT",
+      "DOCUMENTATION"
+    ],
+    "requirements": [
+      "ACCESS-001",
+      "AGENT-CODER-002",
+      "AGENT-RES-002",
+      "ARCH-BOUND-003",
+      "DEPLOY-001",
+      "DEPLOY-002",
+      "EVID-001",
+      "EVID-ARCH-002",
+      "GOV-EXEC-007",
+      "GOV-EXEC-008",
+      "NEUR-003",
+      "RAG-BUNDLE-001",
+      "TEST-002"
+    ],
+    "documents": {
+      "required": [
+        {
+          "document_id": "DEPLOY-ARCH",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "D4-READINESS-REPORT",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "D4-CONSISTENCY-REPORT",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "D4-VALIDATION-REPORT",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "D4-PROMOTION-REPORT",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "GAP-REPORT",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "TRACE-MATRIX",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "DOCUMENTATION-GOVERNANCE",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "OPEN-DECISIONS",
+          "minimum_status": "APPROVED"
+        },
+        {
+          "document_id": "GOV-EXEC-007",
+          "minimum_status": "APPROVED"
+        }
+      ]
+    },
+    "decisions": {
+      "required": [
+        "DEC-010"
+      ]
+    },
+    "stop_conditions": [
+      {
+        "decision": "DEC-010",
+        "when_status": "OPEN",
+        "blocking": true
+      }
+    ],
+    "tests": [
+      "TEST-001",
+      "TEST-002"
+    ],
+    "security_requirements": [
+      "SEC-001"
+    ]
+  }
+]

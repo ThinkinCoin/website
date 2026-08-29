@@ -1,0 +1,56 @@
+document_id: D4-DECISION-DEPENDENCIES
+document_type: REFERENCE
+domain: GOVERNANCE
+version: 1.0.0
+status: APPROVED
+authority: CANONICAL_REFERENCE
+canonicality: CANONICAL_REFERENCE
+effective_from: 2026-08-25
+created_at: 2026-08-25
+updated_at: 2026-08-25
+security_classification: INTERNAL
+decisions:
+  DEC-001:
+    classification: ARCHITECTURE
+    blocking: BLOCKING_FOR_SPECIFIC_SPRINT
+    affects: [NEURONS_ELIGIBILITY, WALLET_GATE]
+  DEC-002:
+    classification: METHODOLOGY
+    blocking: BLOCKING_FOR_SPECIFIC_SPRINT
+    affects: [OBSERVATORY_RATING_CALCULATION, RATING_PUBLICATION]
+  DEC-003:
+    classification: PRODUCT
+    blocking: NON_BLOCKING
+    affects: [ELIGIBILITY_POLICY]
+  DEC-004:
+    classification: COMMERCIAL
+    blocking: BLOCKING_FOR_SPECIFIC_SPRINT
+    affects: [PRIVATE_INVESTIGATION_QUOTING]
+  DEC-005:
+    classification: COMMERCIAL
+    blocking: BLOCKING_FOR_SPECIFIC_SPRINT
+    affects: [REFUNDS]
+  DEC-006:
+    classification: SECURITY
+    blocking: BLOCKING_FOR_SPECIFIC_SPRINT
+    affects: [PAYMENT_VERIFICATION]
+  DEC-007:
+    classification: PRODUCT
+    blocking: NON_BLOCKING
+    affects: [RATING_PRESENTATION]
+  DEC-008:
+    classification: ARCHITECTURE
+    blocking: BLOCKING_FOR_SPECIFIC_SPRINT
+    affects: [PRICE_SERVICE, ELIGIBILITY]
+  DEC-009:
+    classification: ARCHITECTURE
+    blocking: BLOCKING_FOR_SPECIFIC_SPRINT
+    affects: [PRICE_FRESHNESS, ELIGIBILITY]
+  DEC-010:
+    classification: ARCHITECTURE
+    blocking: BLOCKING_NOW
+    affects: [BACKEND_IMPLEMENTATION, SPRINT_0]
+  DEC-011:
+    classification: ARCHITECTURE
+    blocking: NON_BLOCKING
+    affects: [SEARCH_SCALE_OPTIMIZATION]

@@ -1,3 +1,25 @@
+---
+document_id: UI-PACK-DEVIATIONS
+title: UI Pack Deviations
+document_type: SPEC
+domain: ui
+version: 1.0.0
+status: APPROVED
+authority: CANONICAL_NORMATIVE
+canonicality: CURRENT_CANONICAL
+effective_from: 2026-08-25
+created_at: 2026-08-25
+updated_at: 2026-08-26
+supersedes: ["SEMANTIC-AMENDMENT"]
+superseded_by: []
+related_documents: ["UI-CONT","TRACE-MATRIX"]
+requirement_ids: ["EVID-001","CLAIM-001"]
+decision_ids: []
+tags: ["ui","evidence","semantics","badge"]
+security_classification: PUBLIC
+rag_priority: 1
+---
+
 # UI Pack Deviations
 
 ## Evidence semantics
